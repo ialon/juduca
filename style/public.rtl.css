@@ -1,0 +1,727 @@
+/******************************************************************************/
+/* Base                                                                       */
+/******************************************************************************/
+
+.bgcbs-main .bgcbs-align-right
+{
+    text-align:left;
+}
+
+/******************************************************************************/
+/* Qtip         															  */
+/******************************************************************************/
+
+.bgcbs-main .bgcbs-qtip .qtip-content
+{
+    text-align:right;
+}
+
+/******************************************************************************/
+/* Button                                                                     */
+/******************************************************************************/
+
+    .bgcbs-main .bgcbs-button.bgcbs-button-step-next>span,
+    .bgcbs-main .bgcbs-button.bgcbs-button-step-prev>span
+    {
+		transform: scaleX(-1);
+        -moz-transform:scaleX(-1);
+        -o-transform:scaleX(-1);
+        -webkit-transform:scaleX(-1);
+    }
+    
+    .bgcbs-main .bgcbs-button.bgcbs-button-step-prev>span
+    {
+        transform:scaleX(1);
+        -moz-transform:scaleX(1);
+        -o-transform:scaleX(1);
+        -webkit-transform:scaleX(1);
+    }
+  
+.bgcbs-main .bgcbs-button.bgcbs-button-step-prev
+{
+    padding:14px 24px 16px 32px;
+}
+
+.bgcbs-main .bgcbs-button.bgcbs-button-step-next
+{
+    padding:14px 32px 16px 24px;
+}
+
+/******************************************************************************/
+/* Button checkbox                                                            */
+/******************************************************************************/
+
+    .bgcbs-button-checkbox>a
+    {
+        float:right;
+    }
+    
+    .bgcbs-button-checkbox>a+a
+    {
+        right:-1px;
+		left:auto;
+    }
+    
+    .bgcbs-button-checkbox>a:first-child
+    {
+		border-top-left-radius:0px;
+		border-bottom-left-radius:0px;
+        border-top-right-radius:2px;
+        border-bottom-right-radius:2px;
+    }
+    
+    .bgcbs-button-checkbox>a:last-child
+    {
+        border-top-left-radius:2px;
+        border-bottom-left-radius:2px;
+		border-top-right-radius:0px;
+		border-bottom-right-radius:0px;
+    }
+    
+/******************************************************************************/
+/* Button navigation                                                          */
+/******************************************************************************/
+
+    .bgcbs-main .bgcbs-main-content-navigation-button .bgcbs-button.bgcbs-button-step-prev
+    {
+        float:right;
+    }
+
+    .bgcbs-main .bgcbs-main-content-navigation-button .bgcbs-button.bgcbs-button-step-next
+    {
+        float:left;
+    }
+
+/******************************************************************************/
+/* Selectmenu                                                                 */
+/******************************************************************************/
+
+	.bgcbs-main .ui-selectmenu-button .ui-selectmenu-text
+    {
+        text-align:right;
+    }
+	
+    .bgcbs-main .ui-selectmenu-button .bgcbs-meta-icon-arrow-vertical
+    {
+        float:left;
+        transform:scaleY(-1);
+    }
+
+/******************************************************************************/
+/* Timepicker                                                                 */
+/******************************************************************************/
+  
+.bgcbs-main .ui-timepicker-wrapper
+{
+    margin-left:0px;
+    margin-right:-1px;
+}
+
+/******************************************************************************/
+/* Datepicker                                                                 */
+/******************************************************************************/            
+
+.ui-datepicker
+{
+	margin-left:0px;
+    margin-right:-1px;
+    padding:20px 17px 30px 18px;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-prev-hover
+{
+	left:auto;
+    right:0px;
+	margin-left:0px;
+    margin-right:7px;
+	transform:scaleX(1);
+	-moz-transform:scaleX(1);
+	-o-transform:scaleX(1);
+	-webkit-transform:scaleX(1);
+}
+
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-next-hover
+{
+    left:0px;
+	right:auto;
+    margin-left:7px;
+	margin-right:0px;
+	transform:scaleX(-1);
+	-moz-transform:scaleX(-1);
+	-o-transform:scaleX(-1);
+	-webkit-transform:scaleX(-1);
+}
+
+/******************************************************************************/
+/* Layout                                                                     */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Layout / Layout 50x50                                                  */
+    /**************************************************************************/
+
+        .bgcbs-main .bgcbs-layout-50x50>.bgcbs-layout-column-left,
+        .bgcbs-main.bgcbs-width-480 #bgcbs-location-info-frame .bgcbs-layout-50x50>.bgcbs-layout-column-left
+        {
+            float:right;
+        }
+        
+        .bgcbs-main .bgcbs-layout-50x50>.bgcbs-layout-column-right,
+        .bgcbs-main.bgcbs-width-480 #bgcbs-location-info-frame .bgcbs-layout-50x50>.bgcbs-layout-column-right
+        {
+            float:left;
+        }
+        
+    /**************************************************************************/
+    /* Layout / Layout 33x33x33                                               */
+    /**************************************************************************/
+        
+        .bgcbs-main .bgcbs-layout-33x33x33>.bgcbs-layout-column-left,
+        .bgcbs-main .bgcbs-layout-33x33x33>.bgcbs-layout-column-center,
+        .bgcbs-main .bgcbs-layout-33x33x33>.bgcbs-layout-column-right,
+        .bgcbs-main.bgcbs-width-480 #bgcbs-location-info-frame .bgcbs-layout-33x33x33>.bgcbs-layout-column-left,
+        .bgcbs-main.bgcbs-width-480 #bgcbs-location-info-frame .bgcbs-layout-33x33x33>.bgcbs-layout-column-center,
+        .bgcbs-main.bgcbs-width-480 #bgcbs-location-info-frame .bgcbs-layout-33x33x33>.bgcbs-layout-column-right
+        {
+            float:right;
+        }
+            
+        .bgcbs-main .bgcbs-layout-33x33x33>.bgcbs-layout-column-left,
+        .bgcbs-main .bgcbs-layout-33x33x33>.bgcbs-layout-column-center,
+        .bgcbs-main.bgcbs-width-480 #bgcbs-location-info-frame .bgcbs-layout-33x33x33>.bgcbs-layout-column-left,
+        .bgcbs-main.bgcbs-width-480 #bgcbs-location-info-frame .bgcbs-layout-33x33x33>.bgcbs-layout-column-center
+        {
+			margin-right:0px;
+            margin-left:3.2784%;
+        }
+
+    /**************************************************************************/
+    /* Layout / Layout 25x75                                                  */
+    /**************************************************************************/
+
+        .bgcbs-main .bgcbs-layout-25x75>.bgcbs-layout-column-left
+        {
+            float:right;
+        }
+
+        .bgcbs-main .bgcbs-layout-25x75>.bgcbs-layout-column-right
+        {
+            float:left;
+        }
+        
+    /**************************************************************************/
+    /* Layout / Layout 75x25                                                  */
+    /**************************************************************************/
+
+        .bgcbs-main .bgcbs-layout-75x25>.bgcbs-layout-column-left
+        {
+            float:right;
+        }
+
+        .bgcbs-main .bgcbs-layout-75x25>.bgcbs-layout-column-right
+        {
+            float:left;
+        }
+
+/******************************************************************************/
+/* Main navigation                                                            */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Main navigation / Default                                              */
+    /**************************************************************************/
+
+            .bgcbs-main .bgcbs-main-navigation-default>ul>li
+            {
+                float:right;
+            }
+            
+                .bgcbs-main .bgcbs-main-navigation-default>ul>li>div
+                {
+					left:auto;
+                    right:50%;
+                }
+
+/******************************************************************************/
+/* Disable section                                                            */
+/******************************************************************************/        
+    
+.bgcbs-disable-section
+{
+	left:auto;
+    right:0px;
+}
+
+/******************************************************************************/
+/* Form checkbox                                                              */
+/******************************************************************************/
+
+.bgcbs-main .bgcbs-form-checkbox
+{
+    float:right;
+    margin-right:0px;
+    margin-left:20px;
+}
+
+.bgcbs-main .bgcbs-form-checkbox+span
+{
+	margin-left:0px;
+    margin-right:30px;
+}
+
+.bgcbs-main .bgcbs-form-panel-label .bgcbs-form-checkbox
+{
+    left:auto;
+    right:10px;
+}
+
+/******************************************************************************/
+/* Form field                                                                 */
+/******************************************************************************/
+
+.bgcbs-main .bgcbs-form-field.bgcbs-form-field-width-50
+{
+    float:right;
+}
+
+.bgcbs-main .bgcbs-form-field.bgcbs-form-field-width-33
+{
+    float:right;   
+}
+
+.bgcbs-main .bgcbs-form-field.bgcbs-form-field-width-50+.bgcbs-form-field-width-50,
+.bgcbs-main .bgcbs-form-field.bgcbs-form-field-width-33+.bgcbs-form-field-width-33
+{
+	border-left-width:1px;
+    border-right-width:0px;
+}
+
+    .bgcbs-main .bgcbs-form-field>label
+    {
+		margin-left:0px;
+        margin-right:20px;
+    }
+    
+    .bgcbs-main .bgcbs-form-field.bgcbs-form-field-location-switch>input
+    {
+		padding-right:0px;
+        padding-left:110px;
+    }
+
+/******************************************************************************/
+/* Vehicle                                                                    */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Vehicle / Image                                                        */
+    /**************************************************************************/
+
+    .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-image
+    {
+        padding:20px 20px 20px 15px;
+    }
+    
+    /**************************************************************************/
+    /* Vehicle / Content                                                      */
+    /**************************************************************************/    
+    
+    .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-image+.bgcbs-vehicle-content
+    {
+		padding-left:0px;
+        padding-right:15px;
+    }
+    
+        /**********************************************************************/
+        /* Vehicle / Content / Header                                         */
+        /**********************************************************************/   
+    
+            .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-content .bgcbs-vehicle-header>span
+            {
+				padding-left:0px;
+                padding-right:5px;
+            }
+        
+        /**********************************************************************/
+        /* Vehicle / Content / Meta                                           */
+        /**********************************************************************/   
+    
+                .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-content .bgcbs-vehicle-meta>ul>li
+                {
+                    float:right;
+                }
+				
+					 .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-content .bgcbs-vehicle-meta>ul>li>span
+					{
+						float:right;
+					}
+                
+                    .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-content .bgcbs-vehicle-meta>ul>li>span:first-child+span
+                    {
+						left:auto;
+                        right:15px;
+						margin-top:6px;
+                    }                    
+
+    /**************************************************************************/
+    /* Vehicle / Description                                                  */
+    /**************************************************************************/   
+
+    .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-image+.bgcbs-vehicle-content+.bgcbs-vehicle-price+.bgcbs-vehicle-description
+    {
+		padding-left:0px;
+        padding-right:350px;
+    }
+
+        .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-description>div
+        {
+            margin:30px 0px 30px 30px;
+        }
+
+    /**************************************************************************/
+    /* Vehicle / Attribute                                                    */
+    /**************************************************************************/               
+  
+        .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-attribute>ul
+        {
+            float:right;
+        }
+
+        .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-attribute>ul+ul
+        {
+            float:left;
+        }
+
+                .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-attribute>ul>li>div:first-child
+                {
+                    float:right;
+                }
+
+                .bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-attribute>ul>li>div:first-child+div
+                {
+                    float:left;
+                    text-align:left;
+                }
+
+/******************************************************************************/
+/* Summary                                                                    */
+/******************************************************************************/
+
+        .bgcbs-main .bgcbs-summary .bgcbs-summary-header>a
+        {
+            float:left;
+        }
+
+/******************************************************************************/
+/* Summary price element                                                      */
+/******************************************************************************/
+
+        .bgcbs-main .bgcbs-summary-price-element>div>span:first-child+span
+        {
+            float:left;
+        }
+        
+        .bgcbs-main .bgcbs-summary-price-element>div.bgcbs-summary-price-element-total>span:first-child+span
+        {
+            left:0px;
+            right:auto;
+            float:left;
+        }
+
+/******************************************************************************/
+/* Payment                                                                    */
+/******************************************************************************/
+
+.bgcbs-main #bgcbs-payment>ul
+{
+    margin:30px 0px 0px -20px;
+}
+
+    .bgcbs-main #bgcbs-payment>ul>li
+    {
+        margin:15px 0px 15px 20px;
+    }
+    
+    .bgcbs-main #bgcbs-payment>ul>li:first-child
+    {
+		margin-left:20px;
+		margin-right:0px;
+    }
+	
+            .bgcbs-main #bgcbs-payment>ul>li>a>span.bgcbs-meta-icon-tick
+            {
+				left:auto;
+                right:50%;
+                margin-left:0px;
+                margin-right:-19px;
+            }
+            
+/******************************************************************************/
+/* Agreement                                                                  */
+/******************************************************************************/        
+
+        .bgcbs-agreement>div>.bgcbs-form-checkbox+span
+        {
+            margin-left:0px;
+            margin-right:0px;
+        }
+
+/******************************************************************************/
+/* Booking extra                                                              */
+/******************************************************************************/
+
+    .bgcbs-main .bgcbs-booking-extra-header>span:first-child+span
+    {
+        padding-left:0px;
+        padding-right:20px;
+    }
+
+            .bgcbs-main .bgcbs-booking-extra-list>ul>li>div
+            {
+                border-width:1px 1px 0px 0px;
+            }
+            
+            .bgcbs-main .bgcbs-booking-extra-list>ul>li>div.bgcbs-column-1
+            {
+                border-right:none;
+                padding-left:20px;
+				padding-right:0px;
+            }
+
+                .bgcbs-main .bgcbs-booking-extra-list>ul>li>div.bgcbs-column-1>.booking-form-extra-name
+                {
+                    margin-left:20px;
+					margin-right:0px;
+                }
+                
+            .bgcbs-main .bgcbs-booking-extra-list>ul>li>div.bgcbs-column-2:empty
+            {
+				border-right-width:0px;
+            }
+
+            .bgcbs-main .bgcbs-booking-extra-list>ul>li>div.bgcbs-column-3
+            {
+                text-align:left;
+				border-left-width:0px;
+                border-right-width:1px;
+            }
+            
+/******************************************************************************/
+/* Booking complete                                                           */
+/******************************************************************************/
+
+        .bgcbs-main .bgcbs-booking-complete .bgcbs-meta-icon-tick>div:first-child
+        {
+            right:0px;
+            left:auto;
+        }
+        
+        .bgcbs-main .bgcbs-booking-complete .bgcbs-meta-icon-tick>div:first-child+div
+        {
+			left:auto;
+            right:10px;
+        }
+
+/******************************************************************************/
+/* Location detail frame                                                      */
+/******************************************************************************/
+
+#bgcbs-location-info-frame
+{
+    left:auto;
+    right:0px;
+}
+
+    /**************************************************************************/
+    /* Location detail frame / Header                                         */
+    /**************************************************************************/
+
+        #bgcbs-location-info-frame .bgcbs-location-info-frame-header h4
+        {
+            padding-left:60px;
+			padding-right:0px;
+        }
+
+        #bgcbs-location-info-frame .bgcbs-location-info-frame-header a
+        {
+            left:30px;
+            right:auto;
+            float:left;
+        }
+    
+    /**************************************************************************/
+    /* Location detail frame / Meta 2                                         */
+    /**************************************************************************/
+    
+                #bgcbs-location-info-frame .bgcbs-location-info-frame-meta-2 ul>li>span:first-child+span
+                {
+                    float:left
+                } 
+        
+    /**************************************************************************/
+    /* Location detail frame / Button                                         */
+    /**************************************************************************/
+    
+    #bgcbs-location-info-frame .bgcbs-location-info-frame-button
+    {
+        padding:0px 0px 30px 60px;
+    }
+    
+        #bgcbs-location-info-frame .bgcbs-location-info-frame-button>a
+        {
+            float:left;
+        }
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Responsive / Button                                                    */
+    /**************************************************************************/
+
+    .bgcbs-main.bgcbs-width-300 .bgcbs-button.bgcbs-button-style-1,
+    .bgcbs-main.bgcbs-width-300 .bgcbs-button.bgcbs-button-style-2,
+    .bgcbs-main.bgcbs-width-480 .bgcbs-button.bgcbs-button-style-1,
+    .bgcbs-main.bgcbs-width-480 .bgcbs-button.bgcbs-button-style-2
+    {
+        padding:10px 26px 12px 26px;
+    }
+    
+    .bgcbs-main.bgcbs-width-300 .bgcbs-button.bgcbs-button-step-prev,
+    .bgcbs-main.bgcbs-width-480 .bgcbs-button.bgcbs-button-step-prev
+    {
+        padding:10px 18px 12px 26px;
+    }
+    
+    .bgcbs-main.bgcbs-width-300 .bgcbs-button.bgcbs-button-step-next,
+    .bgcbs-main.bgcbs-width-480 .bgcbs-button.bgcbs-button-step-next
+    {
+        padding:10px 26px 12px 18px;
+    }
+	
+    /**************************************************************************/
+    /* Responsive / Main navigation                                           */
+    /**************************************************************************/
+
+        .bgcbs-main.bgcbs-width-300 .bgcbs-tab.ui-tabs .ui-tabs-nav>li>a
+        {
+            border-left-width:1px;
+            border-right-width:0px;
+        }
+    
+    /**************************************************************************/
+    /* Responsive / Vehicle                                                   */
+    /**************************************************************************/
+
+    .bgcbs-width-768.bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-image+.bgcbs-vehicle-content+.bgcbs-vehicle-price+.bgcbs-vehicle-description
+    {
+		padding-left:0px;
+        padding-right:215px;
+    }
+    
+    .bgcbs-width-768.bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-price
+    {
+        left:-1px;
+		right:auto;
+    }
+   
+    /***/
+    
+    .bgcbs-width-480.bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-image+.bgcbs-vehicle-content+.bgcbs-vehicle-price+.bgcbs-vehicle-description
+    {
+        padding-left:0px;
+        padding-right:215px;
+    }
+    
+    /***/
+    
+    .bgcbs-width-300.bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-image+.bgcbs-vehicle-content+.bgcbs-vehicle-price+.bgcbs-vehicle-description
+    {
+		padding-left:0px;
+        padding-right:20px;
+    }
+    
+        .bgcbs-width-300.bgcbs-main .bgcbs-vehicle .bgcbs-vehicle-image+.bgcbs-vehicle-content+.bgcbs-vehicle-price+.bgcbs-vehicle-description>div
+        {
+            margin-right:0px;
+            margin-left:20px;
+        }
+        
+    /**************************************************************************/
+    /* Responsive / Booking extra                                             */
+    /**************************************************************************/
+	
+    .bgcbs-main.bgcbs-width-480 .bgcbs-booking-extra-list>ul>li>div.bgcbs-column-1,
+    .bgcbs-main.bgcbs-width-300 .bgcbs-booking-extra-list>ul>li>div.bgcbs-column-1
+    {
+        padding-left:0px;
+        padding-right:0px;
+    }
+    
+    .bgcbs-main.bgcbs-width-300 .bgcbs-booking-extra-list>ul>li.bgcbs-booking-extra-list-item-quantity-enable>div.bgcbs-column-2
+    {
+        border-left-width:1px;
+    }
+    
+    /**************************************************************************/
+    /* Responsive / Form field                                                */
+    /**************************************************************************/    
+    
+    .bgcbs-main.bgcbs-width-300 .bgcbs-form-field.bgcbs-form-field-width-50+.bgcbs-form-field.bgcbs-form-field-width-50
+    {
+        border-right-width:1px;
+    }
+    
+    .bgcbs-width-300.bgcbs-main .bgcbs-form-field-width-33,
+    .bgcbs-width-300.bgcbs-main .bgcbs-form-field-width-33+.bgcbs-form-field-width-33,
+    .bgcbs-width-300.bgcbs-main .bgcbs-form-field-width-33+.bgcbs-form-field-width-33+.bgcbs-form-field-width-33
+    {
+        border-right-width:1px;
+    }
+    
+    /**************************************************************************/
+    /* Responsive / Vehicle filter                                            */
+    /**************************************************************************/
+
+    .bgcbs-main.bgcbs-width-300 .bgcbs-vehicle-filter .bgcbs-form-field.bgcbs-form-field-width-33+.bgcbs-form-field-width-33
+    {
+        border-right-width:1px;
+    }
+    
+    /**************************************************************************/
+    /* Responsive / Location detail frame                                     */
+    /**************************************************************************/      
+    
+    .bgcbs-main.bgcbs-width-300 #bgcbs-location-info-frame .bgcbs-location-info-frame-button 
+    {
+        padding-left:40px;
+		padding-right:0px;
+    }
+    
+@media screen and (max-width:460px)
+{
+    .ui-datepicker .ui-datepicker-next, 
+    .ui-datepicker .ui-datepicker-next-hover 
+    {
+        margin-left:0px;
+		margin-right:0px;
+    }
+
+    .ui-datepicker .ui-datepicker-prev,
+    .ui-datepicker .ui-datepicker-prev-hover
+    {
+        margin-left:0px;
+        margin-right:0px;
+    }
+}
+
+/******************************************************************************/
+/* Bug fixes                                                                  */
+/******************************************************************************/
+
+.gm-style
+{
+	direction:ltr;
+}
