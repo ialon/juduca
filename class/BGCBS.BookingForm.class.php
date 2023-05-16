@@ -1037,7 +1037,7 @@ class BGCBSBookingForm
 			
 			/***/
 			
-			$html.=
+			$html =
 			'
 				<div class="bgcbs-info-2-section">
 					<div class="bgcbs-info-2-section-price">				
