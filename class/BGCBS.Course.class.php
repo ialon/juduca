@@ -276,6 +276,7 @@ class BGCBSCourse
 		/***/
 		
 		$dictionary=$Payment->getDictionary();
+        $option['payment_id']=array(-1);
 		if(in_array(-1,$option['payment_id']))
 		{
 			$option['payment_id']=array(-1);
@@ -439,7 +440,7 @@ class BGCBSCourse
 			'title'=>esc_html__('Title','bookingo'),
 			'group'=>esc_html__('Group','bookingo'),
 			'registration_period'=>esc_html__('Registration period','bookingo'),
-			'payment_method'=>esc_html__('Payment methods','bookingo')
+			// 'payment_method'=>esc_html__('Payment methods','bookingo')
 		);
    
 		return($column);		  

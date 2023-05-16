@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-15 19:11-0600\n"
+"PO-Revision-Date: 2023-05-15 20:20-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -44,15 +44,14 @@ msgstr "No se encontraron inscripciones"
 msgid "No Bookings Found in Trash"
 msgstr "No se encontraron inscripciones en la papelera"
 
-#: ../class/BGCBS.Booking.class.php:49 ../class/BGCBS.PaymentStripe.class.php:122
-#: ../class/BGCBS.Plugin.class.php:490
+#: ../class/BGCBS.Booking.class.php:49 ../class/BGCBS.PaymentStripe.class.php:122 ../class/BGCBS.Plugin.class.php:490
 msgid "Bookingo"
 msgstr "Juduca"
 
 #: ../class/BGCBS.Booking.class.php:84 ../class/BGCBS.BookingForm.class.php:87 ../class/BGCBS.Coupon.class.php:78
-#: ../class/BGCBS.Course.class.php:78 ../class/BGCBS.CourseGroup.class.php:78
-#: ../class/BGCBS.EmailAccount.class.php:97 ../class/BGCBS.Location.class.php:78
-#: ../class/BGCBS.Payment.class.php:106 ../class/BGCBS.PriceRule.class.php:180 ../class/BGCBS.TaxRate.class.php:78
+#: ../class/BGCBS.Course.class.php:78 ../class/BGCBS.CourseGroup.class.php:78 ../class/BGCBS.EmailAccount.class.php:97
+#: ../class/BGCBS.Location.class.php:78 ../class/BGCBS.Payment.class.php:106 ../class/BGCBS.PriceRule.class.php:180
+#: ../class/BGCBS.TaxRate.class.php:78
 msgid "Main"
 msgstr "Principal"
 
@@ -114,8 +113,7 @@ msgstr "Hay un error durante el procesamiento del pago."
 msgid "New booking \"%s\" is received"
 msgstr "Se recibe nueva inscripción \"%s\""
 
-#: ../class/BGCBS.Booking.class.php:599 ../class/BGCBS.PaymentPaypal.class.php:155
-#: ../class/BGCBS.PaymentStripe.class.php:274
+#: ../class/BGCBS.Booking.class.php:599 ../class/BGCBS.PaymentPaypal.class.php:155 ../class/BGCBS.PaymentStripe.class.php:274
 #, php-format
 msgid "Booking \"%s\" has changed status to \"%s\""
 msgstr "La inscripción \"%s\" ha cambiado de estado a \"%s\""
@@ -129,29 +127,26 @@ msgstr "Inscripción #%s"
 msgid "Booking status"
 msgstr "Estado de la inscripción"
 
-#: ../class/BGCBS.Booking.class.php:651 ../class/BGCBS.BookingForm.class.php:309
-#: ../class/BGCBS.BookingReport.class.php:80 ../class/BGCBS.Course.class.php:41 ../class/BGCBS.Course.class.php:52
-#: ../class/BGCBS.PriceRule.class.php:492 ../template/admin/meta_box_booking.php:40
-#: ../template/admin/meta_box_booking_form.php:38 ../template/admin/meta_box_price_rule.php:33
+#: ../class/BGCBS.Booking.class.php:651 ../class/BGCBS.BookingForm.class.php:309 ../class/BGCBS.BookingReport.class.php:80
+#: ../class/BGCBS.Course.class.php:41 ../class/BGCBS.Course.class.php:52 ../class/BGCBS.PriceRule.class.php:492
+#: ../template/admin/meta_box_booking.php:40 ../template/admin/meta_box_booking_form.php:38 ../template/admin/meta_box_price_rule.php:33
 #: ../template/email_booking.php:77
 msgid "Course"
 msgstr "Disciplina"
 
-#: ../class/BGCBS.Booking.class.php:652 ../class/BGCBS.BookingForm.class.php:648
-#: ../class/BGCBS.BookingReport.class.php:81 ../class/BGCBS.PriceRule.class.php:496
-#: ../template/admin/meta_box_booking.php:50 ../template/admin/meta_box_price_rule.php:50
+#: ../class/BGCBS.Booking.class.php:652 ../class/BGCBS.BookingForm.class.php:648 ../class/BGCBS.BookingReport.class.php:81
+#: ../class/BGCBS.PriceRule.class.php:496 ../template/admin/meta_box_booking.php:50 ../template/admin/meta_box_price_rule.php:50
 #: ../template/email_booking.php:81 ../vc/vc_bgcbs_course_group_list.php:23
 msgid "Course group"
 msgstr "Categoría"
 
-#: ../class/BGCBS.Booking.class.php:653 ../class/BGCBS.PriceRule.class.php:30
-#: ../template/admin/meta_box_booking.php:14 ../template/admin/meta_box_booking.php:126
-#: ../template/admin/meta_box_price_rule.php:254 ../template/email_booking.php:124
+#: ../class/BGCBS.Booking.class.php:653 ../class/BGCBS.PriceRule.class.php:30 ../template/admin/meta_box_booking.php:14
+#: ../template/admin/meta_box_booking.php:126 ../template/admin/meta_box_price_rule.php:254 ../template/email_booking.php:124
 msgid "Participant"
 msgstr "Participante"
 
-#: ../class/BGCBS.Booking.class.php:654 ../template/admin/meta_box_booking.php:15
-#: ../template/admin/meta_box_booking.php:149 ../template/email_booking.php:147
+#: ../class/BGCBS.Booking.class.php:654 ../template/admin/meta_box_booking.php:15 ../template/admin/meta_box_booking.php:149
+#: ../template/email_booking.php:147
 msgid "Applicant"
 msgstr "Solicitante"
 
@@ -163,8 +158,7 @@ msgstr "[Todos los estados]"
 msgid "[All groups & courses]"
 msgstr "[Todas las categorías]"
 
-#: ../class/BGCBS.BookingForm.class.php:40 ../class/BGCBS.BookingForm.class.php:46
-#: ../class/BGCBS.BookingForm.class.php:52
+#: ../class/BGCBS.BookingForm.class.php:40 ../class/BGCBS.BookingForm.class.php:46 ../class/BGCBS.BookingForm.class.php:52
 msgid "Booking Forms"
 msgstr "Formularios"
 
@@ -173,9 +167,8 @@ msgid "Booking Form"
 msgstr "Formulario"
 
 #: ../class/BGCBS.BookingForm.class.php:42 ../class/BGCBS.Coupon.class.php:42 ../class/BGCBS.Course.class.php:42
-#: ../class/BGCBS.CourseGroup.class.php:42 ../class/BGCBS.EmailAccount.class.php:61
-#: ../class/BGCBS.Location.class.php:42 ../class/BGCBS.Payment.class.php:70 ../class/BGCBS.PriceRule.class.php:144
-#: ../class/BGCBS.TaxRate.class.php:42
+#: ../class/BGCBS.CourseGroup.class.php:42 ../class/BGCBS.EmailAccount.class.php:61 ../class/BGCBS.Location.class.php:42
+#: ../class/BGCBS.Payment.class.php:70 ../class/BGCBS.PriceRule.class.php:144 ../class/BGCBS.TaxRate.class.php:42
 msgid "Add New"
 msgstr "Crear nuevo"
 
@@ -207,9 +200,8 @@ msgstr "No se encontraron formularios"
 msgid "No Booking Forms Found in Trash"
 msgstr "No se encontraron formularios en la papelera"
 
-#: ../class/BGCBS.BookingForm.class.php:308 ../class/BGCBS.Course.class.php:439
-#: ../class/BGCBS.CourseGroup.class.php:359 ../class/BGCBS.Location.class.php:201
-#: ../class/BGCBS.Payment.class.php:268 ../class/BGCBS.TaxRate.class.php:234 ../template/email_booking.php:69
+#: ../class/BGCBS.BookingForm.class.php:308 ../class/BGCBS.Course.class.php:439 ../class/BGCBS.CourseGroup.class.php:359
+#: ../class/BGCBS.Location.class.php:201 ../class/BGCBS.Payment.class.php:268 ../class/BGCBS.TaxRate.class.php:234 ../template/email_booking.php:69
 msgid "Title"
 msgstr "Título"
 
@@ -227,7 +219,7 @@ msgstr "No se pudo encontrar la categoría asignada a esta disciplina."
 
 #: ../class/BGCBS.BookingForm.class.php:644 ../class/BGCBS.CourseGroup.class.php:41
 msgid "Course Group"
-msgstr "Disciplina"
+msgstr "Categoría"
 
 #: ../class/BGCBS.BookingForm.class.php:673
 msgid "Course Participant Data"
@@ -305,9 +297,8 @@ msgstr "Nombre de la disciplina / categoría"
 msgid "Info"
 msgstr "Información"
 
-#: ../class/BGCBS.BookingForm.class.php:1015 ../class/BGCBS.CourseGroup.class.php:361
-#: ../class/BGCBS.Location.class.php:41 ../class/BGCBS.Location.class.php:52
-#: ../template/admin/meta_box_course_group.php:41
+#: ../class/BGCBS.BookingForm.class.php:1015 ../class/BGCBS.CourseGroup.class.php:361 ../class/BGCBS.Location.class.php:41
+#: ../class/BGCBS.Location.class.php:52 ../template/admin/meta_box_course_group.php:41
 msgid "Location"
 msgstr "Ubicación"
 
@@ -375,7 +366,7 @@ msgstr "Ingrese una dirección de correo electrónico válida del solicitante."
 
 #: ../class/BGCBS.BookingForm.class.php:1253
 msgid "Approve all agreements."
-msgstr "Aprobar todos los acuerdos."
+msgstr "Aprobar todos las condiciones."
 
 #: ../class/BGCBS.BookingReport.class.php:33
 msgid "Export as CSV"
@@ -409,8 +400,8 @@ msgstr "Dirección de correo electrónico del solicitante"
 msgid "Applicant phone number"
 msgstr "Número de teléfono del solicitante"
 
-#: ../class/BGCBS.BookingReport.class.php:88 ../template/admin/option_exchange_rate.php:32
-#: ../template/admin/option_general.php:11 ../vc/vc_bgcbs_booking_form.php:33
+#: ../class/BGCBS.BookingReport.class.php:88 ../template/admin/option_exchange_rate.php:32 ../template/admin/option_general.php:11
+#: ../vc/vc_bgcbs_booking_form.php:33
 msgid "Currency"
 msgstr "Moneda"
 
@@ -1446,8 +1437,8 @@ msgstr ""
 msgid "Zimbabwe"
 msgstr "Zimbabue"
 
-#: ../class/BGCBS.Coupon.class.php:40 ../class/BGCBS.Coupon.class.php:41 ../class/BGCBS.Coupon.class.php:46
-#: ../class/BGCBS.Coupon.class.php:52 ../template/admin/meta_box_booking_form.php:106
+#: ../class/BGCBS.Coupon.class.php:40 ../class/BGCBS.Coupon.class.php:41 ../class/BGCBS.Coupon.class.php:46 ../class/BGCBS.Coupon.class.php:52
+#: ../template/admin/meta_box_booking_form.php:106
 msgid "Coupons"
 msgstr "Cupones"
 
@@ -1483,8 +1474,7 @@ msgstr "No hay cupones en la papelera"
 msgid "Code"
 msgstr "Código"
 
-#: ../class/BGCBS.Coupon.class.php:214 ../template/admin/meta_box_coupon.php:28
-#: ../template/admin/option_coupon_creator.php:16
+#: ../class/BGCBS.Coupon.class.php:214 ../template/admin/meta_box_coupon.php:28 ../template/admin/option_coupon_creator.php:16
 msgid "Usage limit"
 msgstr "Límite de uso"
 
@@ -1492,23 +1482,19 @@ msgstr "Límite de uso"
 msgid "Usage count"
 msgstr "Recuento de uso"
 
-#: ../class/BGCBS.Coupon.class.php:216 ../template/admin/meta_box_coupon.php:49
-#: ../template/admin/option_coupon_creator.php:23
+#: ../class/BGCBS.Coupon.class.php:216 ../template/admin/meta_box_coupon.php:49 ../template/admin/option_coupon_creator.php:23
 msgid "Percentage discount"
 msgstr "Porcentaje de descuento"
 
-#: ../class/BGCBS.Coupon.class.php:217 ../template/admin/meta_box_coupon.php:56
-#: ../template/admin/option_coupon_creator.php:31
+#: ../class/BGCBS.Coupon.class.php:217 ../template/admin/meta_box_coupon.php:56 ../template/admin/option_coupon_creator.php:31
 msgid "Fixed discount"
 msgstr "Descuento fijo"
 
-#: ../class/BGCBS.Coupon.class.php:218 ../template/admin/meta_box_coupon.php:35
-#: ../template/admin/option_coupon_creator.php:38
+#: ../class/BGCBS.Coupon.class.php:218 ../template/admin/meta_box_coupon.php:35 ../template/admin/option_coupon_creator.php:38
 msgid "Active from"
 msgstr "Activo desde"
 
-#: ../class/BGCBS.Coupon.class.php:219 ../template/admin/meta_box_coupon.php:42
-#: ../template/admin/option_coupon_creator.php:45
+#: ../class/BGCBS.Coupon.class.php:219 ../template/admin/meta_box_coupon.php:42 ../template/admin/option_coupon_creator.php:45
 msgid "Active to"
 msgstr "Activo a"
 
@@ -1590,16 +1576,14 @@ msgstr "Para: %s"
 msgid "Consent and Statements"
 msgstr "Consentimiento y declaraciones"
 
-#: ../class/BGCBS.CourseAgreement.class.php:125 ../class/BGCBS.CourseAgreement.class.php:134
-#: ../template/admin/meta_box_course.php:469 ../template/admin/meta_box_course.php:526
-#: ../template/admin/meta_box_course.php:615 ../template/admin/meta_box_course.php:642
+#: ../class/BGCBS.CourseAgreement.class.php:125 ../class/BGCBS.CourseAgreement.class.php:134 ../template/admin/meta_box_course.php:469
+#: ../template/admin/meta_box_course.php:526 ../template/admin/meta_box_course.php:615 ../template/admin/meta_box_course.php:642
 #: ../template/admin/meta_box_tax_rate.php:24
 msgid "Yes"
 msgstr "Sí"
 
-#: ../class/BGCBS.CourseAgreement.class.php:125 ../class/BGCBS.CourseAgreement.class.php:134
-#: ../template/admin/meta_box_course.php:470 ../template/admin/meta_box_course.php:527
-#: ../template/admin/meta_box_course.php:616 ../template/admin/meta_box_course.php:643
+#: ../class/BGCBS.CourseAgreement.class.php:125 ../class/BGCBS.CourseAgreement.class.php:134 ../template/admin/meta_box_course.php:470
+#: ../template/admin/meta_box_course.php:527 ../template/admin/meta_box_course.php:616 ../template/admin/meta_box_course.php:643
 #: ../template/admin/meta_box_tax_rate.php:26
 msgid "No"
 msgstr ""
@@ -1628,8 +1612,7 @@ msgstr "- Datos del participante de la disciplina -"
 msgid "- Applicant Data -"
 msgstr "- Datos del solicitante -"
 
-#: ../class/BGCBS.CourseGroup.class.php:40 ../class/BGCBS.CourseGroup.class.php:46
-#: ../class/BGCBS.CourseGroup.class.php:52
+#: ../class/BGCBS.CourseGroup.class.php:40 ../class/BGCBS.CourseGroup.class.php:46 ../class/BGCBS.CourseGroup.class.php:52
 msgid "Course Groups"
 msgstr "Categorías"
 
@@ -1665,9 +1648,8 @@ msgstr "No hay categorías en la Papelera"
 msgid "Course period"
 msgstr "Período de disciplina"
 
-#: ../class/BGCBS.CourseGroup.class.php:362 ../template/admin/meta_box_booking.php:59
-#: ../template/admin/meta_box_course_group.php:74 ../template/admin/meta_box_price_rule.php:94
-#: ../template/email_booking.php:89
+#: ../class/BGCBS.CourseGroup.class.php:362 ../template/admin/meta_box_booking.php:59 ../template/admin/meta_box_course_group.php:74
+#: ../template/admin/meta_box_price_rule.php:94 ../template/email_booking.php:89
 msgid "Price"
 msgstr "Precio"
 
@@ -2330,9 +2312,8 @@ msgstr ""
 msgid "Chinese Yuan"
 msgstr "Yuan chino"
 
-#: ../class/BGCBS.EmailAccount.class.php:14 ../template/admin/meta_box_booking_form.php:47
-#: ../template/admin/meta_box_booking_form.php:97 ../template/admin/meta_box_course.php:40
-#: ../template/admin/meta_box_course.php:109 ../template/admin/meta_box_course_group.php:51
+#: ../class/BGCBS.EmailAccount.class.php:14 ../template/admin/meta_box_booking_form.php:47 ../template/admin/meta_box_booking_form.php:97
+#: ../template/admin/meta_box_course.php:40 ../template/admin/meta_box_course.php:109 ../template/admin/meta_box_course_group.php:51
 #: ../template/admin/meta_box_course_group.php:89 ../template/admin/meta_box_course_group.php:157
 msgid "- None -"
 msgstr "- Ninguno -"
@@ -2345,8 +2326,8 @@ msgstr ""
 msgid "TLS"
 msgstr ""
 
-#: ../class/BGCBS.EmailAccount.class.php:59 ../class/BGCBS.EmailAccount.class.php:60
-#: ../class/BGCBS.EmailAccount.class.php:65 ../class/BGCBS.EmailAccount.class.php:71
+#: ../class/BGCBS.EmailAccount.class.php:59 ../class/BGCBS.EmailAccount.class.php:60 ../class/BGCBS.EmailAccount.class.php:65
+#: ../class/BGCBS.EmailAccount.class.php:71
 msgid "E-mail Accounts"
 msgstr "Cuentas de correo electrónico"
 
@@ -2463,8 +2444,7 @@ msgstr "Enviando una notificación sobre una nueva inscripción en las direccion
 msgid "Sending an notification about new changes in the booking to the customer."
 msgstr ""
 
-#: ../class/BGCBS.LogManger.class.php:33 ../class/BGCBS.LogManger.class.php:40
-#: ../class/BGCBS.LogManger.class.php:47
+#: ../class/BGCBS.LogManger.class.php:33 ../class/BGCBS.LogManger.class.php:40 ../class/BGCBS.LogManger.class.php:47
 msgid "Sending an notification about new booking on defined phone number."
 msgstr "Enviando una notificación sobre una nueva inscripción en un número de teléfono definido."
 
@@ -2509,8 +2489,7 @@ msgid "PayPal"
 msgstr ""
 
 #: ../class/BGCBS.Payment.class.php:68 ../class/BGCBS.Payment.class.php:74 ../class/BGCBS.Payment.class.php:80
-#: ../template/admin/meta_box_course.php:11 ../template/admin/meta_box_course.php:101
-#: ../template/admin/option.php:51
+#: ../template/admin/meta_box_course.php:11 ../template/admin/meta_box_course.php:101 ../template/admin/option.php:51
 msgid "Payments"
 msgstr "Pagos"
 
@@ -2684,8 +2663,8 @@ msgstr "Tiempo total: %s"
 
 #: ../class/BGCBS.Plugin.class.php:605
 msgid ""
-"Seems, that demo data has been imported. To make sure if this process has been successfully completed,please "
-"check below content of buffer returned by external applications."
+"Seems, that demo data has been imported. To make sure if this process has been successfully completed,please check below content of buffer "
+"returned by external applications."
 msgstr ""
 
 #: ../class/BGCBS.Plugin.class.php:610
@@ -2724,8 +2703,7 @@ msgstr "Aumentar por porcentaje"
 msgid "Decrease by percentage"
 msgstr "Disminuir por porcentaje"
 
-#: ../class/BGCBS.PriceRule.class.php:142 ../class/BGCBS.PriceRule.class.php:148
-#: ../class/BGCBS.PriceRule.class.php:154
+#: ../class/BGCBS.PriceRule.class.php:142 ../class/BGCBS.PriceRule.class.php:148 ../class/BGCBS.PriceRule.class.php:154
 msgid "Pricing Rules"
 msgstr "Reglas de precios"
 
@@ -2765,8 +2743,7 @@ msgstr "No hay reglas de precios en la papelera"
 msgid "Conditions and details"
 msgstr "Condiciones y detalles"
 
-#: ../class/BGCBS.PriceRule.class.php:384 ../template/admin/meta_box_price_rule.php:10
-#: ../template/admin/meta_box_price_rule.php:205
+#: ../class/BGCBS.PriceRule.class.php:384 ../template/admin/meta_box_price_rule.php:10 ../template/admin/meta_box_price_rule.php:205
 msgid "Prices"
 msgstr "Precios"
 
@@ -2790,27 +2767,21 @@ msgstr "Prioridad"
 msgid "Next rule processing"
 msgstr "Siguiente proceso de regla"
 
-#: ../class/BGCBS.PriceRule.class.php:509 ../template/admin/meta_box_booking_form.php:83
-#: ../template/admin/meta_box_booking_form.php:110 ../template/admin/meta_box_booking_form.php:124
-#: ../template/admin/meta_box_course.php:90 ../template/admin/meta_box_course.php:162
-#: ../template/admin/meta_box_course.php:172 ../template/admin/meta_box_course.php:186
-#: ../template/admin/meta_box_course.php:235 ../template/admin/meta_box_course.php:284
-#: ../template/admin/meta_box_course_group.php:107 ../template/admin/meta_box_course_group.php:124
-#: ../template/admin/meta_box_email_account.php:38 ../template/admin/meta_box_email_account.php:94
-#: ../template/admin/meta_box_payment.php:125 ../template/admin/meta_box_price_rule.php:198
-#: ../template/admin/option_payment.php:25 ../vc/vc_bgcbs_course_group_list.php:36
+#: ../class/BGCBS.PriceRule.class.php:509 ../template/admin/meta_box_booking_form.php:83 ../template/admin/meta_box_booking_form.php:110
+#: ../template/admin/meta_box_booking_form.php:124 ../template/admin/meta_box_course.php:90 ../template/admin/meta_box_course.php:162
+#: ../template/admin/meta_box_course.php:172 ../template/admin/meta_box_course.php:186 ../template/admin/meta_box_course.php:235
+#: ../template/admin/meta_box_course.php:284 ../template/admin/meta_box_course_group.php:107 ../template/admin/meta_box_course_group.php:124
+#: ../template/admin/meta_box_email_account.php:38 ../template/admin/meta_box_email_account.php:94 ../template/admin/meta_box_payment.php:125
+#: ../template/admin/meta_box_price_rule.php:198 ../template/admin/option_payment.php:25 ../vc/vc_bgcbs_course_group_list.php:36
 msgid "Enable"
 msgstr "Habilitar"
 
-#: ../class/BGCBS.PriceRule.class.php:509 ../template/admin/meta_box_booking_form.php:85
-#: ../template/admin/meta_box_booking_form.php:112 ../template/admin/meta_box_booking_form.php:126
-#: ../template/admin/meta_box_course.php:92 ../template/admin/meta_box_course.php:164
-#: ../template/admin/meta_box_course.php:174 ../template/admin/meta_box_course.php:188
-#: ../template/admin/meta_box_course.php:237 ../template/admin/meta_box_course.php:286
-#: ../template/admin/meta_box_course_group.php:109 ../template/admin/meta_box_course_group.php:126
-#: ../template/admin/meta_box_email_account.php:40 ../template/admin/meta_box_email_account.php:96
-#: ../template/admin/meta_box_payment.php:127 ../template/admin/meta_box_price_rule.php:200
-#: ../template/admin/option_payment.php:27 ../vc/vc_bgcbs_course_group_list.php:37
+#: ../class/BGCBS.PriceRule.class.php:509 ../template/admin/meta_box_booking_form.php:85 ../template/admin/meta_box_booking_form.php:112
+#: ../template/admin/meta_box_booking_form.php:126 ../template/admin/meta_box_course.php:92 ../template/admin/meta_box_course.php:164
+#: ../template/admin/meta_box_course.php:174 ../template/admin/meta_box_course.php:188 ../template/admin/meta_box_course.php:237
+#: ../template/admin/meta_box_course.php:286 ../template/admin/meta_box_course_group.php:109 ../template/admin/meta_box_course_group.php:126
+#: ../template/admin/meta_box_email_account.php:40 ../template/admin/meta_box_email_account.php:96 ../template/admin/meta_box_payment.php:127
+#: ../template/admin/meta_box_price_rule.php:200 ../template/admin/option_payment.php:27 ../vc/vc_bgcbs_course_group_list.php:37
 msgid "Disable"
 msgstr "Deshabilitar"
 
@@ -2822,8 +2793,7 @@ msgstr "Tipo de fuente de precio"
 msgid "Inherited"
 msgstr "Heredado"
 
-#: ../class/BGCBS.TaxRate.class.php:40 ../class/BGCBS.TaxRate.class.php:41 ../class/BGCBS.TaxRate.class.php:46
-#: ../class/BGCBS.TaxRate.class.php:52
+#: ../class/BGCBS.TaxRate.class.php:40 ../class/BGCBS.TaxRate.class.php:41 ../class/BGCBS.TaxRate.class.php:46 ../class/BGCBS.TaxRate.class.php:52
 msgid "Tax Rates"
 msgstr "Tasas de impuestos"
 
@@ -2855,8 +2825,7 @@ msgstr "No se encontraron tasas de impuestos"
 msgid "No Tax Rates in Trash"
 msgstr "Sin tasas de impuestos en la papelera"
 
-#: ../class/BGCBS.TaxRate.class.php:235 ../template/admin/meta_box_price_rule.php:236
-#: ../template/admin/meta_box_tax_rate.php:13
+#: ../class/BGCBS.TaxRate.class.php:235 ../template/admin/meta_box_price_rule.php:236 ../template/admin/meta_box_tax_rate.php:13
 msgid "Value"
 msgstr "Valor"
 
@@ -2866,9 +2835,7 @@ msgid "Tax %.2f"
 msgstr "Impuesto %.2f"
 
 #: ../class/BGCBS.WooCommerce.class.php:419
-msgid ""
-"This order has corresponding booking from \"Bookingo\" plugin. Click on button below to see its details in new "
-"window."
+msgid "This order has corresponding booking from \"Bookingo\" plugin. Click on button below to see its details in new window."
 msgstr ""
 
 #: ../library/parsers.php:42 ../library/parsers.php:72 ../library/parsers.php:80
@@ -2883,9 +2850,8 @@ msgstr ""
 msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
 msgstr ""
 
-#: ../library/wordpress-importer.php:134 ../library/wordpress-importer.php:143
-#: ../library/wordpress-importer.php:194 ../library/wordpress-importer.php:198
-#: ../library/wordpress-importer.php:207
+#: ../library/wordpress-importer.php:134 ../library/wordpress-importer.php:143 ../library/wordpress-importer.php:194
+#: ../library/wordpress-importer.php:198 ../library/wordpress-importer.php:207
 msgid "Sorry, there has been an error."
 msgstr "Lo siento, ha habido un error."
 
@@ -2907,9 +2873,7 @@ msgstr "Recuerde actualizar las contraseñas y roles de los usuarios importados.
 
 #: ../library/wordpress-importer.php:199
 #, php-format
-msgid ""
-"The export file could not be found at <code>%s</code>. It is likely that this was caused by a permissions "
-"problem."
+msgid "The export file could not be found at <code>%s</code>. It is likely that this was caused by a permissions problem."
 msgstr ""
 
 #: ../library/wordpress-importer.php:215
@@ -2928,16 +2892,15 @@ msgstr "Asignar autores"
 
 #: ../library/wordpress-importer.php:267
 msgid ""
-"To make it easier for you to edit and save the imported content, you may want to reassign the author of the "
-"imported item to an existing user of this site. For example, you may want to import all the entries as "
-"<code>admin</code>s entries."
+"To make it easier for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of "
+"this site. For example, you may want to import all the entries as <code>admin</code>s entries."
 msgstr ""
 
 #: ../library/wordpress-importer.php:269
 #, php-format
 msgid ""
-"If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role "
-"will be set as %s. Manually changing the new user&#8217;s details will be necessary."
+"If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually "
+"changing the new user&#8217;s details will be necessary."
 msgstr ""
 
 #: ../library/wordpress-importer.php:279
@@ -3056,24 +3019,21 @@ msgstr ""
 
 #: ../library/wordpress-importer.php:1074
 #, php-format
-msgid ""
-"A new version of this importer is available. Please update to version %s to ensure compatibility with newer "
-"export files."
+msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
 msgstr ""
 
 #: ../library/wordpress-importer.php:1089
 msgid ""
-"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom "
-"fields, categories, and tags into this site."
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into "
+"this site."
 msgstr ""
 
 #: ../library/wordpress-importer.php:1090
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
 msgstr ""
 
-#: ../template/admin/meta_box_booking.php:13 ../template/admin/meta_box_booking_form.php:8
-#: ../template/admin/meta_box_coupon.php:8 ../template/admin/meta_box_course.php:10
-#: ../template/admin/meta_box_course_group.php:10 ../template/admin/meta_box_payment.php:9
+#: ../template/admin/meta_box_booking.php:13 ../template/admin/meta_box_booking_form.php:8 ../template/admin/meta_box_coupon.php:8
+#: ../template/admin/meta_box_course.php:10 ../template/admin/meta_box_course_group.php:10 ../template/admin/meta_box_payment.php:9
 #: ../template/admin/meta_box_tax_rate.php:7 ../template/admin/option.php:45 ../template/email_booking.php:62
 msgid "General"
 msgstr ""
@@ -3082,18 +3042,17 @@ msgstr ""
 msgid "Form elements"
 msgstr "Elementos de formulario"
 
-#: ../template/admin/meta_box_booking.php:17 ../template/admin/meta_box_booking.php:227
-#: ../template/admin/meta_box_course.php:14 ../template/admin/meta_box_course.php:572
+#: ../template/admin/meta_box_booking.php:17 ../template/admin/meta_box_booking.php:227 ../template/admin/meta_box_course.php:14
+#: ../template/admin/meta_box_course.php:572
 msgid "Agreements"
-msgstr "Acuerdos"
+msgstr "Condiciones"
 
 #: ../template/admin/meta_box_booking.php:22
 msgid "Booking ID"
 msgstr "ID de inscripción"
 
-#: ../template/admin/meta_box_booking.php:24 ../template/admin/meta_box_booking.php:371
-#: ../template/admin/meta_box_course.php:182 ../template/admin/meta_box_course.php:231
-#: ../template/admin/meta_box_course.php:280 ../template/email_booking.php:73
+#: ../template/admin/meta_box_booking.php:24 ../template/admin/meta_box_booking.php:371 ../template/admin/meta_box_course.php:182
+#: ../template/admin/meta_box_course.php:231 ../template/admin/meta_box_course.php:280 ../template/email_booking.php:73
 msgid "Status"
 msgstr "Estado"
 
@@ -3179,15 +3138,15 @@ msgstr "No hay elementos de formulario en esta inscripción."
 
 #: ../template/admin/meta_box_booking.php:228
 msgid "List of agreements from course."
-msgstr "Lista de acuerdos de la disciplina."
+msgstr "Lista de condiciones de la disciplina."
 
 #: ../template/admin/meta_box_booking.php:235
 msgid "Agreement"
-msgstr "Acuerdo"
+msgstr "Condición"
 
 #: ../template/admin/meta_box_booking.php:237
 msgid "Text of agreement."
-msgstr "Texto del acuerdo."
+msgstr "Texto de la condición."
 
 #: ../template/admin/meta_box_booking.php:243
 msgid "Answer"
@@ -3199,7 +3158,7 @@ msgstr "Respuesta del solicitante."
 
 #: ../template/admin/meta_box_booking.php:261
 msgid "There are no agreements in this course."
-msgstr "No hay acuerdos en esta categoría."
+msgstr "No hay condiciones en esta categoría."
 
 #: ../template/admin/meta_box_booking.php:274
 msgid "Payment details"
@@ -3229,8 +3188,7 @@ msgstr "ID de transacción"
 msgid "Transaction ID."
 msgstr "ID de transacción."
 
-#: ../template/admin/meta_box_booking.php:306 ../template/admin/meta_box_course.php:402
-#: ../template/admin/meta_box_payment.php:18
+#: ../template/admin/meta_box_booking.php:306 ../template/admin/meta_box_course.php:402 ../template/admin/meta_box_payment.php:18
 msgid "Type"
 msgstr "Tipo"
 
@@ -3238,14 +3196,12 @@ msgstr "Tipo"
 msgid "Type."
 msgstr "Tipo."
 
-#: ../template/admin/meta_box_booking.php:312 ../template/admin/meta_box_booking.php:377
-#: ../template/admin/meta_box_course_group.php:291
+#: ../template/admin/meta_box_booking.php:312 ../template/admin/meta_box_booking.php:377 ../template/admin/meta_box_course_group.php:291
 msgid "Date"
 msgstr "Fecha"
 
-#: ../template/admin/meta_box_booking.php:313 ../template/admin/meta_box_booking.php:378
-#: ../template/admin/meta_box_course.php:59 ../template/admin/meta_box_course.php:74
-#: ../template/admin/meta_box_course_group.php:19 ../template/admin/meta_box_course_group.php:31
+#: ../template/admin/meta_box_booking.php:313 ../template/admin/meta_box_booking.php:378 ../template/admin/meta_box_course.php:59
+#: ../template/admin/meta_box_course.php:74 ../template/admin/meta_box_course_group.php:19 ../template/admin/meta_box_course_group.php:31
 #: ../template/admin/meta_box_course_group.php:293
 msgid "Date."
 msgstr "Fecha."
@@ -3254,8 +3210,8 @@ msgstr "Fecha."
 msgid "Details"
 msgstr "Detalles"
 
-#: ../template/admin/meta_box_booking.php:319 ../template/admin/meta_box_course.php:183
-#: ../template/admin/meta_box_course.php:232 ../template/admin/meta_box_course.php:281
+#: ../template/admin/meta_box_booking.php:319 ../template/admin/meta_box_course.php:183 ../template/admin/meta_box_course.php:232
+#: ../template/admin/meta_box_course.php:281
 msgid "Status."
 msgstr "Estado."
 
@@ -3277,7 +3233,7 @@ msgstr ""
 
 #: ../template/admin/meta_box_booking_form.php:18
 msgid "You have to assign one course to this booking form. Otherwise booking form will not be displayed."
-msgstr ""
+msgstr "Tiene que asignar una disciplina a este formulario o el formulario no se va a mostrar en pantalla."
 
 #: ../template/admin/meta_box_booking_form.php:24
 msgid "Booking form ID"
@@ -3326,8 +3282,8 @@ msgstr ""
 
 #: ../template/admin/meta_box_booking_form.php:93
 msgid ""
-"You can run booking form with particular currency by adding parameter \"currency=CODE\" to the query string of "
-"page on which booking form is located."
+"You can run booking form with particular currency by adding parameter \"currency=CODE\" to the query string of page on which booking form is "
+"located."
 msgstr ""
 
 #: ../template/admin/meta_box_booking_form.php:107
@@ -3448,7 +3404,7 @@ msgstr "Otro"
 
 #: ../template/admin/meta_box_course.php:23
 msgid "You have to assign at least one group to this course. Otherwise booking form will not be displayed."
-msgstr ""
+msgstr "Tiene que asignar por lo menos una categoría a esta disciplina o el formulario no se mostrará en pantalla."
 
 #: ../template/admin/meta_box_course.php:31
 msgid "Course groups"
@@ -3456,7 +3412,7 @@ msgstr "Categorías"
 
 #: ../template/admin/meta_box_course.php:35
 msgid "Select at least one course group. Course group can be assigned to the one course only."
-msgstr ""
+msgstr "Seleccione por lo menos una categoría. Cada categoría solo puede asignarse a una disciplina."
 
 #: ../template/admin/meta_box_course.php:53
 msgid "Registration start"
@@ -3470,10 +3426,10 @@ msgstr "Establecer fecha/hora de inicio de registro."
 msgid "Before this date/time form will not be available for participants."
 msgstr "Antes de esta fecha/hora, el formulario no estará disponible para los participantes."
 
-#: ../template/admin/meta_box_course.php:63 ../template/admin/meta_box_course.php:78
-#: ../template/admin/meta_box_course_group.php:23 ../template/admin/meta_box_course_group.php:35
+#: ../template/admin/meta_box_course.php:63 ../template/admin/meta_box_course.php:78 ../template/admin/meta_box_course_group.php:23
+#: ../template/admin/meta_box_course_group.php:35
 msgid "Time."
-msgstr "Tiempo."
+msgstr "Hora."
 
 #: ../template/admin/meta_box_course.php:68
 msgid "Registration end"
@@ -3497,7 +3453,7 @@ msgstr "Defina si el complemento debe recopilar datos sobre el solicitante."
 
 #: ../template/admin/meta_box_course.php:86
 msgid "If this option is enable, section \"Applicant data\" will be visible in the booking form."
-msgstr ""
+msgstr "Si esta opción está habilitada la sección “Información del solicitante” será visible en el formulario de inscripción."
 
 #: ../template/admin/meta_box_course.php:105
 msgid "Select payment methods available in this course."
@@ -3552,8 +3508,7 @@ msgid "Sending an e-mail to defined recipients"
 msgstr "Enviando un correo electrónico a destinatarios definidos"
 
 #: ../template/admin/meta_box_course.php:169
-msgid ""
-"Define whether the plugin has to sent e-mail messages about new booking to addresses defined on recipient list."
+msgid "Define whether the plugin has to sent e-mail messages about new booking to addresses defined on recipient list."
 msgstr ""
 
 #: ../template/admin/meta_box_course.php:192
@@ -3588,13 +3543,11 @@ msgstr "Número de teléfono del destinatario"
 msgid "Recipient phone number."
 msgstr "Número de teléfono del destinatario."
 
-#: ../template/admin/meta_box_course.php:220 ../template/admin/meta_box_course.php:269
-#: ../template/admin/meta_box_course.php:304
+#: ../template/admin/meta_box_course.php:220 ../template/admin/meta_box_course.php:269 ../template/admin/meta_box_course.php:304
 msgid "Message"
 msgstr "Mensaje"
 
-#: ../template/admin/meta_box_course.php:221 ../template/admin/meta_box_course.php:270
-#: ../template/admin/meta_box_course.php:305
+#: ../template/admin/meta_box_course.php:221 ../template/admin/meta_box_course.php:270 ../template/admin/meta_box_course.php:305
 msgid "Message."
 msgstr "Mensaje."
 
@@ -3644,7 +3597,7 @@ msgstr "Paneles"
 
 #: ../template/admin/meta_box_course.php:319
 msgid "Table includes list of user defined panels (group of fields) used in client form."
-msgstr ""
+msgstr "La tabla incluye una lista de paneles definidos por el usuario (grupos de campos) utilizados en el formulario."
 
 #: ../template/admin/meta_box_course.php:326 ../template/admin/meta_box_course.php:394
 msgid "Label"
@@ -3654,32 +3607,27 @@ msgstr "Etiqueta"
 msgid "Label of the panel."
 msgstr "Etiqueta del panel."
 
-#: ../template/admin/meta_box_course.php:334 ../template/admin/meta_box_course.php:350
-#: ../template/admin/meta_box_course.php:369 ../template/admin/meta_box_course.php:442
-#: ../template/admin/meta_box_course.php:496 ../template/admin/meta_box_course.php:553
-#: ../template/admin/meta_box_course.php:598 ../template/admin/meta_box_course.php:622
-#: ../template/admin/meta_box_course.php:649 ../template/admin/meta_box_course_group.php:202
-#: ../template/admin/meta_box_course_group.php:233 ../template/admin/meta_box_course_group.php:267
-#: ../template/admin/meta_box_course_group.php:315 ../template/admin/meta_box_course_group.php:341
-#: ../template/admin/meta_box_course_group.php:370 ../template/admin/meta_box_price_rule.php:102
-#: ../template/admin/meta_box_price_rule.php:127 ../template/admin/meta_box_price_rule.php:157
+#: ../template/admin/meta_box_course.php:334 ../template/admin/meta_box_course.php:350 ../template/admin/meta_box_course.php:369
+#: ../template/admin/meta_box_course.php:442 ../template/admin/meta_box_course.php:496 ../template/admin/meta_box_course.php:553
+#: ../template/admin/meta_box_course.php:598 ../template/admin/meta_box_course.php:622 ../template/admin/meta_box_course.php:649
+#: ../template/admin/meta_box_course_group.php:202 ../template/admin/meta_box_course_group.php:233 ../template/admin/meta_box_course_group.php:267
+#: ../template/admin/meta_box_course_group.php:315 ../template/admin/meta_box_course_group.php:341 ../template/admin/meta_box_course_group.php:370
+#: ../template/admin/meta_box_price_rule.php:102 ../template/admin/meta_box_price_rule.php:127 ../template/admin/meta_box_price_rule.php:157
 msgid "Remove"
 msgstr "Eliminar"
 
-#: ../template/admin/meta_box_course.php:336 ../template/admin/meta_box_course.php:444
-#: ../template/admin/meta_box_course.php:600 ../template/admin/meta_box_course_group.php:204
-#: ../template/admin/meta_box_course_group.php:317 ../template/admin/meta_box_price_rule.php:104
+#: ../template/admin/meta_box_course.php:336 ../template/admin/meta_box_course.php:444 ../template/admin/meta_box_course.php:600
+#: ../template/admin/meta_box_course_group.php:204 ../template/admin/meta_box_course_group.php:317 ../template/admin/meta_box_price_rule.php:104
 msgid "Remove this entry."
 msgstr "Eliminar esta entrada."
 
-#: ../template/admin/meta_box_course.php:345 ../template/admin/meta_box_course.php:364
-#: ../template/admin/meta_box_course.php:453 ../template/admin/meta_box_course.php:510
+#: ../template/admin/meta_box_course.php:345 ../template/admin/meta_box_course.php:364 ../template/admin/meta_box_course.php:453
+#: ../template/admin/meta_box_course.php:510
 msgid "Enter label."
 msgstr "Ingresar etiqueta."
 
-#: ../template/admin/meta_box_course.php:379 ../template/admin/meta_box_course.php:563
-#: ../template/admin/meta_box_course.php:659 ../template/admin/meta_box_course_group.php:277
-#: ../template/admin/meta_box_course_group.php:380 ../template/admin/meta_box_price_rule.php:168
+#: ../template/admin/meta_box_course.php:379 ../template/admin/meta_box_course.php:563 ../template/admin/meta_box_course.php:659
+#: ../template/admin/meta_box_course_group.php:277 ../template/admin/meta_box_course_group.php:380 ../template/admin/meta_box_price_rule.php:168
 msgid "Add"
 msgstr "Agregar"
 
@@ -3692,10 +3640,8 @@ msgid "Table includes list of user defined fields used in client form."
 msgstr "La tabla incluye una lista de campos definidos por el usuario utilizados en el formulario de cliente."
 
 #: ../template/admin/meta_box_course.php:387
-msgid ""
-"In case of set field as \"Mandatory\", it is needed to fill \"Error message\" field, otherwise new field will "
-"not be created."
-msgstr ""
+msgid "In case of set field as \"Mandatory\", it is needed to fill \"Error message\" field, otherwise new field will not be created."
+msgstr "En el caso de campos marcados como \"Obligatorios\", es necesario completar el campo \"Mensaje de error\" o el nuevo campo no será creado."
 
 #: ../template/admin/meta_box_course.php:396
 msgid "Label of the field."
@@ -3747,15 +3693,15 @@ msgstr "Ingresar mensaje de error."
 
 #: ../template/admin/meta_box_course.php:574
 msgid "Table includes list of agreements needed to accept by course participant before sending the booking."
-msgstr ""
+msgstr "La tabla incluye un listado de condiciones que debe aceptar el participante antes de enviar su inscripción."
 
 #: ../template/admin/meta_box_course.php:575
 msgid "Each agreement consists of approval field (checkbox) and text of agreement."
-msgstr ""
+msgstr "Cada condición consiste de una casilla que debe ser marcada y un texto con la descripción."
 
 #: ../template/admin/meta_box_course.php:584
 msgid "Text of the agreement."
-msgstr "Texto del acuerdo."
+msgstr "Texto de la condición."
 
 #: ../template/admin/meta_box_course.php:609 ../template/admin/meta_box_course.php:636
 msgid "Enter text."
@@ -3783,11 +3729,11 @@ msgstr "Código de vídeo incrustado:"
 
 #: ../template/admin/meta_box_course.php:685
 msgid "\"Thank you\" page"
-msgstr "\"Gracias\" página"
+msgstr "Página de “Agradecimiento”"
 
 #: ../template/admin/meta_box_course.php:687
 msgid "Enter settings for \"Thank you\" page."
-msgstr "Ingrese la configuración para la página \"Gracias\"."
+msgstr "Ingrese la configuración para la página de “Agradecimiento”."
 
 #: ../template/admin/meta_box_course.php:690
 msgid "Header:"
@@ -3799,11 +3745,11 @@ msgstr "Subtítulo:"
 
 #: ../template/admin/meta_box_course.php:699
 msgid "Back button"
-msgstr "Botón Atrás"
+msgstr "Botón de retroceso"
 
 #: ../template/admin/meta_box_course.php:701
 msgid "Button displayed on the second step (payment) if there is no payment method."
-msgstr ""
+msgstr "Botón mostrado en el segundo paso (pago) si no hay un método de pago configurado."
 
 #: ../template/admin/meta_box_course.php:704
 msgid "Label:"
@@ -3811,7 +3757,7 @@ msgstr "Etiqueta:"
 
 #: ../template/admin/meta_box_course.php:708
 msgid "URL address:"
-msgstr "dirección URL:"
+msgstr "Dirección URL:"
 
 #: ../template/admin/meta_box_course_group.php:11
 msgid "Schedule"
@@ -3977,8 +3923,7 @@ msgstr "Nombre"
 msgid "Name."
 msgstr "Nombre."
 
-#: ../template/admin/meta_box_email_account.php:23 ../template/admin/meta_box_payment.php:114
-#: ../template/email_booking.php:162
+#: ../template/admin/meta_box_email_account.php:23 ../template/admin/meta_box_payment.php:114 ../template/email_booking.php:162
 msgid "E-mail address"
 msgstr "dirección de correo electrónico"
 
@@ -4043,9 +3988,7 @@ msgid "You can check result of debugging in Chrome/Firebug console (after submit
 msgstr ""
 
 #: ../template/admin/meta_box_email_account.php:103
-msgid ""
-"Enter receiver e-mail address and click on below button to send testing e-mail message using details of this "
-"account."
+msgid "Enter receiver e-mail address and click on below button to send testing e-mail message using details of this account."
 msgstr ""
 
 #: ../template/admin/meta_box_email_account.php:107
@@ -4140,13 +4083,11 @@ msgstr ""
 msgid "Enter all \"Custom\" details if you selected this payment type in the \"General\" tab."
 msgstr ""
 
-#: ../template/admin/meta_box_payment.php:43 ../template/admin/meta_box_payment.php:93
-#: ../template/admin/meta_box_payment.php:131
+#: ../template/admin/meta_box_payment.php:43 ../template/admin/meta_box_payment.php:93 ../template/admin/meta_box_payment.php:131
 msgid "\"Success\" URL address"
 msgstr "\"Éxito\" dirección URL"
 
-#: ../template/admin/meta_box_payment.php:44 ../template/admin/meta_box_payment.php:94
-#: ../template/admin/meta_box_payment.php:132
+#: ../template/admin/meta_box_payment.php:44 ../template/admin/meta_box_payment.php:94 ../template/admin/meta_box_payment.php:132
 msgid "Enter \"Success\" URL address."
 msgstr "Ingrese la dirección URL \"Éxito\"."
 
@@ -4167,9 +4108,7 @@ msgid "Enter publishable API key."
 msgstr "Ingrese la clave API publicable."
 
 #: ../template/admin/meta_box_payment.php:72
-msgid ""
-"Select at least one payment method - you need to set up each of them in your \"Stripe\" dashboard under "
-"\"Settings / Payment methods\":"
+msgid "Select at least one payment method - you need to set up each of them in your \"Stripe\" dashboard under \"Settings / Payment methods\":"
 msgstr ""
 
 #: ../template/admin/meta_box_payment.php:86
@@ -4245,15 +4184,11 @@ msgid "Enter the registration dates for which rule has to be applied or define p
 msgstr ""
 
 #: ../template/admin/meta_box_price_rule.php:70
-msgid ""
-"If the \"Price source\" option is set to \"Calculation based on registration dates\" plugin uses prices defined "
-"in this table."
+msgid "If the \"Price source\" option is set to \"Calculation based on registration dates\" plugin uses prices defined in this table."
 msgstr ""
 
 #: ../template/admin/meta_box_price_rule.php:71
-msgid ""
-"Otherwise, plugin checks whether the registration date is defined in this table and use prices from \"Prices\" "
-"table."
+msgid "Otherwise, plugin checks whether the registration date is defined in this table and use prices from \"Prices\" table."
 msgstr ""
 
 #: ../template/admin/meta_box_price_rule.php:78
@@ -4286,8 +4221,7 @@ msgstr "Seleccionar fuente de precio."
 
 #: ../template/admin/meta_box_price_rule.php:193
 msgid ""
-"This option determine, whether prices will be set up based on this rule only or plugin has to processing next "
-"rule based on priority (order)."
+"This option determine, whether prices will be set up based on this rule only or plugin has to processing next rule based on priority (order)."
 msgstr ""
 
 #: ../template/admin/meta_box_price_rule.php:206
@@ -4335,8 +4269,7 @@ msgid "Tax rate ID"
 msgstr "ID de tasa de impuesto"
 
 #: ../template/admin/meta_box_tax_rate.php:14
-msgid ""
-"Percentage value of tax rate. Floating point values are allowed, up to two decimal places in the range 0-100."
+msgid "Percentage value of tax rate. Floating point values are allowed, up to two decimal places in the range 0-100."
 msgstr ""
 
 #: ../template/admin/meta_box_tax_rate.php:20
@@ -4515,8 +4448,7 @@ msgid "Address format"
 msgstr "Formato de dirección"
 
 #: ../template/admin/option_general.php:38
-msgid ""
-"Determine in which way elements of the address (street name/number, city, country etc.) should be displayed."
+msgid "Determine in which way elements of the address (street name/number, city, country etc.) should be displayed."
 msgstr ""
 
 #: ../template/admin/option_general.php:41
@@ -4710,14 +4642,13 @@ msgstr ""
 
 #: ../woocommerce/checkout/form-pay.php:44
 msgid ""
-"Sorry, it seems that there are no available payment methods for your location. Please contact us if you require "
-"assistance or wish to make alternate arrangements."
+"Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
 msgstr ""
 
 #: ../woocommerce/checkout/thankyou.php:44
 msgid ""
-"Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. "
-"Please attempt your purchase again."
+"Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again."
 msgstr ""
 
 #: ../woocommerce/checkout/thankyou.php:48 ../woocommerce/checkout/thankyou.php:54

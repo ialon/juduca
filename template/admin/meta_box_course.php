@@ -8,8 +8,8 @@
 			<div class="ui-tabs">
 				<ul>
 					<li><a href="#meta-box-course-1"><?php esc_html_e('General','bookingo'); ?></a></li>
-					<li><a href="#meta-box-course-2"><?php esc_html_e('Payments','bookingo'); ?></a></li>
-					<li><a href="#meta-box-course-3"><?php esc_html_e('Notifications','bookingo'); ?></a></li>
+					<!-- <li><a href="#meta-box-course-2"><?php esc_html_e('Payments','bookingo'); ?></a></li> -->
+					<!-- <li><a href="#meta-box-course-3"><?php esc_html_e('Notifications','bookingo'); ?></a></li> -->
 					<li><a href="#meta-box-course-4"><?php esc_html_e('Form Elements','bookingo'); ?></a></li>
 					<li><a href="#meta-box-course-5"><?php esc_html_e('Agreements','bookingo'); ?></a></li>
 					<li><a href="#meta-box-course-6"><?php esc_html_e('Other','bookingo'); ?></a></li>
@@ -20,7 +20,7 @@
 		{
 ?>
 					<div class="to-notice-small to-notice-small-error">
-						<?php esc_html_e('You have to assign at least one group to this course. Otherwise booking form will not be displayed.') ?>
+						<?php esc_html_e('You have to assign at least one group to this course. Otherwise booking form will not be displayed.', 'bookingo') ?>
 					</div>
 <?php
 		}
@@ -94,7 +94,7 @@
 						</li>
 					</ul>
 				</div>
-				<div id="meta-box-course-2">
+				<!-- <div id="meta-box-course-2">
 					<ul class="to-form-field-list">
 						<li>
 							<h5>
@@ -119,8 +119,8 @@
 							</div>
 						</li>						
 					</ul>				
-				</div>
-				<div id="meta-box-course-3">
+				</div> -->
+				<!-- <div id="meta-box-course-3">
 					<div class="ui-tabs">
 						<ul>
 						   <li><a href="#meta-box-course-2-1"><?php esc_html_e('E-mail','bookingo'); ?></a></li>
@@ -310,7 +310,7 @@
 						   </ul>
 					   </div>
 					</div>
-				</div>
+				</div> -->
 				<div id="meta-box-course-4">
 					<ul class="to-form-field-list">
 						<li>
