@@ -358,8 +358,8 @@ class BGCBSCourseGroup
 			'cb'=> $column['cb'],
 			'title'=> esc_html__('Title','bookingo'),
 			'course_period'=>esc_html__('Course period','bookingo'),
-			'location'=>esc_html__('Location','bookingo'),
-			'price'=>esc_html__('Price','bookingo'),
+			// 'location'=>esc_html__('Location','bookingo'),
+			// 'price'=>esc_html__('Price','bookingo'),
 			'participant'=>esc_html__('Participants / Registered / Confirmed','bookingo')
 		);
    

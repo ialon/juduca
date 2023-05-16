@@ -36,7 +36,7 @@
 								<input class="to-timepicker-custom" type="text" name="<?php BGCBSHelper::getFormName('course_group_end_time'); ?>" value="<?php echo esc_attr($this->data['meta']['course_group_end_time']); ?>"/>
 							</div>
 						</li>
-						<li>
+						<!-- <li>
 							<h5>
 								<?php esc_html_e('Location','bookingo'); ?>
 								<?php echo BGCBSHelper::createAddPostLink(BGCBSLocation::getCPTName(),'Add new'); ?>
@@ -54,22 +54,22 @@
 ?>
 								</select>
 							</div>						
-						</li>
-						<li>
+						</li> -->
+						<!-- <li>
 							<h5><?php esc_html_e('Number of lessons','bookingo'); ?></h5>
 							<span class="to-legend"><?php esc_html_e('Enter number of lessons.','bookingo'); ?></span>
 							<div>
 								<input type="text" maxlength="5" name="<?php BGCBSHelper::getFormName('lesson_number'); ?>" value="<?php echo esc_attr($this->data['meta']['lesson_number']); ?>"/>
 							</div>
-						</li>
-						<li>
+						</li> -->
+						<!-- <li>
 							<h5><?php esc_html_e('Lesson length','bookingo'); ?></h5>
 							<span class="to-legend"><?php esc_html_e('Enter length of single lesson in minutes.','bookingo'); ?></span>
 							<div>
 								<input type="text" maxlength="5" name="<?php BGCBSHelper::getFormName('lesson_length'); ?>" value="<?php echo esc_attr($this->data['meta']['lesson_length']); ?>"/>
 							</div>
-						</li>	
- 						<li>
+						</li> -->
+ 						<!-- <li>
 							<h5>
 								<?php esc_html_e('Price','bookingo'); ?>
 								<?php echo BGCBSHelper::createAddPostLink(BGCBSTaxRate::getCPTName(),'Add new'); ?>
@@ -109,7 +109,7 @@
 									<label for="<?php BGCBSHelper::getFormName('price_net_display_enable_0'); ?>"><?php esc_html_e('Disable','bookingo'); ?></label>
 								</div>
 							</div>
-						</li>	
+						</li> -->
  						<li>
 							<h5><?php esc_html_e('Participants','bookingo'); ?></h5>
 							<span class="to-legend"><?php esc_html_e('Define participants details.','bookingo'); ?></span>
