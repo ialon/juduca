@@ -154,8 +154,8 @@ class BGCBSPriceRule
 					'menu_name'=>esc_html__('Pricing Rules','bookingo')
 				),	
 				'public'=>false,  
-				'show_ui'=>true, 
-				'show_in_menu'=>'edit.php?post_type='.BGCBSBooking::getCPTName(),
+				// 'show_ui'=>true,
+				// 'show_in_menu'=>'edit.php?post_type='.BGCBSBooking::getCPTName(),
 				'capability_type'=>'post',
 				'menu_position'=>2,
 				'hierarchical'=>false,  
