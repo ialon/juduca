@@ -1,0 +1,4725 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
+"POT-Creation-Date: 2022-08-16 13:21+0200\n"
+"PO-Revision-Date: 2023-05-15 19:11-0600\n"
+"Last-Translator: \n"
+"Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../class/BGCBS.Booking.class.php:40 ../class/BGCBS.Booking.class.php:43
+msgid "Bookings"
+msgstr "Inscripciones"
+
+#: ../class/BGCBS.Booking.class.php:41 ../class/BGCBS.WooCommerce.class.php:403
+msgid "Booking"
+msgstr "Inscripción"
+
+#: ../class/BGCBS.Booking.class.php:42
+msgid "Edit Booking"
+msgstr "Editar inscripción"
+
+#: ../class/BGCBS.Booking.class.php:44
+msgid "View Booking"
+msgstr "Ver inscripción"
+
+#: ../class/BGCBS.Booking.class.php:45
+msgid "Search Bookings"
+msgstr "Buscar inscripciones"
+
+#: ../class/BGCBS.Booking.class.php:46
+msgid "No Bookings Found"
+msgstr "No se encontraron inscripciones"
+
+#: ../class/BGCBS.Booking.class.php:47
+msgid "No Bookings Found in Trash"
+msgstr "No se encontraron inscripciones en la papelera"
+
+#: ../class/BGCBS.Booking.class.php:49 ../class/BGCBS.PaymentStripe.class.php:122
+#: ../class/BGCBS.Plugin.class.php:490
+msgid "Bookingo"
+msgstr "Juduca"
+
+#: ../class/BGCBS.Booking.class.php:84 ../class/BGCBS.BookingForm.class.php:87 ../class/BGCBS.Coupon.class.php:78
+#: ../class/BGCBS.Course.class.php:78 ../class/BGCBS.CourseGroup.class.php:78
+#: ../class/BGCBS.EmailAccount.class.php:97 ../class/BGCBS.Location.class.php:78
+#: ../class/BGCBS.Payment.class.php:106 ../class/BGCBS.PriceRule.class.php:180 ../class/BGCBS.TaxRate.class.php:78
+msgid "Main"
+msgstr "Principal"
+
+#: ../class/BGCBS.Booking.class.php:85 ../template/admin/meta_box_booking_form.php:76
+msgid "WooCommerce"
+msgstr ""
+
+#: ../class/BGCBS.Booking.class.php:114
+msgid "This booking has corresponding wooCommerce order. Click on button below to see its details in new window."
+msgstr ""
+
+#: ../class/BGCBS.Booking.class.php:116 ../class/BGCBS.WooCommerce.class.php:421
+msgid "Open booking"
+msgstr "Abrir inscripción"
+
+#: ../class/BGCBS.Booking.class.php:125
+msgid "This booking hasn't corresponding wooCommerce order."
+msgstr "Esta inscripción no tiene el pedido de wooCommerce correspondiente."
+
+#: ../class/BGCBS.Booking.class.php:340
+msgid "Cannot find booking with provided ID."
+msgstr "No se puede encontrar la inscripción con la identificación proporcionada."
+
+#: ../class/BGCBS.Booking.class.php:362
+msgid "Cannot find course or course group."
+msgstr "No se puede encontrar la disciplina o categoría."
+
+#: ../class/BGCBS.Booking.class.php:373
+msgid "Cannot find at least one payment method."
+msgstr "No se puede encontrar al menos un método de pago."
+
+#: ../class/BGCBS.Booking.class.php:382
+#, php-format
+msgid "It is not possible to pay for a booking with status %s."
+msgstr "No es posible pagar una inscripción con estado %s."
+
+#: ../class/BGCBS.Booking.class.php:390
+msgid "It is not possible to pay for a booking, because the price is hidden."
+msgstr "No es posible pagar una inscripción, porque el precio está oculto."
+
+#: ../class/BGCBS.Booking.class.php:398
+msgid "Booking is paid."
+msgstr "La inscripción está pagada."
+
+#: ../class/BGCBS.Booking.class.php:429
+msgid "Please select payment method."
+msgstr "Seleccione el método de pago."
+
+#: ../class/BGCBS.Booking.class.php:438
+msgid "Booking cannot be found."
+msgstr "No se puede encontrar la inscripción."
+
+#: ../class/BGCBS.Booking.class.php:463
+msgid "There is an error during processing the payment."
+msgstr "Hay un error durante el procesamiento del pago."
+
+#: ../class/BGCBS.Booking.class.php:500
+#, php-format
+msgid "New booking \"%s\" is received"
+msgstr "Se recibe nueva inscripción \"%s\""
+
+#: ../class/BGCBS.Booking.class.php:599 ../class/BGCBS.PaymentPaypal.class.php:155
+#: ../class/BGCBS.PaymentStripe.class.php:274
+#, php-format
+msgid "Booking \"%s\" has changed status to \"%s\""
+msgstr "La inscripción \"%s\" ha cambiado de estado a \"%s\""
+
+#: ../class/BGCBS.Booking.class.php:611
+#, php-format
+msgid "Booking #%s"
+msgstr "Inscripción #%s"
+
+#: ../class/BGCBS.Booking.class.php:650 ../class/BGCBS.BookingReport.class.php:79
+msgid "Booking status"
+msgstr "Estado de la inscripción"
+
+#: ../class/BGCBS.Booking.class.php:651 ../class/BGCBS.BookingForm.class.php:309
+#: ../class/BGCBS.BookingReport.class.php:80 ../class/BGCBS.Course.class.php:41 ../class/BGCBS.Course.class.php:52
+#: ../class/BGCBS.PriceRule.class.php:492 ../template/admin/meta_box_booking.php:40
+#: ../template/admin/meta_box_booking_form.php:38 ../template/admin/meta_box_price_rule.php:33
+#: ../template/email_booking.php:77
+msgid "Course"
+msgstr "Disciplina"
+
+#: ../class/BGCBS.Booking.class.php:652 ../class/BGCBS.BookingForm.class.php:648
+#: ../class/BGCBS.BookingReport.class.php:81 ../class/BGCBS.PriceRule.class.php:496
+#: ../template/admin/meta_box_booking.php:50 ../template/admin/meta_box_price_rule.php:50
+#: ../template/email_booking.php:81 ../vc/vc_bgcbs_course_group_list.php:23
+msgid "Course group"
+msgstr "Categoría"
+
+#: ../class/BGCBS.Booking.class.php:653 ../class/BGCBS.PriceRule.class.php:30
+#: ../template/admin/meta_box_booking.php:14 ../template/admin/meta_box_booking.php:126
+#: ../template/admin/meta_box_price_rule.php:254 ../template/email_booking.php:124
+msgid "Participant"
+msgstr "Participante"
+
+#: ../class/BGCBS.Booking.class.php:654 ../template/admin/meta_box_booking.php:15
+#: ../template/admin/meta_box_booking.php:149 ../template/email_booking.php:147
+msgid "Applicant"
+msgstr "Solicitante"
+
+#: ../class/BGCBS.Booking.class.php:749
+msgid "[All statuses]"
+msgstr "[Todos los estados]"
+
+#: ../class/BGCBS.Booking.class.php:775
+msgid "[All groups & courses]"
+msgstr "[Todas las categorías]"
+
+#: ../class/BGCBS.BookingForm.class.php:40 ../class/BGCBS.BookingForm.class.php:46
+#: ../class/BGCBS.BookingForm.class.php:52
+msgid "Booking Forms"
+msgstr "Formularios"
+
+#: ../class/BGCBS.BookingForm.class.php:41
+msgid "Booking Form"
+msgstr "Formulario"
+
+#: ../class/BGCBS.BookingForm.class.php:42 ../class/BGCBS.Coupon.class.php:42 ../class/BGCBS.Course.class.php:42
+#: ../class/BGCBS.CourseGroup.class.php:42 ../class/BGCBS.EmailAccount.class.php:61
+#: ../class/BGCBS.Location.class.php:42 ../class/BGCBS.Payment.class.php:70 ../class/BGCBS.PriceRule.class.php:144
+#: ../class/BGCBS.TaxRate.class.php:42
+msgid "Add New"
+msgstr "Crear nuevo"
+
+#: ../class/BGCBS.BookingForm.class.php:43
+msgid "Add New Booking Form"
+msgstr "Crear nuevo formulario"
+
+#: ../class/BGCBS.BookingForm.class.php:44
+msgid "Edit Booking Form"
+msgstr "Editar formulario"
+
+#: ../class/BGCBS.BookingForm.class.php:45
+msgid "New Booking Form"
+msgstr "Nuevo formulario"
+
+#: ../class/BGCBS.BookingForm.class.php:47
+msgid "View Booking Form"
+msgstr "Ver formulario"
+
+#: ../class/BGCBS.BookingForm.class.php:48
+msgid "Search Booking Forms"
+msgstr "Buscar formulario"
+
+#: ../class/BGCBS.BookingForm.class.php:49
+msgid "No Booking Forms Found"
+msgstr "No se encontraron formularios"
+
+#: ../class/BGCBS.BookingForm.class.php:50
+msgid "No Booking Forms Found in Trash"
+msgstr "No se encontraron formularios en la papelera"
+
+#: ../class/BGCBS.BookingForm.class.php:308 ../class/BGCBS.Course.class.php:439
+#: ../class/BGCBS.CourseGroup.class.php:359 ../class/BGCBS.Location.class.php:201
+#: ../class/BGCBS.Payment.class.php:268 ../class/BGCBS.TaxRate.class.php:234 ../template/email_booking.php:69
+msgid "Title"
+msgstr "Título"
+
+#: ../class/BGCBS.BookingForm.class.php:451
+msgid "Cannot find booking form with provided ID."
+msgstr "No se pudo encontrar un formulario con el ID dado."
+
+#: ../class/BGCBS.BookingForm.class.php:462
+msgid "Cannot find course assigned to this booking form."
+msgstr "No se pudo encontrar la disciplina asignada a este formulario."
+
+#: ../class/BGCBS.BookingForm.class.php:483
+msgid "Cannot find group assigned to this course."
+msgstr "No se pudo encontrar la categoría asignada a esta disciplina."
+
+#: ../class/BGCBS.BookingForm.class.php:644 ../class/BGCBS.CourseGroup.class.php:41
+msgid "Course Group"
+msgstr "Disciplina"
+
+#: ../class/BGCBS.BookingForm.class.php:673
+msgid "Course Participant Data"
+msgstr "Información del participante en la disciplina"
+
+#: ../class/BGCBS.BookingForm.class.php:680 ../class/BGCBS.BookingForm.class.php:722
+msgid "First Name *"
+msgstr "Primer nombre *"
+
+#: ../class/BGCBS.BookingForm.class.php:685 ../class/BGCBS.BookingForm.class.php:727
+msgid "Last Name *"
+msgstr "Apellido *"
+
+#: ../class/BGCBS.BookingForm.class.php:715
+msgid "Applicant Data"
+msgstr "Información del participante"
+
+#: ../class/BGCBS.BookingForm.class.php:736
+msgid "E-mail Address *"
+msgstr "Dirección de correo *"
+
+#: ../class/BGCBS.BookingForm.class.php:741
+msgid "Phone Number"
+msgstr "Teléfono"
+
+#: ../class/BGCBS.BookingForm.class.php:818
+#, php-format
+msgid "Every %s"
+msgstr "Cada %s"
+
+#: ../class/BGCBS.BookingForm.class.php:819 ../class/BGCBS.BookingForm.class.php:841
+#, php-format
+msgid "%s - %s"
+msgstr ""
+
+#: ../class/BGCBS.BookingForm.class.php:853
+msgid "Classes Schedule"
+msgstr "Horario de eventos"
+
+#: ../class/BGCBS.BookingForm.class.php:899
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#: ../class/BGCBS.BookingForm.class.php:908
+msgid "End date"
+msgstr "Fecha de finalización"
+
+#: ../class/BGCBS.BookingForm.class.php:917
+msgid "Course length"
+msgstr "Duración de la disciplina"
+
+#: ../class/BGCBS.BookingForm.class.php:918
+#, php-format
+msgid "%sx Lesson"
+msgstr "%sx Lección"
+
+#: ../class/BGCBS.BookingForm.class.php:926
+msgid "Class duration"
+msgstr "Duración de la clase"
+
+#: ../class/BGCBS.BookingForm.class.php:927
+#, php-format
+msgid "%s Minutes"
+msgstr "%s Minutos"
+
+#: ../class/BGCBS.BookingForm.class.php:954
+msgid "Course name"
+msgstr "Nombre de la disciplina"
+
+#: ../class/BGCBS.BookingForm.class.php:959
+msgid "Course / group name"
+msgstr "Nombre de la disciplina / categoría"
+
+#: ../class/BGCBS.BookingForm.class.php:985
+msgid "Info"
+msgstr "Información"
+
+#: ../class/BGCBS.BookingForm.class.php:1015 ../class/BGCBS.CourseGroup.class.php:361
+#: ../class/BGCBS.Location.class.php:41 ../class/BGCBS.Location.class.php:52
+#: ../template/admin/meta_box_course_group.php:41
+msgid "Location"
+msgstr "Ubicación"
+
+#: ../class/BGCBS.BookingForm.class.php:1031
+msgid "Contact"
+msgstr "Contacto"
+
+#: ../class/BGCBS.BookingForm.class.php:1057
+#, php-format
+msgid "Price (%s)"
+msgstr "Precio (%s)"
+
+#: ../class/BGCBS.BookingForm.class.php:1093
+msgid "Students"
+msgstr "Estudiantes"
+
+#: ../class/BGCBS.BookingForm.class.php:1094
+#, php-format
+msgid "%s enrolled of %s"
+msgstr "%s inscrito de %s"
+
+#: ../class/BGCBS.BookingForm.class.php:1109 ../template/admin/meta_box_booking_form.php:136
+msgid "Book a class"
+msgstr "Inscribirse en una disciplina"
+
+#: ../class/BGCBS.BookingForm.class.php:1137 ../template/admin/meta_box_booking.php:94
+msgid "Coupon"
+msgstr "Cupón"
+
+#: ../class/BGCBS.BookingForm.class.php:1141 ../template/admin/meta_box_coupon.php:14
+msgid "Coupon code"
+msgstr "Código de cupón"
+
+#: ../class/BGCBS.BookingForm.class.php:1145
+msgid "Apply coupon"
+msgstr "Aplicar cupón"
+
+#: ../class/BGCBS.BookingForm.class.php:1201
+msgid "Coupon is not valid."
+msgstr "El cupón no es válido."
+
+#: ../class/BGCBS.BookingForm.class.php:1206
+msgid "Coupon is valid. Discount has been granted."
+msgstr "El cupón es válido."
+
+#: ../class/BGCBS.BookingForm.class.php:1226
+msgid "Enter participant first name."
+msgstr "Ingrese el nombre del participante."
+
+#: ../class/BGCBS.BookingForm.class.php:1228
+msgid "Enter participant last name."
+msgstr "Ingrese el apellido del participante."
+
+#: ../class/BGCBS.BookingForm.class.php:1236
+msgid "Enter applicant first name."
+msgstr "Ingrese el nombre del solicitante."
+
+#: ../class/BGCBS.BookingForm.class.php:1238
+msgid "Enter applicant last name."
+msgstr "Ingrese el apellido del solicitante."
+
+#: ../class/BGCBS.BookingForm.class.php:1240
+msgid "Enter valid applicant e-mail address."
+msgstr "Ingrese una dirección de correo electrónico válida del solicitante."
+
+#: ../class/BGCBS.BookingForm.class.php:1253
+msgid "Approve all agreements."
+msgstr "Aprobar todos los acuerdos."
+
+#: ../class/BGCBS.BookingReport.class.php:33
+msgid "Export as CSV"
+msgstr "Exportar como CSV"
+
+#: ../class/BGCBS.BookingReport.class.php:78
+msgid "ID"
+msgstr "identificación"
+
+#: ../class/BGCBS.BookingReport.class.php:82
+msgid "Participant first name"
+msgstr "Nombre del participante"
+
+#: ../class/BGCBS.BookingReport.class.php:83
+msgid "Participant second name"
+msgstr "Segundo nombre del participante"
+
+#: ../class/BGCBS.BookingReport.class.php:84
+msgid "Applicant first name"
+msgstr "Nombre del solicitante"
+
+#: ../class/BGCBS.BookingReport.class.php:85
+msgid "Applicant second name"
+msgstr "Segundo nombre del solicitante"
+
+#: ../class/BGCBS.BookingReport.class.php:86
+msgid "Applicant e-mail address"
+msgstr "Dirección de correo electrónico del solicitante"
+
+#: ../class/BGCBS.BookingReport.class.php:87
+msgid "Applicant phone number"
+msgstr "Número de teléfono del solicitante"
+
+#: ../class/BGCBS.BookingReport.class.php:88 ../template/admin/option_exchange_rate.php:32
+#: ../template/admin/option_general.php:11 ../vc/vc_bgcbs_booking_form.php:33
+msgid "Currency"
+msgstr "Moneda"
+
+#: ../class/BGCBS.BookingReport.class.php:89
+msgid "Price net"
+msgstr "Precio neto"
+
+#: ../class/BGCBS.BookingReport.class.php:90
+msgid "Price gross"
+msgstr "Precio bruto"
+
+#: ../class/BGCBS.BookingReport.class.php:91
+msgid "Tax rate"
+msgstr "Tasa de impuestos"
+
+#: ../class/BGCBS.BookingStatus.class.php:14
+msgid "Pending (new)"
+msgstr "Pendiente (nuevo)"
+
+#: ../class/BGCBS.BookingStatus.class.php:15
+msgid "Processing (accepted)"
+msgstr "Procesando (aceptado)"
+
+#: ../class/BGCBS.BookingStatus.class.php:16
+msgid "Cancelled (rejected)"
+msgstr "Cancelado (rechazado)"
+
+#: ../class/BGCBS.BookingStatus.class.php:17
+msgid "Completed (confirmed)"
+msgstr "Completado (confirmado)"
+
+#: ../class/BGCBS.BookingStatus.class.php:18
+msgid "On hold"
+msgstr "En espera"
+
+#: ../class/BGCBS.BookingStatus.class.php:19
+msgid "Refunded"
+msgstr "Reembolsado"
+
+#: ../class/BGCBS.BookingStatus.class.php:20
+msgid "Failed"
+msgstr "Error"
+
+#: ../class/BGCBS.BookingStatus.class.php:36
+msgid "No synchronization"
+msgstr "Sin sincronización"
+
+#: ../class/BGCBS.BookingStatus.class.php:37
+msgid "One way: from wooCommerce to plugin"
+msgstr "Una forma: de wooCommerce a plugin"
+
+#: ../class/BGCBS.BookingStatus.class.php:38
+msgid "One way: from plugin to wooCommerce"
+msgstr "Una forma: del complemento a wooCommerce"
+
+#: ../class/BGCBS.Country.class.php:21
+msgid "Afghanistan"
+msgstr "Afganistán"
+
+#: ../class/BGCBS.Country.class.php:22
+msgid "Aland Islands"
+msgstr "Islas Aland"
+
+#: ../class/BGCBS.Country.class.php:23
+msgid "Albania"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:24
+msgid "Algeria"
+msgstr "Argelia"
+
+#: ../class/BGCBS.Country.class.php:25
+msgid "American Samoa"
+msgstr "Samoa Americana"
+
+#: ../class/BGCBS.Country.class.php:26
+msgid "Andorra"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:27
+msgid "Angola"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:28
+msgid "Anguilla"
+msgstr "Anguila"
+
+#: ../class/BGCBS.Country.class.php:29
+msgid "Antarctica"
+msgstr "Antártida"
+
+#: ../class/BGCBS.Country.class.php:30
+msgid "Antigua And Barbuda"
+msgstr "Antigua y Barbuda"
+
+#: ../class/BGCBS.Country.class.php:31
+msgid "Argentina"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:32
+msgid "Armenia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:33
+msgid "Aruba"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:34
+msgid "Australia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:35
+msgid "Austria"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:36
+msgid "Azerbaijan"
+msgstr "Azerbaiyán"
+
+#: ../class/BGCBS.Country.class.php:37
+msgid "Bahamas"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:38
+msgid "Bahrain"
+msgstr "Bahréin"
+
+#: ../class/BGCBS.Country.class.php:39
+msgid "Bangladesh"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:40
+msgid "Barbados"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:41
+msgid "Belarus"
+msgstr "Bielorrusia"
+
+#: ../class/BGCBS.Country.class.php:42
+msgid "Belgium"
+msgstr "Bélgica"
+
+#: ../class/BGCBS.Country.class.php:43
+msgid "Belize"
+msgstr "Belice"
+
+#: ../class/BGCBS.Country.class.php:44
+msgid "Benin"
+msgstr "Benín"
+
+#: ../class/BGCBS.Country.class.php:45
+msgid "Bermuda"
+msgstr "Bermudas"
+
+#: ../class/BGCBS.Country.class.php:46
+msgid "Bhutan"
+msgstr "Bután"
+
+#: ../class/BGCBS.Country.class.php:47
+msgid "Bolivia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:48
+msgid "Bosnia And Herzegovina"
+msgstr "Bosnia y Herzegovina"
+
+#: ../class/BGCBS.Country.class.php:49
+msgid "Botswana"
+msgstr "Botsuana"
+
+#: ../class/BGCBS.Country.class.php:50
+msgid "Bouvet Island"
+msgstr "Isla Bouvet"
+
+#: ../class/BGCBS.Country.class.php:51
+msgid "Brazil"
+msgstr "Brasil"
+
+#: ../class/BGCBS.Country.class.php:52
+msgid "British Indian Ocean Territory"
+msgstr "Territorio Británico del Océano Índico"
+
+#: ../class/BGCBS.Country.class.php:53
+msgid "Brunei Darussalam"
+msgstr "Brunéi Darussalam"
+
+#: ../class/BGCBS.Country.class.php:54
+msgid "Bulgaria"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:55
+msgid "Burkina Faso"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:56
+msgid "Burundi"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:57
+msgid "Cambodia"
+msgstr "Camboya"
+
+#: ../class/BGCBS.Country.class.php:58
+msgid "Cameroon"
+msgstr "Camerún"
+
+#: ../class/BGCBS.Country.class.php:59
+msgid "Canada"
+msgstr "Canadá"
+
+#: ../class/BGCBS.Country.class.php:60
+msgid "Cape Verde"
+msgstr "Cabo Verde"
+
+#: ../class/BGCBS.Country.class.php:61
+msgid "Cayman Islands"
+msgstr "Islas Caimán"
+
+#: ../class/BGCBS.Country.class.php:62
+msgid "Central African Republic"
+msgstr "República Centroafricana"
+
+#: ../class/BGCBS.Country.class.php:63
+msgid "Chad"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:64
+msgid "Chile"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:65
+msgid "China"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:66
+msgid "Christmas Island"
+msgstr "Isla de Navidad"
+
+#: ../class/BGCBS.Country.class.php:67
+msgid "Cocos (Keeling) Islands"
+msgstr "Islas Cocos (Keeling)"
+
+#: ../class/BGCBS.Country.class.php:68
+msgid "Colombia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:69
+msgid "Comoros"
+msgstr "Comoras"
+
+#: ../class/BGCBS.Country.class.php:70
+msgid "Congo"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:71
+msgid "Congo, Democratic Republic"
+msgstr "Congo, República Democrática"
+
+#: ../class/BGCBS.Country.class.php:72
+msgid "Cook Islands"
+msgstr "Islas Cook"
+
+#: ../class/BGCBS.Country.class.php:73
+msgid "Costa Rica"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:74
+msgid "Cote D'Ivoire"
+msgstr "Costa de Marfil"
+
+#: ../class/BGCBS.Country.class.php:75
+msgid "Croatia"
+msgstr "Croacia"
+
+#: ../class/BGCBS.Country.class.php:76
+msgid "Cuba"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:77
+msgid "Curaçao"
+msgstr "Curazao"
+
+#: ../class/BGCBS.Country.class.php:78
+msgid "Cyprus"
+msgstr "Chipre"
+
+#: ../class/BGCBS.Country.class.php:79
+msgid "Czech Republic"
+msgstr "República Checa"
+
+#: ../class/BGCBS.Country.class.php:80
+msgid "Denmark"
+msgstr "Dinamarca"
+
+#: ../class/BGCBS.Country.class.php:81
+msgid "Djibouti"
+msgstr "Yibuti"
+
+#: ../class/BGCBS.Country.class.php:82
+msgid "Dominica"
+msgstr "República Dominicana"
+
+#: ../class/BGCBS.Country.class.php:83
+msgid "Dominican Republic"
+msgstr "República Dominicana"
+
+#: ../class/BGCBS.Country.class.php:84
+msgid "Ecuador"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:85
+msgid "Egypt"
+msgstr "Egipto"
+
+#: ../class/BGCBS.Country.class.php:86
+msgid "El Salvador"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:87
+msgid "Equatorial Guinea"
+msgstr "Guinea Ecuatorial"
+
+#: ../class/BGCBS.Country.class.php:88
+msgid "Eritrea"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:89
+msgid "Estonia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:90
+msgid "Ethiopia"
+msgstr "Etiopía"
+
+#: ../class/BGCBS.Country.class.php:91
+msgid "Falkland Islands (Malvinas)"
+msgstr "Islas Malvinas (Falkland)"
+
+#: ../class/BGCBS.Country.class.php:92
+msgid "Faroe Islands"
+msgstr "Islas Feroe"
+
+#: ../class/BGCBS.Country.class.php:93
+msgid "Fiji"
+msgstr "Fiyi"
+
+#: ../class/BGCBS.Country.class.php:94
+msgid "Finland"
+msgstr "Finlandia"
+
+#: ../class/BGCBS.Country.class.php:95
+msgid "France"
+msgstr "Francia"
+
+#: ../class/BGCBS.Country.class.php:96
+msgid "French Guiana"
+msgstr "Guayana Francesa"
+
+#: ../class/BGCBS.Country.class.php:97
+msgid "French Polynesia"
+msgstr "Polinesia Francesa"
+
+#: ../class/BGCBS.Country.class.php:98
+msgid "French Southern Territories"
+msgstr "Territorios Australes Franceses"
+
+#: ../class/BGCBS.Country.class.php:99
+msgid "Gabon"
+msgstr "Gabón"
+
+#: ../class/BGCBS.Country.class.php:100
+msgid "Gambia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:101
+msgid "Georgia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:102
+msgid "Germany"
+msgstr "Alemania"
+
+#: ../class/BGCBS.Country.class.php:103
+msgid "Ghana"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:104
+msgid "Gibraltar"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:105
+msgid "Greece"
+msgstr "Grecia"
+
+#: ../class/BGCBS.Country.class.php:106
+msgid "Greenland"
+msgstr "Groenlandia"
+
+#: ../class/BGCBS.Country.class.php:107
+msgid "Grenada"
+msgstr "Granada"
+
+#: ../class/BGCBS.Country.class.php:108
+msgid "Guadeloupe"
+msgstr "Guadalupe"
+
+#: ../class/BGCBS.Country.class.php:109
+msgid "Guam"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:110
+msgid "Guatemala"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:111
+msgid "Guernsey"
+msgstr "Guernesey"
+
+#: ../class/BGCBS.Country.class.php:112
+msgid "Guinea"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:113
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bisáu"
+
+#: ../class/BGCBS.Country.class.php:114
+msgid "Guyana"
+msgstr "Guayana"
+
+#: ../class/BGCBS.Country.class.php:115
+msgid "Haiti"
+msgstr "Haití"
+
+#: ../class/BGCBS.Country.class.php:116
+msgid "Heard Island & Mcdonald Islands"
+msgstr "Isla Heard"
+
+#: ../class/BGCBS.Country.class.php:117
+msgid "Holy See (Vatican City State)"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:118
+msgid "Honduras"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:119
+msgid "Hong Kong"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:120
+msgid "Hungary"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:121
+msgid "Iceland"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:122
+msgid "India"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:123
+msgid "Indonesia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:124
+msgid "Iran, Islamic Republic Of"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:125
+msgid "Iraq"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:126
+msgid "Ireland"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:127
+msgid "Isle Of Man"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:128
+msgid "Israel"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:129
+msgid "Italy"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:130
+msgid "Jamaica"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:131
+msgid "Japan"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:132
+msgid "Jersey"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:133
+msgid "Jordan"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:134
+msgid "Kazakhstan"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:135
+msgid "Kenya"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:136
+msgid "Kiribati"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:137
+msgid "Korea"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:138
+msgid "Kuwait"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:139
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:140
+msgid "Lao People's Democratic Republic"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:141
+msgid "Latvia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:142
+msgid "Lebanon"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:143
+msgid "Lesotho"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:144
+msgid "Liberia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:145
+msgid "Libyan Arab Jamahiriya"
+msgstr "Jamahiriya Árabe Libia"
+
+#: ../class/BGCBS.Country.class.php:146
+msgid "Liechtenstein"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:147
+msgid "Lithuania"
+msgstr "Lituania"
+
+#: ../class/BGCBS.Country.class.php:148
+msgid "Luxembourg"
+msgstr "Luxemburgo"
+
+#: ../class/BGCBS.Country.class.php:149
+msgid "Macao"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:150
+msgid "Macedonia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:151
+msgid "Madagascar"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:152
+msgid "Malawi"
+msgstr "Malaui"
+
+#: ../class/BGCBS.Country.class.php:153
+msgid "Malaysia"
+msgstr "Malasia"
+
+#: ../class/BGCBS.Country.class.php:154
+msgid "Maldives"
+msgstr "Maldivas"
+
+#: ../class/BGCBS.Country.class.php:155
+msgid "Mali"
+msgstr "Malí"
+
+#: ../class/BGCBS.Country.class.php:156
+msgid "Malta"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:157
+msgid "Marshall Islands"
+msgstr "Islas Marshall"
+
+#: ../class/BGCBS.Country.class.php:158
+msgid "Martinique"
+msgstr "Martinica"
+
+#: ../class/BGCBS.Country.class.php:159
+msgid "Mauritania"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:160
+msgid "Mauritius"
+msgstr "Mauricio"
+
+#: ../class/BGCBS.Country.class.php:161
+msgid "Mayotte"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:162
+msgid "Mexico"
+msgstr "México"
+
+#: ../class/BGCBS.Country.class.php:163
+msgid "Micronesia, Federated States Of"
+msgstr "Micronesia, Estados Federados De"
+
+#: ../class/BGCBS.Country.class.php:164
+msgid "Moldova"
+msgstr "Moldavia"
+
+#: ../class/BGCBS.Country.class.php:165
+msgid "Monaco"
+msgstr "Mónaco"
+
+#: ../class/BGCBS.Country.class.php:166
+msgid "Mongolia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:167
+msgid "Montenegro"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:168
+msgid "Montserrat"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:169
+msgid "Morocco"
+msgstr "Marruecos"
+
+#: ../class/BGCBS.Country.class.php:170
+msgid "Mozambique"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:171
+msgid "Myanmar"
+msgstr "Birmania"
+
+#: ../class/BGCBS.Country.class.php:172
+msgid "Namibia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:173
+msgid "Nauru"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:174
+msgid "Nepal"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:175
+msgid "Netherlands"
+msgstr "Países Bajos"
+
+#: ../class/BGCBS.Country.class.php:176
+msgid "New Caledonia"
+msgstr "Nueva Caledonia"
+
+#: ../class/BGCBS.Country.class.php:177
+msgid "New Zealand"
+msgstr "Nueva Zelanda"
+
+#: ../class/BGCBS.Country.class.php:178
+msgid "Nicaragua"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:179
+msgid "Niger"
+msgstr "Níger"
+
+#: ../class/BGCBS.Country.class.php:180
+msgid "Nigeria"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:181
+msgid "Niue"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:182
+msgid "Norfolk Island"
+msgstr "Isla Norfolk"
+
+#: ../class/BGCBS.Country.class.php:183
+msgid "Northern Mariana Islands"
+msgstr "Islas Marianas del Norte"
+
+#: ../class/BGCBS.Country.class.php:184
+msgid "Norway"
+msgstr "Noruega"
+
+#: ../class/BGCBS.Country.class.php:185
+msgid "Oman"
+msgstr "Omán"
+
+#: ../class/BGCBS.Country.class.php:186
+msgid "Pakistan"
+msgstr "Pakistán"
+
+#: ../class/BGCBS.Country.class.php:187
+msgid "Palau"
+msgstr "Palaos"
+
+#: ../class/BGCBS.Country.class.php:188
+msgid "Palestinian Territory, Occupied"
+msgstr "Territorio Palestino, Ocupado"
+
+#: ../class/BGCBS.Country.class.php:189
+msgid "Panama"
+msgstr "Panamá"
+
+#: ../class/BGCBS.Country.class.php:190
+msgid "Papua New Guinea"
+msgstr "Papúa Nueva Guinea"
+
+#: ../class/BGCBS.Country.class.php:191
+msgid "Paraguay"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:192
+msgid "Peru"
+msgstr "Perú"
+
+#: ../class/BGCBS.Country.class.php:193
+msgid "Philippines"
+msgstr "Filipinas"
+
+#: ../class/BGCBS.Country.class.php:194
+msgid "Pitcairn"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:195
+msgid "Poland"
+msgstr "Polonia"
+
+#: ../class/BGCBS.Country.class.php:196
+msgid "Portugal"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:197
+msgid "Puerto Rico"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:198
+msgid "Qatar"
+msgstr "Catar"
+
+#: ../class/BGCBS.Country.class.php:199
+msgid "Reunion"
+msgstr "Reunión"
+
+#: ../class/BGCBS.Country.class.php:200
+msgid "Romania"
+msgstr "Rumania"
+
+#: ../class/BGCBS.Country.class.php:201
+msgid "Russian Federation"
+msgstr "Federación Rusa"
+
+#: ../class/BGCBS.Country.class.php:202
+msgid "Rwanda"
+msgstr "Ruanda"
+
+#: ../class/BGCBS.Country.class.php:203
+msgid "Saint Barthelemy"
+msgstr "San Bartolomé"
+
+#: ../class/BGCBS.Country.class.php:204
+msgid "Saint Helena"
+msgstr "Santa Elena"
+
+#: ../class/BGCBS.Country.class.php:205
+msgid "Saint Kitts And Nevis"
+msgstr "San Cristóbal y Nieves"
+
+#: ../class/BGCBS.Country.class.php:206
+msgid "Saint Lucia"
+msgstr "Santa Lucía"
+
+#: ../class/BGCBS.Country.class.php:207
+msgid "Saint Martin"
+msgstr "San Martín"
+
+#: ../class/BGCBS.Country.class.php:208
+msgid "Saint Pierre And Miquelon"
+msgstr "San Pedro y Miquelón"
+
+#: ../class/BGCBS.Country.class.php:209
+msgid "Saint Vincent And Grenadines"
+msgstr "San Vicente y las Granadinas"
+
+#: ../class/BGCBS.Country.class.php:210
+msgid "Samoa"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:211
+msgid "San Marino"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:212
+msgid "Sao Tome And Principe"
+msgstr "Santo Tomé y Príncipe"
+
+#: ../class/BGCBS.Country.class.php:213
+msgid "Saudi Arabia"
+msgstr "Arabia Saudita"
+
+#: ../class/BGCBS.Country.class.php:214
+msgid "Senegal"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:215
+msgid "Serbia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:216
+msgid "Seychelles"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:217
+msgid "Sierra Leone"
+msgstr "Sierra Leona"
+
+#: ../class/BGCBS.Country.class.php:218
+msgid "Singapore"
+msgstr "Singapur"
+
+#: ../class/BGCBS.Country.class.php:219
+msgid "Slovakia"
+msgstr "Eslovaquia"
+
+#: ../class/BGCBS.Country.class.php:220
+msgid "Slovenia"
+msgstr "Eslovenia"
+
+#: ../class/BGCBS.Country.class.php:221
+msgid "Solomon Islands"
+msgstr "Islas Salomón"
+
+#: ../class/BGCBS.Country.class.php:222
+msgid "Somalia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:223
+msgid "South Africa"
+msgstr "Sudáfrica"
+
+#: ../class/BGCBS.Country.class.php:224
+msgid "South Georgia And Sandwich Isl."
+msgstr "Islas Georgias del Sur y Sandwich."
+
+#: ../class/BGCBS.Country.class.php:225
+msgid "Spain"
+msgstr "España"
+
+#: ../class/BGCBS.Country.class.php:226
+msgid "Sri Lanka"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:227
+msgid "Sudan"
+msgstr "Sudán"
+
+#: ../class/BGCBS.Country.class.php:228
+msgid "Suriname"
+msgstr "Surinam"
+
+#: ../class/BGCBS.Country.class.php:229
+msgid "Svalbard And Jan Mayen"
+msgstr "Svalbard y Jan Mayen"
+
+#: ../class/BGCBS.Country.class.php:230
+msgid "Swaziland"
+msgstr "Suazilandia"
+
+#: ../class/BGCBS.Country.class.php:231
+msgid "Sweden"
+msgstr "Suecia"
+
+#: ../class/BGCBS.Country.class.php:232
+msgid "Switzerland"
+msgstr "Suiza"
+
+#: ../class/BGCBS.Country.class.php:233
+msgid "Syrian Arab Republic"
+msgstr "República Árabe Siria"
+
+#: ../class/BGCBS.Country.class.php:234
+msgid "Taiwan"
+msgstr "Taiwán"
+
+#: ../class/BGCBS.Country.class.php:235
+msgid "Tajikistan"
+msgstr "Tayikistán"
+
+#: ../class/BGCBS.Country.class.php:236
+msgid "Tanzania"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:237
+msgid "Thailand"
+msgstr "Tailandia"
+
+#: ../class/BGCBS.Country.class.php:238
+msgid "Timor-Leste"
+msgstr "Timor Oriental"
+
+#: ../class/BGCBS.Country.class.php:239
+msgid "Togo"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:240
+msgid "Tokelau"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:241
+msgid "Tonga"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:242
+msgid "Trinidad And Tobago"
+msgstr "Trinidad y Tobago"
+
+#: ../class/BGCBS.Country.class.php:243
+msgid "Tunisia"
+msgstr "Túnez"
+
+#: ../class/BGCBS.Country.class.php:244
+msgid "Turkey"
+msgstr "Turquía"
+
+#: ../class/BGCBS.Country.class.php:245
+msgid "Turkmenistan"
+msgstr "Turkmenistán"
+
+#: ../class/BGCBS.Country.class.php:246
+msgid "Turks And Caicos Islands"
+msgstr "Islas Turcas y Caicos"
+
+#: ../class/BGCBS.Country.class.php:247
+msgid "Tuvalu"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:248
+msgid "Uganda"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:249
+msgid "Ukraine"
+msgstr "Ucrania"
+
+#: ../class/BGCBS.Country.class.php:250
+msgid "United Arab Emirates"
+msgstr "Emiratos Árabes Unidos"
+
+#: ../class/BGCBS.Country.class.php:251
+msgid "United Kingdom"
+msgstr "Reino Unido"
+
+#: ../class/BGCBS.Country.class.php:252
+msgid "United States"
+msgstr "Estados Unidos"
+
+#: ../class/BGCBS.Country.class.php:253
+msgid "United States Outlying Islands"
+msgstr "Islas Periféricas de los Estados Unidos"
+
+#: ../class/BGCBS.Country.class.php:254
+msgid "Uruguay"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:255
+msgid "Uzbekistan"
+msgstr "Uzbekistán"
+
+#: ../class/BGCBS.Country.class.php:256
+msgid "Vanuatu"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:257
+msgid "Venezuela"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:258
+msgid "Viet Nam"
+msgstr "Vietnam"
+
+#: ../class/BGCBS.Country.class.php:259
+msgid "Virgin Islands, British"
+msgstr "Islas Vírgenes Británicas"
+
+#: ../class/BGCBS.Country.class.php:260
+msgid "Virgin Islands, U.S."
+msgstr "Islas Vírgenes, EE. UU."
+
+#: ../class/BGCBS.Country.class.php:261
+msgid "Wallis And Futuna"
+msgstr "Wallis y Futuna"
+
+#: ../class/BGCBS.Country.class.php:262
+msgid "Western Sahara"
+msgstr "Sáhara Occidental"
+
+#: ../class/BGCBS.Country.class.php:263
+msgid "Yemen"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:264
+msgid "Zambia"
+msgstr ""
+
+#: ../class/BGCBS.Country.class.php:265
+msgid "Zimbabwe"
+msgstr "Zimbabue"
+
+#: ../class/BGCBS.Coupon.class.php:40 ../class/BGCBS.Coupon.class.php:41 ../class/BGCBS.Coupon.class.php:46
+#: ../class/BGCBS.Coupon.class.php:52 ../template/admin/meta_box_booking_form.php:106
+msgid "Coupons"
+msgstr "Cupones"
+
+#: ../class/BGCBS.Coupon.class.php:43
+msgid "Add New Coupon"
+msgstr "Agregar nuevo cupón"
+
+#: ../class/BGCBS.Coupon.class.php:44
+msgid "Edit Coupon"
+msgstr "Editar cupón"
+
+#: ../class/BGCBS.Coupon.class.php:45
+msgid "New Coupon"
+msgstr "Nuevo cupón"
+
+#: ../class/BGCBS.Coupon.class.php:47
+msgid "View Coupon"
+msgstr "Ver cupón"
+
+#: ../class/BGCBS.Coupon.class.php:48
+msgid "Search Coupons"
+msgstr "Buscar cupones"
+
+#: ../class/BGCBS.Coupon.class.php:49
+msgid "No Coupons Found"
+msgstr "No se encontraron cupones"
+
+#: ../class/BGCBS.Coupon.class.php:50
+msgid "No Coupons in Trash"
+msgstr "No hay cupones en la papelera"
+
+#: ../class/BGCBS.Coupon.class.php:213
+msgid "Code"
+msgstr "Código"
+
+#: ../class/BGCBS.Coupon.class.php:214 ../template/admin/meta_box_coupon.php:28
+#: ../template/admin/option_coupon_creator.php:16
+msgid "Usage limit"
+msgstr "Límite de uso"
+
+#: ../class/BGCBS.Coupon.class.php:215 ../template/admin/meta_box_coupon.php:21
+msgid "Usage count"
+msgstr "Recuento de uso"
+
+#: ../class/BGCBS.Coupon.class.php:216 ../template/admin/meta_box_coupon.php:49
+#: ../template/admin/option_coupon_creator.php:23
+msgid "Percentage discount"
+msgstr "Porcentaje de descuento"
+
+#: ../class/BGCBS.Coupon.class.php:217 ../template/admin/meta_box_coupon.php:56
+#: ../template/admin/option_coupon_creator.php:31
+msgid "Fixed discount"
+msgstr "Descuento fijo"
+
+#: ../class/BGCBS.Coupon.class.php:218 ../template/admin/meta_box_coupon.php:35
+#: ../template/admin/option_coupon_creator.php:38
+msgid "Active from"
+msgstr "Activo desde"
+
+#: ../class/BGCBS.Coupon.class.php:219 ../template/admin/meta_box_coupon.php:42
+#: ../template/admin/option_coupon_creator.php:45
+msgid "Active to"
+msgstr "Activo a"
+
+#: ../class/BGCBS.Coupon.class.php:297 ../class/BGCBS.Plugin.class.php:533
+msgid "This field includes invalid value."
+msgstr "Este campo incluye un valor inválido."
+
+#: ../class/BGCBS.Coupon.class.php:315 ../class/BGCBS.Coupon.class.php:316
+msgid "Invalid dates range."
+msgstr "Rango de fechas inválido."
+
+#: ../class/BGCBS.Course.class.php:40 ../class/BGCBS.Course.class.php:46
+msgid "Courses"
+msgstr "Disciplinas"
+
+#: ../class/BGCBS.Course.class.php:43
+msgid "Add New Course"
+msgstr "Agregar nuevo disciplina"
+
+#: ../class/BGCBS.Course.class.php:44
+msgid "Edit Course"
+msgstr "Editar disciplina"
+
+#: ../class/BGCBS.Course.class.php:45
+msgid "New Course"
+msgstr "Nueva disciplina"
+
+#: ../class/BGCBS.Course.class.php:47
+msgid "View Course"
+msgstr "Ver disciplina"
+
+#: ../class/BGCBS.Course.class.php:48
+msgid "Search Course"
+msgstr "Buscar disciplina"
+
+#: ../class/BGCBS.Course.class.php:49
+msgid "No Course Found"
+msgstr "No se encontró ninguna disciplina"
+
+#: ../class/BGCBS.Course.class.php:50
+msgid "No Course in Trash"
+msgstr "No hay disciplinas en la papelera"
+
+#: ../class/BGCBS.Course.class.php:147 ../class/BGCBS.Course.class.php:154 ../class/BGCBS.Course.class.php:159
+msgid "New booking has been received."
+msgstr "Se ha recibido una nueva inscripción."
+
+#: ../class/BGCBS.Course.class.php:164
+msgid "Thank you for sending your booking!"
+msgstr "¡Gracias por enviar su inscripción!"
+
+#: ../class/BGCBS.Course.class.php:167
+msgid "Back To Home"
+msgstr "Volver a casa"
+
+#: ../class/BGCBS.Course.class.php:440
+msgid "Group"
+msgstr "Categoría"
+
+#: ../class/BGCBS.Course.class.php:441
+msgid "Registration period"
+msgstr "Período de registro"
+
+#: ../class/BGCBS.Course.class.php:442 ../template/admin/meta_box_payment.php:71
+msgid "Payment methods"
+msgstr "Métodos de pago"
+
+#: ../class/BGCBS.Course.class.php:475 ../class/BGCBS.CourseGroup.class.php:390
+#, php-format
+msgid "From: %s"
+msgstr "De: %s"
+
+#: ../class/BGCBS.Course.class.php:480 ../class/BGCBS.CourseGroup.class.php:395
+#, php-format
+msgid "To: %s"
+msgstr "Para: %s"
+
+#: ../class/BGCBS.CourseAgreement.class.php:94
+msgid "Consent and Statements"
+msgstr "Consentimiento y declaraciones"
+
+#: ../class/BGCBS.CourseAgreement.class.php:125 ../class/BGCBS.CourseAgreement.class.php:134
+#: ../template/admin/meta_box_course.php:469 ../template/admin/meta_box_course.php:526
+#: ../template/admin/meta_box_course.php:615 ../template/admin/meta_box_course.php:642
+#: ../template/admin/meta_box_tax_rate.php:24
+msgid "Yes"
+msgstr "Sí"
+
+#: ../class/BGCBS.CourseAgreement.class.php:125 ../class/BGCBS.CourseAgreement.class.php:134
+#: ../template/admin/meta_box_course.php:470 ../template/admin/meta_box_course.php:527
+#: ../template/admin/meta_box_course.php:616 ../template/admin/meta_box_course.php:643
+#: ../template/admin/meta_box_tax_rate.php:26
+msgid "No"
+msgstr ""
+
+#: ../class/BGCBS.CourseFormElement.class.php:14 ../template/admin/meta_box_course.php:582
+msgid "Text"
+msgstr "Texto"
+
+#: ../class/BGCBS.CourseFormElement.class.php:15
+msgid "Textarea"
+msgstr "Área de texto"
+
+#: ../class/BGCBS.CourseFormElement.class.php:16
+msgid "Select list"
+msgstr "Seleccionar lista"
+
+#: ../class/BGCBS.CourseFormElement.class.php:17
+msgid "Checkbox"
+msgstr "Casilla de verificación"
+
+#: ../class/BGCBS.CourseFormElement.class.php:117
+msgid "- Course Participant Data -"
+msgstr "- Datos del participante de la disciplina -"
+
+#: ../class/BGCBS.CourseFormElement.class.php:122
+msgid "- Applicant Data -"
+msgstr "- Datos del solicitante -"
+
+#: ../class/BGCBS.CourseGroup.class.php:40 ../class/BGCBS.CourseGroup.class.php:46
+#: ../class/BGCBS.CourseGroup.class.php:52
+msgid "Course Groups"
+msgstr "Categorías"
+
+#: ../class/BGCBS.CourseGroup.class.php:43
+msgid "Add New Course Group"
+msgstr "Agregar nueva categoría"
+
+#: ../class/BGCBS.CourseGroup.class.php:44
+msgid "Edit Course Group"
+msgstr "Editar categoría"
+
+#: ../class/BGCBS.CourseGroup.class.php:45
+msgid "New Course Group"
+msgstr "Nueva categoría"
+
+#: ../class/BGCBS.CourseGroup.class.php:47
+msgid "View Course Group"
+msgstr "Ver categoría"
+
+#: ../class/BGCBS.CourseGroup.class.php:48
+msgid "Search Course Group"
+msgstr "Buscar categoría"
+
+#: ../class/BGCBS.CourseGroup.class.php:49
+msgid "No Course Group Found"
+msgstr "No se encontró ninguna categoría"
+
+#: ../class/BGCBS.CourseGroup.class.php:50
+msgid "No Course Group in Trash"
+msgstr "No hay categorías en la Papelera"
+
+#: ../class/BGCBS.CourseGroup.class.php:360
+msgid "Course period"
+msgstr "Período de disciplina"
+
+#: ../class/BGCBS.CourseGroup.class.php:362 ../template/admin/meta_box_booking.php:59
+#: ../template/admin/meta_box_course_group.php:74 ../template/admin/meta_box_price_rule.php:94
+#: ../template/email_booking.php:89
+msgid "Price"
+msgstr "Precio"
+
+#: ../class/BGCBS.CourseGroup.class.php:363
+msgid "Participants / Registered / Confirmed"
+msgstr "Participantes / Registrados / Confirmados"
+
+#: ../class/BGCBS.CourseGroup.class.php:429
+#, php-format
+msgid " (+%s%% tax)"
+msgstr " (+%s%% impuesto)"
+
+#: ../class/BGCBS.CourseGroup.class.php:643
+msgid "/ person"
+msgstr "/ persona"
+
+#: ../class/BGCBS.CourseGroup.class.php:697
+#, php-format
+msgid "%s enrolled"
+msgstr "%s inscrito"
+
+#: ../class/BGCBS.CourseGroup.class.php:701 ../class/BGCBS.CourseGroup.class.php:716
+#, php-format
+msgid "%sx lesson"
+msgstr "%sx lección"
+
+#: ../class/BGCBS.Currency.class.php:23
+msgid "Afghan afghani"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:28
+msgid "Albanian lek"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:33
+msgid "Algerian dinar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:38
+msgid "Angolan kwanza"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:43
+msgid "Argentine peso"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:48
+msgid "Armenian dram"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:53
+msgid "Aruban florin"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:58
+msgid "Australian dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:64
+msgid "Azerbaijani manat"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:69
+msgid "Bahamian dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:74
+msgid "Bahraini dinar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:80
+msgid "Bangladeshi taka"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:85
+msgid "Barbadian dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:90
+msgid "Belarusian ruble"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:95
+msgid "Belize dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:100
+msgid "Bhutanese ngultrum"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:105
+msgid "Bolivian boliviano"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:110
+msgid "Bosnia and Herzegovina konvertibilna marka"
+msgstr "Bosnia y Herzegovina konvertibilna marka"
+
+#: ../class/BGCBS.Currency.class.php:115
+msgid "Botswana pula"
+msgstr "Botsuana pula"
+
+#: ../class/BGCBS.Currency.class.php:121
+msgid "Brazilian real"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:126
+msgid "British pound"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:133
+msgid "Brunei dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:139
+msgid "Bulgarian lev"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:144
+msgid "Burundi franc"
+msgstr "Franco de Burundi"
+
+#: ../class/BGCBS.Currency.class.php:149
+msgid "Cayman Islands dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:154
+msgid "Cambodian riel"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:159
+msgid "Canadian dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:165
+msgid "Cape Verdean escudo"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:170 ../class/BGCBS.Currency.class.php:175
+msgid "Central African CFA franc"
+msgstr "Franco CFA de África Central"
+
+#: ../class/BGCBS.Currency.class.php:180
+msgid "CFP franc"
+msgstr "Franco CFP"
+
+#: ../class/BGCBS.Currency.class.php:185
+msgid "Chilean peso"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:190
+msgid "Chinese renminbi"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:195
+msgid "Colombian peso"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:200
+msgid "Comorian franc"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:205
+msgid "Congolese franc"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:210
+msgid "Costa Rican colon"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:215
+msgid "Croatian kuna"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:220
+msgid "Cuban peso"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:225
+msgid "Czech koruna"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:230
+msgid "Danish krone"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:235
+msgid "Djiboutian franc"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:240
+msgid "Dominican peso"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:246
+msgid "East Caribbean dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:251
+msgid "Egyptian pound"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:256
+msgid "Eritrean nakfa"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:261
+msgid "Estonian kroon"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:266
+msgid "Ethiopian birr"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:271
+msgid "European euro"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:277
+msgid "Falkland Islands pound"
+msgstr "Libra de las Islas Malvinas"
+
+#: ../class/BGCBS.Currency.class.php:282
+msgid "Fijian dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:288
+msgid "Gambian dalasi"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:293
+msgid "Georgian lari"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:298
+msgid "Ghanaian cedi"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:303
+msgid "Gibraltar pound"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:308
+msgid "Guatemalan quetzal"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:314
+msgid "Guinean franc"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:319
+msgid "Guyanese dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:324
+msgid "Haitian gourde"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:329
+msgid "Honduran lempira"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:335
+msgid "Hong Kong dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:341
+msgid "Hungarian forint"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:346
+msgid "Icelandic krona"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:351
+msgid "Indian rupee"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:357
+msgid "Indonesian rupiah"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:363
+msgid "Iranian rial"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:369
+msgid "Iraqi dinar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:375
+msgid "Israeli new sheqel"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:381
+msgid "Yemeni rial"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:386
+msgid "Jamaican dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:391
+msgid "Japanese yen"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:397
+msgid "Jordanian dinar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:402
+msgid "Kazakhstani tenge"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:407
+msgid "Kenyan shilling"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:412
+msgid "Kyrgyzstani som"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:417
+msgid "Kuwaiti dinar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:423
+msgid "Lao kip"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:428
+msgid "Latvian lats"
+msgstr "Lat letón"
+
+#: ../class/BGCBS.Currency.class.php:433
+msgid "Lebanese lira"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:438
+msgid "Lesotho loti"
+msgstr "Lesoto loti"
+
+#: ../class/BGCBS.Currency.class.php:443
+msgid "Liberian dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:448
+msgid "Libyan dinar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:453
+msgid "Lithuanian litas"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:458
+msgid "Macanese pataca"
+msgstr "Pataca de Macao"
+
+#: ../class/BGCBS.Currency.class.php:463
+msgid "Macedonian denar"
+msgstr "Denar macedonio"
+
+#: ../class/BGCBS.Currency.class.php:468
+msgid "Malagasy ariary"
+msgstr "Ariary malgache"
+
+#: ../class/BGCBS.Currency.class.php:473
+msgid "Malaysian ringgit"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:479
+msgid "Malawian kwacha"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:484
+msgid "Maldivian rufiyaa"
+msgstr "Rufiyaa de Maldivas"
+
+#: ../class/BGCBS.Currency.class.php:489
+msgid "Mauritanian ouguiya"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:494
+msgid "Mauritian rupee"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:499
+msgid "Mexican peso"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:505
+msgid "Myanma kyat"
+msgstr "Kyat de Myanmar"
+
+#: ../class/BGCBS.Currency.class.php:510
+msgid "Moldovan leu"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:515
+msgid "Mongolian tugrik"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:520
+msgid "Moroccan dirham"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:526
+msgid "Mozambican metical"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:531
+msgid "Namibian dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:536
+msgid "Nepalese rupee"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:541
+msgid "Netherlands Antillean gulden"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:546
+msgid "New Taiwan dollar"
+msgstr "Nuevo dólar taiwanés"
+
+#: ../class/BGCBS.Currency.class.php:552
+msgid "New Zealand dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:558
+msgid "Nicaraguan cordoba"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:564
+msgid "Nigerian naira"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:570
+msgid "North Korean won"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:576
+msgid "Norwegian krone"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:581
+msgid "Omani rial"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:587
+msgid "Paanga"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:592
+msgid "Pakistani rupee"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:598
+msgid "Panamanian balboa"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:604
+msgid "Papua New Guinean kina"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:609
+msgid "Paraguayan guarani"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:614
+msgid "Peruvian nuevo sol"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:619
+msgid "Philippine peso"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:624
+msgid "Polish zloty"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:631
+msgid "Qatari riyal"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:637
+msgid "Romanian leu"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:642
+msgid "Russian ruble"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:647
+msgid "Rwandan franc"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:652
+msgid "Saint Helena pound"
+msgstr "Libra de Santa Elena"
+
+#: ../class/BGCBS.Currency.class.php:657
+msgid "Samoan tala"
+msgstr "Tala de Samoa"
+
+#: ../class/BGCBS.Currency.class.php:662
+msgid "Sao Tome and Principe dobra"
+msgstr "Santo Tomé y Príncipe dobra"
+
+#: ../class/BGCBS.Currency.class.php:667
+msgid "Saudi riyal"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:673
+msgid "Seychellois rupee"
+msgstr "Rupia de Seychelles"
+
+#: ../class/BGCBS.Currency.class.php:678
+msgid "Serbian dinar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:683
+msgid "Sierra Leonean leone"
+msgstr "Sierra Leona Leona"
+
+#: ../class/BGCBS.Currency.class.php:688
+msgid "Singapore dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:694
+msgid "Syrian pound"
+msgstr "Libra siria"
+
+#: ../class/BGCBS.Currency.class.php:700
+msgid "Slovak koruna"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:705
+msgid "Solomon Islands dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:710
+msgid "Somali shilling"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:715
+msgid "South African rand"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:720
+msgid "South Korean won"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:726
+msgid "Special Drawing Rights"
+msgstr "Derechos especiales de giro"
+
+#: ../class/BGCBS.Currency.class.php:731
+msgid "Sri Lankan rupee"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:737
+msgid "Sudanese pound"
+msgstr "Libra sudanesa"
+
+#: ../class/BGCBS.Currency.class.php:742
+msgid "Surinamese dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:747
+msgid "Swazi lilangeni"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:752
+msgid "Swedish krona"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:757
+msgid "Swiss franc"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:763
+msgid "Tajikistani somoni"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:768
+msgid "Tanzanian shilling"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:773
+msgid "Thai baht"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:778
+msgid "Trinidad and Tobago dollar"
+msgstr "Dólar de Trinidad y Tobago"
+
+#: ../class/BGCBS.Currency.class.php:783
+msgid "Tunisian dinar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:788
+msgid "Turkish new lira"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:793
+msgid "Turkmen manat"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:798
+msgid "UAE dirham"
+msgstr "dirham de los Emiratos Árabes Unidos"
+
+#: ../class/BGCBS.Currency.class.php:803
+msgid "Ugandan shilling"
+msgstr "Chelín ugandés"
+
+#: ../class/BGCBS.Currency.class.php:808
+msgid "Ukrainian hryvnia"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:813
+msgid "United States dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:821
+msgid "Uruguayan peso"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:826
+msgid "Uzbekistani som"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:831
+msgid "Vanuatu vatu"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:836
+msgid "Venezuelan bolivar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:841
+msgid "Vietnamese dong"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:846
+msgid "West African CFA franc"
+msgstr "Franco CFA de África Occidental"
+
+#: ../class/BGCBS.Currency.class.php:851
+msgid "Zambian kwacha"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:856
+msgid "Zimbabwean dollar"
+msgstr ""
+
+#: ../class/BGCBS.Currency.class.php:861
+msgid "Chinese Yuan"
+msgstr "Yuan chino"
+
+#: ../class/BGCBS.EmailAccount.class.php:14 ../template/admin/meta_box_booking_form.php:47
+#: ../template/admin/meta_box_booking_form.php:97 ../template/admin/meta_box_course.php:40
+#: ../template/admin/meta_box_course.php:109 ../template/admin/meta_box_course_group.php:51
+#: ../template/admin/meta_box_course_group.php:89 ../template/admin/meta_box_course_group.php:157
+msgid "- None -"
+msgstr "- Ninguno -"
+
+#: ../class/BGCBS.EmailAccount.class.php:15
+msgid "SSL"
+msgstr ""
+
+#: ../class/BGCBS.EmailAccount.class.php:16
+msgid "TLS"
+msgstr ""
+
+#: ../class/BGCBS.EmailAccount.class.php:59 ../class/BGCBS.EmailAccount.class.php:60
+#: ../class/BGCBS.EmailAccount.class.php:65 ../class/BGCBS.EmailAccount.class.php:71
+msgid "E-mail Accounts"
+msgstr "Cuentas de correo electrónico"
+
+#: ../class/BGCBS.EmailAccount.class.php:62
+msgid "Add New E-mail Account"
+msgstr "Agregar nueva cuenta de correo electrónico"
+
+#: ../class/BGCBS.EmailAccount.class.php:63
+msgid "Edit E-mail Account"
+msgstr "Editar cuenta de correo electrónico"
+
+#: ../class/BGCBS.EmailAccount.class.php:64
+msgid "New E-mail Account"
+msgstr "Nueva cuenta de correo electrónico"
+
+#: ../class/BGCBS.EmailAccount.class.php:66
+msgid "View E-mail Account"
+msgstr "Ver cuenta de correo electrónico"
+
+#: ../class/BGCBS.EmailAccount.class.php:67
+msgid "Search E-mail Accounts"
+msgstr "Buscar cuentas de correo electrónico"
+
+#: ../class/BGCBS.EmailAccount.class.php:68
+msgid "No E-mail Accounts Found"
+msgstr "No se encontraron cuentas de correo electrónico"
+
+#: ../class/BGCBS.EmailAccount.class.php:69
+msgid "No E-mail Accounts in Trash"
+msgstr "No hay cuentas de correo electrónico en la Papelera"
+
+#: ../class/BGCBS.EmailAccount.class.php:230 ../template/admin/meta_box_email_account.php:8
+msgid "Sender"
+msgstr "Remitente"
+
+#: ../class/BGCBS.EmailAccount.class.php:278
+msgid "Cannot set details needed to send an e-mail message."
+msgstr "No se pueden configurar los detalles necesarios para enviar un mensaje de correo electrónico."
+
+#: ../class/BGCBS.EmailAccount.class.php:332
+msgid "Test message"
+msgstr "Mensaje de prueba"
+
+#: ../class/BGCBS.ExchangeRateProvider.class.php:14 ../template/admin/option.php:67
+msgid "Fixer.io"
+msgstr "Fijador.io"
+
+#: ../class/BGCBS.ExchangeRateProvider.class.php:67
+msgid "Exchange rates have been imported. Page will be reloaded..."
+msgstr "Los tipos de cambio han sido importados."
+
+#: ../class/BGCBS.ExchangeRateProvider.class.php:74
+msgid "Exchange rates cannot be imported."
+msgstr "No se pueden importar tipos de cambio."
+
+#: ../class/BGCBS.Helper.class.php:415 ../template/admin/meta_box_booking_form.php:33
+msgid "Copied!"
+msgstr "¡Copiado!"
+
+#: ../class/BGCBS.Helper.class.php:415 ../template/admin/meta_box_booking_form.php:33
+msgid "Copy"
+msgstr "Copiar"
+
+#: ../class/BGCBS.Helper.class.php:481
+#, php-format
+msgid "Post #%s"
+msgstr "Publicación #%s"
+
+#: ../class/BGCBS.Location.class.php:40 ../class/BGCBS.Location.class.php:46
+msgid "Locations"
+msgstr "Ubicaciones"
+
+#: ../class/BGCBS.Location.class.php:43
+msgid "Add New Location"
+msgstr "Agregar nueva ubicación"
+
+#: ../class/BGCBS.Location.class.php:44
+msgid "Edit Location"
+msgstr "Editar ubicación"
+
+#: ../class/BGCBS.Location.class.php:45
+msgid "New Location"
+msgstr "Nueva ubicación"
+
+#: ../class/BGCBS.Location.class.php:47
+msgid "View Location"
+msgstr "Ver ubicación"
+
+#: ../class/BGCBS.Location.class.php:48
+msgid "Search Location"
+msgstr "Buscar ubicación"
+
+#: ../class/BGCBS.Location.class.php:49
+msgid "No Location Found"
+msgstr "No se encontró ninguna ubicación"
+
+#: ../class/BGCBS.Location.class.php:50
+msgid "No Location in Trash"
+msgstr "Sin ubicación en la papelera"
+
+#: ../class/BGCBS.Location.class.php:202 ../template/admin/meta_box_location.php:9
+msgid "Address"
+msgstr "Dirección"
+
+#: ../class/BGCBS.LogManger.class.php:18
+msgid "Sending an notification about new booking to the customer."
+msgstr "Enviando una notificación sobre nueva inscripción al cliente."
+
+#: ../class/BGCBS.LogManger.class.php:22
+msgid "Sending an notification about new booking on defined e-mail addresses."
+msgstr "Enviando una notificación sobre una nueva inscripción en las direcciones de correo electrónico definidas."
+
+#: ../class/BGCBS.LogManger.class.php:26
+msgid "Sending an notification about new changes in the booking to the customer."
+msgstr ""
+
+#: ../class/BGCBS.LogManger.class.php:33 ../class/BGCBS.LogManger.class.php:40
+#: ../class/BGCBS.LogManger.class.php:47
+msgid "Sending an notification about new booking on defined phone number."
+msgstr "Enviando una notificación sobre una nueva inscripción en un número de teléfono definido."
+
+#: ../class/BGCBS.LogManger.class.php:54 ../class/BGCBS.LogManger.class.php:65
+msgid "Creating a payment."
+msgstr "Creando un pago."
+
+#: ../class/BGCBS.LogManger.class.php:58 ../class/BGCBS.LogManger.class.php:69
+msgid "Receiving a payment."
+msgstr "Recibiendo un pago."
+
+#: ../class/BGCBS.LogManger.class.php:76
+msgid "Importing an exchange rates."
+msgstr "Importando tipos de cambio."
+
+#: ../class/BGCBS.Notice.class.php:46
+msgid "Error"
+msgstr ""
+
+#: ../class/BGCBS.Notice.class.php:47
+msgid "Changes can not be saved."
+msgstr "Los cambios no se pueden guardar."
+
+#: ../class/BGCBS.Notice.class.php:51
+msgid "Success"
+msgstr "Éxito"
+
+#: ../class/BGCBS.Notice.class.php:52
+msgid "All changes have been saved."
+msgstr "Todos los cambios han sido guardados."
+
+#: ../class/BGCBS.Payment.class.php:14 ../template/admin/meta_box_payment.php:10
+msgid "Custom"
+msgstr "Personalizado"
+
+#: ../class/BGCBS.Payment.class.php:15 ../template/admin/meta_box_payment.php:11 ../template/admin/option.php:63
+msgid "Stripe"
+msgstr ""
+
+#: ../class/BGCBS.Payment.class.php:16 ../template/admin/meta_box_payment.php:12 ../template/admin/option.php:64
+msgid "PayPal"
+msgstr ""
+
+#: ../class/BGCBS.Payment.class.php:68 ../class/BGCBS.Payment.class.php:74 ../class/BGCBS.Payment.class.php:80
+#: ../template/admin/meta_box_course.php:11 ../template/admin/meta_box_course.php:101
+#: ../template/admin/option.php:51
+msgid "Payments"
+msgstr "Pagos"
+
+#: ../class/BGCBS.Payment.class.php:69 ../template/admin/meta_box_booking.php:18 ../template/email_booking.php:110
+msgid "Payment"
+msgstr "Pago"
+
+#: ../class/BGCBS.Payment.class.php:71
+msgid "Add New Payment"
+msgstr "Agregar nuevo pago"
+
+#: ../class/BGCBS.Payment.class.php:72
+msgid "Edit Payment"
+msgstr "Editar pago"
+
+#: ../class/BGCBS.Payment.class.php:73
+msgid "New Payment"
+msgstr "Nuevo Pago"
+
+#: ../class/BGCBS.Payment.class.php:75
+msgid "View Payment"
+msgstr "Ver pago"
+
+#: ../class/BGCBS.Payment.class.php:76
+msgid "Search Payment"
+msgstr "Buscar pago"
+
+#: ../class/BGCBS.Payment.class.php:77
+msgid "No Payment Found"
+msgstr "No se encontró pago"
+
+#: ../class/BGCBS.Payment.class.php:78
+msgid "No Payment in Trash"
+msgstr "Sin Pago en Papelera"
+
+#: ../class/BGCBS.Payment.class.php:269
+msgid "Payment type"
+msgstr "Tipo de pago"
+
+#: ../class/BGCBS.PaymentPaypal.class.php:40 ../class/BGCBS.WooCommerce.class.php:158
+#, php-format
+msgid "Payment for course %s"
+msgstr "Pago de la disciplina %s"
+
+#: ../class/BGCBS.PaymentPaypal.class.php:66 ../class/BGCBS.PaymentStripe.class.php:186
+msgid "[1] Receiving a payment."
+msgstr "[1] Recibir un pago."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:71
+#, php-format
+msgid "[2] Booking %s is not found."
+msgstr "[2] No se encuentra la inscripción %s."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:80
+#, php-format
+msgid "[3] Payment %s is not found."
+msgstr "[3] No se encuentra el pago %s."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:95
+#, php-format
+msgid "[4] Sending a request: %s on address: %s."
+msgstr "[4] Enviando una solicitud: %s a la dirección: %s."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:108
+#, php-format
+msgid "[5] Error %s during processing cURL request."
+msgstr "[5] Error %s durante el procesamiento de la solicitud cURL."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:114
+#, php-format
+msgid "[6] Request cannot be verified: %s."
+msgstr "[6] No se puede verificar la solicitud: %s."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:127 ../class/BGCBS.PaymentStripe.class.php:246
+msgid "[7] Updating a booking about transaction details."
+msgstr "[7] Actualización de una inscripción sobre los detalles de la transacción."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:138 ../class/BGCBS.PaymentStripe.class.php:257
+msgid "[11] Updating booking status."
+msgstr "[11] Actualizando el estado de la inscripción."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:165
+msgid "[10] Cannot find a valid booking status."
+msgstr "[10] No se puede encontrar un estado de inscripción válido."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:170 ../class/BGCBS.PaymentStripe.class.php:285
+msgid "[9] Changing status of the booking after successful payment is off."
+msgstr "[9] El cambio de estado de la inscripción después de que el pago exitoso esté desactivado."
+
+#: ../class/BGCBS.PaymentPaypal.class.php:175
+#, php-format
+msgid "[8] Payment status %s is not supported."
+msgstr "[8] El estado de pago %s no es compatible."
+
+#: ../class/BGCBS.PaymentStripe.class.php:14
+msgid "Alipay"
+msgstr ""
+
+#: ../class/BGCBS.PaymentStripe.class.php:15
+msgid "Cards"
+msgstr "Tarjetas"
+
+#: ../class/BGCBS.PaymentStripe.class.php:16
+msgid "iDEAL"
+msgstr ""
+
+#: ../class/BGCBS.PaymentStripe.class.php:17
+msgid "FPX"
+msgstr ""
+
+#: ../class/BGCBS.PaymentStripe.class.php:18
+msgid "Bacs Direct Debit"
+msgstr "Débito Directo Bacs"
+
+#: ../class/BGCBS.PaymentStripe.class.php:19
+msgid "Bancontact"
+msgstr "Bancontacto"
+
+#: ../class/BGCBS.PaymentStripe.class.php:20
+msgid "Giropay"
+msgstr ""
+
+#: ../class/BGCBS.PaymentStripe.class.php:21
+msgid "Przelewy24"
+msgstr ""
+
+#: ../class/BGCBS.PaymentStripe.class.php:22
+msgid "EPS"
+msgstr ""
+
+#: ../class/BGCBS.PaymentStripe.class.php:23
+msgid "Sofort"
+msgstr ""
+
+#: ../class/BGCBS.PaymentStripe.class.php:24
+msgid "SEPA Direct Debit"
+msgstr "Débito Directo SEPA"
+
+#: ../class/BGCBS.PaymentStripe.class.php:199
+msgid "[2] Error during parsing data in JSON format."
+msgstr "[2] Error durante el análisis de datos en formato JSON."
+
+#: ../class/BGCBS.PaymentStripe.class.php:206
+msgid "[4] Checking a booking."
+msgstr "[4] Comprobación de una inscripción."
+
+#: ../class/BGCBS.PaymentStripe.class.php:232
+#, php-format
+msgid "[6] Booking %s is found."
+msgstr "[6] Se encontró la inscripción %s."
+
+#: ../class/BGCBS.PaymentStripe.class.php:290
+#, php-format
+msgid "[8] Event %s is not supported."
+msgstr "[8] El evento %s no es compatible."
+
+#: ../class/BGCBS.PaymentStripe.class.php:298
+#, php-format
+msgid "[5] Booking %s is not found."
+msgstr "[5] No se encuentra la inscripción %s."
+
+#: ../class/BGCBS.PaymentStripe.class.php:306
+#, php-format
+msgid "[3] Event %s is not supported."
+msgstr "[3] El evento %s no es compatible."
+
+#: ../class/BGCBS.Performance.class.php:24
+#, php-format
+msgid "Total time: %s"
+msgstr "Tiempo total: %s"
+
+#: ../class/BGCBS.Plugin.class.php:605
+msgid ""
+"Seems, that demo data has been imported. To make sure if this process has been successfully completed,please "
+"check below content of buffer returned by external applications."
+msgstr ""
+
+#: ../class/BGCBS.Plugin.class.php:610
+msgid "Dummy data cannot be imported."
+msgstr "No se pueden importar datos ficticios."
+
+#: ../class/BGCBS.PriceRule.class.php:14
+msgid "Set directly in rule"
+msgstr "Establecer directamente en la regla"
+
+#: ../class/BGCBS.PriceRule.class.php:15
+msgid "Calculation based on registration dates"
+msgstr "Cálculo basado en fechas de registro"
+
+#: ../class/BGCBS.PriceRule.class.php:20
+msgid "- Inherited -"
+msgstr "- Heredado -"
+
+#: ../class/BGCBS.PriceRule.class.php:21
+msgid "Set value"
+msgstr "Establecer valor"
+
+#: ../class/BGCBS.PriceRule.class.php:22
+msgid "Increase by value"
+msgstr "Aumentar por valor"
+
+#: ../class/BGCBS.PriceRule.class.php:23
+msgid "Decrease by value"
+msgstr "Disminuir por valor"
+
+#: ../class/BGCBS.PriceRule.class.php:24
+msgid "Increase by percentage"
+msgstr "Aumentar por porcentaje"
+
+#: ../class/BGCBS.PriceRule.class.php:25
+msgid "Decrease by percentage"
+msgstr "Disminuir por porcentaje"
+
+#: ../class/BGCBS.PriceRule.class.php:142 ../class/BGCBS.PriceRule.class.php:148
+#: ../class/BGCBS.PriceRule.class.php:154
+msgid "Pricing Rules"
+msgstr "Reglas de precios"
+
+#: ../class/BGCBS.PriceRule.class.php:143
+msgid "Pricing Rule"
+msgstr "Regla de fijación de precios"
+
+#: ../class/BGCBS.PriceRule.class.php:145
+msgid "Add New Pricing Rule"
+msgstr "Agregar nueva regla de precios"
+
+#: ../class/BGCBS.PriceRule.class.php:146
+msgid "Edit Pricing Rule"
+msgstr "Editar regla de precios"
+
+#: ../class/BGCBS.PriceRule.class.php:147
+msgid "New Pricing Rule"
+msgstr "Nueva regla de precios"
+
+#: ../class/BGCBS.PriceRule.class.php:149
+msgid "View Pricing Rule"
+msgstr "Ver regla de precios"
+
+#: ../class/BGCBS.PriceRule.class.php:150
+msgid "Search Pricing Rules"
+msgstr "Reglas de precios de búsqueda"
+
+#: ../class/BGCBS.PriceRule.class.php:151
+msgid "No Pricing Rules Found"
+msgstr "No se encontraron reglas de precios"
+
+#: ../class/BGCBS.PriceRule.class.php:152
+msgid "No Pricing Rules in Trash"
+msgstr "No hay reglas de precios en la papelera"
+
+#: ../class/BGCBS.PriceRule.class.php:383
+msgid "Conditions and details"
+msgstr "Condiciones y detalles"
+
+#: ../class/BGCBS.PriceRule.class.php:384 ../template/admin/meta_box_price_rule.php:10
+#: ../template/admin/meta_box_price_rule.php:205
+msgid "Prices"
+msgstr "Precios"
+
+#: ../class/BGCBS.PriceRule.class.php:411 ../class/BGCBS.PriceRule.class.php:479
+msgid " - "
+msgstr ""
+
+#: ../class/BGCBS.PriceRule.class.php:488 ../vc/vc_bgcbs_booking_form.php:24
+msgid "Booking form"
+msgstr "Formulario de inscripción"
+
+#: ../class/BGCBS.PriceRule.class.php:500 ../template/admin/meta_box_price_rule.php:67
+msgid "Registration dates"
+msgstr "Fechas de registro"
+
+#: ../class/BGCBS.PriceRule.class.php:504
+msgid "Priority"
+msgstr "Prioridad"
+
+#: ../class/BGCBS.PriceRule.class.php:508 ../template/admin/meta_box_price_rule.php:191
+msgid "Next rule processing"
+msgstr "Siguiente proceso de regla"
+
+#: ../class/BGCBS.PriceRule.class.php:509 ../template/admin/meta_box_booking_form.php:83
+#: ../template/admin/meta_box_booking_form.php:110 ../template/admin/meta_box_booking_form.php:124
+#: ../template/admin/meta_box_course.php:90 ../template/admin/meta_box_course.php:162
+#: ../template/admin/meta_box_course.php:172 ../template/admin/meta_box_course.php:186
+#: ../template/admin/meta_box_course.php:235 ../template/admin/meta_box_course.php:284
+#: ../template/admin/meta_box_course_group.php:107 ../template/admin/meta_box_course_group.php:124
+#: ../template/admin/meta_box_email_account.php:38 ../template/admin/meta_box_email_account.php:94
+#: ../template/admin/meta_box_payment.php:125 ../template/admin/meta_box_price_rule.php:198
+#: ../template/admin/option_payment.php:25 ../vc/vc_bgcbs_course_group_list.php:36
+msgid "Enable"
+msgstr "Habilitar"
+
+#: ../class/BGCBS.PriceRule.class.php:509 ../template/admin/meta_box_booking_form.php:85
+#: ../template/admin/meta_box_booking_form.php:112 ../template/admin/meta_box_booking_form.php:126
+#: ../template/admin/meta_box_course.php:92 ../template/admin/meta_box_course.php:164
+#: ../template/admin/meta_box_course.php:174 ../template/admin/meta_box_course.php:188
+#: ../template/admin/meta_box_course.php:237 ../template/admin/meta_box_course.php:286
+#: ../template/admin/meta_box_course_group.php:109 ../template/admin/meta_box_course_group.php:126
+#: ../template/admin/meta_box_email_account.php:40 ../template/admin/meta_box_email_account.php:96
+#: ../template/admin/meta_box_payment.php:127 ../template/admin/meta_box_price_rule.php:200
+#: ../template/admin/option_payment.php:27 ../vc/vc_bgcbs_course_group_list.php:37
+msgid "Disable"
+msgstr "Deshabilitar"
+
+#: ../class/BGCBS.PriceRule.class.php:522
+msgid "Price source type"
+msgstr "Tipo de fuente de precio"
+
+#: ../class/BGCBS.PriceRule.class.php:560
+msgid "Inherited"
+msgstr "Heredado"
+
+#: ../class/BGCBS.TaxRate.class.php:40 ../class/BGCBS.TaxRate.class.php:41 ../class/BGCBS.TaxRate.class.php:46
+#: ../class/BGCBS.TaxRate.class.php:52
+msgid "Tax Rates"
+msgstr "Tasas de impuestos"
+
+#: ../class/BGCBS.TaxRate.class.php:43
+msgid "Add New Tax Rate"
+msgstr "Agregar nueva tasa de impuestos"
+
+#: ../class/BGCBS.TaxRate.class.php:44
+msgid "Edit Tax Rate"
+msgstr "Editar tasa de impuestos"
+
+#: ../class/BGCBS.TaxRate.class.php:45
+msgid "New Tax Rate"
+msgstr "Nueva tasa de impuestos"
+
+#: ../class/BGCBS.TaxRate.class.php:47
+msgid "View Tax Rate"
+msgstr "Ver tasa de impuestos"
+
+#: ../class/BGCBS.TaxRate.class.php:48
+msgid "Search Tax Rates"
+msgstr "Buscar tasas de impuestos"
+
+#: ../class/BGCBS.TaxRate.class.php:49
+msgid "No Tax Rates Found"
+msgstr "No se encontraron tasas de impuestos"
+
+#: ../class/BGCBS.TaxRate.class.php:50
+msgid "No Tax Rates in Trash"
+msgstr "Sin tasas de impuestos en la papelera"
+
+#: ../class/BGCBS.TaxRate.class.php:235 ../template/admin/meta_box_price_rule.php:236
+#: ../template/admin/meta_box_tax_rate.php:13
+msgid "Value"
+msgstr "Valor"
+
+#: ../class/BGCBS.WooCommerce.class.php:195
+#, php-format
+msgid "Tax %.2f"
+msgstr "Impuesto %.2f"
+
+#: ../class/BGCBS.WooCommerce.class.php:419
+msgid ""
+"This order has corresponding booking from \"Bookingo\" plugin. Click on button below to see its details in new "
+"window."
+msgstr ""
+
+#: ../library/parsers.php:42 ../library/parsers.php:72 ../library/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr "Hubo un error al leer este archivo WXR"
+
+#: ../library/parsers.php:43
+msgid "Details are shown above. The importer will now try again with a different parser..."
+msgstr ""
+
+#: ../library/parsers.php:84 ../library/parsers.php:89 ../library/parsers.php:279 ../library/parsers.php:468
+msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: ../library/wordpress-importer.php:134 ../library/wordpress-importer.php:143
+#: ../library/wordpress-importer.php:194 ../library/wordpress-importer.php:198
+#: ../library/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr "Lo siento, ha habido un error."
+
+#: ../library/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr "El archivo no existe, inténtalo de nuevo."
+
+#: ../library/wordpress-importer.php:178
+msgid "All done."
+msgstr "Todo hecho."
+
+#: ../library/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr "¡Diviértete!"
+
+#: ../library/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr "Recuerde actualizar las contraseñas y roles de los usuarios importados."
+
+#: ../library/wordpress-importer.php:199
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that this was caused by a permissions "
+"problem."
+msgstr ""
+
+#: ../library/wordpress-importer.php:215
+#, php-format
+msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
+msgstr ""
+
+#: ../library/wordpress-importer.php:240
+#, php-format
+msgid "Failed to import author %s. Their posts will be attributed to the current user."
+msgstr ""
+
+#: ../library/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr "Asignar autores"
+
+#: ../library/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may want to reassign the author of the "
+"imported item to an existing user of this site. For example, you may want to import all the entries as "
+"<code>admin</code>s entries."
+msgstr ""
+
+#: ../library/wordpress-importer.php:269
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role "
+"will be set as %s. Manually changing the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: ../library/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr "Importar adjuntos"
+
+#: ../library/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr "Descargar e importar archivos adjuntos"
+
+#: ../library/wordpress-importer.php:286
+msgid "Submit"
+msgstr "Enviar"
+
+#: ../library/wordpress-importer.php:299
+msgid "Import author:"
+msgstr "Importar autor:"
+
+#: ../library/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr "o cree un nuevo usuario con nombre de inicio de sesión:"
+
+#: ../library/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr "como nuevo usuario:"
+
+#: ../library/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr "asignar publicaciones a un usuario existente:"
+
+#: ../library/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr "o asignar publicaciones a un usuario existente:"
+
+#: ../library/wordpress-importer.php:324
+msgid "- Select -"
+msgstr "- Seleccionar -"
+
+#: ../library/wordpress-importer.php:374
+#, php-format
+msgid "Failed to create new user for %s. Their posts will be attributed to the current user."
+msgstr ""
+
+#: ../library/wordpress-importer.php:425
+#, php-format
+msgid "Failed to import category %s"
+msgstr "Error al importar la categoría %s"
+
+#: ../library/wordpress-importer.php:465
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr "Error al importar la etiqueta de publicación %s"
+
+#: ../library/wordpress-importer.php:511 ../library/wordpress-importer.php:652
+#, php-format
+msgid "Failed to import %s %s"
+msgstr "Error al importar %s %s"
+
+#: ../library/wordpress-importer.php:537
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr "Error la importar &#8220;%s&#8221;: Tipo de post inválido %s"
+
+#: ../library/wordpress-importer.php:559
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr "%s &#8220;%s&#8221; ya existe."
+
+#: ../library/wordpress-importer.php:618
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: ../library/wordpress-importer.php:793
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: ../library/wordpress-importer.php:800
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: ../library/wordpress-importer.php:887
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: ../library/wordpress-importer.php:900
+msgid "Invalid file type"
+msgstr ""
+
+#: ../library/wordpress-importer.php:944
+msgid "Remote server did not respond"
+msgstr ""
+
+#: ../library/wordpress-importer.php:950
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: ../library/wordpress-importer.php:957
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: ../library/wordpress-importer.php:962
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: ../library/wordpress-importer.php:968
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: ../library/wordpress-importer.php:1067
+msgid "Import WordPress"
+msgstr ""
+
+#: ../library/wordpress-importer.php:1074
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to ensure compatibility with newer "
+"export files."
+msgstr ""
+
+#: ../library/wordpress-importer.php:1089
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom "
+"fields, categories, and tags into this site."
+msgstr ""
+
+#: ../library/wordpress-importer.php:1090
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: ../template/admin/meta_box_booking.php:13 ../template/admin/meta_box_booking_form.php:8
+#: ../template/admin/meta_box_coupon.php:8 ../template/admin/meta_box_course.php:10
+#: ../template/admin/meta_box_course_group.php:10 ../template/admin/meta_box_payment.php:9
+#: ../template/admin/meta_box_tax_rate.php:7 ../template/admin/option.php:45 ../template/email_booking.php:62
+msgid "General"
+msgstr ""
+
+#: ../template/admin/meta_box_booking.php:16
+msgid "Form elements"
+msgstr "Elementos de formulario"
+
+#: ../template/admin/meta_box_booking.php:17 ../template/admin/meta_box_booking.php:227
+#: ../template/admin/meta_box_course.php:14 ../template/admin/meta_box_course.php:572
+msgid "Agreements"
+msgstr "Acuerdos"
+
+#: ../template/admin/meta_box_booking.php:22
+msgid "Booking ID"
+msgstr "ID de inscripción"
+
+#: ../template/admin/meta_box_booking.php:24 ../template/admin/meta_box_booking.php:371
+#: ../template/admin/meta_box_course.php:182 ../template/admin/meta_box_course.php:231
+#: ../template/admin/meta_box_course.php:280 ../template/email_booking.php:73
+msgid "Status"
+msgstr "Estado"
+
+#: ../template/admin/meta_box_booking.php:25
+msgid "Booking status."
+msgstr "Estado de la inscripción."
+
+#: ../template/admin/meta_box_booking.php:43
+msgid "Course name."
+msgstr "Nombre de la disciplina."
+
+#: ../template/admin/meta_box_booking.php:53
+msgid "Course group."
+msgstr "Categoría."
+
+#: ../template/admin/meta_box_booking.php:61
+msgid "Price details."
+msgstr "Detalles de precio."
+
+#: ../template/admin/meta_box_booking.php:64
+msgid "Net."
+msgstr "Neto."
+
+#: ../template/admin/meta_box_booking.php:70
+msgid "Gross."
+msgstr "Bruto."
+
+#: ../template/admin/meta_box_booking.php:76 ../template/admin/meta_box_course_group.php:85
+msgid "Tax rate."
+msgstr "Tasa de impuesto."
+
+#: ../template/admin/meta_box_booking.php:79 ../template/admin/meta_box_booking.php:102
+msgid "Edit"
+msgstr "Editar"
+
+#: ../template/admin/meta_box_booking.php:83
+msgid "Label displayed instead of price"
+msgstr "Etiqueta mostrada en lugar de precio"
+
+#: ../template/admin/meta_box_booking.php:96
+msgid "Coupon details."
+msgstr "Detalles del cupón."
+
+#: ../template/admin/meta_box_booking.php:99
+msgid "Code."
+msgstr "Código."
+
+#: ../template/admin/meta_box_booking.php:106
+msgid "Percentage discount."
+msgstr "Porcentaje de descuento."
+
+#: ../template/admin/meta_box_booking.php:112 ../template/admin/option_coupon_creator.php:32
+msgid "Fixed discount."
+msgstr "Descuento fijo."
+
+#: ../template/admin/meta_box_booking.php:128
+msgid "Participant details."
+msgstr "Detalles del participante."
+
+#: ../template/admin/meta_box_booking.php:131 ../template/admin/meta_box_booking.php:154
+msgid "First name."
+msgstr "Nombre."
+
+#: ../template/admin/meta_box_booking.php:137 ../template/admin/meta_box_booking.php:160
+msgid "Last name."
+msgstr "Apellido."
+
+#: ../template/admin/meta_box_booking.php:151
+msgid "Applicant details."
+msgstr "Detalles del solicitante."
+
+#: ../template/admin/meta_box_booking.php:166 ../template/admin/meta_box_email_account.php:24
+msgid "E-mail address."
+msgstr "Dirección de correo electrónico."
+
+#: ../template/admin/meta_box_booking.php:172
+msgid "Phone number."
+msgstr "Número de teléfono."
+
+#: ../template/admin/meta_box_booking.php:213
+msgid "There are no form elements in this booking."
+msgstr "No hay elementos de formulario en esta inscripción."
+
+#: ../template/admin/meta_box_booking.php:228
+msgid "List of agreements from course."
+msgstr "Lista de acuerdos de la disciplina."
+
+#: ../template/admin/meta_box_booking.php:235
+msgid "Agreement"
+msgstr "Acuerdo"
+
+#: ../template/admin/meta_box_booking.php:237
+msgid "Text of agreement."
+msgstr "Texto del acuerdo."
+
+#: ../template/admin/meta_box_booking.php:243
+msgid "Answer"
+msgstr "Respuesta"
+
+#: ../template/admin/meta_box_booking.php:245
+msgid "Applicant answer."
+msgstr "Respuesta del solicitante."
+
+#: ../template/admin/meta_box_booking.php:261
+msgid "There are no agreements in this course."
+msgstr "No hay acuerdos en esta categoría."
+
+#: ../template/admin/meta_box_booking.php:274
+msgid "Payment details"
+msgstr "Detalles de pago"
+
+#: ../template/admin/meta_box_booking.php:276
+msgid "Payment details."
+msgstr "Detalles de pago."
+
+#: ../template/admin/meta_box_booking.php:279
+msgid "Payment method:"
+msgstr "Método de pago:"
+
+#: ../template/admin/meta_box_booking.php:284
+msgid "Transactions"
+msgstr "Transacciones"
+
+#: ../template/admin/meta_box_booking.php:286
+msgid "List of registered transactions for this payment."
+msgstr "Lista de transacciones registradas para este pago."
+
+#: ../template/admin/meta_box_booking.php:300 ../template/admin/meta_box_booking.php:365
+msgid "Transaction ID"
+msgstr "ID de transacción"
+
+#: ../template/admin/meta_box_booking.php:301 ../template/admin/meta_box_booking.php:366
+msgid "Transaction ID."
+msgstr "ID de transacción."
+
+#: ../template/admin/meta_box_booking.php:306 ../template/admin/meta_box_course.php:402
+#: ../template/admin/meta_box_payment.php:18
+msgid "Type"
+msgstr "Tipo"
+
+#: ../template/admin/meta_box_booking.php:307 ../template/admin/meta_box_booking.php:372
+msgid "Type."
+msgstr "Tipo."
+
+#: ../template/admin/meta_box_booking.php:312 ../template/admin/meta_box_booking.php:377
+#: ../template/admin/meta_box_course_group.php:291
+msgid "Date"
+msgstr "Fecha"
+
+#: ../template/admin/meta_box_booking.php:313 ../template/admin/meta_box_booking.php:378
+#: ../template/admin/meta_box_course.php:59 ../template/admin/meta_box_course.php:74
+#: ../template/admin/meta_box_course_group.php:19 ../template/admin/meta_box_course_group.php:31
+#: ../template/admin/meta_box_course_group.php:293
+msgid "Date."
+msgstr "Fecha."
+
+#: ../template/admin/meta_box_booking.php:318 ../template/admin/meta_box_booking.php:383
+msgid "Details"
+msgstr "Detalles"
+
+#: ../template/admin/meta_box_booking.php:319 ../template/admin/meta_box_course.php:183
+#: ../template/admin/meta_box_course.php:232 ../template/admin/meta_box_course.php:281
+msgid "Status."
+msgstr "Estado."
+
+#: ../template/admin/meta_box_booking.php:335 ../template/admin/meta_box_booking.php:400
+msgid "Toggle details"
+msgstr "Alternar detalles"
+
+#: ../template/admin/meta_box_booking.php:384
+msgid "Details."
+msgstr "Detalles."
+
+#: ../template/admin/meta_box_booking_form.php:9
+msgid "Look & feel"
+msgstr "Mira"
+
+#: ../template/admin/meta_box_booking_form.php:10
+msgid "Styles"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:18
+msgid "You have to assign one course to this booking form. Otherwise booking form will not be displayed."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:24
+msgid "Booking form ID"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:26
+msgid "Shortcode"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:27
+msgid "Copy and paste the shortcode on a page."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:43 ../template/admin/meta_box_price_rule.php:34
+msgid "Select course."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:61
+msgid "Default booking status"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:62
+msgid "Default booking status of new order."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:78
+msgid "Enable or disable WooCommerce support for this booking form."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:79
+#, php-format
+msgid "Please make sure that you set up \"Checkout page\" in <a href=\"%s\">WooCommerce settings</a>"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:89
+msgid "Currencies"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:91
+msgid "Select available currencies."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:92
+msgid "You can set exchange rates for each selected currency in plugin options."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:93
+msgid ""
+"You can run booking form with particular currency by adding parameter \"currency=CODE\" to the query string of "
+"page on which booking form is located."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:107
+msgid "Enable or disable coupons for this booking form."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:120
+msgid "Form preloader"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:121
+msgid "Enable or disable form preloader."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:130
+msgid "Default active tab"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:131
+msgid "Select which tab has to be active by default."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:134 ../template/public/public.php:34
+msgid "Overview"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:140
+msgid "Course start/end time"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:141
+msgid "Show or hide course start/end time in the top bar."
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:144
+msgid "Show"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:146
+msgid "Hide"
+msgstr "Ocultar"
+
+#: ../template/admin/meta_box_booking_form.php:154
+msgid "Colors"
+msgstr "Colores"
+
+#: ../template/admin/meta_box_booking_form.php:156
+msgid "Specify color for each group of elements."
+msgstr "Especificar color para cada grupo de elementos."
+
+#: ../template/admin/meta_box_booking_form.php:163
+msgid "Group number"
+msgstr "Número de categoría"
+
+#: ../template/admin/meta_box_booking_form.php:165
+msgid "Group number."
+msgstr "Número de categoría."
+
+#: ../template/admin/meta_box_booking_form.php:171
+msgid "Default color"
+msgstr "Color por defecto"
+
+#: ../template/admin/meta_box_booking_form.php:173
+msgid "Default value of the color."
+msgstr "Valor por defecto del color."
+
+#: ../template/admin/meta_box_booking_form.php:179
+msgid "Color"
+msgstr ""
+
+#: ../template/admin/meta_box_booking_form.php:181
+msgid "New value (in HEX) of the color."
+msgstr "Nuevo valor (en HEX) del color."
+
+#: ../template/admin/meta_box_coupon.php:12
+msgid "Coupon ID"
+msgstr "ID de cupón"
+
+#: ../template/admin/meta_box_coupon.php:15
+msgid "Unique, coupon code."
+msgstr "Único, código de cupón."
+
+#: ../template/admin/meta_box_coupon.php:22
+msgid "Current usage count of the coupon."
+msgstr "Recuento de uso actual del cupón."
+
+#: ../template/admin/meta_box_coupon.php:29
+msgid "Usage limit of the coupon. Allowed are integer values from range 1-9999. Leave blank for unlimited."
+msgstr ""
+
+#: ../template/admin/meta_box_coupon.php:36
+msgid "Start date. Leave blank if there is no start date."
+msgstr "Fecha de inicio."
+
+#: ../template/admin/meta_box_coupon.php:43
+msgid "Stop date. Leave blank if there is no stop date."
+msgstr "Fecha de finalización."
+
+#: ../template/admin/meta_box_coupon.php:50
+msgid "Percentage discount. Allowed are integer numbers from 0-99."
+msgstr "Porcentaje de descuento."
+
+#: ../template/admin/meta_box_coupon.php:57
+msgid "Fixed discount. This discount is used only if percentage discount is set to 0."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:12
+msgid "Notifications"
+msgstr "Notificaciones"
+
+#: ../template/admin/meta_box_course.php:13
+msgid "Form Elements"
+msgstr "Elementos de formulario"
+
+#: ../template/admin/meta_box_course.php:15
+msgid "Other"
+msgstr "Otro"
+
+#: ../template/admin/meta_box_course.php:23
+msgid "You have to assign at least one group to this course. Otherwise booking form will not be displayed."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:31
+msgid "Course groups"
+msgstr "Categorías"
+
+#: ../template/admin/meta_box_course.php:35
+msgid "Select at least one course group. Course group can be assigned to the one course only."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:53
+msgid "Registration start"
+msgstr "Inicio registro"
+
+#: ../template/admin/meta_box_course.php:55
+msgid "Set date/time of registration start."
+msgstr "Establecer fecha/hora de inicio de registro."
+
+#: ../template/admin/meta_box_course.php:56
+msgid "Before this date/time form will not be available for participants."
+msgstr "Antes de esta fecha/hora, el formulario no estará disponible para los participantes."
+
+#: ../template/admin/meta_box_course.php:63 ../template/admin/meta_box_course.php:78
+#: ../template/admin/meta_box_course_group.php:23 ../template/admin/meta_box_course_group.php:35
+msgid "Time."
+msgstr "Tiempo."
+
+#: ../template/admin/meta_box_course.php:68
+msgid "Registration end"
+msgstr "Fin registro"
+
+#: ../template/admin/meta_box_course.php:70
+msgid "Set date/time of registration end."
+msgstr "Establecer fecha/hora de fin de registro."
+
+#: ../template/admin/meta_box_course.php:71
+msgid "After this date/time form will not be available for participants."
+msgstr "Después de esta fecha/hora, el formulario no estará disponible para los participantes."
+
+#: ../template/admin/meta_box_course.php:83
+msgid "Applicant data"
+msgstr "Datos del solicitante"
+
+#: ../template/admin/meta_box_course.php:85
+msgid "Define whether the plugin has to collect data about applicant."
+msgstr "Defina si el complemento debe recopilar datos sobre el solicitante."
+
+#: ../template/admin/meta_box_course.php:86
+msgid "If this option is enable, section \"Applicant data\" will be visible in the booking form."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:105
+msgid "Select payment methods available in this course."
+msgstr "Seleccione los métodos de pago disponibles en esta categoría."
+
+#: ../template/admin/meta_box_course.php:126
+msgid "E-mail"
+msgstr "Correo electrónico"
+
+#: ../template/admin/meta_box_course.php:127 ../template/admin/option.php:65
+msgid "Twilio"
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:128 ../template/admin/option.php:66
+msgid "Vonage"
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:129 ../template/admin/option.php:68
+msgid "Telegram"
+msgstr "Telegrama"
+
+#: ../template/admin/meta_box_course.php:135
+msgid "Sender e-mail account"
+msgstr "Cuenta de correo del remitente"
+
+#: ../template/admin/meta_box_course.php:139
+msgid "Select sender e-mail account."
+msgstr "Seleccione la cuenta de correo electrónico del remitente."
+
+#: ../template/admin/meta_box_course.php:143
+msgid " - Not set -"
+msgstr " - No configurado -"
+
+#: ../template/admin/meta_box_course.php:151
+msgid "Recipients"
+msgstr "Destinatarios"
+
+#: ../template/admin/meta_box_course.php:152
+msgid "List of recipients e-mail addresses (separated by semicolon)."
+msgstr "Lista de direcciones de correo electrónico de los destinatarios (separados por punto y coma)."
+
+#: ../template/admin/meta_box_course.php:158
+msgid "Sending an e-mail to the customers"
+msgstr "Enviando un e-mail a los clientes"
+
+#: ../template/admin/meta_box_course.php:159
+msgid "Define whether the plugin has to sent e-mail messages about new booking to the customers."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:168
+msgid "Sending an e-mail to defined recipients"
+msgstr "Enviando un correo electrónico a destinatarios definidos"
+
+#: ../template/admin/meta_box_course.php:169
+msgid ""
+"Define whether the plugin has to sent e-mail messages about new booking to addresses defined on recipient list."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:192
+msgid "API key"
+msgstr "clave API"
+
+#: ../template/admin/meta_box_course.php:193
+msgid "API key."
+msgstr "Clave API."
+
+#: ../template/admin/meta_box_course.php:199 ../template/admin/meta_box_payment.php:57
+msgid "Secret API key"
+msgstr "Clave API secreta"
+
+#: ../template/admin/meta_box_course.php:200
+msgid "Secret API key."
+msgstr "Clave API secreta."
+
+#: ../template/admin/meta_box_course.php:206
+msgid "Sender name"
+msgstr "Nombre del remitente"
+
+#: ../template/admin/meta_box_course.php:207
+msgid "Sender name."
+msgstr "Nombre del remitente."
+
+#: ../template/admin/meta_box_course.php:213 ../template/admin/meta_box_course.php:262
+msgid "Recipient phone number"
+msgstr "Número de teléfono del destinatario"
+
+#: ../template/admin/meta_box_course.php:214 ../template/admin/meta_box_course.php:263
+msgid "Recipient phone number."
+msgstr "Número de teléfono del destinatario."
+
+#: ../template/admin/meta_box_course.php:220 ../template/admin/meta_box_course.php:269
+#: ../template/admin/meta_box_course.php:304
+msgid "Message"
+msgstr "Mensaje"
+
+#: ../template/admin/meta_box_course.php:221 ../template/admin/meta_box_course.php:270
+#: ../template/admin/meta_box_course.php:305
+msgid "Message."
+msgstr "Mensaje."
+
+#: ../template/admin/meta_box_course.php:241
+msgid "API SID"
+msgstr "SID API"
+
+#: ../template/admin/meta_box_course.php:242
+msgid "API SID."
+msgstr "SID API."
+
+#: ../template/admin/meta_box_course.php:248
+msgid "API token"
+msgstr "token de API"
+
+#: ../template/admin/meta_box_course.php:249
+msgid "API token."
+msgstr "Token API."
+
+#: ../template/admin/meta_box_course.php:255
+msgid "Sender phone number"
+msgstr "Número de teléfono del remitente"
+
+#: ../template/admin/meta_box_course.php:256
+msgid "Sender phone number."
+msgstr "Número de teléfono del remitente."
+
+#: ../template/admin/meta_box_course.php:290
+msgid "Token"
+msgstr "Ficha"
+
+#: ../template/admin/meta_box_course.php:291
+msgid "Token."
+msgstr "Ficha."
+
+#: ../template/admin/meta_box_course.php:297
+msgid "Group ID"
+msgstr "ID de categoría"
+
+#: ../template/admin/meta_box_course.php:298
+msgid "Group ID."
+msgstr "ID de categoría."
+
+#: ../template/admin/meta_box_course.php:317
+msgid "Panels"
+msgstr "Paneles"
+
+#: ../template/admin/meta_box_course.php:319
+msgid "Table includes list of user defined panels (group of fields) used in client form."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:326 ../template/admin/meta_box_course.php:394
+msgid "Label"
+msgstr "Etiqueta"
+
+#: ../template/admin/meta_box_course.php:328
+msgid "Label of the panel."
+msgstr "Etiqueta del panel."
+
+#: ../template/admin/meta_box_course.php:334 ../template/admin/meta_box_course.php:350
+#: ../template/admin/meta_box_course.php:369 ../template/admin/meta_box_course.php:442
+#: ../template/admin/meta_box_course.php:496 ../template/admin/meta_box_course.php:553
+#: ../template/admin/meta_box_course.php:598 ../template/admin/meta_box_course.php:622
+#: ../template/admin/meta_box_course.php:649 ../template/admin/meta_box_course_group.php:202
+#: ../template/admin/meta_box_course_group.php:233 ../template/admin/meta_box_course_group.php:267
+#: ../template/admin/meta_box_course_group.php:315 ../template/admin/meta_box_course_group.php:341
+#: ../template/admin/meta_box_course_group.php:370 ../template/admin/meta_box_price_rule.php:102
+#: ../template/admin/meta_box_price_rule.php:127 ../template/admin/meta_box_price_rule.php:157
+msgid "Remove"
+msgstr "Eliminar"
+
+#: ../template/admin/meta_box_course.php:336 ../template/admin/meta_box_course.php:444
+#: ../template/admin/meta_box_course.php:600 ../template/admin/meta_box_course_group.php:204
+#: ../template/admin/meta_box_course_group.php:317 ../template/admin/meta_box_price_rule.php:104
+msgid "Remove this entry."
+msgstr "Eliminar esta entrada."
+
+#: ../template/admin/meta_box_course.php:345 ../template/admin/meta_box_course.php:364
+#: ../template/admin/meta_box_course.php:453 ../template/admin/meta_box_course.php:510
+msgid "Enter label."
+msgstr "Ingresar etiqueta."
+
+#: ../template/admin/meta_box_course.php:379 ../template/admin/meta_box_course.php:563
+#: ../template/admin/meta_box_course.php:659 ../template/admin/meta_box_course_group.php:277
+#: ../template/admin/meta_box_course_group.php:380 ../template/admin/meta_box_price_rule.php:168
+msgid "Add"
+msgstr "Agregar"
+
+#: ../template/admin/meta_box_course.php:384
+msgid "Fields"
+msgstr "Campos"
+
+#: ../template/admin/meta_box_course.php:386
+msgid "Table includes list of user defined fields used in client form."
+msgstr "La tabla incluye una lista de campos definidos por el usuario utilizados en el formulario de cliente."
+
+#: ../template/admin/meta_box_course.php:387
+msgid ""
+"In case of set field as \"Mandatory\", it is needed to fill \"Error message\" field, otherwise new field will "
+"not be created."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:396
+msgid "Label of the field."
+msgstr "Etiqueta del campo."
+
+#: ../template/admin/meta_box_course.php:404
+msgid "Field type."
+msgstr "Tipo de campo."
+
+#: ../template/admin/meta_box_course.php:410 ../template/admin/meta_box_course.php:590
+msgid "Mandatory"
+msgstr "Obligatorio"
+
+#: ../template/admin/meta_box_course.php:412 ../template/admin/meta_box_course.php:592
+msgid "Mandatory."
+msgstr "Obligatorio."
+
+#: ../template/admin/meta_box_course.php:418
+msgid "Values"
+msgstr "Valores"
+
+#: ../template/admin/meta_box_course.php:420
+msgid "List of possible values to choose separated by semicolon."
+msgstr "Lista de posibles valores a elegir separados por punto y coma."
+
+#: ../template/admin/meta_box_course.php:426
+msgid "Error message"
+msgstr "Mensaje de error"
+
+#: ../template/admin/meta_box_course.php:428
+msgid "Error message displayed in tooltip when field is empty."
+msgstr "Mensaje de error mostrado en información sobre herramientas cuando el campo está vacío."
+
+#: ../template/admin/meta_box_course.php:434
+msgid "Panel"
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:436
+msgid "Panel in which field has to be located."
+msgstr "Panel en que campo se ha de ubicar."
+
+#: ../template/admin/meta_box_course.php:476 ../template/admin/meta_box_course.php:533
+msgid "Enter values of list separated by semicolon."
+msgstr "Ingrese los valores de la lista separados por punto y coma."
+
+#: ../template/admin/meta_box_course.php:481 ../template/admin/meta_box_course.php:538
+msgid "Enter error message."
+msgstr "Ingresar mensaje de error."
+
+#: ../template/admin/meta_box_course.php:574
+msgid "Table includes list of agreements needed to accept by course participant before sending the booking."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:575
+msgid "Each agreement consists of approval field (checkbox) and text of agreement."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:584
+msgid "Text of the agreement."
+msgstr "Texto del acuerdo."
+
+#: ../template/admin/meta_box_course.php:609 ../template/admin/meta_box_course.php:636
+msgid "Enter text."
+msgstr "Ingresar texto."
+
+#: ../template/admin/meta_box_course.php:668
+msgid "Promo section"
+msgstr "Sección de promoción"
+
+#: ../template/admin/meta_box_course.php:670
+msgid "Enter settings for promo section."
+msgstr "Ingrese la configuración para la sección de promoción."
+
+#: ../template/admin/meta_box_course.php:673
+msgid "Image:"
+msgstr "Imagen:"
+
+#: ../template/admin/meta_box_course.php:676 ../template/admin/option_general.php:7
+msgid "Browse"
+msgstr "Examinar"
+
+#: ../template/admin/meta_box_course.php:680
+msgid "Embed video code:"
+msgstr "Código de vídeo incrustado:"
+
+#: ../template/admin/meta_box_course.php:685
+msgid "\"Thank you\" page"
+msgstr "\"Gracias\" página"
+
+#: ../template/admin/meta_box_course.php:687
+msgid "Enter settings for \"Thank you\" page."
+msgstr "Ingrese la configuración para la página \"Gracias\"."
+
+#: ../template/admin/meta_box_course.php:690
+msgid "Header:"
+msgstr "Encabezado:"
+
+#: ../template/admin/meta_box_course.php:694
+msgid "Subheader:"
+msgstr "Subtítulo:"
+
+#: ../template/admin/meta_box_course.php:699
+msgid "Back button"
+msgstr "Botón Atrás"
+
+#: ../template/admin/meta_box_course.php:701
+msgid "Button displayed on the second step (payment) if there is no payment method."
+msgstr ""
+
+#: ../template/admin/meta_box_course.php:704
+msgid "Label:"
+msgstr "Etiqueta:"
+
+#: ../template/admin/meta_box_course.php:708
+msgid "URL address:"
+msgstr "dirección URL:"
+
+#: ../template/admin/meta_box_course_group.php:11
+msgid "Schedule"
+msgstr "Horario"
+
+#: ../template/admin/meta_box_course_group.php:16
+msgid "Course start"
+msgstr "Inicio de disciplina"
+
+#: ../template/admin/meta_box_course_group.php:17
+msgid "Set date/time of course start for this group."
+msgstr "Establecer fecha/hora de inicio de disciplina para esta categoría."
+
+#: ../template/admin/meta_box_course_group.php:28
+msgid "Course end"
+msgstr "Fin de la disciplina"
+
+#: ../template/admin/meta_box_course_group.php:29
+msgid "Set date/time of course end for this group."
+msgstr "Establecer fecha/hora de fin de disciplina para esta categoría."
+
+#: ../template/admin/meta_box_course_group.php:46
+msgid "Select location of course for this group."
+msgstr "Seleccione la ubicación de la disciplina para esta categoría."
+
+#: ../template/admin/meta_box_course_group.php:59
+msgid "Number of lessons"
+msgstr "Número de lecciones"
+
+#: ../template/admin/meta_box_course_group.php:60
+msgid "Enter number of lessons."
+msgstr "Ingrese el número de lecciones."
+
+#: ../template/admin/meta_box_course_group.php:66
+msgid "Lesson length"
+msgstr "Duración de la lección"
+
+#: ../template/admin/meta_box_course_group.php:67
+msgid "Enter length of single lesson in minutes."
+msgstr "Ingrese la duración de una sola lección en minutos."
+
+#: ../template/admin/meta_box_course_group.php:78
+msgid "Enter net price and tax for course participant in this group."
+msgstr "Ingrese el precio neto y el impuesto para el participante de la disciplina en esta categoría."
+
+#: ../template/admin/meta_box_course_group.php:80
+msgid "Net price."
+msgstr "Precio neto."
+
+#: ../template/admin/meta_box_course_group.php:96
+msgid "Label displayed under the price."
+msgstr "Etiqueta mostrada debajo del precio."
+
+#: ../template/admin/meta_box_course_group.php:100
+msgid "Label displayed instead of price (if the label is specified, payments are not available)."
+msgstr ""
+
+#: ../template/admin/meta_box_course_group.php:104
+msgid "Display net price."
+msgstr "Mostrar precio neto."
+
+#: ../template/admin/meta_box_course_group.php:114
+msgid "Participants"
+msgstr "Participantes"
+
+#: ../template/admin/meta_box_course_group.php:115
+msgid "Define participants details."
+msgstr "Definir detalles de los participantes."
+
+#: ../template/admin/meta_box_course_group.php:117
+msgid "Enter number of participants."
+msgstr "Ingrese el número de participantes."
+
+#: ../template/admin/meta_box_course_group.php:121
+msgid "Show number of enrolled/all possible to enrolled participants."
+msgstr "Mostrar número de inscritos/todos los participantes inscritos posibles."
+
+#: ../template/admin/meta_box_course_group.php:131
+msgid "Short description"
+msgstr "Breve descripción"
+
+#: ../template/admin/meta_box_course_group.php:132
+msgid "Short description of the course group."
+msgstr "Breve descripción de la categoría."
+
+#: ../template/admin/meta_box_course_group.php:138
+msgid "Short info"
+msgstr "Información breve"
+
+#: ../template/admin/meta_box_course_group.php:139
+msgid "Contact info about the course group displayed in the right sidebar."
+msgstr "Información de contacto sobre la categoría que se muestra en la barra lateral derecha."
+
+#: ../template/admin/meta_box_course_group.php:145
+msgid "Contact info"
+msgstr "Información de contacto"
+
+#: ../template/admin/meta_box_course_group.php:146
+msgid "Contact info displayed in the right sidebar."
+msgstr "Información de contacto mostrada en la barra lateral derecha."
+
+#: ../template/admin/meta_box_course_group.php:152
+msgid "Target page"
+msgstr "Página de destino"
+
+#: ../template/admin/meta_box_course_group.php:153
+msgid "Target page opened after clicking on the group located on list."
+msgstr "Página de destino abierta después de hacer clic en la categoría ubicada en la lista."
+
+#: ../template/admin/meta_box_course_group.php:169 ../template/admin/meta_box_course_group.php:178
+msgid "Day of week"
+msgstr "Día de la semana"
+
+#: ../template/admin/meta_box_course_group.php:171
+msgid "Table includes schedule of the course group created based on days of week."
+msgstr ""
+
+#: ../template/admin/meta_box_course_group.php:180
+msgid "Day of week."
+msgstr "Día de la semana."
+
+#: ../template/admin/meta_box_course_group.php:186 ../template/admin/meta_box_course_group.php:299
+msgid "Start time"
+msgstr "Hora de inicio"
+
+#: ../template/admin/meta_box_course_group.php:188 ../template/admin/meta_box_course_group.php:301
+msgid "Start time."
+msgstr "Hora de inicio."
+
+#: ../template/admin/meta_box_course_group.php:194 ../template/admin/meta_box_course_group.php:307
+msgid "End time"
+msgstr "Hora de finalización"
+
+#: ../template/admin/meta_box_course_group.php:196 ../template/admin/meta_box_course_group.php:309
+msgid "End time."
+msgstr "Hora de finalización."
+
+#: ../template/admin/meta_box_course_group.php:282
+msgid "Dates"
+msgstr "Fechas"
+
+#: ../template/admin/meta_box_course_group.php:284
+msgid "Table includes schedule of the course group created based on dates."
+msgstr "La tabla incluye el horario de la la categoría creada en base a las fechas."
+
+#: ../template/admin/meta_box_email_account.php:9
+msgid "SMTP Authentication"
+msgstr "autenticación SMTP"
+
+#: ../template/admin/meta_box_email_account.php:10
+msgid "E-mail Testing"
+msgstr "prueba de correo electrónico"
+
+#: ../template/admin/meta_box_email_account.php:14
+msgid "Email account ID"
+msgstr "ID de cuenta de correo electrónico"
+
+#: ../template/admin/meta_box_email_account.php:16 ../template/admin/meta_box_price_rule.php:212
+msgid "Name"
+msgstr "Nombre"
+
+#: ../template/admin/meta_box_email_account.php:17 ../template/admin/meta_box_price_rule.php:214
+msgid "Name."
+msgstr "Nombre."
+
+#: ../template/admin/meta_box_email_account.php:23 ../template/admin/meta_box_payment.php:114
+#: ../template/email_booking.php:162
+msgid "E-mail address"
+msgstr "dirección de correo electrónico"
+
+#: ../template/admin/meta_box_email_account.php:34
+msgid "SMTP AUTH"
+msgstr "AUTENTICACIÓN SMTP"
+
+#: ../template/admin/meta_box_email_account.php:35
+msgid "Enable or disable SMTP AUTH."
+msgstr "Habilitar o deshabilitar SMTP AUTH."
+
+#: ../template/admin/meta_box_email_account.php:44
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: ../template/admin/meta_box_email_account.php:45
+msgid "Username."
+msgstr "Nombre de usuario."
+
+#: ../template/admin/meta_box_email_account.php:51
+msgid "Password"
+msgstr "Contraseña"
+
+#: ../template/admin/meta_box_email_account.php:52
+msgid "Password."
+msgstr "Contraseña."
+
+#: ../template/admin/meta_box_email_account.php:58
+msgid "Host"
+msgstr "Anfitrión"
+
+#: ../template/admin/meta_box_email_account.php:59
+msgid "Host."
+msgstr "Anfitrión."
+
+#: ../template/admin/meta_box_email_account.php:65
+msgid "Port"
+msgstr "Puerto"
+
+#: ../template/admin/meta_box_email_account.php:66
+msgid "Port."
+msgstr "Puerto."
+
+#: ../template/admin/meta_box_email_account.php:72
+msgid "Secure connection type"
+msgstr "Tipo de conexion segura"
+
+#: ../template/admin/meta_box_email_account.php:73
+msgid "Secure connection type."
+msgstr "Tipo de conexión segura."
+
+#: ../template/admin/meta_box_email_account.php:87
+msgid "Debug"
+msgstr "Depurar"
+
+#: ../template/admin/meta_box_email_account.php:89
+msgid "Enable or disable debugging."
+msgstr "Habilitar o deshabilitar la depuración."
+
+#: ../template/admin/meta_box_email_account.php:90
+msgid "You can check result of debugging in Chrome/Firebug console (after submit form)."
+msgstr ""
+
+#: ../template/admin/meta_box_email_account.php:103
+msgid ""
+"Enter receiver e-mail address and click on below button to send testing e-mail message using details of this "
+"account."
+msgstr ""
+
+#: ../template/admin/meta_box_email_account.php:107
+msgid "Receiver e-mail address"
+msgstr "Dirección de correo electrónico del destinatario"
+
+#: ../template/admin/meta_box_email_account.php:108
+msgid "Receiver e-mail address."
+msgstr "Dirección de correo electrónico del destinatario."
+
+#: ../template/admin/meta_box_email_account.php:114
+msgid "Response"
+msgstr "Respuesta"
+
+#: ../template/admin/meta_box_email_account.php:115
+msgid "Response from the server."
+msgstr "Respuesta del servidor."
+
+#: ../template/admin/meta_box_email_account.php:117 ../template/admin/meta_box_email_account.php:155
+msgid "No reply from the server."
+msgstr "No hay respuesta del servidor."
+
+#: ../template/admin/meta_box_email_account.php:118
+msgid "Send a message"
+msgstr "Enviar un mensaje"
+
+#: ../template/admin/meta_box_email_account.php:148
+msgid "Please enter receiver e-mail address."
+msgstr "Ingrese la dirección de correo electrónico del destinatario."
+
+#: ../template/admin/meta_box_location.php:14
+msgid "Street"
+msgstr "Calle"
+
+#: ../template/admin/meta_box_location.php:15
+msgid "Enter street name."
+msgstr "Ingrese el nombre de la calle."
+
+#: ../template/admin/meta_box_location.php:21
+msgid "Street number"
+msgstr "Número de calle"
+
+#: ../template/admin/meta_box_location.php:22
+msgid "Enter street number."
+msgstr "Ingrese número de calle."
+
+#: ../template/admin/meta_box_location.php:28
+msgid "Postcode"
+msgstr "Código postal"
+
+#: ../template/admin/meta_box_location.php:29
+msgid "Enter postcode."
+msgstr "Ingrese código postal."
+
+#: ../template/admin/meta_box_location.php:35
+msgid "City"
+msgstr "Ciudad"
+
+#: ../template/admin/meta_box_location.php:36
+msgid "Enter city name."
+msgstr "Ingrese el nombre de la ciudad."
+
+#: ../template/admin/meta_box_location.php:42
+msgid "State"
+msgstr "Estado"
+
+#: ../template/admin/meta_box_location.php:43
+msgid "Enter state name."
+msgstr "Ingrese el nombre del estado."
+
+#: ../template/admin/meta_box_location.php:49
+msgid "Country"
+msgstr "País"
+
+#: ../template/admin/meta_box_location.php:50
+msgid "Select country."
+msgstr "Seleccionar pais."
+
+#: ../template/admin/meta_box_payment.php:16
+msgid "Payment ID"
+msgstr "ID de pago"
+
+#: ../template/admin/meta_box_payment.php:20
+msgid "Select payment type."
+msgstr "Seleccionar tipo de pago."
+
+#: ../template/admin/meta_box_payment.php:21
+msgid "If you choose \"Stripe\" or \"PayPal\" you have to enter all needed details in related tabs.."
+msgstr ""
+
+#: ../template/admin/meta_box_payment.php:39
+msgid "Enter all \"Custom\" details if you selected this payment type in the \"General\" tab."
+msgstr ""
+
+#: ../template/admin/meta_box_payment.php:43 ../template/admin/meta_box_payment.php:93
+#: ../template/admin/meta_box_payment.php:131
+msgid "\"Success\" URL address"
+msgstr "\"Éxito\" dirección URL"
+
+#: ../template/admin/meta_box_payment.php:44 ../template/admin/meta_box_payment.php:94
+#: ../template/admin/meta_box_payment.php:132
+msgid "Enter \"Success\" URL address."
+msgstr "Ingrese la dirección URL \"Éxito\"."
+
+#: ../template/admin/meta_box_payment.php:53
+msgid "Enter all \"Stripe\" details if you selected this payment type in the \"General\" tab."
+msgstr ""
+
+#: ../template/admin/meta_box_payment.php:58
+msgid "Enter secret API key."
+msgstr "Ingrese clave API secreta."
+
+#: ../template/admin/meta_box_payment.php:64
+msgid "Publishable API key"
+msgstr "Clave API publicable"
+
+#: ../template/admin/meta_box_payment.php:65
+msgid "Enter publishable API key."
+msgstr "Ingrese la clave API publicable."
+
+#: ../template/admin/meta_box_payment.php:72
+msgid ""
+"Select at least one payment method - you need to set up each of them in your \"Stripe\" dashboard under "
+"\"Settings / Payment methods\":"
+msgstr ""
+
+#: ../template/admin/meta_box_payment.php:86
+msgid "Product ID"
+msgstr "ID del producto"
+
+#: ../template/admin/meta_box_payment.php:87
+msgid "Product ID."
+msgstr "Identificación del producto."
+
+#: ../template/admin/meta_box_payment.php:100
+msgid "\"Cancel\" URL address"
+msgstr "\"Cancelar\" dirección URL"
+
+#: ../template/admin/meta_box_payment.php:101 ../template/admin/meta_box_payment.php:139
+msgid "Enter \"Cancel\" URL address."
+msgstr "Ingrese la dirección URL \"Cancelar\"."
+
+#: ../template/admin/meta_box_payment.php:110
+msgid "Enter all \"PayPal\" details if you selected this payment type in the \"General\" tab."
+msgstr ""
+
+#: ../template/admin/meta_box_payment.php:115
+msgid "Enter your PayPal e-mail address."
+msgstr "Ingrese su dirección de correo electrónico de PayPal."
+
+#: ../template/admin/meta_box_payment.php:121
+msgid "Sandbox mode"
+msgstr "Modo de caja de arena"
+
+#: ../template/admin/meta_box_payment.php:122
+msgid "Enable or disabled testing mode."
+msgstr "Habilitar o deshabilitar el modo de prueba."
+
+#: ../template/admin/meta_box_payment.php:138
+msgid "\"Cancel\" URL address:"
+msgstr "\"Cancelar\" Dirección URL:"
+
+#: ../template/admin/meta_box_price_rule.php:9
+msgid "Conditions "
+msgstr "Condiciones "
+
+#: ../template/admin/meta_box_price_rule.php:14
+msgid "Price rule ID"
+msgstr "ID de regla de precio"
+
+#: ../template/admin/meta_box_price_rule.php:16
+msgid "Booking forms"
+msgstr "Formularios de inscripción"
+
+#: ../template/admin/meta_box_price_rule.php:17
+msgid "Select forms."
+msgstr "Seleccionar formularios."
+
+#: ../template/admin/meta_box_price_rule.php:20
+msgid "- All forms -"
+msgstr "- Todas las formas -"
+
+#: ../template/admin/meta_box_price_rule.php:37
+msgid "- All courses -"
+msgstr "- Todos las disciplinas -"
+
+#: ../template/admin/meta_box_price_rule.php:51
+msgid "Select course group."
+msgstr "Seleccionar categorías."
+
+#: ../template/admin/meta_box_price_rule.php:54
+msgid "- All course groups -"
+msgstr "- Todas las categorías de la disciplina -"
+
+#: ../template/admin/meta_box_price_rule.php:69
+msgid "Enter the registration dates for which rule has to be applied or define prices."
+msgstr ""
+
+#: ../template/admin/meta_box_price_rule.php:70
+msgid ""
+"If the \"Price source\" option is set to \"Calculation based on registration dates\" plugin uses prices defined "
+"in this table."
+msgstr ""
+
+#: ../template/admin/meta_box_price_rule.php:71
+msgid ""
+"Otherwise, plugin checks whether the registration date is defined in this table and use prices from \"Prices\" "
+"table."
+msgstr ""
+
+#: ../template/admin/meta_box_price_rule.php:78
+msgid "From"
+msgstr "Desde"
+
+#: ../template/admin/meta_box_price_rule.php:80
+msgid "From."
+msgstr "Desde."
+
+#: ../template/admin/meta_box_price_rule.php:86
+msgid "To"
+msgstr "Para"
+
+#: ../template/admin/meta_box_price_rule.php:88
+msgid "To."
+msgstr "A."
+
+#: ../template/admin/meta_box_price_rule.php:96
+msgid "Price."
+msgstr "Precio."
+
+#: ../template/admin/meta_box_price_rule.php:177
+msgid "Price source"
+msgstr "Fuente de precio"
+
+#: ../template/admin/meta_box_price_rule.php:179
+msgid "Select price source."
+msgstr "Seleccionar fuente de precio."
+
+#: ../template/admin/meta_box_price_rule.php:193
+msgid ""
+"This option determine, whether prices will be set up based on this rule only or plugin has to processing next "
+"rule based on priority (order)."
+msgstr ""
+
+#: ../template/admin/meta_box_price_rule.php:206
+msgid "Prices."
+msgstr "Precios."
+
+#: ../template/admin/meta_box_price_rule.php:220
+msgid "Description"
+msgstr "Descripción"
+
+#: ../template/admin/meta_box_price_rule.php:222
+msgid "Description."
+msgstr "Descripción."
+
+#: ../template/admin/meta_box_price_rule.php:228
+msgid "Price alter"
+msgstr "Alterar precio"
+
+#: ../template/admin/meta_box_price_rule.php:230
+msgid "Price alter type."
+msgstr "Tipo de cambio de precio."
+
+#: ../template/admin/meta_box_price_rule.php:238
+msgid "Value."
+msgstr "Valor."
+
+#: ../template/admin/meta_box_price_rule.php:244 ../template/email_booking.php:102
+msgid "Tax"
+msgstr "Impuesto"
+
+#: ../template/admin/meta_box_price_rule.php:246
+msgid "Tax."
+msgstr "Impuesto."
+
+#: ../template/admin/meta_box_price_rule.php:259
+msgid "Price per participant"
+msgstr "Precio por participante"
+
+#: ../template/admin/meta_box_price_rule.php:283 ../template/admin/option_general.php:55
+msgid "- Not set -"
+msgstr "- No establecido -"
+
+#: ../template/admin/meta_box_tax_rate.php:11
+msgid "Tax rate ID"
+msgstr "ID de tasa de impuesto"
+
+#: ../template/admin/meta_box_tax_rate.php:14
+msgid ""
+"Percentage value of tax rate. Floating point values are allowed, up to two decimal places in the range 0-100."
+msgstr ""
+
+#: ../template/admin/meta_box_tax_rate.php:20
+msgid "Default tax rate"
+msgstr "Tasa impositiva por defecto"
+
+#: ../template/admin/meta_box_tax_rate.php:21
+msgid "Mark this tax rate as default."
+msgstr "Marcar esta tasa impositiva como predeterminada."
+
+#: ../template/admin/option.php:13
+msgid "QuanticaLabs"
+msgstr ""
+
+#: ../template/admin/option.php:14
+msgid "Plugin Options"
+msgstr "Opciones de complemento"
+
+#: ../template/admin/option.php:23
+msgid "Bookingo - Course Booking System for WordPress"
+msgstr "Juduca - Sistema de inscripción"
+
+#: ../template/admin/option.php:26
+#, php-format
+msgid "WordPress Plugin ver. %s"
+msgstr "Versión del complemento de WordPress. %s"
+
+#: ../template/admin/option.php:29
+msgid "Support Forum"
+msgstr "Foro de soporte"
+
+#: ../template/admin/option.php:30
+msgid "Plugin site"
+msgstr "Sitio del complemento"
+
+#: ../template/admin/option.php:48 ../template/admin/option_import_demo.php:3
+msgid "Import demo"
+msgstr "Importar demostración"
+
+#: ../template/admin/option.php:54
+msgid "Coupons creator"
+msgstr "Creador de cupones"
+
+#: ../template/admin/option.php:57
+msgid "Exchange rates"
+msgstr "Tipos de cambio"
+
+#: ../template/admin/option.php:60
+msgid "Log manager"
+msgstr "Administrador de registro"
+
+#: ../template/admin/option.php:62
+msgid "Mail"
+msgstr "Correo"
+
+#: ../template/admin/option.php:113
+msgid "Envato"
+msgstr ""
+
+#: ../template/admin/option.php:114
+msgid "Facebook"
+msgstr ""
+
+#: ../template/admin/option.php:115
+msgid "Twitter"
+msgstr ""
+
+#: ../template/admin/option.php:116
+msgid "Tumblr"
+msgstr ""
+
+#: ../template/admin/option.php:122
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+#: ../template/admin/option_coupon_creator.php:6
+msgid "Count"
+msgstr "Cuenta"
+
+#: ../template/admin/option_coupon_creator.php:8
+msgid "Number of coupons which should be generated."
+msgstr "Número de cupones que se deben generar."
+
+#: ../template/admin/option_coupon_creator.php:9
+msgid "Allowed are integer numbers from range 1-999."
+msgstr "Se permiten números enteros del rango 1-999."
+
+#: ../template/admin/option_coupon_creator.php:17
+msgid "Current usage count of the code. Allowed are integer values from range 1-9999. Leave blank for unlimited."
+msgstr ""
+
+#: ../template/admin/option_coupon_creator.php:25
+msgid "Percentage discount. Allowed are integer numbers from 1-99."
+msgstr "Porcentaje de descuento."
+
+#: ../template/admin/option_coupon_creator.php:39
+msgid "Start date. Leave blank for no start date."
+msgstr "Fecha de inicio."
+
+#: ../template/admin/option_coupon_creator.php:46
+msgid "Stop date. Leave blank for no start date."
+msgstr "Fecha de finalización."
+
+#: ../template/admin/option_coupon_creator.php:52
+msgid "Create coupons"
+msgstr "Crear cupones"
+
+#: ../template/admin/option_exchange_rate.php:4
+msgid "Update"
+msgstr "Actualizar"
+
+#: ../template/admin/option_exchange_rate.php:6
+msgid "Select exchange rate provider."
+msgstr "Seleccionar proveedor de tipo de cambio."
+
+#: ../template/admin/option_exchange_rate.php:7
+msgid "For the \"Fixer.io\" provider, you need to enter additional details in \"General\" tab."
+msgstr ""
+
+#: ../template/admin/option_exchange_rate.php:8
+msgid "All rates will be replaced during process of importing."
+msgstr "Todas las tarifas serán reemplazadas durante el proceso de importación."
+
+#: ../template/admin/option_exchange_rate.php:20
+msgid "Import exchange rates"
+msgstr "Importar tipos de cambio"
+
+#: ../template/admin/option_exchange_rate.php:23
+msgid "Rates table"
+msgstr "Tabla de tarifas"
+
+#: ../template/admin/option_exchange_rate.php:25
+msgid "Enter an exchange rate for selected currencies in relation to base currency."
+msgstr ""
+
+#: ../template/admin/option_exchange_rate.php:34 ../template/admin/option_general.php:12
+msgid "Currency."
+msgstr "Moneda."
+
+#: ../template/admin/option_exchange_rate.php:40
+msgid "Exchange rate"
+msgstr "Tipo de cambio"
+
+#: ../template/admin/option_exchange_rate.php:42
+msgid "Exchange rate."
+msgstr "Tipo de cambio."
+
+#: ../template/admin/option_general.php:3
+msgid "Logo"
+msgstr "Logotipo"
+
+#: ../template/admin/option_general.php:4
+msgid "Select company logo."
+msgstr "Seleccione el logotipo de la empresa."
+
+#: ../template/admin/option_general.php:23
+msgid "Date format"
+msgstr "Formato de fecha"
+
+#: ../template/admin/option_general.php:24
+#, php-format
+msgid "Select the date format to be displayed. More info you can find here %s."
+msgstr "Seleccione el formato de fecha a mostrar. Puede encontrar más información aquí %s."
+
+#: ../template/admin/option_general.php:30
+msgid "Time format"
+msgstr "Formato de hora"
+
+#: ../template/admin/option_general.php:31
+#, php-format
+msgid "Select the time format to be displayed. More info you can find here %s."
+msgstr "Seleccione el formato de hora a mostrar. Puede encontrar más información aquí %s."
+
+#: ../template/admin/option_general.php:37
+msgid "Address format"
+msgstr "Formato de dirección"
+
+#: ../template/admin/option_general.php:38
+msgid ""
+"Determine in which way elements of the address (street name/number, city, country etc.) should be displayed."
+msgstr ""
+
+#: ../template/admin/option_general.php:41
+msgid "Layout I"
+msgstr "Disposición I"
+
+#: ../template/admin/option_general.php:43
+msgid "Layout II (US)"
+msgstr "Diseño II (EE. UU.)"
+
+#: ../template/admin/option_general.php:47
+msgid "Default sender e-mail account"
+msgstr "Cuenta de correo electrónico del remitente predeterminado"
+
+#: ../template/admin/option_general.php:49
+msgid "Select default e-mail account."
+msgstr "Seleccione la cuenta de correo electrónico predeterminada."
+
+#: ../template/admin/option_general.php:50
+msgid "It will be used to sending email messages to clients about changing of booking status."
+msgstr ""
+
+#: ../template/admin/option_general.php:63
+msgid "Fixer.io API key"
+msgstr "Clave API de Fixer.io"
+
+#: ../template/admin/option_general.php:65
+#, php-format
+msgid "Enter API key generated by <a href=\"%s\" target=\"_blank\">Fixer.io</a>."
+msgstr ""
+
+#: ../template/admin/option_import_demo.php:8
+msgid "Import demo for the plugin is not available, because your are using \"Swim Academy\" theme."
+msgstr ""
+
+#: ../template/admin/option_import_demo.php:10
+msgid "You should use \"Theme Demo Data Installer\" to install entire dummy content."
+msgstr ""
+
+#: ../template/admin/option_import_demo.php:14
+msgid "To import demo content, click on below button."
+msgstr "Para importar contenido de demostración, haga clic en el botón de abajo."
+
+#: ../template/admin/option_import_demo.php:16
+msgid "You should run this function only once (the same content will be created when you run it once again)."
+msgstr ""
+
+#: ../template/admin/option_import_demo.php:18
+msgid "This operation takes a few minutes. This operation is not reversible."
+msgstr "Esta operación tarda unos minutos."
+
+#: ../template/admin/option_import_demo.php:26
+msgid "Import"
+msgstr "Importar"
+
+#: ../template/admin/option_payment.php:3
+msgid "Booking status after successful payment"
+msgstr "Estado de la inscripción después del pago exitoso"
+
+#: ../template/admin/option_payment.php:4
+msgid "Set selected status of the booking after the successful payment."
+msgstr "Establecer el estado seleccionado de la inscripción después del pago exitoso."
+
+#: ../template/admin/option_payment.php:6
+msgid "New status:"
+msgstr "Nuevo estado:"
+
+#: ../template/admin/option_payment.php:9
+msgid "[No changes]"
+msgstr "[Sin cambios]"
+
+#: ../template/admin/option_payment.php:22
+msgid "Set the same status if the booking sum is zero:"
+msgstr "Establecer el mismo estado si la suma de la inscripción es cero:"
+
+#: ../template/admin/option_payment.php:32
+msgid "Booking statuses synchronization"
+msgstr "Sincronización de estados de inscripción"
+
+#: ../template/admin/option_payment.php:34
+msgid "Synchronize booking statuses between plugin and wooCommerce."
+msgstr "Sincronizar estados de inscripción entre complemento y wooCommerce."
+
+#: ../template/email_booking.php:98
+msgid "Net price"
+msgstr "Precio neto"
+
+#: ../template/email_booking.php:106
+msgid "Gross price"
+msgstr "Precio bruto"
+
+#: ../template/email_booking.php:111
+msgid "Pay for a booking"
+msgstr "Pagar por una inscripción"
+
+#: ../template/email_booking.php:131 ../template/email_booking.php:154
+msgid "First name"
+msgstr "Nombre"
+
+#: ../template/email_booking.php:135 ../template/email_booking.php:158
+msgid "Second name"
+msgstr "Segundo nombre"
+
+#: ../template/email_booking.php:166
+msgid "Phone number"
+msgstr "Número de teléfono"
+
+#: ../template/email_test.php:50
+msgid "Information"
+msgstr "Información"
+
+#: ../template/email_test.php:55
+msgid "Test message sending via \"Bookingo - Course Booking System for WordPress\" plugin."
+msgstr ""
+
+#: ../template/public/public.php:35
+msgid "Book a Class"
+msgstr "Inscribirse a una disciplina"
+
+#: ../template/public/public.php:62
+msgid "Sign Up"
+msgstr "Registrarse"
+
+#: ../template/public/public.php:126
+msgid "Pay <span></span> for the booking"
+msgstr "Pague <span></span> por la inscripción"
+
+#: ../vc/vc_bgcbs_booking_form.php:15
+msgid "Bookingo Booking Form"
+msgstr "Juduca Formulario de inscripción"
+
+#: ../vc/vc_bgcbs_booking_form.php:16
+msgid "Displays booking from."
+msgstr "Mostrar inscripción desde."
+
+#: ../vc/vc_bgcbs_booking_form.php:17 ../vc/vc_bgcbs_course_group_list.php:16
+msgid "Content"
+msgstr "Contenido"
+
+#: ../vc/vc_bgcbs_booking_form.php:25
+msgid "Select booking form which has to be displayed."
+msgstr "Seleccione el formulario de inscripción que debe mostrarse."
+
+#: ../vc/vc_bgcbs_booking_form.php:34
+msgid "Select currency of booking form."
+msgstr "Seleccione la moneda del formulario de inscripción."
+
+#: ../vc/vc_bgcbs_course_group_list.php:14
+msgid "Bookingo Course Group List"
+msgstr "Lista de categorías de Juduca"
+
+#: ../vc/vc_bgcbs_course_group_list.php:15
+msgid "Creates list (or carousel) of course groups."
+msgstr "Crea lista (o carrusel) de categorías."
+
+#: ../vc/vc_bgcbs_course_group_list.php:24
+msgid "Select at least one course group."
+msgstr "Seleccione al menos una categoría."
+
+#: ../vc/vc_bgcbs_course_group_list.php:32
+msgid "Carousel"
+msgstr "Carrusel"
+
+#: ../vc/vc_bgcbs_course_group_list.php:33
+msgid "Enable or disable carousel."
+msgstr "Habilitar o deshabilitar carrusel."
+
+#: ../vc/vc_bgcbs_course_group_list.php:45
+msgid "Style"
+msgstr "Estilo"
+
+#: ../vc/vc_bgcbs_course_group_list.php:46
+msgid "Select a list style."
+msgstr "Seleccione un estilo de lista."
+
+#: ../vc/vc_bgcbs_course_group_list.php:49
+msgid "Style 1"
+msgstr "Estilo 1"
+
+#: ../vc/vc_bgcbs_course_group_list.php:50
+msgid "Style 2"
+msgstr "Estilo 2"
+
+#: ../vc/vc_bgcbs_course_group_list.php:58
+msgid "CSS class"
+msgstr "clase CSS"
+
+#: ../vc/vc_bgcbs_course_group_list.php:59
+msgid "Additional CSS classes which are applied to top level markup of this shortcode."
+msgstr ""
+
+#: ../woocommerce/checkout/form-pay.php:44
+msgid ""
+"Sorry, it seems that there are no available payment methods for your location. Please contact us if you require "
+"assistance or wish to make alternate arrangements."
+msgstr ""
+
+#: ../woocommerce/checkout/thankyou.php:44
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. "
+"Please attempt your purchase again."
+msgstr ""
+
+#: ../woocommerce/checkout/thankyou.php:48 ../woocommerce/checkout/thankyou.php:54
+msgid "Thank you. Your order has been received."
+msgstr "Gracias."
