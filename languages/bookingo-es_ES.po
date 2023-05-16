@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-15 20:20-0600\n"
+"PO-Revision-Date: 2023-05-15 22:21-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -3225,11 +3225,11 @@ msgstr "Detalles."
 
 #: ../template/admin/meta_box_booking_form.php:9
 msgid "Look & feel"
-msgstr "Mira"
+msgstr "Aspecto visual"
 
 #: ../template/admin/meta_box_booking_form.php:10
 msgid "Styles"
-msgstr ""
+msgstr "Estilo"
 
 #: ../template/admin/meta_box_booking_form.php:18
 msgid "You have to assign one course to this booking form. Otherwise booking form will not be displayed."
@@ -3237,7 +3237,7 @@ msgstr "Tiene que asignar una disciplina a este formulario o el formulario no se
 
 #: ../template/admin/meta_box_booking_form.php:24
 msgid "Booking form ID"
-msgstr ""
+msgstr "ID de formulario"
 
 #: ../template/admin/meta_box_booking_form.php:26
 msgid "Shortcode"
@@ -3245,19 +3245,19 @@ msgstr ""
 
 #: ../template/admin/meta_box_booking_form.php:27
 msgid "Copy and paste the shortcode on a page."
-msgstr ""
+msgstr "Copie y pegue el shortcode en una página."
 
 #: ../template/admin/meta_box_booking_form.php:43 ../template/admin/meta_box_price_rule.php:34
 msgid "Select course."
-msgstr ""
+msgstr "Seleccione una disciplina."
 
 #: ../template/admin/meta_box_booking_form.php:61
 msgid "Default booking status"
-msgstr ""
+msgstr "Estado inicial"
 
 #: ../template/admin/meta_box_booking_form.php:62
 msgid "Default booking status of new order."
-msgstr ""
+msgstr "Estado por defecto de las nuevas inscripciones."
 
 #: ../template/admin/meta_box_booking_form.php:78
 msgid "Enable or disable WooCommerce support for this booking form."
@@ -3292,35 +3292,35 @@ msgstr ""
 
 #: ../template/admin/meta_box_booking_form.php:120
 msgid "Form preloader"
-msgstr ""
+msgstr "Carga previa de formularios"
 
 #: ../template/admin/meta_box_booking_form.php:121
 msgid "Enable or disable form preloader."
-msgstr ""
+msgstr "Habilitar o deshabilitar la carga previa de formularios."
 
 #: ../template/admin/meta_box_booking_form.php:130
 msgid "Default active tab"
-msgstr ""
+msgstr "Pestaña activa por defecto"
 
 #: ../template/admin/meta_box_booking_form.php:131
 msgid "Select which tab has to be active by default."
-msgstr ""
+msgstr "Seleccione cual pestaña estará activa por defecto."
 
 #: ../template/admin/meta_box_booking_form.php:134 ../template/public/public.php:34
 msgid "Overview"
-msgstr ""
+msgstr "Detalles"
 
 #: ../template/admin/meta_box_booking_form.php:140
 msgid "Course start/end time"
-msgstr ""
+msgstr "Inicio/fin de la disciplina"
 
 #: ../template/admin/meta_box_booking_form.php:141
 msgid "Show or hide course start/end time in the top bar."
-msgstr ""
+msgstr "Mostrar o esconder el tiempo de inicio/fin en la barra superior."
 
 #: ../template/admin/meta_box_booking_form.php:144
 msgid "Show"
-msgstr ""
+msgstr "Mostrar"
 
 #: ../template/admin/meta_box_booking_form.php:146
 msgid "Hide"
@@ -4566,7 +4566,7 @@ msgstr ""
 
 #: ../template/public/public.php:35
 msgid "Book a Class"
-msgstr "Inscribirse a una disciplina"
+msgstr "Inscripción"
 
 #: ../template/public/public.php:62
 msgid "Sign Up"

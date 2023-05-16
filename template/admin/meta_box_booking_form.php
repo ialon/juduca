@@ -15,7 +15,7 @@
 		{
 ?>
 					<div class="to-notice-small to-notice-small-error">
-						<?php esc_html_e('You have to assign one course to this booking form. Otherwise booking form will not be displayed.') ?>
+						<?php esc_html_e('You have to assign one course to this booking form. Otherwise booking form will not be displayed.', 'bookingo') ?>
 					</div>
 <?php
 		}
@@ -71,8 +71,8 @@ echo esc_html($shortcode);
 		}	
 ?>								
 							</div>
-						</li>  		
-						<li>
+						</li>
+						<!-- <li>
 							<h5><?php esc_html_e('WooCommerce','bookingo'); ?></h5>
 							<span class="to-legend">
 								<?php esc_html_e('Enable or disable WooCommerce support for this booking form.','bookingo'); ?><br/>
@@ -84,14 +84,14 @@ echo esc_html($shortcode);
 								<input type="radio" value="0" id="<?php BGCBSHelper::getFormName('woocommerce_enable_0'); ?>" name="<?php BGCBSHelper::getFormName('woocommerce_enable'); ?>" <?php BGCBSHelper::checkedIf($this->data['meta']['woocommerce_enable'],0); ?>/>
 								<label for="<?php BGCBSHelper::getFormName('woocommerce_enable_0'); ?>"><?php esc_html_e('Disable','bookingo'); ?></label>
 							</div>
-						</li> 
-						<li>
+						</li> -->
+						<!-- <li>
 							<h5><?php esc_html_e('Currencies','bookingo'); ?></h5>
 							<span class="to-legend">
 								<?php esc_html_e('Select available currencies.','bookingo'); ?><br/>
 								<?php esc_html_e('You can set exchange rates for each selected currency in plugin options.','bookingo'); ?><br/>
 								<?php esc_html_e('You can run booking form with particular currency by adding parameter "currency=CODE" to the query string of page on which booking form is located.','bookingo'); ?>
-							</span>						
+							</span>
 							<div class="to-clear-fix">
 								<select multiple="multiple" class="to-dropkick-disable" name="<?php BGCBSHelper::getFormName('currency[]'); ?>">
 									<option value="-1" <?php BGCBSHelper::selectedIf($this->data['meta']['currency'],-1); ?>><?php esc_html_e('- None -','bookingo'); ?></option>
@@ -99,10 +99,10 @@ echo esc_html($shortcode);
 		foreach($this->data['dictionary']['currency'] as $index=>$value)
 			echo '<option value="'.esc_attr($index).'" '.(BGCBSHelper::selectedIf($this->data['meta']['currency'],$index,false)).'>'.esc_html($value['name'].' ('.$index.')').'</option>';
 ?>
-								</select>												
+								</select>
 							</div>
-						</li>
-						<li>
+						</li> -->
+						<!-- <li>
 							<h5><?php esc_html_e('Coupons','bookingo'); ?></h5>
 							<span class="to-legend"><?php esc_html_e('Enable or disable coupons for this booking form.','bookingo'); ?></span>
 							<div class="to-radio-button">
@@ -111,7 +111,7 @@ echo esc_html($shortcode);
 								<input type="radio" value="0" id="<?php BGCBSHelper::getFormName('coupon_enable_0'); ?>" name="<?php BGCBSHelper::getFormName('coupon_enable'); ?>" <?php BGCBSHelper::checkedIf($this->data['meta']['coupon_enable'],0); ?>/>
 								<label for="<?php BGCBSHelper::getFormName('coupon_enable_0'); ?>"><?php esc_html_e('Disable','bookingo'); ?></label>
 							</div>
-						</li>	
+						</li> -->
 					</ul>
 				</div>
 				<div id="meta-box-booking-form-2">
