@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-15 22:21-0600\n"
+"PO-Revision-Date: 2023-05-16 17:41-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -223,7 +223,7 @@ msgstr "Categoría"
 
 #: ../class/BGCBS.BookingForm.class.php:673
 msgid "Course Participant Data"
-msgstr "Información del participante en la disciplina"
+msgstr "Información del atleta"
 
 #: ../class/BGCBS.BookingForm.class.php:680 ../class/BGCBS.BookingForm.class.php:722
 msgid "First Name *"
@@ -235,7 +235,7 @@ msgstr "Apellido *"
 
 #: ../class/BGCBS.BookingForm.class.php:715
 msgid "Applicant Data"
-msgstr "Información del participante"
+msgstr "Información de contacto"
 
 #: ../class/BGCBS.BookingForm.class.php:736
 msgid "E-mail Address *"
@@ -313,7 +313,7 @@ msgstr "Precio (%s)"
 
 #: ../class/BGCBS.BookingForm.class.php:1093
 msgid "Students"
-msgstr "Estudiantes"
+msgstr "Inscritos"
 
 #: ../class/BGCBS.BookingForm.class.php:1094
 #, php-format
@@ -4570,7 +4570,7 @@ msgstr "Inscripción"
 
 #: ../template/public/public.php:62
 msgid "Sign Up"
-msgstr "Registrarse"
+msgstr "Inscribir"
 
 #: ../template/public/public.php:126
 msgid "Pay <span></span> for the booking"

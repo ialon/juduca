@@ -19,7 +19,7 @@
 					<div id="<?php BGCBSHelper::getFormName('step_1'); ?>"<?php echo BGCBSHelper::createCSSClassAttribute($class); ?>> 
 					
 						<div class="bgcbs-main-content-top">
-							<?php echo $this->data['info_1_section']; ?>
+							<?php // echo $this->data['info_1_section']; ?>
 						</div>	
 
 						<div class="bgcbs-main-content-bottom">
@@ -179,6 +179,10 @@
 ?>
 		</div>
 <?php
+
+        $plugin = new BGCBSPlugin();
+        $plugin->publicInit();
+
 		wp_add_inline_script('bgcbs-bookingo',
 		'
 			jQuery(document).ready(function($)

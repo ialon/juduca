@@ -444,7 +444,7 @@
 
 				if(typeof(response.info_1_section)!=='undefined')
 				{
-					$self.e('.bgcbs-main-content-top').append(response.info_1_section);
+					// $self.e('.bgcbs-main-content-top').append(response.info_1_section);
 				}
 				if(typeof(response.info_2_section)!=='undefined')
 				{

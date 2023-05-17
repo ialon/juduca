@@ -1040,7 +1040,7 @@ class BGCBSBookingForm
 			$html =
 			'
 				<div class="bgcbs-info-2-section">
-					<div class="bgcbs-info-2-section-price">				
+					<!-- <div class="bgcbs-info-2-section-price">				
 			';
 			
 			if($Validation->isNotEmpty($courseGroup['meta']['price_label_instead_price']))
@@ -1077,7 +1077,7 @@ class BGCBSBookingForm
 			{
 				$html.=
 				'
-						<span class="bgcbs-info-2-section-price-item-3">'.esc_html($courseGroup['meta']['price_label_under_price']).'</span>					
+						<span class="bgcbs-info-2-section-price-item-3">'.esc_html($courseGroup['meta']['price_label_under_price']).'</span> -->					
 				';				
 			}	
 			
@@ -1104,10 +1104,10 @@ class BGCBSBookingForm
 			
 			$html.=
 			'
-					</div>
-					<div class="bgcbs-button bgcbs-button-style-2">
+					<!-- </div> -->
+					<!-- <div class="bgcbs-button bgcbs-button-style-2">
 						<a href="#">'.esc_html__('Book a class','bookingo').'</a>
-					</div>
+					</div> -->
 					<ul class="bgcbs-list-reset">			
 						'.$htmlStudent.'
 						'.$htmlCourse.'

@@ -1591,7 +1591,7 @@ msgstr ""
 
 #: ../class/BGCBS.Course.class.php:164
 msgid "Thank you for sending your booking!"
-msgstr ""
+msgstr "¡Gracias por enviar su inscripción!"
 
 #: ../class/BGCBS.Course.class.php:167
 msgid "Back To Home"
