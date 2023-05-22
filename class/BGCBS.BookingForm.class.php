@@ -1083,6 +1083,13 @@ class BGCBSBookingForm
 			
 			if((int)$courseGroup['meta']['participant_number_enable']===1)
 			{
+                $limitlesssports = array(
+                    'Atletismo',
+                    'Natación',
+                    'Taekwondo',
+                    'Karate Do'
+                );
+
 				$htmlStudent=
 				'
 					<li>
@@ -1091,15 +1098,44 @@ class BGCBSBookingForm
 						</div>
 						<div>
 							<span>'.esc_html__('Students','bookingo').'</span>
-							<h5>'.sprintf(esc_html__('%s enrolled of %s','bookingo'),$participant['confirmed'],$courseGroup['meta']['participant_number']).'</h5>
-						</div>
-						<div class="bgcbs-participant-number-circle" data-value="'.esc_attr((($participant['confirmed']/$courseGroup['meta']['participant_number']))).'">
-							<div></div>
-							<b></b>
-							<b></b>
-						</div>
-					</li>					
 				';
+
+                if(!in_array($course['post']->post_title, $limitlesssports))
+                {
+                    $htmlStudent.='<h5>'.sprintf(esc_html__('%s enrolled of %s','bookingo'),$participant['confirmed'],$courseGroup['meta']['participant_number']).'</h5>';
+                }
+                else
+                {
+                    $htmlStudent.='<h5>'.sprintf(esc_html__('%s enrolled','bookingo'),$participant['confirmed']).'</h5>';
+                }
+
+                $groupsports = array(
+                    'Baloncesto' => 9,
+                    'Fútbol' => 15,
+                    'Fútbol Sala' => 9,
+                    'Vóleibol' => 9,
+                    'Tenis de Mesa' => 1,
+                    'Ajedrez' => 1
+                );
+
+                if(in_array($course['post']->post_title, array_keys($groupsports)))
+                {
+                    $htmlStudent.= '<h5>'.sprintf(esc_html__('Minimum required: %s','bookingo'), $groupsports[$course['post']->post_title]).'</h5>';
+                }
+
+                if(!in_array($course['post']->post_title, $limitlesssports))
+                {
+                    $htmlStudent.=
+                    '
+                        </div>
+                            <div class="bgcbs-participant-number-circle" data-value="'.esc_attr((($participant['confirmed']/$courseGroup['meta']['participant_number']))).'">
+                                <div></div>
+                                <b></b>
+                                <b></b>
+                            </div>
+                        </li>					
+                    ';
+                }
 			}
 			
 			$html.=

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-22 16:56-0600\n"
+"PO-Revision-Date: 2023-05-22 17:43-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -296,6 +296,10 @@ msgstr "Nombre de la disciplina / categoría"
 #: ../class/BGCBS.BookingForm.class.php:985
 msgid "Info"
 msgstr "Información"
+
+#: ../class/BGCBS.BookingForm.class.php:1106
+msgid "Minimum required: %s"
+msgstr "Mínimo requerido: %s"
 
 #: ../class/BGCBS.BookingForm.class.php:1015 ../class/BGCBS.CourseGroup.class.php:361 ../class/BGCBS.Location.class.php:41
 #: ../class/BGCBS.Location.class.php:52 ../template/admin/meta_box_course_group.php:41
@@ -1673,7 +1677,7 @@ msgstr "/ persona"
 #: ../class/BGCBS.CourseGroup.class.php:697
 #, php-format
 msgid "%s enrolled"
-msgstr "%s inscrito"
+msgstr "%s inscritos"
 
 #: ../class/BGCBS.CourseGroup.class.php:701 ../class/BGCBS.CourseGroup.class.php:716
 #, php-format
