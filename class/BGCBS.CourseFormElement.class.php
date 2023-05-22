@@ -15,6 +15,7 @@ class BGCBSCourseFormElement
 			4=>array(esc_html__('Textarea','bookingo')),
 			2=>array(esc_html__('Select list','bookingo')),
 			3=>array(esc_html__('Checkbox','bookingo')),
+            5=>array(esc_html__('Date','bookingo')),
 		);
 	}
 	
@@ -175,7 +176,7 @@ class BGCBSCourseFormElement
 			{
 				$name='form_element_field_'.$value['id'];
 				
-				if(in_array($value['field_type'],array(1,2,3,4)))
+				if(in_array($value['field_type'],array(1,2,3,4,5)))
 				{
 					$html.=
 					'
@@ -243,6 +244,13 @@ class BGCBSCourseFormElement
 							<textarea name="'.BGCBSHelper::getFormName($name,false).'">'.esc_html(BGCBSHelper::getPostValue($name)).'</textarea>
 						';
 					}
+                    elseif((int)$value['field_type']===5)
+                    {
+                        $html.=
+                        '
+							<input type="date" min="1994-01-01" max="2007-01-01" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
+						';
+                    }
 
 					$html.=
 					'							
@@ -308,6 +316,14 @@ class BGCBSCourseFormElement
 					}
 				}
 			}
+
+            if((int)$value['field_type']===5)
+            {
+                $birthdate = DateTimeImmutable::createFromFormat("Y-m-d", $data[$name2]);
+                $agelimit = DateTimeImmutable::createFromFormat("Y-m-d", "1994-01-01");
+                if ($birthdate < $agelimit)
+                    $error[]=array('name'=>BGCBSHelper::getFormName($name2,false),'message_error'=>esc_html__('The selected birth date exceeds the maximum age allowed.','bookingo'));
+            }
 		}
 		
 		return($error);

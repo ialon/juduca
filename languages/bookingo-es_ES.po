@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-16 17:41-0600\n"
+"PO-Revision-Date: 2023-05-22 16:56-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -366,7 +366,7 @@ msgstr "Ingrese una dirección de correo electrónico válida del solicitante."
 
 #: ../class/BGCBS.BookingForm.class.php:1253
 msgid "Approve all agreements."
-msgstr "Aprobar todos las condiciones."
+msgstr "Es obligatorio aceptar todos los requerimientos de la disciplina."
 
 #: ../class/BGCBS.BookingReport.class.php:33
 msgid "Export as CSV"
@@ -1574,7 +1574,7 @@ msgstr "Para: %s"
 
 #: ../class/BGCBS.CourseAgreement.class.php:94
 msgid "Consent and Statements"
-msgstr "Consentimiento y declaraciones"
+msgstr "Requerimientos de la disciplina"
 
 #: ../class/BGCBS.CourseAgreement.class.php:125 ../class/BGCBS.CourseAgreement.class.php:134 ../template/admin/meta_box_course.php:469
 #: ../template/admin/meta_box_course.php:526 ../template/admin/meta_box_course.php:615 ../template/admin/meta_box_course.php:642
@@ -1598,11 +1598,15 @@ msgstr "Área de texto"
 
 #: ../class/BGCBS.CourseFormElement.class.php:16
 msgid "Select list"
-msgstr "Seleccionar lista"
+msgstr "Lista de opciones"
 
 #: ../class/BGCBS.CourseFormElement.class.php:17
 msgid "Checkbox"
 msgstr "Casilla de verificación"
+
+#: ../class/BGCBS.CourseFormElement.class.php:322
+msgid "The selected birth date exceeds the maximum age allowed."
+msgstr "La fecha de nacimiento seleccionada excede el límite de edad permitido."
 
 #: ../class/BGCBS.CourseFormElement.class.php:117
 msgid "- Course Participant Data -"

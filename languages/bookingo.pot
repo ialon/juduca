@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
-"POT-Creation-Date: 2022-08-16 13:21+0200\n"
+"POT-Creation-Date: 2023-05-22 16:17-0600\n"
 "PO-Revision-Date: 2021-05-24 11:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
@@ -10,11 +10,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3\n"
 "X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../class/BGCBS.Booking.class.php:40 ../class/BGCBS.Booking.class.php:43
@@ -3444,8 +3444,8 @@ msgstr ""
 #: ../template/admin/meta_box_booking_form.php:79
 #, php-format
 msgid ""
-"Please make sure that you set up \"Checkout page\" in <a href=\"%s"
-"\">WooCommerce settings</a>"
+"Please make sure that you set up \"Checkout page\" in <a "
+"href=\"%s\">WooCommerce settings</a>"
 msgstr ""
 
 #: ../template/admin/meta_box_booking_form.php:89
@@ -3872,8 +3872,8 @@ msgstr ""
 
 #: ../template/admin/meta_box_course.php:387
 msgid ""
-"In case of set field as \"Mandatory\", it is needed to fill \"Error message"
-"\" field, otherwise new field will not be created."
+"In case of set field as \"Mandatory\", it is needed to fill \"Error "
+"message\" field, otherwise new field will not be created."
 msgstr ""
 
 #: ../template/admin/meta_box_course.php:396
