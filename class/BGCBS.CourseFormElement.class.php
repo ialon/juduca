@@ -190,6 +190,17 @@ class BGCBSCourseFormElement
 						$fieldHtml=null;
 						$fieldValue=preg_split('/;/',$value['dictionary']);
 						
+                        if($value['label'] == 'Universidad')
+                        {
+                            global $wpdb;
+                            $fieldValue = [];
+                            $universities = $wpdb->get_results($wpdb->prepare("SELECT DISTINCT company_name FROM {$wpdb->prefix}swpm_members_tbl"));
+                            foreach($universities as $university)
+                            {
+                                $fieldValue[] = $university->company_name;
+                            }
+                        }
+
 						if((int)$value['field_type']===2)
 						{
 							foreach($fieldValue as $fieldValueValue)
@@ -198,13 +209,25 @@ class BGCBSCourseFormElement
 									$fieldHtml.='<option value="'.esc_attr($fieldValueValue).'"'.BGCBSHelper::selectedIf($fieldValueValue,BGCBSHelper::getPostValue($name),false).'>'.esc_html($fieldValueValue).'</option>';
 							}
 
-							$html.=
-							'
-								<select name="'.BGCBSHelper::getFormName($name,false).'">
-									'.$fieldHtml.'
-								</select>
-							';	
-						}
+
+                            if(!current_user_can('administrator') && $value['label'] == 'Universidad')
+                            {
+                                global $user_identity;
+                                $university = $wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity));
+                                $html.=
+                                '
+                                    <input type="text" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr($university->company_name).'" disabled />	
+                                ';
+                            }
+                            else {
+                                $html .=
+                                '
+                                    <select name="' . BGCBSHelper::getFormName($name, false) . '">
+                                        ' . $fieldHtml . '
+                                    </select>
+                                ';
+                            }
+                        }
 						else if((int)$value['field_type']===3)
 						{
 							foreach($fieldValue as $fieldValueValue)
@@ -341,6 +364,13 @@ class BGCBSCourseFormElement
 		{
 			$name='form_element_field_'.$value['id']; 
 			$course['meta']['form_element_field'][$index]['value']=$data[$name];
+
+            if(!current_user_can('administrator') && $value['label'] == 'Universidad')
+            {
+                global $wpdb, $user_identity;
+                $university = $wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity));
+                $course['meta']['form_element_field'][$index]['value']=$university->company_name;
+            }
 		}
 		
 		BGCBSPostMeta::updatePostMeta($bookingId,'form_element_panel',$course['meta']['form_element_panel']);
