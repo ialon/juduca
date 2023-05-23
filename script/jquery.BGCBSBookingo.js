@@ -242,7 +242,8 @@
 				
 				$self.setAction('send_booking');
 				
-				$self.post($self.e('form[name="bgcbs-form"]').serialize(),function(response)
+				var formdata = new FormData(doc.getElementsByName('bgcbs-form')[0]);
+				$self.filepost(formdata,function(response)
 				{
 					if(typeof(response.error)!=='undefined')
 					{
@@ -520,6 +521,23 @@
 			},'json');
 		}; 
 		
+		/**********************************************************************/
+
+		this.filepost=function(data,callback)
+		{
+			$.ajax({
+				type: "POST",
+				data: data,
+				dataType: "json",
+				url: $option.ajax_url,
+				processData: false,
+				contentType: false,
+				success: function(response) {
+					callback(response);
+				}
+			});
+		};
+
 		/**********************************************************************/
 		
         this.preloader=function(action)

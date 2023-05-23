@@ -16,6 +16,7 @@ class BGCBSCourseFormElement
 			2=>array(esc_html__('Select list','bookingo')),
 			3=>array(esc_html__('Checkbox','bookingo')),
             5=>array(esc_html__('Date','bookingo')),
+            6=>array(esc_html__('Upload','bookingo')),
 		);
 	}
 	
@@ -176,7 +177,7 @@ class BGCBSCourseFormElement
 			{
 				$name='form_element_field_'.$value['id'];
 				
-				if(in_array($value['field_type'],array(1,2,3,4,5)))
+				if(in_array($value['field_type'],array(1,2,3,4,5,6)))
 				{
 					$html.=
 					'
@@ -274,6 +275,13 @@ class BGCBSCourseFormElement
 							<input type="date" min="1994-01-01" max="2007-01-01" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
 						';
                     }
+                    elseif((int)$value['field_type']===6)
+                    {
+                        $html.=
+                            '
+							<input type="file" name="'.BGCBSHelper::getFormName($name,false).'" value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
+						';
+                    }
 
 					$html.=
 					'							
@@ -342,10 +350,19 @@ class BGCBSCourseFormElement
 
             if((int)$value['field_type']===5)
             {
-                $birthdate = DateTimeImmutable::createFromFormat("Y-m-d", $data[$name2]);
+                $birthdate = DateTimeImmutable::createFromFormat("Y-m-d", $data[$name]);
                 $agelimit = DateTimeImmutable::createFromFormat("Y-m-d", "1994-01-01");
                 if ($birthdate < $agelimit)
-                    $error[]=array('name'=>BGCBSHelper::getFormName($name2,false),'message_error'=>esc_html__('The selected birth date exceeds the maximum age allowed.','bookingo'));
+                    $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>esc_html__('The selected birth date exceeds the maximum age allowed.','bookingo'));
+            }
+
+            if((int)$value['field_type']===6)
+            {
+                $uploadname = 'bgcbs_' . $name;
+                if(empty($_FILES) || !isset($_FILES[$uploadname]) || $_FILES[$uploadname]['size'] == 0)
+                {
+                    $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>$value['message_error']);
+                }
             }
 		}
 		
@@ -370,6 +387,13 @@ class BGCBSCourseFormElement
                 global $wpdb, $user_identity;
                 $university = $wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity));
                 $course['meta']['form_element_field'][$index]['value']=$university->company_name;
+            }
+
+            if((int)$value['field_type']===6)
+            {
+                $uploadname = 'bgcbs_' . $name;
+                $attachment_id = media_handle_upload($uploadname, $bookingId);
+                $course['meta']['form_element_field'][$index]['value']=$attachment_id;
             }
 		}
 		
