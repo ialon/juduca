@@ -106,7 +106,7 @@ class BGCBSBooking
 		
 		$booking=$this->getBooking($post->ID);
 		
-		if((int)$booking['meta']['woocommerce_booking_id']>0)
+		if(isset($booking['meta']['woocommerce_booking_id']) && (int)$booking['meta']['woocommerce_booking_id']>0)
 		{
 			echo 
 			'
@@ -894,15 +894,34 @@ class BGCBSBooking
  	 	$query=new WP_Query($argument);
 		if($query===false) return($participant); 		
 		
+        global $wpdb, $user_identity;
+        $university = null;
+        if(!current_user_can('administrator'))
+        {
+            $university = ($wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity)))->company_name;
+        }
+
 		while($query->have_posts())
 		{
 			$query->the_post();
 			
 			$meta=BGCBSPostMeta::getPostMeta($post);
 			
-			if((int)$meta['booking_status_id']===4) $participant['confirmed']++;
-			
-			$participant['registered']++;
+            if ($university)
+            {
+                foreach($meta['form_element_field'] as $elementfield)
+                {
+                    if (($elementfield['label'] == 'Universidad') && $elementfield['value'] == $university) {
+                        if((int)$meta['booking_status_id']===4) $participant['confirmed']++;
+                        $participant['registered']++;
+                    }
+                }
+            }
+            else
+            {
+                if((int)$meta['booking_status_id']===4) $participant['confirmed']++;
+                $participant['registered']++;
+            }
 		}
 		
 		BGCBSHelper::preservePost($post,$bPost,0);

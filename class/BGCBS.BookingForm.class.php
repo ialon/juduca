@@ -528,7 +528,7 @@ class BGCBSBookingForm
 
 		$participant=$Booking->getNumberParticipant($courseGroupId);
 
-		if($participant['confirmed']>=$bookingForm['course_group'][$courseGroupId]['meta']['participant_number']) return(false);
+		if($participant['registered']>=$bookingForm['course_group'][$courseGroupId]['meta']['participant_number']) return(false);
 
 		return(true);
 	}
@@ -1102,11 +1102,11 @@ class BGCBSBookingForm
 
                 if(!in_array($course['post']->post_title, $limitlesssports))
                 {
-                    $htmlStudent.='<h5>'.sprintf(esc_html__('%s enrolled of %s','bookingo'),$participant['confirmed'],$courseGroup['meta']['participant_number']).'</h5>';
+                    $htmlStudent.='<h5>'.sprintf(esc_html__('%s enrolled of %s','bookingo'),$participant['registered'],$courseGroup['meta']['participant_number']).'</h5>';
                 }
                 else
                 {
-                    $htmlStudent.='<h5>'.sprintf(esc_html__('%s enrolled','bookingo'),$participant['confirmed']).'</h5>';
+                    $htmlStudent.='<h5>'.sprintf(esc_html__('%s enrolled','bookingo'),$participant['registered']).'</h5>';
                 }
 
                 $groupsports = array(
@@ -1128,7 +1128,7 @@ class BGCBSBookingForm
                     $htmlStudent.=
                     '
                         </div>
-                            <div class="bgcbs-participant-number-circle" data-value="'.esc_attr((($participant['confirmed']/$courseGroup['meta']['participant_number']))).'">
+                            <div class="bgcbs-participant-number-circle" data-value="'.esc_attr((($participant['registered']/$courseGroup['meta']['participant_number']))).'">
                                 <div></div>
                                 <b></b>
                                 <b></b>
