@@ -195,7 +195,7 @@ class BGCBSCourseFormElement
                         {
                             global $wpdb;
                             $fieldValue = [];
-                            $universities = $wpdb->get_results($wpdb->prepare("SELECT DISTINCT company_name FROM {$wpdb->prefix}swpm_members_tbl"));
+                            $universities = $wpdb->get_results("SELECT DISTINCT company_name FROM {$wpdb->prefix}swpm_members_tbl");
                             foreach($universities as $university)
                             {
                                 $fieldValue[] = $university->company_name;
@@ -362,6 +362,22 @@ class BGCBSCourseFormElement
                 if(empty($_FILES) || !isset($_FILES[$uploadname]) || $_FILES[$uploadname]['size'] == 0)
                 {
                     $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>$value['message_error']);
+                }
+            }
+
+            if((int)$value['field_type']===1 && $value['label']=='No. de Documento de viaje')
+            {
+                global $wpdb;
+                $bookings = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}posts WHERE post_type = 'bgcbs_booking'");
+                foreach($bookings as $booking)
+                {
+                    $meta=BGCBSPostMeta::getPostMeta($booking);
+                    foreach($meta['form_element_field'] as $elementfield)
+                    {
+                        if (($elementfield['label'] == 'No. de Documento de viaje') && $elementfield['value'] == $data[$name]) {
+                            $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>esc_html__('This document number has already been used.','bookingo'));
+                        }
+                    }
                 }
             }
 		}
