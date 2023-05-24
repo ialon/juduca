@@ -2,6 +2,7 @@
 		global $post;
 		
 		$Validation=new BGCBSValidation();
+        $BookingList = new BGCBSBookingList($this->data['course'][$this->data['course_id']]['post']);
 
 		$class=array('bgcbs-main','bgcbs-booking-form-id-'.$this->data['booking_form_post_id'],'bgcbs-clear-fix','bgcbs-hidden');
 ?>
@@ -37,6 +38,7 @@
 
 									<div id="booking-form-tab-1">
 										<?php echo apply_filters('the_content',$this->data['course'][$this->data['course_id']]['post']->post_content); ?>
+                                        <?php echo $BookingList->generate(); ?>
 									</div>
 
 									<div id="booking-form-tab-2">

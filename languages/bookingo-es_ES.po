@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-23 14:21-0600\n"
+"PO-Revision-Date: 2023-05-24 16:43-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -322,7 +322,7 @@ msgstr "Inscritos"
 #: ../class/BGCBS.BookingForm.class.php:1094
 #, php-format
 msgid "%s enrolled of %s"
-msgstr "%s inscrito de %s"
+msgstr "%s inscritos de %s"
 
 #: ../class/BGCBS.BookingForm.class.php:1109 ../template/admin/meta_box_booking_form.php:136
 msgid "Book a class"
@@ -1615,6 +1615,10 @@ msgstr "Subida de archivo"
 #: ../class/BGCBS.CourseFormElement.class.php:322
 msgid "The selected birth date exceeds the maximum age allowed."
 msgstr "La fecha de nacimiento seleccionada excede el límite de edad permitido."
+
+#: ../class/BGCBS.CourseFormElement.class.php:378
+msgid "This document number has already been used."
+msgstr "Este número de documento ya ha sido registrado."
 
 #: ../class/BGCBS.CourseFormElement.class.php:117
 msgid "- Course Participant Data -"
@@ -3132,6 +3136,15 @@ msgstr "Nombre."
 msgid "Last name."
 msgstr "Apellido."
 
+msgid "ID."
+msgstr "Identificación."
+
+msgid "Events."
+msgstr "Eventos."
+
+msgid "Documents."
+msgstr "Documentos."
+
 #: ../template/admin/meta_box_booking.php:151
 msgid "Applicant details."
 msgstr "Detalles del solicitante."
@@ -3320,7 +3333,7 @@ msgstr "Seleccione cual pestaña estará activa por defecto."
 
 #: ../template/admin/meta_box_booking_form.php:134 ../template/public/public.php:34
 msgid "Overview"
-msgstr "Detalles"
+msgstr "Listado"
 
 #: ../template/admin/meta_box_booking_form.php:140
 msgid "Course start/end time"
