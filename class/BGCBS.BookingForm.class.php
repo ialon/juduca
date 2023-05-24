@@ -474,7 +474,8 @@ class BGCBSBookingForm
 			foreach($bookingForm['course_group'] as $index=>$value)
 			{
 				$active=$this->checkCourseGroupActive($bookingForm,$index);
-				if(!$active) unset($bookingForm['course_group'][$index]);
+				if(!$active) $bookingForm['course_group_inactive'][$index] = $value;
+                // if(!$active) unset($bookingForm['course_group'][$index]);
 			}            
 		}
 
@@ -634,7 +635,8 @@ class BGCBSBookingForm
 		
 		foreach($bookingForm['course_group'] as $index=>$value)
 		{
-			$html.='<option value="'.esc_attr($index).'"'.BGCBSHelper::selectedIf($index,$bookingForm['course_group_id'],false).'>'.esc_html($value['post']->post_title).'</option>';
+            $inactive = (isset($bookingForm['course_group_inactive']) && in_array($index, array_keys($bookingForm['course_group_inactive'])));
+			$html.='<option value="'.esc_attr($index).'"'.BGCBSHelper::selectedIf($index,$bookingForm['course_group_id'],false).'>'.esc_html($value['post']->post_title).($inactive?esc_html__(' (full)','bookingo'):'').'</option>';
 		}
 		
 		$html=
@@ -949,16 +951,16 @@ class BGCBSBookingForm
 			$htmlCourseLabel=null;
 			$htmlCourseValue=null;
 			
-			if(count($bookingForm['course_group'])===1)
-			{
-				$htmlCourseLabel=esc_html__('Course name','bookingo');
-				$htmlCourseValue=$course['post']->post_title;
-			}
-			else
-			{
+			// if(count($bookingForm['course_group'])===1)
+			// {
+            // 	$htmlCourseLabel=esc_html__('Course name','bookingo');
+            // 	$htmlCourseValue=$course['post']->post_title;
+            // }
+            // else
+            // {
 				$htmlCourseLabel=esc_html__('Course / group name','bookingo');
-				$htmlCourseValue=$course['post']->post_title.' / '.$courseGroup['post']->post_title;				
-			}
+				$htmlCourseValue=$course['post']->post_title.' / '.$courseGroup['post']->post_title;
+            // }
 			
 			$htmlCourse=
 			'
@@ -1255,6 +1257,7 @@ class BGCBSBookingForm
 		$Validation=new BGCBSValidation();
  	 	$CourseAgreement=new BGCBSCourseAgreement();
 		$CourseFormElement=new BGCBSCourseFormElement();
+        $Booking=new BGCBSBooking();
 		
 		/***/
 		
@@ -1284,6 +1287,11 @@ class BGCBSBookingForm
 		
 		/***/
 		
+        $participant = $Booking->getNumberParticipant($bookingForm['course_group_id']);
+        $participant_number = (int)$bookingForm['course_group'][$bookingForm['course_group_id']]['meta']['participant_number'];
+        if ($participant['registered'] >= $participant_number)
+            $this->setErrorGlobal($response,esc_html__('This course group is full.','bookingo'));
+
 		$error=$CourseAgreement->validate($bookingForm,$data);
 		if($error)
 			$this->setErrorGlobal($response,esc_html__('Approve all agreements.','bookingo'));  
