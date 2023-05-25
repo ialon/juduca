@@ -20,6 +20,7 @@ class BGCBSCourseFormElement
 		);
 
         $this->customOptions = [
+            // Ajedrez
             'Equipo de Ajedrez' => [
                 'meta' => 'equipo_de_ajedrez',
                 'multi' => false,
@@ -35,6 +36,44 @@ class BGCBSCourseFormElement
                 'max' => 1,
                 'options' => [
                     'Sí participa' => 1
+                ]
+            ],
+            // Karate Do
+            'Kumite' => [
+                'meta' => 'kumite',
+                'multi' => false,
+                'max' => 1,
+                'options' => [
+                    249 => [
+                        'Menos de 60kg' => 1,
+                        'Menos de 67kg' => 1,
+                        'Menos de 75kg' => 1,
+                        'Menos de 84kg' => 1,
+                        'Más de 84kg' => 1
+                    ],
+                    250 => [
+                        'Menos de 50kg' => 1,
+                        'Menos de 55kg' => 1,
+                        'Menos de 61kg' => 1,
+                        'Menos de 68kg' => 1,
+                        'Más de 68kg' => 1
+                    ]
+                ]
+            ],
+            'Kata Individual' => [
+                'meta' => 'kata_individual',
+                'multi' => false,
+                'max' => 1,
+                'options' => [
+                    'Sí participa' => 3
+                ]
+            ],
+            'Kata por equipo' => [
+                'meta' => 'kata_equipo',
+                'multi' => false,
+                'max' => 1,
+                'options' => [
+                    'Sí participa' => 3
                 ]
             ]
         ];
@@ -321,7 +360,7 @@ class BGCBSCourseFormElement
 	
 	/**************************************************************************/
 	
-    function createCustomSelect($meta, $field, $options, $name) {
+    function createCustomSelect($meta, $field, $existingoption, $name) {
         $optionshtml = '';
 
         if (!in_array($field['label'], array_keys($this->customOptions))) {
@@ -329,7 +368,9 @@ class BGCBSCourseFormElement
         }
 
         foreach($meta['course_group_id'] as $groupid) {
-            foreach($this->customOptions[$field['label']]['options'] as $optionname => $maxallowed)
+            $options = $this->customOptions[$field['label']]['options'];
+            if(in_array($groupid, array_keys($options))) $options = $options[$groupid];
+            foreach($options as $optionname => $maxallowed)
             {
                 $uses = $this->getCustomBookings($groupid, $this->customOptions[$field['label']]['meta'], esc_attr($optionname));
                 $enrolled = sprintf(esc_html__('%s enrolled of %s','bookingo'), count($uses) ?? 0, $maxallowed);
@@ -340,7 +381,7 @@ class BGCBSCourseFormElement
 
         $selecthtml =
         '<select name="' . BGCBSHelper::getFormName($name, false) . '">
-                ' . $options . $optionshtml . ' 
+                ' . $existingoption . $optionshtml . ' 
         </select>';
 
         return $selecthtml;
@@ -589,11 +630,21 @@ class BGCBSCourseFormElement
             $config = $this->customOptions[$sport];
             $selected = explode(';', $data[$name]);
 
+            $options = [];
+            foreach ($config['options'] as $key => $option) {
+                if (is_array($option)) {
+                    // Support for sports with different options per group
+                    $options = array_merge($options, $option);
+                } else {
+                    $options[$key] = $option;
+                }
+            }
+
             // Check if selection is valid and max allowed has not been reached yet
             foreach($selected as $index => $option) {
-                if (in_array($option, array_keys($config['options'])))
+                if (in_array($option, array_keys($options)))
                 {
-                    $maxallowed = $config['options'][$option];
+                    $maxallowed = $options[$option];
                     $uses = $this->getCustomBookings($groupid, $this->customOptions[$sport]['meta'], esc_attr($option));
                     if ((count($uses) ?? 0) >= $maxallowed)
                     {
@@ -611,6 +662,8 @@ class BGCBSCourseFormElement
             // Special conditions
             $message_error = null;
             if (!isset($data['total_ajedrez'])) $data['total_ajedrez'] = 0;
+            if (!isset($data['total_karate'])) $data['total_karate'] = 0;
+
             switch($sport)
             {
                 case 'Equipo de Ajedrez':
@@ -620,6 +673,19 @@ class BGCBSCourseFormElement
                     $data['total_ajedrez'] += count($selected);
                     // At least one must have an option selected
                     if ($data['total_ajedrez'] == 0) {
+                        $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
+                    }
+                    break;
+                case 'Kumite':
+                    $data['total_karate'] += count($selected);
+                    break;
+                case 'Kata Individual':
+                    $data['total_karate'] += count($selected);
+                    break;
+                case 'Kata por equipo':
+                    $data['total_karate'] += count($selected);
+                    // At least one must have an option selected
+                    if ($data['total_karate'] == 0) {
                         $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
                     }
                     break;

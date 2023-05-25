@@ -171,6 +171,33 @@ class BGCBSBookingList
                     }
 
                     break;
+
+                case 'Karate Do':
+                    $kumite = [];
+                    if(!empty($metadata['kumite']))
+                        $kumite = explode(';', $metadata['kumite']);
+                    if (count($kumite) > 0) $eventhtml .= '<strong>Kumite:</strong>';
+                    foreach ($kumite as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    $equipo = [];
+                    if(!empty($metadata['kata_individual']))
+                        $equipo = explode(';', $metadata['kata_individual']);
+                    if (count($equipo) > 0) $eventhtml .= '<strong>Kata individual:</strong>';
+                    foreach ($equipo as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    $individual = [];
+                    if(!empty($metadata['kata_equipo']))
+                        $individual = explode(';', $metadata['kata_equipo']);
+                    if (count($individual) > 0) $eventhtml .= '<strong>Kata por equipo:</strong>';
+                    foreach ($individual as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    break;
             }
 
             $html = '';
