@@ -1250,7 +1250,7 @@ class BGCBSBookingForm
 	
 	/**************************************************************************/
 	
-	function validate($bookingForm,$data)
+	function validate($bookingForm,&$data)
 	{
  	 	$response=array();
 		

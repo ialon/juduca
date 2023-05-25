@@ -171,9 +171,12 @@
                     if(name==='bgcbs_course_group_id')
                     {
                         $self.changeGroupAjax();
+						$self.toggleCustomOptions($(this));
                     }
 				}
 			});
+            
+			$self.toggleCustomOptions($self.e('select'));
             
             $self.e('select').parent('.bgcbs-form-field').addClass('bgcbs-form-field-type-select');
 			
@@ -586,6 +589,19 @@
 		};
 
 		/**********************************************************************/
+
+		this.toggleCustomOptions=function(element)
+		{
+			var items = $('[data-course-group]');
+			items.each(function() {
+				$(this).attr('disabled', false);
+				if ($(this).attr('data-course-group') != element.val()) {
+					$(this).attr('disabled', true);
+				}
+				$(this).parent().selectmenu("refresh");
+			});
+		}
+
         /**********************************************************************/
 	};
 	

@@ -10,6 +10,16 @@ class BGCBSBookingList
 	function __construct($post)
 	{
 		$this->post = $post;
+
+        $CourseFormElement=new BGCBSCourseFormElement();
+        $this->customOptions = $CourseFormElement->customOptions;
+        $this->eventsports = array(
+            'Ajedrez',
+            'Atletismo',
+            'Taekwondo',
+            'Karate Do',
+            'Natación'
+        );
 	}
 	
 	/**************************************************************************/
@@ -25,14 +35,7 @@ class BGCBSBookingList
                     <th>' . esc_html__( 'ID.', 'bookingo' ) . '</th>
                     <th>' . esc_html__( 'Course group.', 'bookingo' ) . '</th>';
 
-        $eventsports = array(
-            'Atletismo',
-            'Taekwondo',
-            'Karate Do',
-            'Natación'
-        );
-
-        if(in_array($this->post->post_title, $eventsports))
+        if(in_array($this->post->post_title, $this->eventsports))
         {
             $html .= '<th>' . esc_html__( 'Events.', 'bookingo' ) . '</th>';
         }
@@ -59,7 +62,7 @@ class BGCBSBookingList
                     <th>' . $booking['idnumber'] . '</th>
                     <th>' . $booking['category'] . '</th>';
 
-            if(in_array($this->post->post_title, $eventsports))
+            if(in_array($this->post->post_title, $this->eventsports))
             {
                 $html .= '<th>' . ($booking['events'] ?? '') . '</th>';
             }
@@ -97,60 +100,42 @@ class BGCBSBookingList
 
         foreach($allbookings as $allbooking)
         {
-            $metadata = $wpdb->get_results(
-                $wpdb->prepare(
-                    "SELECT pm.*
-                    FROM {$wpdb->prefix}postmeta pm
-                    JOIN {$wpdb->prefix}posts p ON p.ID = pm.post_id AND p.post_type = 'bgcbs_booking'
-                    WHERE post_id = %d",
-                    $allbooking->post_id
-                )
-            );
+            $metadata = BGCBSPostMeta::getPostMeta($allbooking->post_id);
 
-            if (empty($metadata)) {
+            if (empty($metadata) || !isset($metadata['applicant_first_name'])) {
                 continue;
             }
 
             $booking = [];
             $documents = [];
 
-            foreach($metadata as $data)
-            {
-                switch($data->meta_key) {
-                    case 'bgcbs_applicant_first_name':
-                        $booking['firstname'] = $data->meta_value;
-                        break;
-                    case 'bgcbs_applicant_second_name':
-                        $booking['lastname'] = $data->meta_value;
-                        break;
-                    case 'bgcbs_course_group_name':
-                        $booking['category'] = $data->meta_value;
-                        break;
-                    case 'bgcbs_form_element_field':
-                        $elementfields = unserialize($data->meta_value);
-                        foreach($elementfields as $elementfield)
-                        {
-                            if ($elementfield['label'] == 'Universidad')
-                                $booking['university'] = $elementfield['value'];
-                            if ($elementfield['label'] == 'No. de Documento de viaje')
-                                $booking['idnumber'] = $elementfield['value'];
-                            if ((int)$elementfield['field_type']===6)
-                                $documents[$elementfield['value']] = $elementfield['label'];
-                        }
-                        break;
+            $booking['firstname'] = $metadata['applicant_first_name'];
+            $booking['lastname'] = $metadata['applicant_second_name'];
+            $booking['category'] = $metadata['course_group_name'];
+
+            foreach ($metadata['form_element_field'] as $elementfield) {
+                if ($elementfield['label'] == 'Universidad')
+                    $booking['university'] = $elementfield['value'];
+                if ($elementfield['label'] == 'Documento de viaje') {
+                    $documenttype = '<strong>' . $elementfield['value'] . ':</strong><br>';
+                    $booking['idnumber'] = $documenttype . ($booking['idnumber'] ?? '');
                 }
+                if ($elementfield['label'] == 'No. de Documento de viaje')
+                    $booking['idnumber'] = ($booking['idnumber'] ?? '') . $elementfield['value'];
+
+                if ((int)$elementfield['field_type']===6)
+                    $documents[$elementfield['value']] = $elementfield['label'];
             }
 
             if ($university && $booking['university'] != $university) {
                 continue;
             }
 
-            $booking['events'] = '100m, 200m, 300m';
+            $booking['events'] = $this->getEventList($metadata);
+
             $booking['documents'] = '<ul>';
             foreach($documents as $id => $document)
-            {
                 $booking['documents'] .= '<li><a href="' . wp_get_attachment_url($id) . '" target="_blank">' . esc_html__($document) . '</a></li>';
-            }
             $booking['documents'] .= '</ul>';
 
             $bookings[] = $booking;
@@ -158,7 +143,44 @@ class BGCBSBookingList
 
         return $bookings;
 	}
-	
+
+    /**************************************************************************/
+
+    function getEventList($metadata) {
+        if(in_array($this->post->post_title, $this->eventsports))
+        {
+            $eventhtml = '';
+
+            switch($this->post->post_title)
+            {
+                case 'Ajedrez':
+                    $equipo = [];
+                    if(!empty($metadata['equipo_de_ajedrez']))
+                        $equipo = explode(';', $metadata['equipo_de_ajedrez']);
+                    if (count($equipo) > 0) $eventhtml .= '<strong>Equipo:</strong>';
+                    foreach ($equipo as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    $individual = [];
+                    if(!empty($metadata['torneo_individual']))
+                        $individual = explode(';', $metadata['torneo_individual']);
+                    if (count($individual) > 0) $eventhtml .= '<strong>Torneo individual:</strong>';
+                    foreach ($individual as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    break;
+            }
+
+            $html = '';
+            if ($eventhtml)
+                $html = '<ul>' . $eventhtml . '</ul>';
+
+            return $html;
+        }
+    }
+
 	/**************************************************************************/
 	/**************************************************************************/
 }

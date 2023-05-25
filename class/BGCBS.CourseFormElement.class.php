@@ -18,6 +18,26 @@ class BGCBSCourseFormElement
             5=>array(esc_html__('Date','bookingo')),
             6=>array(esc_html__('Upload','bookingo')),
 		);
+
+        $this->customOptions = [
+            'Equipo de Ajedrez' => [
+                'meta' => 'equipo_de_ajedrez',
+                'multi' => false,
+                'max' => 1,
+                'options' => [
+                    'Titular' => 4,
+                    'Suplente' => 1
+                ]
+            ],
+            'Torneo Individual' => [
+                'meta' => 'torneo_individual',
+                'multi' => false,
+                'max' => 1,
+                'options' => [
+                    'Sí participa' => 1
+                ]
+            ]
+        ];
 	}
 	
 	/**************************************************************************/
@@ -220,6 +240,10 @@ class BGCBSCourseFormElement
                                     <input type="text" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr($university->company_name).'" disabled />	
                                 ';
                             }
+                            else if($customselect = $this->createCustomSelect($meta, $value, $fieldHtml, $name))
+                            {
+                                $html .= $customselect;
+                            }
                             else {
                                 $html .=
                                 '
@@ -297,7 +321,80 @@ class BGCBSCourseFormElement
 	
 	/**************************************************************************/
 	
-	function validate($bookingForm,$data)
+    function createCustomSelect($meta, $field, $options, $name) {
+        $optionshtml = '';
+
+        if (!in_array($field['label'], array_keys($this->customOptions))) {
+            return $optionshtml;
+        }
+
+        foreach($meta['course_group_id'] as $groupid) {
+            foreach($this->customOptions[$field['label']]['options'] as $optionname => $maxallowed)
+            {
+                $uses = $this->getCustomBookings($groupid, $this->customOptions[$field['label']]['meta'], esc_attr($optionname));
+                $enrolled = sprintf(esc_html__('%s enrolled of %s','bookingo'), count($uses) ?? 0, $maxallowed);
+                $disabled = ((count($uses) ?? 0) >= $maxallowed) ? 'disabled="disabled"' : '';
+                $optionshtml.='<option value="'.esc_attr($optionname).'" data-course-group="' . $groupid . '" ' . $disabled . '>'.esc_html($optionname . ' (' .$enrolled . ')' ).'</option>';
+            }
+        }
+
+        $selecthtml =
+        '<select name="' . BGCBSHelper::getFormName($name, false) . '">
+                ' . $options . $optionshtml . ' 
+        </select>';
+
+        return $selecthtml;
+    }
+
+    /**************************************************************************/
+
+    function getCustomBookings($groupid, $metakey, $value)
+    {
+        global $wpdb, $user_identity;
+
+        $university = null;
+        if(!current_user_can('administrator'))
+        {
+            $university = ($wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity)))->company_name;
+        }
+
+        $allbookings = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = 'bgcbs_course_group_id' AND meta_value = %d",
+                $groupid
+            )
+        );
+
+        foreach($allbookings as $index => $allbooking) {
+            $selected = $wpdb->get_row(
+                $wpdb->prepare(
+                    "SELECT meta_value FROM {$wpdb->prefix}postmeta WHERE post_id = %d AND meta_key = %s",
+                    $allbooking->post_id,
+                    PLUGIN_BGCBS_CONTEXT.'_'.$metakey
+                )
+            );
+            $selected = explode(';', (($selected && $selected->meta_value) ? $selected->meta_value : ''));
+            if (!in_array($value, $selected)) {
+                unset($allbookings[$index]);
+                continue;
+            }
+
+            if ($university) {
+                $meta = BGCBSPostMeta::getPostMeta($allbooking->post_id);
+                foreach ($meta['form_element_field'] as $elementfield) {
+                    if (($elementfield['label'] == 'Universidad') && $elementfield['value'] != $university) {
+                        unset($allbookings[$index]);
+                    }
+                }
+            }
+        }
+
+        return $allbookings;
+    }
+
+    /**************************************************************************/
+
+	function validate($bookingForm,&$data)
 	{
 		$error=array();
 		
@@ -380,6 +477,8 @@ class BGCBSCourseFormElement
                     }
                 }
             }
+
+            $this->getCustomErrors($error, $data, $bookingForm['course_group_id'], $value, $name);
 		}
 		
 		return($error);
@@ -410,6 +509,12 @@ class BGCBSCourseFormElement
                 $uploadname = 'bgcbs_' . $name;
                 $attachment_id = media_handle_upload($uploadname, $bookingId);
                 $course['meta']['form_element_field'][$index]['value']=$attachment_id;
+            }
+
+            $sport = $value['label'];
+            if ((int)$value['field_type']===2 && in_array($sport, array_keys($this->customOptions))) {
+                $config = $this->customOptions[$sport];
+                BGCBSPostMeta::updatePostMeta($bookingId, $config['meta'], $data[$config['meta']]);
             }
 		}
 		
@@ -476,6 +581,57 @@ class BGCBSCourseFormElement
 	}
 
 	/**************************************************************************/
+
+    function getCustomErrors(&$error, &$data, $groupid, $value, $name)
+    {
+        $sport = $value['label'];
+        if ((int)$value['field_type']===2 && in_array($sport, array_keys($this->customOptions))) {
+            $config = $this->customOptions[$sport];
+            $selected = explode(';', $data[$name]);
+
+            // Check if selection is valid and max allowed has not been reached yet
+            foreach($selected as $index => $option) {
+                if (in_array($option, array_keys($config['options'])))
+                {
+                    $maxallowed = $config['options'][$option];
+                    $uses = $this->getCustomBookings($groupid, $this->customOptions[$sport]['meta'], esc_attr($option));
+                    if ((count($uses) ?? 0) >= $maxallowed)
+                    {
+                        $message_error = sprintf(esc_html__('This event is full: %s.', 'bookingo'), esc_html($option));
+                        $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>$message_error);
+                    }
+                }
+                else
+                {
+                    unset($selected[$index]);
+                }
+            }
+            $data[$config['meta']] = implode(';', $selected);
+
+            // Special conditions
+            $message_error = null;
+            if (!isset($data['total_ajedrez'])) $data['total_ajedrez'] = 0;
+            switch($sport)
+            {
+                case 'Equipo de Ajedrez':
+                    $data['total_ajedrez'] += count($selected);
+                    break;
+                case 'Torneo Individual':
+                    $data['total_ajedrez'] += count($selected);
+                    // At least one must have an option selected
+                    if ($data['total_ajedrez'] == 0) {
+                        $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
+                    }
+                    break;
+            }
+
+            if ($message_error) {
+                $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>$message_error);
+            }
+        }
+    }
+
+    /**************************************************************************/
 }
 
 /******************************************************************************/
