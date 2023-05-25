@@ -198,6 +198,33 @@ class BGCBSBookingList
                     }
 
                     break;
+
+                case 'Taekwondo':
+                    $combate = [];
+                    if(!empty($metadata['combate']))
+                        $combate = explode(';', $metadata['combate']);
+                    if (count($combate) > 0) $eventhtml .= '<strong>Combate:</strong>';
+                    foreach ($combate as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    $poomsae = [];
+                    if(!empty($metadata['poomsae']))
+                        $poomsae = explode(';', $metadata['poomsae']);
+                    if (count($poomsae) > 0) $eventhtml .= '<strong>Poomsae:</strong>';
+                    foreach ($poomsae as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    $poomsaemixto = [];
+                    if(!empty($metadata['poomsae_mixto']))
+                        $poomsaemixto = explode(';', $metadata['poomsae_mixto']);
+                    if (count($poomsaemixto) > 0) $eventhtml .= '<strong>Poomsae Mixto:</strong>';
+                    foreach ($poomsaemixto as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    break;
             }
 
             $html = '';

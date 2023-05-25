@@ -75,6 +75,50 @@ class BGCBSCourseFormElement
                 'options' => [
                     'Sí participa' => 3
                 ]
+            ],
+            // Taekwondo
+            'Combate' => [
+                'meta' => 'combate',
+                'multi' => false,
+                'max' => 1,
+                'options' => [
+                    247 => [
+                        'Menos de 54kg' => 1,
+                        '54kg a 58kg' => 1,
+                        '58kg a 63kg' => 1,
+                        '63kg a 68kg' => 1,
+                        '68kg a 74kg' => 1,
+                        '74kg a 80kg' => 1,
+                        '80kg a 87kg' => 1,
+                        'Más de 87kg' => 1
+                    ],
+                    248 => [
+                        'Menos de 46kg' => 1,
+                        '46kg a 49kg' => 1,
+                        '49kg a 53kg' => 1,
+                        '53kg a 57kg' => 1,
+                        '57kg a 62kg' => 1,
+                        '62kg a 67kg' => 1,
+                        '67kg a 73kg' => 1,
+                        'Más de 73kg' => 1
+                    ]
+                ]
+            ],
+            'Poomsae' => [
+                'meta' => 'poomsae',
+                'multi' => false,
+                'max' => 1,
+                'options' => [
+                    'Sí participa' => 1
+                ]
+            ],
+            'Poomsae Mixto' => [
+                'meta' => 'poomsae_mixto',
+                'multi' => false,
+                'max' => 1,
+                'options' => [
+                    'Sí participa' => 1
+                ]
             ]
         ];
 	}
@@ -663,6 +707,7 @@ class BGCBSCourseFormElement
             $message_error = null;
             if (!isset($data['total_ajedrez'])) $data['total_ajedrez'] = 0;
             if (!isset($data['total_karate'])) $data['total_karate'] = 0;
+            if (!isset($data['total_taekwondo'])) $data['total_taekwondo'] = 0;
 
             switch($sport)
             {
@@ -686,6 +731,19 @@ class BGCBSCourseFormElement
                     $data['total_karate'] += count($selected);
                     // At least one must have an option selected
                     if ($data['total_karate'] == 0) {
+                        $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
+                    }
+                    break;
+                case 'Combate':
+                    $data['total_taekwondo'] += count($selected);
+                    break;
+                case 'Poomsae':
+                    $data['total_taekwondo'] += count($selected);
+                    break;
+                case 'Poomsae Mixto':
+                    $data['total_taekwondo'] += count($selected);
+                    // At least one must have an option selected
+                    if ($data['total_taekwondo'] == 0) {
                         $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
                     }
                     break;
