@@ -244,6 +244,25 @@ class BGCBSBookingList
                     }
 
                     break;
+
+                case 'Natación':
+                    $estilo_individual = [];
+                    if(!empty($metadata['estilo_individual']))
+                        $estilo_individual = explode(';', $metadata['estilo_individual']);
+                    if (count($estilo_individual) > 0) $eventhtml .= '<strong>Estilo individual:</strong>';
+                    foreach ($estilo_individual as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    $relevos = [];
+                    if(!empty($metadata['relevos']))
+                        $relevos = explode(';', $metadata['relevos']);
+                    if (count($relevos) > 0) $eventhtml .= '<strong>Relevos:</strong>';
+                    foreach ($relevos as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    break;
             }
 
             $html = '';

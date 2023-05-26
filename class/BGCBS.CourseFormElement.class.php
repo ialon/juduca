@@ -151,6 +151,42 @@ class BGCBSCourseFormElement
                     '4x100m' => 4,
                     '4x400m' => 4
                 ]
+            ],
+            // Natación
+            'Estilo individual' => [
+                'meta' => 'estilo_individual',
+                'multi' => true,
+                'max' => 4,
+                'options' => [
+                    '50m Libre' => 2,
+                    '100m Libre' => 2,
+                    '200m Libre' => 2,
+                    '50m Dorso' => 2,
+                    '100m Dorso' => 2,
+                    '200m Dorso' => 2,
+                    '50m Pecho' => 2,
+                    '100m Pecho' => 2,
+                    '200m Pecho' => 2,
+                    '50m Mariposa' => 2,
+                    '100m Mariposa' => 2,
+                    '200m Mariposa' => 2,
+                    '200m Combinado' => 2,
+                ]
+            ],
+            'Relevos' => [
+                'meta' => 'relevos',
+                'multi' => true,
+                'max' => 3,
+                'options' => [
+                    '4x50m Libre' => 4,
+                    '4x100m Libre' => 4,
+                    '4x50m Combinado' => 4,
+                    '4x100m Combinado' => 4,
+                    '4x50m Libre Mixto' => 2,
+                    '4x100m Libre Mixto' => 2,
+                    '4x50m Combinado Mixto' => 2,
+                    '4x100m Combinado Mixto' => 2,
+                ]
             ]
         ];
 	}
@@ -754,6 +790,7 @@ class BGCBSCourseFormElement
 
             switch($sport)
             {
+                // Ajedrez
                 case 'Equipo de Ajedrez':
                     $data['total_ajedrez'] += count($selected);
                     break;
@@ -764,6 +801,8 @@ class BGCBSCourseFormElement
                         $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
                     }
                     break;
+
+                // Karate Do
                 case 'Kumite':
                     $data['total_karate'] += count($selected);
                     break;
@@ -777,6 +816,8 @@ class BGCBSCourseFormElement
                         $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
                     }
                     break;
+
+                // Taekwondo
                 case 'Combate':
                     $data['total_taekwondo'] += count($selected);
                     break;
@@ -790,6 +831,8 @@ class BGCBSCourseFormElement
                         $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
                     }
                     break;
+
+                // Atletismo
                 case 'Prueba individual':
                     $data['total_prueba_individual'] += count($selected);
                     break;
@@ -798,6 +841,19 @@ class BGCBSCourseFormElement
 
                     // At least one must have an option selected
                     if ($data['total_prueba_individual'] + $data['total_prueba_relevos'] == 0) {
+                        $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
+                    }
+                    break;
+
+                // Natación
+                case 'Estilo individual':
+                    $data['total_estilo_individual'] += count($selected);
+                    break;
+                case 'Relevos':
+                    $data['total_relevos'] += count($selected);
+
+                    // At least one must have an option selected
+                    if ($data['total_estilo_individual'] + $data['total_relevos'] == 0) {
                         $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
                     }
                     break;
