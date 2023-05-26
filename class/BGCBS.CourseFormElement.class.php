@@ -119,6 +119,38 @@ class BGCBSCourseFormElement
                 'options' => [
                     'Sí participa' => 1
                 ]
+            ],
+            // Atletismo
+            'Prueba individual' => [
+                'meta' => 'prueba_individual',
+                'multi' => true,
+                'max' => 3,
+                'options' => [
+                    '100m' => 2,
+                    '200m' => 2,
+                    '400m' => 2,
+                    '800m' => 2,
+                    '1500m' => 2,
+                    '5000m' => 2,
+                    '110m vallas' => 2,
+                    '400m vallas' => 2,
+                    'Salto largo' => 2,
+                    'Salto triple' => 2,
+                    'Salto alto' => 2,
+                    'Jabalina' => 2,
+                    'Disco' => 2,
+                    'Impulsión de bala' => 2,
+                    'Lanzamiento de martillo' => 2
+                ]
+            ],
+            'Prueba de relevos' => [
+                'meta' => 'prueba_relevos',
+                'multi' => true,
+                'max' => 2,
+                'options' => [
+                    '4x100m' => 4,
+                    '4x400m' => 4
+                ]
             ]
         ];
 	}
@@ -411,21 +443,28 @@ class BGCBSCourseFormElement
             return $optionshtml;
         }
 
+        $config = $this->customOptions[$field['label']];
+
         foreach($meta['course_group_id'] as $groupid) {
-            $options = $this->customOptions[$field['label']]['options'];
+            $options = $config['options'];
             if(in_array($groupid, array_keys($options))) $options = $options[$groupid];
             foreach($options as $optionname => $maxallowed)
             {
-                $uses = $this->getCustomBookings($groupid, $this->customOptions[$field['label']]['meta'], esc_attr($optionname));
+                $uses = $this->getCustomBookings($groupid, $config['meta'], esc_attr($optionname));
                 $enrolled = sprintf(esc_html__('%s enrolled of %s','bookingo'), count($uses) ?? 0, $maxallowed);
                 $disabled = ((count($uses) ?? 0) >= $maxallowed) ? 'disabled="disabled"' : '';
                 $optionshtml.='<option value="'.esc_attr($optionname).'" data-course-group="' . $groupid . '" ' . $disabled . '>'.esc_html($optionname . ' (' .$enrolled . ')' ).'</option>';
             }
         }
 
+        $multi = '"';
+        if ($config['multi']) {
+            $multi = '[]" multiple="multiple" data-meta="' . $config['meta'] . '" data-max="' . $config['max'] . '" size="' . count($config['options']) + 1 . '"';
+        }
+
         $selecthtml =
-        '<select name="' . BGCBSHelper::getFormName($name, false) . '">
-                ' . $existingoption . $optionshtml . ' 
+        '<select name="' . BGCBSHelper::getFormName($name, false) . $multi . '>
+            ' . $existingoption . $optionshtml . ' 
         </select>';
 
         return $selecthtml;
@@ -671,8 +710,9 @@ class BGCBSCourseFormElement
     {
         $sport = $value['label'];
         if ((int)$value['field_type']===2 && in_array($sport, array_keys($this->customOptions))) {
+            $message_error = null;
             $config = $this->customOptions[$sport];
-            $selected = explode(';', $data[$name]);
+            $selected = is_array($data[$name]) ? $data[$name] : [$data[$name]];
 
             $options = [];
             foreach ($config['options'] as $key => $option) {
@@ -691,10 +731,7 @@ class BGCBSCourseFormElement
                     $maxallowed = $options[$option];
                     $uses = $this->getCustomBookings($groupid, $this->customOptions[$sport]['meta'], esc_attr($option));
                     if ((count($uses) ?? 0) >= $maxallowed)
-                    {
                         $message_error = sprintf(esc_html__('This event is full: %s.', 'bookingo'), esc_html($option));
-                        $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>$message_error);
-                    }
                 }
                 else
                 {
@@ -703,11 +740,17 @@ class BGCBSCourseFormElement
             }
             $data[$config['meta']] = implode(';', $selected);
 
+            // Maximum allowed per select exceeded
+            if (count($selected) > $config['max']) {
+                $message_error = esc_html__('Maximum amount of events exceeded.','bookingo');
+            }
+
             // Special conditions
-            $message_error = null;
             if (!isset($data['total_ajedrez'])) $data['total_ajedrez'] = 0;
             if (!isset($data['total_karate'])) $data['total_karate'] = 0;
             if (!isset($data['total_taekwondo'])) $data['total_taekwondo'] = 0;
+            if (!isset($data['total_prueba_individual'])) $data['total_prueba_individual'] = 0;
+            if (!isset($data['total_prueba_relevos'])) $data['total_prueba_relevos'] = 0;
 
             switch($sport)
             {
@@ -747,10 +790,22 @@ class BGCBSCourseFormElement
                         $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
                     }
                     break;
+                case 'Prueba individual':
+                    $data['total_prueba_individual'] += count($selected);
+                    break;
+                case 'Prueba de relevos':
+                    $data['total_prueba_relevos'] += count($selected);
+
+                    // At least one must have an option selected
+                    if ($data['total_prueba_individual'] + $data['total_prueba_relevos'] == 0) {
+                        $message_error = esc_html__('Please select at least one event to participate in.','bookingo');
+                    }
+                    break;
             }
 
             if ($message_error) {
-                $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>$message_error);
+                $multi = $config['multi'] ? '[]' : '';
+                $error[]=array('name'=>BGCBSHelper::getFormName($name,false).$multi,'message_error'=>$message_error);
             }
         }
     }

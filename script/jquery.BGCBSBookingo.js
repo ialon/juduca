@@ -110,7 +110,7 @@
 		{        
 			$('.bgcbs-main').on('click','.bgcbs-form-field',function()
 			{
-                var select=$(this).find('select');
+                var select=$(this).find('select:not([multiple])');
                 
                 if(select.length) select.selectmenu('open');  
                 else $(this).find(':input').focus();
@@ -145,7 +145,7 @@
 		
         this.createSelectField=function()
         {
-            $self.e('select').selectmenu(
+            $self.e('select:not([multiple])').selectmenu(
             {
                 appendTo:$this,
 				open:function(event,ui)
@@ -176,9 +176,25 @@
 				}
 			});
             
+			$self.e('select[multiple]').change(function() {
+				var max = $(this).attr('data-max');
+				var meta = $(this).attr('data-meta');
+				if ($("select[data-meta='" + meta + "'] option:selected").length > max) {
+					$(this).val($(this).val().slice(0,max));
+				}
+			});
+
+			$self.e('select[multiple] option').click(function(e) {
+				var max = $(this).parent().attr('data-max');
+				var meta = $(this).parent().attr('data-meta');
+				if ($("select[data-meta='" + meta + "'] option:selected").length > max) {
+					$(this).removeAttr("selected");
+				}
+			});
+
 			$self.toggleCustomOptions($self.e('select'));
             
-            $self.e('select').parent('.bgcbs-form-field').addClass('bgcbs-form-field-type-select');
+            $self.e('select:not([multiple])').parent('.bgcbs-form-field').addClass('bgcbs-form-field-type-select');
 			
 			$self.e('.ui-selectmenu-button .ui-icon.ui-icon-triangle-1-s').attr('class','bgcbs-icon-meta-24-chevron-vertical'); 
 		};
@@ -261,6 +277,8 @@
 							for(var index in response.error.local)
 							{
 								var selector='[name="'+response.error.local[index].field+'"]:eq(0)';
+
+								console.log("SELECTOR " + selector);
 
 								var object=$self.e(selector).prevAll('label');
 								if(parseInt(object.length,10)===0) object=$self.e(selector).parents('*').prevAll('label:first');
@@ -592,13 +610,16 @@
 
 		this.toggleCustomOptions=function(element)
 		{
-			var items = $('[data-course-group]');
+			var items = $('select [data-course-group]');
 			items.each(function() {
 				$(this).attr('disabled', false);
 				if ($(this).attr('data-course-group') != element.val()) {
 					$(this).attr('disabled', true);
 				}
-				$(this).parent().selectmenu("refresh");
+				var select = $(this).parent();
+				if (!select.attr('multiple')) {
+					select.selectmenu("refresh");
+				}
 			});
 		}
 

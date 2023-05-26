@@ -225,6 +225,25 @@ class BGCBSBookingList
                     }
 
                     break;
+
+                case 'Atletismo':
+                    $prueba_individual = [];
+                    if(!empty($metadata['prueba_individual']))
+                        $prueba_individual = explode(';', $metadata['prueba_individual']);
+                    if (count($prueba_individual) > 0) $eventhtml .= '<strong>Prueba individual:</strong>';
+                    foreach ($prueba_individual as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    $prueba_relevos = [];
+                    if(!empty($metadata['prueba_relevos']))
+                        $prueba_relevos = explode(';', $metadata['prueba_relevos']);
+                    if (count($prueba_relevos) > 0) $eventhtml .= '<strong>Prueba de relevos:</strong>';
+                    foreach ($prueba_relevos as $item) {
+                        if ($item) $eventhtml .= '<li>' . $item . '</li>';
+                    }
+
+                    break;
             }
 
             $html = '';

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-25 09:05-0600\n"
+"PO-Revision-Date: 2023-05-25 15:53-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -1633,6 +1633,10 @@ msgstr "Este evento ya está lleno: %s."
 #: ../class/BGCBS.CourseFormElement.class.php:612
 msgid "Please select at least one event to participate in."
 msgstr "Por favor seleccione por lo menos un evento en el cual participar."
+
+#: ../class/BGCBS.CourseFormElement.class.php:739
+msgid "Maximum amount of events exceeded."
+msgstr "Ha seleccionado más pruebas de las permitidas."
 
 #: ../class/BGCBS.CourseFormElement.class.php:117
 msgid "- Course Participant Data -"

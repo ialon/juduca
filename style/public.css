@@ -1961,3 +1961,7 @@ input.bgcbs-button
 .bgcbs-main li.ui-state-disabled {
 	display: none;
 }
+
+.bgcbs-main select[multiple] option[disabled] {
+	display: none;
+}
