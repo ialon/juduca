@@ -618,7 +618,8 @@
 				}
 				var select = $(this).parent();
 				if (!select.attr('multiple')) {
-					select.selectmenu("refresh");
+					select.val(select.find('option:not([data-course-group])').val());
+					select.selectmenu("refresh", true);
 				}
 			});
 		}
