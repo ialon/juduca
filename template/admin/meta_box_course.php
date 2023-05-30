@@ -507,8 +507,40 @@
 										<td>
 											<div class="to-clear-fix">
 												<input type="hidden" value="<?php echo esc_attr($fieldValue['id']); ?>" name="<?php BGCBSHelper::getFormName('form_element_field[id][]'); ?>"/>
-												<input type="text" value="<?php echo esc_attr($fieldValue['label']); ?>" name="<?php BGCBSHelper::getFormName('form_element_field[label][]'); ?>" title="<?php esc_attr_e('Enter label.','bookingo'); ?>"/>
-											</div>									
+
+                                                <?php
+                                                    $disabled = '';
+                                                    $hardcoded = [
+                                                        // Disciplinas
+                                                        'Ajedrez',
+                                                        'Atletismo',
+                                                        'Baloncesto',
+                                                        'Fútbol',
+                                                        'Fútbol Sala',
+                                                        'Karate Do',
+                                                        'Natación',
+                                                        'Taekwondo',
+                                                        'Tenis de Mesa',
+                                                        'Vóleibol',
+                                                        // Campos custom
+                                                        'Documento de viaje',
+                                                        'No. de Documento de viaje',
+                                                        'Fecha de nacimiento',
+                                                        'Universidad',
+                                                        'Documentación',
+                                                        'Foto de carnet',
+                                                    ];
+
+                                                    $cfe = new BGCBSCourseFormElement();
+                                                    $hardcoded = array_merge($hardcoded, array_keys($cfe->customOptions));
+
+                                                    if (in_array($fieldValue['label'], $hardcoded)) {
+                                                        $disabled = 'disabled';
+                                                    }
+                                                ?>
+
+												<input <?php echo $disabled; ?> type="text" value="<?php echo esc_attr($fieldValue['label']); ?>" name="<?php BGCBSHelper::getFormName('form_element_field[label][]'); ?>" title="<?php esc_attr_e('Enter label.','bookingo'); ?>"/>
+											</div>
 										</td>
 										<td>
 											<div class="to-clear-fix">
@@ -530,12 +562,12 @@
 										</td>
 										<td>
 											<div class="to-clear-fix">												
-												<input type="text" value="<?php echo esc_attr($fieldValue['dictionary']); ?>" name="<?php BGCBSHelper::getFormName('form_element_field[dictionary][]'); ?>" title="<?php esc_attr_e('Enter values of list separated by semicolon.','bookingo'); ?>"/>
+												<input <?php echo $disabled; ?> type="text" value="<?php echo esc_attr($fieldValue['dictionary']); ?>" name="<?php BGCBSHelper::getFormName('form_element_field[dictionary][]'); ?>" title="<?php esc_attr_e('Enter values of list separated by semicolon.','bookingo'); ?>"/>
 											</div>									
 										</td> 
 										<td>
 											<div class="to-clear-fix">												
-												<input type="text" value="<?php echo esc_attr($fieldValue['message_error']); ?>" name="<?php BGCBSHelper::getFormName('form_element_field[message_error][]'); ?>" title="<?php esc_attr_e('Enter error message.','bookingo'); ?>"/>
+												<input <?php echo $disabled; ?> type="text" value="<?php echo esc_attr($fieldValue['message_error']); ?>" name="<?php BGCBSHelper::getFormName('form_element_field[message_error][]'); ?>" title="<?php esc_attr_e('Enter error message.','bookingo'); ?>"/>
 											</div>									
 										</td>										
 										<td>
@@ -550,7 +582,12 @@
 										</td>
 										<td>
 											<div>
-												<a href="#" class="to-table-button-remove"><?php esc_html_e('Remove','bookingo'); ?></a>
+                                                <?php
+                                                    if (!$disabled)
+                                                    {
+                                                        echo '<a href="#" class="to-table-button-remove">' . esc_html('Remove','bookingo') . '</a>';
+                                                    }
+                                                ?>
 											</div>
 										</td>										
 									</tr>		   
