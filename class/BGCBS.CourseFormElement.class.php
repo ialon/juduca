@@ -197,6 +197,23 @@ class BGCBSCourseFormElement
 	{
 		return($this->fieldType);
 	}
+
+    /**************************************************************************/
+
+    function getUniversityList()
+    {
+        global $wpdb;
+
+        $universities = [];
+        $results = $wpdb->get_results("SELECT DISTINCT company_name FROM {$wpdb->prefix}swpm_members_tbl");
+
+        foreach ($results as $result)
+        {
+            $universities[] = $result->company_name;
+        }
+
+        return $universities;
+    }
 	
 	/**************************************************************************/
 	
@@ -364,12 +381,11 @@ class BGCBSCourseFormElement
 						
                         if($value['label'] == 'Universidad')
                         {
-                            global $wpdb;
                             $fieldValue = [];
-                            $universities = $wpdb->get_results("SELECT DISTINCT company_name FROM {$wpdb->prefix}swpm_members_tbl");
+                            $universities = $this->getUniversityList();
                             foreach($universities as $university)
                             {
-                                $fieldValue[] = $university->company_name;
+                                $fieldValue[] = $university;
                             }
                         }
 
@@ -384,11 +400,10 @@ class BGCBSCourseFormElement
 
                             if(!current_user_can('administrator') && $value['label'] == 'Universidad')
                             {
-                                global $user_identity;
-                                $university = $wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity));
+                                $university = BGCBSBooking::getUniversityFromUser();
                                 $html.=
                                 '
-                                    <input type="text" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr($university->company_name).'" disabled />	
+                                    <input type="text" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr($university).'" disabled />	
                                 ';
                             }
                             else if($customselect = $this->createCustomSelect($meta, $value, $fieldHtml, $name))
@@ -510,12 +525,12 @@ class BGCBSCourseFormElement
 
     function getCustomBookings($groupid, $metakey, $value)
     {
-        global $wpdb, $user_identity;
+        global $wpdb;
 
         $university = null;
         if(!current_user_can('administrator'))
         {
-            $university = ($wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity)))->company_name;
+            $university = BGCBSBooking::getUniversityFromUser();
         }
 
         $allbookings = $wpdb->get_results(
@@ -540,11 +555,10 @@ class BGCBSCourseFormElement
             }
 
             if ($university) {
-                $meta = BGCBSPostMeta::getPostMeta($allbooking->post_id);
-                foreach ($meta['form_element_field'] as $elementfield) {
-                    if (($elementfield['label'] == 'Universidad') && $elementfield['value'] != $university) {
-                        unset($allbookings[$index]);
-                    }
+                $booking = new BGCBSBooking();
+                $selecteduniversity = $booking->getUniversityFromBooking($allbooking->post_id);
+                if ($university !== $selecteduniversity) {
+                    unset($allbookings[$index]);
                 }
             }
         }
@@ -659,9 +673,7 @@ class BGCBSCourseFormElement
 
             if(!current_user_can('administrator') && $value['label'] == 'Universidad')
             {
-                global $wpdb, $user_identity;
-                $university = $wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity));
-                $course['meta']['form_element_field'][$index]['value']=$university->company_name;
+                $course['meta']['form_element_field'][$index]['value']=BGCBSBooking::getUniversityFromUser();
             }
 
             if((int)$value['field_type']===6)

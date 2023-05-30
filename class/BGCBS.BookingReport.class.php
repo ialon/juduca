@@ -39,8 +39,9 @@ class BGCBSBookingReport
 					{
 						var courseGroupId=$(\'[name="course_group_id"]\').val();
 						var bookingStatusId=$(\'[name="booking_status_id"]\').val();
+						var universityId=$(\'[name="university"]\').val();
 
-						window.location.href="'.admin_url('edit.php?post_type='.BGCBSBooking::getCPTName()).'&bgcbs_booking_report_form_submit=1&bgcbs_course_group_id="+courseGroupId+"&bgcbs_booking_status_id="+bookingStatusId;
+						window.location.href="'.admin_url('edit.php?post_type='.BGCBSBooking::getCPTName()).'&bgcbs_booking_report_form_submit=1&bgcbs_course_group_id="+courseGroupId+"&bgcbs_booking_status_id="+bookingStatusId+"&bgcbs_university="+universityId;
 						return(false);
 					});			
 				});
@@ -85,10 +86,10 @@ class BGCBSBookingReport
 		$data[]=__('Applicant second name','bookingo');
 		$data[]=__('Applicant e-mail address','bookingo');
 		$data[]=__('Applicant phone number','bookingo');
-		$data[]=__('Currency','bookingo');
-		$data[]=__('Price net','bookingo');
-		$data[]=__('Price gross','bookingo');
-		$data[]=__('Tax rate','bookingo');
+		// $data[]=__('Currency','bookingo');
+		// $data[]=__('Price net','bookingo');
+		// $data[]=__('Price gross','bookingo');
+		// $data[]=__('Tax rate','bookingo');
 		
 		while($query->have_posts())
 		{
@@ -100,11 +101,14 @@ class BGCBSBookingReport
 			{
 				foreach($booking['meta']['form_element_field'] as $value)
 				{
-					if(array_key_exists($value['id'],$formElementOrder)) continue;
+                    if((int)$value['field_type']===6)
+                        continue;
+
+					if(array_key_exists($value['label'],$formElementOrder)) continue;
 					
-					$data[]=$value['label'];
+					$data[]=(string)$value['label'];
 				
-					$formElementOrder[$value['id']]=count($data)-1;
+					$formElementOrder[$value['label']]=count($formElementOrder);
 				}
 			}
 		}
@@ -138,10 +142,10 @@ class BGCBSBookingReport
 			$data[]=$booking['meta']['applicant_email_address'];
 			$data[]=$booking['meta']['applicant_phone_number'];
 
-			$data[]=$booking['meta']['currency'];
-			$data[]=$booking['billing']['value_net'];
-			$data[]=$booking['billing']['value_gross'];
-			$data[]=$booking['billing']['tax_rate_value'];
+			// $data[]=$booking['meta']['currency'];
+			// $data[]=$booking['billing']['value_net'];
+			// $data[]=$booking['billing']['value_gross'];
+			// $data[]=$booking['billing']['tax_rate_value'];
 			
 			/***/
 			
@@ -149,6 +153,9 @@ class BGCBSBookingReport
 			{
 				foreach($booking['meta']['form_element_field'] as $value)
 				{
+                    if((int)$value['field_type']===6)
+                        continue;
+
 					if((int)$value['field_type']===3)
 					{
 						$fieldValue=null;
@@ -164,11 +171,21 @@ class BGCBSBookingReport
 							}
 						}
 						
-						$data[$formElementOrder[$value['id']]]=$fieldValue;
+						$cdata[$value['label']]=$fieldValue;
 					}
-					else $data[$formElementOrder[$value['id']]]=$value['value'];
+					else
+                    {
+                        if (is_array($value['value']))
+                            $value['value'] = implode(';', $value['value']);
+                        $cdata[$value['label']]=$value['value'];
+                    }
 				}
 			}
+
+            foreach ($formElementOrder as $label => $index) {
+                $data[] = $cdata[$label] ?? '';
+            }
+            unset($cdata);
 			
 			/***/
 			
@@ -186,7 +203,7 @@ class BGCBSBookingReport
 		header('Cache-Control: public');
 		header('Content-Type: text/csv');
 		header('Content-Transfer-Encoding: Binary');
-		header('Content-Disposition: attachment;filename=bookings.csv');
+		header('Content-Disposition: attachment;filename=juduca.csv');
 		echo $document;
 		die();
 	}
@@ -236,6 +253,23 @@ class BGCBSBookingReport
 		} 
 
 		/***/
+
+        $universityIndex=BGCBSHelper::getGetValue('university');
+
+        if($universityIndex!=-1)
+        {
+            $cfe = new BGCBSCourseFormElement();
+            $universities = $cfe->getUniversityList();
+            $encodedsearch = str_replace("a:1:{", "", serialize(["value"=>$universities[$universityIndex]]));
+            array_push($metaQuery,array
+            (
+                'key'=>PLUGIN_BGCBS_CONTEXT.'_form_element_field',
+                'value'=>$encodedsearch,
+                'compare'=>'LIKE'
+            ));
+        }
+
+        /***/
 		
 		$argument=array
 		(

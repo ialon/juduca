@@ -651,7 +651,7 @@ class BGCBSBooking
  	 	 	'course'=>esc_html__('Course','bookingo'),
  	 	 	'course_group'=>esc_html__('Course group','bookingo'),
  	 	 	'participant'=>esc_html__('Participant','bookingo'),
- 	 	 	'applicant'=>esc_html__('Applicant','bookingo'),
+ 	 	 	'university'=>'Universidad',
  	 	 	'date'=>$column['date']
  	 	);
    
@@ -700,9 +700,9 @@ class BGCBSBooking
  	 	 	 	
  	 	 	break;
    
- 	 	 	case 'applicant':
+ 	 	 	case 'university':
  	 	 	 	
-				echo esc_html($meta['applicant_first_name'].' '.$meta['applicant_second_name']);
+				echo $this->getUniversityFromBooking($post);
  	 	 	 	
  	 	 	break;
  	 	}
@@ -777,6 +777,28 @@ class BGCBSBooking
 			</select>
 		';
 
+        /***/
+
+        if(!array_key_exists('university',$_GET))
+            $_GET['university']=-1;
+
+        $htmlTemp=null;
+
+        $cfe = new BGCBSCourseFormElement();
+        $universities = $cfe->getUniversityList();
+
+        foreach($universities as $index=>$value)
+            $htmlTemp.='<option value="'.(int)$index.'" '.(((int)BGCBSHelper::getGetValue('university',false)==$index) ?  'selected' : null).'>'.$value.'</option>';
+
+
+        $html.=
+            '
+			<select name="university">
+				<option value="-1">'.'[Todas las universidades]'.'</option>
+				'.$htmlTemp.'
+			</select>
+		';
+
 		/***/
 
 		echo $html;
@@ -810,29 +832,49 @@ class BGCBSBooking
 
 		/***/
 
-		list($courseId,$courseGroupId)=preg_split('/_/',BGCBSHelper::getGetValue('course_group_id',false));
+        $cgi = BGCBSHelper::getGetValue('course_group_id',false);
 
-		if((int)$courseId>0)
-		{
-			array_push($metaQuery,array
-			(
-				'key'=>PLUGIN_BGCBS_CONTEXT.'_course_id',
-				'value'=>$courseId,
-				'compare'=>'IN'
-			));           
-		}
+        if ($cgi) {
+            list($courseId,$courseGroupId)=preg_split('/_/', $cgi);
 
-		if((int)$courseGroupId>0)
-		{
-			array_push($metaQuery,array
-			(
-				'key'=>PLUGIN_BGCBS_CONTEXT.'_course_group_id',
-				'value'=>$courseGroupId,
-				'compare'=>'IN'
-			));           
-		}   
+            if((int)$courseId>0)
+            {
+                array_push($metaQuery,array
+                (
+                    'key'=>PLUGIN_BGCBS_CONTEXT.'_course_id',
+                    'value'=>$courseId,
+                    'compare'=>'IN'
+                ));
+            }
 
-		/***/
+            if((int)$courseGroupId>0)
+            {
+                array_push($metaQuery,array
+                (
+                    'key'=>PLUGIN_BGCBS_CONTEXT.'_course_group_id',
+                    'value'=>$courseGroupId,
+                    'compare'=>'IN'
+                ));
+            }
+        }
+
+        $universityIndex=BGCBSHelper::getGetValue('university',false);
+        if($Validation->isEmpty($universityIndex)) $universityIndex=-1;
+
+        if($universityIndex!=-1)
+        {
+            $cfe = new BGCBSCourseFormElement();
+            $universities = $cfe->getUniversityList();
+            $encodedsearch = str_replace("a:1:{", "", serialize(["value"=>$universities[$universityIndex]]));
+            array_push($metaQuery,array
+            (
+                'key'=>PLUGIN_BGCBS_CONTEXT.'_form_element_field',
+                'value'=>$encodedsearch,
+                'compare'=>'LIKE'
+            ));
+        }
+
+        /***/
 
 		$order=BGCBSHelper::getGetValue('order',false);
 		$orderby=BGCBSHelper::getGetValue('orderby',false);
@@ -894,11 +936,10 @@ class BGCBSBooking
  	 	$query=new WP_Query($argument);
 		if($query===false) return($participant); 		
 		
-        global $wpdb, $user_identity;
         $university = null;
         if(!current_user_can('administrator'))
         {
-            $university = ($wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity)))->company_name;
+            $university = $this->getUniversityFromUser();
         }
 
 		while($query->have_posts())
@@ -909,12 +950,10 @@ class BGCBSBooking
 			
             if ($university)
             {
-                foreach($meta['form_element_field'] as $elementfield)
-                {
-                    if (($elementfield['label'] == 'Universidad') && $elementfield['value'] == $university) {
-                        if((int)$meta['booking_status_id']===4) $participant['confirmed']++;
-                        $participant['registered']++;
-                    }
+                $selecteduniversity = $this->getUniversityFromBooking($post);
+                if ($university == $selecteduniversity) {
+                    if((int)$meta['booking_status_id']===4) $participant['confirmed']++;
+                    $participant['registered']++;
                 }
             }
             else
@@ -963,6 +1002,33 @@ class BGCBSBooking
 
 		return($dictionary);      
 	}
+
+    /**************************************************************************/
+
+    static function getUniversityFromUser()
+    {
+        global $wpdb, $user_identity;
+        $university = $wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %s", $user_identity));
+        return $university->company_name;
+    }
+
+    /**************************************************************************/
+
+    function getUniversityFromBooking($post)
+    {
+        $university = '';
+
+        $meta = BGCBSPostMeta::getPostMeta($post);
+
+        foreach($meta['form_element_field'] as $elementfield)
+        {
+            if (($elementfield['label'] == 'Universidad')) {
+                $university = $elementfield['value'];
+            }
+        }
+
+        return $university;
+    }
 
 	/**************************************************************************/
 }

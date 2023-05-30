@@ -86,14 +86,14 @@ class BGCBSBookingList
 	
 	function getBookings()
 	{
-        global $wpdb, $user_identity;
+        global $wpdb;
 
         $bookings = [];
 
         $university = null;
         if(!current_user_can('administrator'))
         {
-            $university = ($wpdb->get_row($wpdb->prepare("SELECT company_name FROM {$wpdb->prefix}swpm_members_tbl WHERE user_name = %d", $user_identity)))->company_name;
+            $university = BGCBSBooking::getUniversityFromUser();
         }
 
         $allbookings = $wpdb->get_results($wpdb->prepare("SELECT post_id FROM {$wpdb->prefix}postmeta WHERE meta_key = 'bgcbs_course_id' AND meta_value = %d", $this->post->ID));
