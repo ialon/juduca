@@ -1965,3 +1965,12 @@ input.bgcbs-button
 .bgcbs-main select[multiple] option[disabled] {
 	display: none;
 }
+
+.bgcbs-form-field em {
+	font-size: 12px;
+	color: #828F99;
+	padding: 0 20px;
+	top: -10px !important;
+	position: relative;
+}
+

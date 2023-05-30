@@ -467,6 +467,13 @@ class BGCBSCourseFormElement
                     }
                     elseif((int)$value['field_type']===6)
                     {
+
+                        if ($value['label']=='Documentación') {
+                            $html.='<em>Suba un archivo en formato PDF que incluya toda la documentación.</em>';
+                        }
+                        if ($value['label']=='Foto de carnet') {
+                            $html.='<em>Suba una imagen en formato JPG o PNG para utilizar en el carnet de por lo menos 150x150 pixeles.</em>';
+                        }
                         $html.=
                             '
 							<input type="file" name="'.BGCBSHelper::getFormName($name,false).'" value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
@@ -634,6 +641,15 @@ class BGCBSCourseFormElement
                 {
                     $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>$value['message_error']);
                 }
+
+                if ($value['label']=='Documentación' && $_FILES[$uploadname]['type'] != 'application/pdf') {
+                    $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>'Por favor, suba un archivo en formato PDF.');
+                }
+
+                $allowedformats = ['image/jpeg', 'image/png'];
+                if ($value['label']=='Foto de carnet' && !in_array($_FILES[$uploadname]['type'], $allowedformats)) {
+                    $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>'Por favor, suba un archivo en formato JPG o PNG.');
+                }
             }
 
             if((int)$value['field_type']===1 && $value['label']=='No. de Documento de viaje')
@@ -680,6 +696,20 @@ class BGCBSCourseFormElement
             {
                 $uploadname = 'bgcbs_' . $name;
                 $attachment_id = media_handle_upload($uploadname, $bookingId);
+
+                if (is_wp_error($attachment_id)) {
+                    printf(
+                        '<div class="error-div error"><strong>%s</strong><br />%s</div>',
+                        sprintf(
+                        /* translators: %s: Name of the file that failed to upload. */
+                            __( '&#8220;%s&#8221; has failed to upload.' ),
+                            esc_html( $_FILES[$uploadname]['name'] )
+                        ),
+                        esc_html( $attachment_id->get_error_message() )
+                    );
+                    exit;
+                }
+
                 $course['meta']['form_element_field'][$index]['value']=$attachment_id;
             }
 
