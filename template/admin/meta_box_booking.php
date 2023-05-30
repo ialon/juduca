@@ -13,9 +13,9 @@
 					<li><a href="#meta-box-booking-1"><?php esc_html_e('General','bookingo'); ?></a></li>
 					<li><a href="#meta-box-booking-2"><?php esc_html_e('Participant','bookingo'); ?></a></li>
 					<li><a href="#meta-box-booking-3"><?php esc_html_e('Applicant','bookingo'); ?></a></li>
-					<li><a href="#meta-box-booking-4"><?php esc_html_e('Form elements','bookingo'); ?></a></li>
+                    <!-- <li><a href="#meta-box-booking-4"><?php esc_html_e('Form elements','bookingo'); ?></a></li> -->
 					<li><a href="#meta-box-booking-5"><?php esc_html_e('Agreements','bookingo'); ?></a></li>
-					<li><a href="#meta-box-booking-6"><?php esc_html_e('Payment','bookingo'); ?></a></li>
+					<!-- <li><a href="#meta-box-booking-6"><?php esc_html_e('Payment','bookingo'); ?></a></li> -->
 				</ul>
 				<div id="meta-box-booking-1">
 					<ul class="to-form-field-list">
@@ -54,7 +54,8 @@
 							<div class="to-field-disabled">
 								<?php echo esc_html($this->data['meta']['course_group_name']) ?>
 							</div>
-						</li> 
+						</li>
+                        <!--
 						<li>
 							<h5><?php esc_html_e('Price','bookingo'); ?></h5>
 							<span class="to-legend">
@@ -85,7 +86,7 @@
 									<?php echo esc_html($this->data['meta']['price_label_instead_price']); ?>
 								</div>
 							</div>							
-						</li>	
+						</li> -->
 <?php
 		if((int)$this->data['meta']['coupon_id']>0)
 		{
@@ -178,7 +179,7 @@
 						</li> 
 					</ul>					
 				</div>
-				<div id="meta-box-booking-4">
+				<!-- <div id="meta-box-booking-4">
 <?php
 		$html=null;
 		$panel=$CourseFormElement->getPanel($this->data['meta']);
@@ -215,7 +216,7 @@
 <?php			
 		}
 ?>		
-				</div>
+				</div> -->
 				<div id="meta-box-booking-5">
 <?php
 		$html=$CourseAgreement->display($this->data,1);

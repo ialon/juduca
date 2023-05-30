@@ -738,7 +738,7 @@ class BGCBSCourseFormElement
 		{
 			if($value['panel_id']==$panelId)
 			{
-				$fieldValue=$value['value'];
+                $fieldValue = is_array($value['value']) ? implode(';', $value['value']) : $value['value'];
 				$fieldLabel=$value['label'];
 				
 				if((int)$value['field_type']===3)
@@ -758,13 +758,26 @@ class BGCBSCourseFormElement
 
 				if($type===1)
 				{
-					$html.=
-					'
-						<div class="to-clear-fix">
-							<span class="to-legend-field">'.esc_html($fieldLabel).'.</span>
-							<div class="to-field-disabled">'.esc_html($fieldValue).'</div>								
-						</div> 
-					';
+                    if ((int)$value['field_type']==6)
+                    {
+                        $html.=
+                        '
+                            <div class="to-clear-fix">
+                                <span class="to-legend-field">'.esc_html($fieldLabel).'.</span>
+                                <a href="' . wp_get_attachment_url($fieldValue) . '" target="_blank">Abrir</a>								
+                            </div> 
+                        ';
+                    }
+                    else
+                    {
+                        $html.=
+                        '
+                            <div class="to-clear-fix">
+                                <span class="to-legend-field">'.esc_html($fieldLabel).'.</span>
+                                <div class="to-field-disabled">'.esc_html($fieldValue).'</div>								
+                            </div> 
+                        ';
+                    }
 				}
 				else if($type===2)
 				{

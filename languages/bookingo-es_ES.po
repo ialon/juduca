@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-25 15:53-0600\n"
+"PO-Revision-Date: 2023-05-29 23:06-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -148,7 +148,7 @@ msgstr "Participante"
 #: ../class/BGCBS.Booking.class.php:654 ../template/admin/meta_box_booking.php:15 ../template/admin/meta_box_booking.php:149
 #: ../template/email_booking.php:147
 msgid "Applicant"
-msgstr "Solicitante"
+msgstr "Contacto"
 
 #: ../class/BGCBS.Booking.class.php:749
 msgid "[All statuses]"
