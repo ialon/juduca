@@ -1974,3 +1974,108 @@ input.bgcbs-button
 	position: relative;
 }
 
+.carnet-wrapper {
+	font-family: "Poppins", Sans-serif;
+	width: 14cm;
+	height: 22cm;
+	margin: auto;
+	padding: 45px;
+	border: 1px solid #cccccc;
+}
+
+.carnet-header {
+	margin-top: 155px;
+	height: 150px;
+}
+
+.carnet-photo {
+	width: 155px;
+	height: 155px;
+	display: inline-block;
+	float: left;
+}
+
+.carnet-country {
+	font-weight: bold;
+	display: inline-block;
+	margin-top: 30px;
+}
+
+.carnet-country-label {
+	font-weight: 500;
+	font-size: 30px;
+	background: #0c14cc;
+	color: #FFFFFF;
+	padding: 0px 15px 0px 30px;
+}
+
+.carnet-country-flag {
+	max-width: 50px;
+	max-height: 50px;
+	float: right;
+	margin-top: -11px;
+}
+
+.carnet-type {
+	font-size: 30px;
+	color: #0f4463;
+	font-weight: 700;
+	margin: 5px 0px 0px 30px;
+}
+
+.carnet-sport {
+	margin-left: 45px;
+}
+
+.carnet-main {
+	clear: both;
+	height: 115px;
+}
+
+.carnet-names,
+.carnet-lastnames {
+	font-size: 29px;
+	font-weight: 500;
+	line-height: 34px;
+	color: #0f4463;
+	width: 50%;
+}
+
+.carnet-names {
+	margin-top: 23px;
+}
+
+.carnet-unilogo {
+	width: 50%;
+	text-align: center;
+	height: 80px;
+	float: right;
+	position: absolute;
+	top: 46%;
+	right: 18%;
+}
+
+.carnet-unilogo img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.carnet-qr-code {
+	width: 200px;
+	height: 200px;
+	border-radius: 25px;
+	float: left;
+}
+
+.carnet-amenities {
+	width: 220px;
+	height: 210px;
+	float: right;
+	margin-top: 25px;
+}
+
+.carnet-wrapper.orange,
+.carnet-wrapper.orange .carnet-qr-code,
+.carnet-wrapper.orange .carnet-amenities {
+	background: #ff8c00;
+}

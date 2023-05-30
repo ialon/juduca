@@ -67,6 +67,7 @@ class BGCBSBookingForm
  	 	add_filter('postbox_classes_'.self::getCPTName().'_bgcbs_meta_box_booking_form',array($this,'adminCreateMetaBoxClass'));
  	 	
  	 	add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_form',array($this,'createBookingForm'));
+        add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_carnet',array($this,'createBookingCarnet'));
 		
 		add_filter('manage_edit-'.self::getCPTName().'_columns',array($this,'manageEditColumns')); 
 		add_action('manage_'.self::getCPTName().'_posts_custom_column',array($this,'managePostsCustomColumn'));
@@ -339,6 +340,52 @@ class BGCBSBookingForm
  	{
 		return($column); 	   
  	}
+
+    /**************************************************************************/
+
+    function createBookingCarnet($attr)
+    {
+        $Booking=new BGCBSBooking();
+
+        $bookingid=BGCBSHelper::getGetValue('id',false);
+
+        $meta = BGCBSPostMeta::getPostMeta($bookingid);
+
+        if (empty($meta))
+        {
+            return "ID inválido o no encontrado";
+        }
+
+        $university = $Booking->getUniversityFromBooking($bookingid);
+
+        $data = [];
+
+        $data['universidad'] = $university;
+        $data['disciplina'] = $meta['course_name'];
+        $data['categoria'] = $meta['course_group_name'];
+        $data['nombres'] = $meta['participant_first_name'];
+        $data['apellidos'] = $meta['participant_second_name'];
+
+        foreach($meta['form_element_field'] as $elementfield)
+        {
+            if (($elementfield['label'] == 'Foto de carnet')) {
+                $data['urlfoto'] = wp_get_attachment_url($elementfield['value']);
+            } else if (($elementfield['label'] == 'Segundo nombre')) {
+                $data['nombres'] .= ' ' . $elementfield['value'];
+            } else if (($elementfield['label'] == 'Segundo apellido')) {
+                $data['apellidos'] .= ' ' . $elementfield['value'];
+            }
+        }
+
+        $data['color'] = 'orange';
+        $data['universidadlogo'] = 'https://r2sabe.p3cdn1.secureserver.net/wp-content/uploads/2023/05/4.-UNAH-HONDURAS-300x300.jpg';
+        $data['urldisciplina'] = 'http://juduca.local/wp-content/uploads/2023/05/Screen-Shot-2023-05-30-at-14.45.22.png';
+
+        /***/
+
+        $Template=new BGCBSTemplate($data,PLUGIN_BGCBS_TEMPLATE_PATH.'public/carnet.php');
+        return($Template->output());
+    }
  	
  	/**************************************************************************/
  	
