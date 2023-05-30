@@ -94,6 +94,7 @@
 			{
 ?>
 							<h2><?php echo esc_html($this->data['course'][$this->data['course_id']]['meta']['thank_you_page_header_text']); ?></h2>
+                            <?php echo '<button onClick="window.location.reload();">Nueva inscripción</button>'; ?>
 <?php
 			}
 			
