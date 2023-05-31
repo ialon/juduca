@@ -19,6 +19,19 @@ class BGCBSCourseFormElement
             6=>array(esc_html__('Upload','bookingo')),
 		);
 
+        $this->disciplinas = [
+            'Ajedrez',
+            'Atletismo',
+            'Baloncesto',
+            'Fútbol',
+            'Fútbol Sala',
+            'Karate Do',
+            'Natación',
+            'Taekwondo',
+            'Tenis de Mesa',
+            'Vóleibol'
+        ];
+
         $this->customOptions = [
             // Ajedrez
             'Equipo de Ajedrez' => [
@@ -462,7 +475,7 @@ class BGCBSCourseFormElement
                     {
                         $html.=
                         '
-							<input type="date" min="1994-01-01" max="2007-01-01" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
+							<input type="date" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
 						';
                     }
                     elseif((int)$value['field_type']===6)
@@ -626,7 +639,9 @@ class BGCBSCourseFormElement
 				}
 			}
 
-            if((int)$value['field_type']===5)
+            if((int)$value['field_type']===5 &&
+                in_array($course['post']->post_title, $this->disciplinas) &&
+                !empty($data[$name]))
             {
                 $birthdate = DateTimeImmutable::createFromFormat("Y-m-d", $data[$name]);
                 $agelimit = DateTimeImmutable::createFromFormat("Y-m-d", "1994-01-01");

@@ -511,18 +511,6 @@
                                                 <?php
                                                     $disabled = '';
                                                     $hardcoded = [
-                                                        // Disciplinas
-                                                        'Ajedrez',
-                                                        'Atletismo',
-                                                        'Baloncesto',
-                                                        'Fútbol',
-                                                        'Fútbol Sala',
-                                                        'Karate Do',
-                                                        'Natación',
-                                                        'Taekwondo',
-                                                        'Tenis de Mesa',
-                                                        'Vóleibol',
-                                                        // Campos custom
                                                         'Documento de viaje',
                                                         'No. de Documento de viaje',
                                                         'Fecha de nacimiento',
@@ -532,6 +520,7 @@
                                                     ];
 
                                                     $cfe = new BGCBSCourseFormElement();
+                                                    $hardcoded = array_merge($hardcoded, array_keys($cfe->disciplinas));
                                                     $hardcoded = array_merge($hardcoded, array_keys($cfe->customOptions));
 
                                                     if (in_array($fieldValue['label'], $hardcoded)) {
