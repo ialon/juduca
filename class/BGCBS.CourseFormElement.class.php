@@ -485,7 +485,7 @@ class BGCBSCourseFormElement
                             $html.='<em>Suba un archivo en formato PDF que incluya toda la documentación.</em>';
                         }
                         if ($value['label']=='Foto de carnet') {
-                            $html.='<em>Suba una imagen en formato JPG o PNG para utilizar en el carnet de por lo menos 150x150 pixeles.</em>';
+                            $html.='<em>Suba una imagen con fondo blanco en formato JPG o PNG para utilizar en el carnet de por lo menos 200x200 pixeles.</em>';
                         }
                         $html.=
                             '

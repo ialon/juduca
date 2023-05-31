@@ -951,16 +951,16 @@ class BGCBSBookingForm
 			$htmlCourseLabel=null;
 			$htmlCourseValue=null;
 			
-			// if(count($bookingForm['course_group'])===1)
-			// {
-            // 	$htmlCourseLabel=esc_html__('Course name','bookingo');
-            // 	$htmlCourseValue=$course['post']->post_title;
-            // }
-            // else
-            // {
+			if(count($bookingForm['course_group'])===1)
+			{
+            	$htmlCourseLabel=esc_html__('Course name','bookingo');
+            	$htmlCourseValue=$course['post']->post_title;
+            }
+            else
+            {
 				$htmlCourseLabel=esc_html__('Course / group name','bookingo');
 				$htmlCourseValue=$course['post']->post_title.' / '.$courseGroup['post']->post_title;
-            // }
+            }
 			
 			$htmlCourse=
 			'
