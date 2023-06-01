@@ -475,7 +475,7 @@ class BGCBSCourseFormElement
                     {
                         $html.=
                         '
-							<input type="date" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
+							<input type="date" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr(BGCBSHelper::getPostValue($name) ?? '2000-01-01').'"/>	
 						';
                     }
                     elseif((int)$value['field_type']===6)
