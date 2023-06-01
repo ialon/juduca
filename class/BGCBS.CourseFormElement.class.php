@@ -17,6 +17,7 @@ class BGCBSCourseFormElement
 			3=>array(esc_html__('Checkbox','bookingo')),
             5=>array(esc_html__('Date','bookingo')),
             6=>array(esc_html__('Upload','bookingo')),
+            7=>array(esc_html__('Number','bookingo')),
 		);
 
         $this->disciplinas = [
@@ -378,7 +379,7 @@ class BGCBSCourseFormElement
 			{
 				$name='form_element_field_'.$value['id'];
 				
-				if(in_array($value['field_type'],array(1,2,3,4,5,6)))
+				if(in_array($value['field_type'],array(1,2,3,4,5,6,7)))
 				{
 					$html.=
 					'
@@ -464,6 +465,13 @@ class BGCBSCourseFormElement
 							<input type="text" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
 						';
 					}
+                    elseif((int)$value['field_type']===7)
+                    {
+                        $html.=
+                            '
+							<input type="number" name="'.BGCBSHelper::getFormName($name,false).'"  value="'.esc_attr(BGCBSHelper::getPostValue($name)).'"/>	
+						';
+                    }
 					elseif((int)$value['field_type']===4)
 					{
 						$html.=

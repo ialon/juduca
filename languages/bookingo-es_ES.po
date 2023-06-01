@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookingo - Course Booking System for WordPress\n"
 "POT-Creation-Date: 2022-08-16 13:21+0200\n"
-"PO-Revision-Date: 2023-05-31 17:17-0600\n"
+"PO-Revision-Date: 2023-06-01 15:03-0600\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: es\n"
@@ -1617,6 +1617,10 @@ msgstr "Casilla de verificación"
 #: ../class/BGCBS.CourseFormElement.class.php:19
 msgid "Upload"
 msgstr "Subida de archivo"
+
+#: ../class/BGCBS.CourseFormElement.class.php:20
+msgid "Number"
+msgstr "Número"
 
 #: ../class/BGCBS.CourseFormElement.class.php:322
 msgid "The selected birth date exceeds the maximum age allowed."
