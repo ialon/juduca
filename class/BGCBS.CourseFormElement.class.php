@@ -492,6 +492,12 @@ class BGCBSCourseFormElement
                         if ($value['label']=='Documentación') {
                             $html.='<em>Suba un archivo en formato PDF que incluya toda la documentación.</em>';
                         }
+                        if ($value['label']=='Documento de viaje') {
+                            $html.='<em>Suba un archivo en formato PDF con su documento de viaje.</em>';
+                        }
+                        if ($value['label']=='Documento de matrícula o inscripción') {
+                            $html.='<em>Suba un archivo en formato PDF que certifique al atleta como estudiante activo en la Universidad.</em>';
+                        }
                         if ($value['label']=='Foto de carnet') {
                             $html.='<em>Suba una imagen con fondo blanco en formato JPG o PNG para utilizar en el carnet de por lo menos 200x200 pixeles.</em>';
                         }
@@ -665,7 +671,12 @@ class BGCBSCourseFormElement
                     $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>$value['message_error']);
                 }
 
-                if ($value['label']=='Documentación' && $_FILES[$uploadname]['type'] != 'application/pdf') {
+                $pdfs = [
+                    'Documentación',
+                    'Documento de viaje',
+                    'Documento de matrícula o inscripción',
+                ];
+                if (in_array($value['label'], $pdfs) && $_FILES[$uploadname]['type'] != 'application/pdf') {
                     $error[]=array('name'=>BGCBSHelper::getFormName($name,false),'message_error'=>'Por favor, suba un archivo en formato PDF.');
                 }
 
