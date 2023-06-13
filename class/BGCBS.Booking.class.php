@@ -683,15 +683,15 @@ class BGCBSBooking
 			break;
 		
  	 	 	case 'course':
- 	 	 	 	
-				edit_post_link(esc_html($meta['course_name']),null,null,$meta['course_id'],'to-link-target-blank');
-				
+
+                echo esc_html($meta['course_name']);
+
  	 	 	break;
 		
  	 	 	case 'course_group':
- 	 	 	 	
-				edit_post_link(esc_html($meta['course_group_name']),null,null,$meta['course_group_id'],'to-link-target-blank');
- 	 	 	 	
+
+                echo esc_html($meta['course_group_name']);
+
  	 	 	break;
  	 	
  	 	 	case 'participant':
