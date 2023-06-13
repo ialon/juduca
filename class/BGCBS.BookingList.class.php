@@ -102,15 +102,15 @@ class BGCBSBookingList
         {
             $metadata = BGCBSPostMeta::getPostMeta($allbooking->post_id);
 
-            if (empty($metadata) || !isset($metadata['applicant_first_name'])) {
+            if (empty($metadata) || !isset($metadata['participant_first_name'])) {
                 continue;
             }
 
             $booking = [];
             $documents = [];
 
-            $booking['firstname'] = $metadata['applicant_first_name'];
-            $booking['lastname'] = $metadata['applicant_second_name'];
+            $booking['firstname'] = $metadata['participant_first_name'];
+            $booking['lastname'] = $metadata['participant_second_name'];
             $booking['category'] = $metadata['course_group_name'];
 
             foreach ($metadata['form_element_field'] as $elementfield) {
