@@ -695,8 +695,8 @@ class BGCBSBooking
  	 	 	break;
  	 	
  	 	 	case 'participant':
- 	 	 	 	
- 	 	 	 	echo esc_html($meta['participant_first_name'].' '.$meta['participant_second_name']);
+                $website = get_option( 'home' );
+ 	 	 	 	echo '<a href="' . esc_url( $website . '/carnet/?id=' . $post->ID) . '">' . esc_html($meta['participant_first_name'].' '.$meta['participant_second_name']) . '</a>';
  	 	 	 	
  	 	 	break;
    
