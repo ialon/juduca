@@ -2108,11 +2108,6 @@ input.bgcbs-button
 	height: 65px;
 }
 
-.carnet-main {
-	clear: both;
-	height: 115px;
-}
-
 .carnet-names,
 .carnet-lastnames {
 	font-size: 25px;
@@ -2139,11 +2134,32 @@ input.bgcbs-button
 	max-width: 100%;
 }
 
+.carnet-main {
+	clear: both;
+	height: 110px;
+}
+
+.purple .carnet-main {
+	height: 112px;
+}
+
+.orange .carnet-main {
+	height: 105px;
+}
+
 .carnet-qr-code {
-	width: 200px;
-	height: 200px;
-	border-radius: 25px;
-	float: left;
+	width: 150px;
+	height: 150px;
+	margin-left: 18px;
+}
+
+.gold .carnet-qr-code,
+.purple .carnet-qr-code {
+	margin-left: 15px;
+}
+
+.orange .carnet-qr-code {
+	margin-left: 17px;
 }
 
 .carnet-amenities {

@@ -374,19 +374,21 @@ class BGCBSBookingForm
         $data['universidad'] = $university;
         $data['disciplina'] = $meta['course_name'];
         $data['categoria'] = $meta['course_group_name'];
-        $data['nombres'] = $meta['participant_first_name'];
-        $data['apellidos'] = $meta['participant_second_name'];
+        $data['nombres'] = ucwords(strtolower($meta['participant_first_name']));
+        $data['apellidos'] = ucwords(strtolower($meta['participant_second_name']));
 
         foreach($meta['form_element_field'] as $elementfield)
         {
             if (($elementfield['label'] == 'Foto de carnet')) {
                 $data['urlfoto'] = wp_get_attachment_url($elementfield['value']);
             } else if (($elementfield['label'] == 'Segundo nombre')) {
-                $data['nombres'] .= ' ' . $elementfield['value'];
+                $data['nombres'] .= ' ' . ucwords(strtolower($elementfield['value']));
             } else if (($elementfield['label'] == 'Segundo apellido')) {
-                $data['apellidos'] .= ' ' . $elementfield['value'];
+                $data['apellidos'] .= ' ' . ucwords(strtolower($elementfield['value']));
             } else if (($elementfield['label'] == 'Disciplina')) {
-                $data['disciplina'] = ' ' . $elementfield['value'];
+                $data['disciplina'] = $elementfield['value'];
+            } else if (($elementfield['label'] == 'Cargo que desempeña')) {
+                $data['funcionario'] = $elementfield['value'];
             }
         }
 
@@ -396,12 +398,15 @@ class BGCBSBookingForm
             case 'Jefe de delegación':
             case 'Jefe de misión':
                 $data['color'] = 'gold';
+                $qrbgcolor = 'C99C27';
                 break;
             case 'Cuerpo médico':
                 $data['color'] = 'orange';
+                $qrbgcolor = 'EE7627';
                 break;
             case 'Prensa':
                 $data['color'] = 'purple';
+                $qrbgcolor = 'D42262';
                 break;
             case 'Baloncesto':
             case 'Fútbol':
@@ -418,6 +423,7 @@ class BGCBSBookingForm
             case 'Delegados':
             default:
                 $data['color'] = 'gray';
+                $qrbgcolor = '585857';
                 break;
         }
 
@@ -489,8 +495,7 @@ class BGCBSBookingForm
                 $data['type'] = 'Atleta';
                 break;
             case 'Funcionarios':
-                // TODO: which one
-                $data['type'] = 'Funcionario';
+                $data['type'] = $data['funcionario'];
                 break;
             case 'Entrenadores':
                 $data['type'] = 'Entrenador';
@@ -542,6 +547,9 @@ class BGCBSBookingForm
                 $data['sportlogo'] = '';
                 break;
         }
+
+        // QR Code
+        $data['qrcode'] = '<img src="https://api.qrserver.com/v1/create-qr-code/?color=FFFFFF&margin=0&bgcolor=' . $qrbgcolor . '&size=150x150&data=' . urlencode('https://juduca2023.ues.edu.sv/qr/?id=' . $bookingid) . '">';
 
 
         /***/

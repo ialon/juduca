@@ -16,7 +16,7 @@
             <div class="carnet-unilogo"><img alt="<?php echo $this->data['universidad']; ?>" src="<?php echo $this->data['universidadlogo']; ?>"/></div>
         </div>
         <div class="carnet-footer">
-            <div class="carnet-qr-code"></div>
+            <div class="carnet-qr-code"><?php echo $this->data['qrcode']; ?></div>
             <div class="carnet-amenities"></div>
         </div>
     </div>
