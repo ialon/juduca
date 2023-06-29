@@ -1977,54 +1977,135 @@ input.bgcbs-button
 .carnet-wrapper {
 	font-family: "Poppins", Sans-serif;
 	width: 14cm;
-	height: 22cm;
+	height: 20cm;
 	margin: auto;
-	padding: 45px;
+	padding: 41px;
 	border: 1px solid #cccccc;
+	background-size: cover;
+	background-color: #FFFFFF;
+}
+
+.carnet-wrapper.gold {
+	background-image: url('/wp-content/uploads/2023/06/bg-gold.png');
+	color: #C99C27;
+}
+
+.carnet-wrapper.gray {
+	background-image: url('/wp-content/uploads/2023/06/bg-gray.png');
+	color: #585857;
+}
+
+.carnet-wrapper.orange {
+	background-image: url('/wp-content/uploads/2023/06/bg-orange.png');
+	color: #EE7627;
+}
+
+.carnet-wrapper.purple {
+	background-image: url('/wp-content/uploads/2023/06/bg-purple.png');
+	color: #D42262;
 }
 
 .carnet-header {
-	margin-top: 155px;
+	margin-top: 142px;
 	height: 150px;
 }
 
 .carnet-photo {
-	width: 155px;
-	height: 155px;
+	width: 142px;
+	height: 142px;
 	display: inline-block;
 	float: left;
+	overflow: hidden;
 }
 
 .carnet-country {
 	font-weight: bold;
 	display: inline-block;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 
 .carnet-country-label {
 	font-weight: 500;
-	font-size: 30px;
-	background: #0c14cc;
+	font-size: 25px;
 	color: #FFFFFF;
-	padding: 0px 15px 0px 30px;
+	padding: 2px 25px 0px 30px;
+	height: 32px;
+	min-width: 200px;
+	display: inline-block;
+}
+
+.carnet-country-label.do {
+	background: #CE1327;
+}
+.carnet-country-label.be {
+	background: #003F87;
+}
+.carnet-country-label.gt {
+	background: #4897D0;
+}
+.carnet-country-label.hn {
+	background: #2670B7;
+}
+.carnet-country-label.ni {
+	background: #2566AF;
+}
+.carnet-country-label.cr {
+	background: #CE1327;
+}
+.carnet-country-label.pa {
+	background: #D21036;
+}
+.carnet-country-label.sv {
+	background: #244D9C;
 }
 
 .carnet-country-flag {
-	max-width: 50px;
-	max-height: 50px;
-	float: right;
-	margin-top: -11px;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	margin-left: 3px;
+	display: inline-block;
+	border-radius: 16px;
+	background-size: cover;
+	background-color: #FFFFFF;
+	background-position: center center;
+}
+
+.carnet-country-flag.do {
+	background-image: url('/wp-content/uploads/2023/06/flag-do.jpg');
+}
+.carnet-country-flag.be {
+	background-image: url('/wp-content/uploads/2023/06/flag-be.jpg');
+}
+.carnet-country-flag.gt {
+	background-image: url('/wp-content/uploads/2023/06/flag-gt.jpg');
+}
+.carnet-country-flag.hn {
+	background-image: url('/wp-content/uploads/2023/06/flag-hn.jpg');
+}
+.carnet-country-flag.ni {
+	background-image: url('/wp-content/uploads/2023/06/flag-ni.jpg');
+}
+.carnet-country-flag.cr {
+	background-image: url('/wp-content/uploads/2023/06/flag-cr.jpg');
+}
+.carnet-country-flag.pa {
+	background-image: url('/wp-content/uploads/2023/06/flag-pa.jpg');
+}
+.carnet-country-flag.sv {
+	background-image: url('/wp-content/uploads/2023/06/flag-sv.jpg');
 }
 
 .carnet-type {
-	font-size: 30px;
-	color: #0f4463;
-	font-weight: 700;
-	margin: 5px 0px 0px 30px;
+	font-size: 27px;
+	font-weight: 600;
+	margin-left: 27px;
+	margin-top: 3px;
 }
 
 .carnet-sport {
-	margin-left: 45px;
+	margin-left: 43px;
+	height: 65px;
 }
 
 .carnet-main {
@@ -2034,15 +2115,13 @@ input.bgcbs-button
 
 .carnet-names,
 .carnet-lastnames {
-	font-size: 29px;
+	font-size: 25px;
 	font-weight: 500;
-	line-height: 34px;
-	color: #0f4463;
-	width: 50%;
+	margin-left: -10px;
 }
 
 .carnet-names {
-	margin-top: 23px;
+	margin-top: 11px;
 }
 
 .carnet-unilogo {
@@ -2072,10 +2151,4 @@ input.bgcbs-button
 	height: 210px;
 	float: right;
 	margin-top: 25px;
-}
-
-.carnet-wrapper.orange,
-.carnet-wrapper.orange .carnet-qr-code,
-.carnet-wrapper.orange .carnet-amenities {
-	background: #ff8c00;
 }

@@ -385,12 +385,164 @@ class BGCBSBookingForm
                 $data['nombres'] .= ' ' . $elementfield['value'];
             } else if (($elementfield['label'] == 'Segundo apellido')) {
                 $data['apellidos'] .= ' ' . $elementfield['value'];
+            } else if (($elementfield['label'] == 'Disciplina')) {
+                $data['disciplina'] = ' ' . $elementfield['value'];
             }
         }
 
-        $data['color'] = 'orange';
-        $data['universidadlogo'] = 'https://r2sabe.p3cdn1.secureserver.net/wp-content/uploads/2023/05/4.-UNAH-HONDURAS-300x300.jpg';
-        $data['urldisciplina'] = 'http://juduca.local/wp-content/uploads/2023/05/Screen-Shot-2023-05-30-at-14.45.22.png';
+        // Background
+        switch ($meta['course_name']) {
+            case 'Funcionarios':
+            case 'Jefe de delegación':
+            case 'Jefe de misión':
+                $data['color'] = 'gold';
+                break;
+            case 'Cuerpo médico':
+                $data['color'] = 'orange';
+                break;
+            case 'Prensa':
+                $data['color'] = 'purple';
+                break;
+            case 'Baloncesto':
+            case 'Fútbol':
+            case 'Fútbol Sala':
+            case 'Vóleibol':
+            case 'Tenis de Mesa':
+            case 'Ajedrez':
+            case 'Atletismo':
+            case 'Natación':
+            case 'Taekwondo':
+            case 'Karate Do':
+            case 'Entrenadores':
+            case 'Cuerpo técnico':
+            case 'Delegados':
+            default:
+                $data['color'] = 'gray';
+                break;
+        }
+
+        // Country
+        switch ($university) {
+            case 'Universidad Autónoma de Santo Domingo':
+                $data['country'] = 'República Dominicana';
+                $data['countrycode'] = 'do';
+                break;
+            case 'Universidad de Belize':
+                $data['country'] = 'Belize';
+                $data['countrycode'] = 'be';
+                break;
+            case 'Universidad de San Carlos de Guatemala':
+                $data['country'] = 'Guatemala';
+                $data['countrycode'] = 'gt';
+                break;
+            case 'Universidad Nacional Autónoma de Honduras':
+            case 'Universidad Nacional de Ciencias Forestales':
+            case 'Universidad Pedagógica Nacional Francisco Morazán':
+            case 'Universidad Nacional de Agricultura':
+                $data['country'] = 'Honduras';
+                $data['countrycode'] = 'hn';
+                break;
+            case 'Bluefields Indian and Caribbean University':
+            case 'Universidad de las Regiones Autónomas de la Costa Caribe Nicaragüense':
+            case 'Universidad Nacional Autónoma de Nicaragua Managua':
+            case 'Universidad Nacional Autónoma de Nicaragua León':
+            case 'Universidad Nacional Agraria de Nicaragua':
+            case 'Universidad Nacional de Ingeniería':
+                $data['country'] = 'Nicaragua';
+                $data['countrycode'] = 'ni';
+                break;
+            case 'Universidad Técnica Nacional de Costa Rica':
+            case 'Universidad Estatal a Distancia de Costa Rica':
+            case 'Tecnológico de Costa Rica':
+            case 'Universidad de Costa Rica':
+            case 'Universidad Nacional de Costa Rica':
+                $data['country'] = 'Costa Rica';
+                $data['countrycode'] = 'cr';
+                break;
+            case 'Universidad Marítima Internacional de Panamá':
+            case 'Universidad Especializada de las Américas':
+            case 'Universidad Autónoma de Chiriquí':
+            case 'Universidad de Panamá':
+            case 'Universidad Tecnológica de Panamá':
+                $data['country'] = 'Panamá';
+                $data['countrycode'] = 'pa';
+                break;
+            case 'Universidad de El Salvador':
+            default:
+                $data['country'] = 'El Salvador';
+                $data['countrycode'] = 'sv';
+                break;
+        }
+
+        // Type
+        switch ($meta['course_name']) {
+            case 'Baloncesto':
+            case 'Fútbol':
+            case 'Fútbol Sala':
+            case 'Vóleibol':
+            case 'Tenis de Mesa':
+            case 'Ajedrez':
+            case 'Atletismo':
+            case 'Natación':
+            case 'Taekwondo':
+            case 'Karate Do':
+                $data['type'] = 'Atleta';
+                break;
+            case 'Funcionarios':
+                // TODO: which one
+                $data['type'] = 'Funcionario';
+                break;
+            case 'Entrenadores':
+                $data['type'] = 'Entrenador';
+                break;
+            case 'Delegados':
+                $data['type'] = 'Delegado';
+                break;
+            case 'Jefe de delegación':
+            case 'Jefe de misión':
+            case 'Cuerpo médico':
+            case 'Prensa':
+            case 'Cuerpo técnico':
+            default:
+                $data['type'] = $meta['course_name'];
+                break;
+        }
+
+        // Sport logo
+        switch ($meta['course_name']) {
+            case 'Baloncesto':
+            case 'Fútbol':
+            case 'Fútbol Sala':
+            case 'Vóleibol':
+            case 'Tenis de Mesa':
+            case 'Ajedrez':
+            case 'Atletismo':
+            case 'Natación':
+            case 'Taekwondo':
+            case 'Karate Do':
+                $sport = str_replace(' ', '', strtolower($meta['course_name']));
+                $sport = str_replace('ó', 'o', $sport);
+                $sport = str_replace('ú', 'u', $sport);
+                $data['sportlogo'] = '<img class="carnet-sport" alt="' . $meta['course_name'] . '" src="/wp-content/uploads/2023/06/sport-' . $sport . '.png"/>';
+                break;
+            case 'Entrenadores':
+            case 'Delegados':
+            case 'Cuerpo técnico':
+                $sport = str_replace(' ', '', strtolower($data['disciplina']));
+                $sport = str_replace('ó', 'o', $sport);
+                $sport = str_replace('ú', 'u', $sport);
+                $data['sportlogo'] = '<img class="carnet-sport" alt="' . $meta['course_name'] . '" src="/wp-content/uploads/2023/06/sport-' . $sport . '.png"/>';
+                break;
+            case 'Funcionarios':
+            case 'Jefe de delegación':
+            case 'Jefe de misión':
+            case 'Cuerpo médico':
+            case 'Prensa':
+            default:
+                $data['sportlogo'] = '';
+                break;
+        }
+
 
         /***/
 

@@ -1,13 +1,13 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">
-<div class="carnet-wrapper <?php echo $this->data['color']; ?>" style="background-size: cover; background-color: #FFFFFF; background-image: url('http://juduca.local/wp-content/uploads/2023/05/Screen-Shot-2023-05-30-at-12.35.29-e1685475571175.png');">
+<div class="carnet-wrapper <?php echo $this->data['color']; ?>">
     <div class="carnet-content">
         <div class="carnet-header">
             <div class="carnet-photo"><img src="<?php echo $this->data['urlfoto']; ?>"/></div>
             <div class="carnet-country">
-                <span class="carnet-country-label">Honduras</span>
-                <img class="carnet-country-flag" src="<?php echo $this->data['urlfoto']; ?>"/>
-                <div class="carnet-type">Atleta</div>
-                <img class="carnet-sport" alt="<?php echo $this->data['disciplina']; ?>" src="<?php echo $this->data['urldisciplina']; ?>"/>
+                <div class="carnet-country-label <?php echo $this->data['countrycode']; ?>"><?php echo $this->data['country']; ?></div>
+                <div class="carnet-country-flag <?php echo $this->data['countrycode']; ?>"></div>
+                <div class="carnet-type"><?php echo $this->data['type']; ?></div>
+                <?php echo $this->data['sportlogo']; ?>
             </div>
         </div>
         <div class="carnet-main">
