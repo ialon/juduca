@@ -115,7 +115,7 @@ class BGCBSBookingReport
 		
 		$query->rewind_posts();
 		
-		$document.=implode(chr(9),$data)."\r\n";
+		$document.=implode(',',$data)."\r\n";
 		
 		while($query->have_posts())
 		{
@@ -194,14 +194,14 @@ class BGCBSBookingReport
 				$value=preg_replace('/\s+/',' ',$value);
 			});
 				
-			$document.=implode(chr(9),$data)."\r\n";			
+			$document.=implode(',',$data)."\r\n";
 		}
 		
 		BGCBSHelper::preservePost($post,$bPost,0);
 		
 		header($_SERVER['SERVER_PROTOCOL'].' 200 OK');
 		header('Cache-Control: public');
-		header('Content-Type: text/csv');
+		header('Content-Type: text/csv; charset=utf-8');
 		header('Content-Transfer-Encoding: Binary');
 		header('Content-Disposition: attachment;filename=juduca.csv');
 		echo $document;
