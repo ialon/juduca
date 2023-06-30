@@ -79,7 +79,9 @@ class BGCBSBookingForm
  	 	
  	 	add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_form',array($this,'createBookingForm'));
         add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_carnet',array($this,'createBookingCarnet'));
-		
+        add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_carnet_cta',array($this,'createBookingCarnetCta'));
+        add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_carnet_print',array($this,'createBookingCarnetPrint'));
+
 		add_filter('manage_edit-'.self::getCPTName().'_columns',array($this,'manageEditColumns')); 
 		add_action('manage_'.self::getCPTName().'_posts_custom_column',array($this,'managePostsCustomColumn'));
 		add_filter('manage_edit-'.self::getCPTName().'_sortable_columns',array($this,'manageEditSortableColumns'));
@@ -351,6 +353,29 @@ class BGCBSBookingForm
  	{
 		return($column); 	   
  	}
+
+    /**************************************************************************/
+
+    function createBookingCarnetCta()
+    {
+        $bookingid=BGCBSHelper::getGetValue('id',false);
+        $meta = BGCBSPostMeta::getPostMeta($bookingid);
+
+        if (empty($meta)) {
+            return "";
+        } else {
+            return '<div class="wp-block-button has-custom-font-size has-medium-font-size">
+                        <a class="wp-block-button__link has-white-color has-text-color has-background has-text-align-center wp-element-button" href="https://juduca2023.ues.edu.sv/carnet/?id=' . $bookingid . '" style="border-radius:15px;background-color:#f32c46">Carnet Digital</a>
+                    </div>';
+        }
+    }
+
+    /**************************************************************************/
+
+    function createBookingCarnetPrint()
+    {
+        return "";
+    }
 
     /**************************************************************************/
 
