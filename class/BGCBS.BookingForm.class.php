@@ -580,78 +580,88 @@ class BGCBSBookingForm
         // Uni logo
         switch ($university) {
             case 'Universidad Autónoma de Santo Domingo':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/uasd.png';
+                $shortname = 'uasd';
                 break;
             case 'Universidad de Belize':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/ub.png';
+                $shortname = 'ub';
                 break;
             case 'Universidad de San Carlos de Guatemala':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/usac.png';
+                $shortname = 'usac';
                 break;
             case 'Universidad Nacional Autónoma de Honduras':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/unah.png';
+                $shortname = 'unah';
                 break;
             case 'Universidad Nacional de Ciencias Forestales':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/unacifor.png';
+                $shortname = 'unacifor';
                 break;
             case 'Universidad Pedagógica Nacional Francisco Morazán':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/unpfm.png';
+                $shortname = 'unpfm';
                 break;
             case 'Universidad Nacional de Agricultura':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/unag.png';
+                $shortname = 'unag';
                 break;
             case 'Bluefields Indian and Caribbean University':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/bicu.png';
+                $shortname = 'bicu';
                 break;
             case 'Universidad de las Regiones Autónomas de la Costa Caribe Nicaragüense':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/uraccan.png';
+                $shortname = 'uraccan';
                 break;
             case 'Universidad Nacional Autónoma de Nicaragua Managua':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/unan-managua.png';
+                $shortname = 'unan-managua';
                 break;
             case 'Universidad Nacional Autónoma de Nicaragua León':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/unan-leon.png';
+                $shortname = 'unan-leon';
                 break;
             case 'Universidad Nacional Agraria de Nicaragua':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/ni_una.png';
+                $shortname = 'ni_una';
                 break;
             case 'Universidad Nacional de Ingeniería':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/uni.png';
+                $shortname = 'uni';
                 break;
             case 'Universidad Técnica Nacional de Costa Rica':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/utn.png';
+                $shortname = 'utn';
                 break;
             case 'Universidad Estatal a Distancia de Costa Rica':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/uned.png';
+                $shortname = 'uned';
                 break;
             case 'Tecnológico de Costa Rica':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/tec.png';
+                $shortname = 'tec';
                 break;
             case 'Universidad de Costa Rica':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/ucr.png';
+                $shortname = 'ucr';
                 break;
             case 'Universidad Nacional de Costa Rica':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/cr_una.png';
+                $shortname = 'cr_una';
                 break;
             case 'Universidad Marítima Internacional de Panamá':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/umip.png';
+                $shortname = 'umip';
                 break;
             case 'Universidad Especializada de las Américas':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/udelas.png';
+                $shortname = 'udelas';
                 break;
             case 'Universidad Autónoma de Chiriquí':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/unachi.png';
+                $shortname = 'unachi';
                 break;
             case 'Universidad de Panamá':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/up.png';
+                $shortname = 'up';
                 break;
             case 'Universidad Tecnológica de Panamá':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/utp.png';
+                $shortname = 'utp';
                 break;
             case 'Universidad de El Salvador':
-                $data['universidadlogo'] = '/wp-content/uploads/2023/06/ues.png';
+                $shortname = 'ues';
                 break;
         }
+
+        $args = array(
+            'post_type' => 'attachment',
+            'name' => sanitize_title($shortname),
+            'posts_per_page' => 1,
+            'post_status' => 'inherit',
+        );
+        $_header = get_posts( $args );
+        $header = $_header ? array_pop($_header) : null;
+        $data['universidadlogo'] = $header ? wp_get_attachment_image_url($header->ID, 'medium') : '';
 
         /***/
 
