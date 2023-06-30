@@ -364,7 +364,7 @@ class BGCBSBookingForm
         if (empty($meta)) {
             return "";
         } else {
-            return '<div class="wp-block-button has-custom-font-size has-medium-font-size">
+            return '<div class="wp-block-button has-custom-font-size has-medium-font-size" style="text-align:center;">
                         <a class="wp-block-button__link has-white-color has-text-color has-background has-text-align-center wp-element-button" href="https://juduca2023.ues.edu.sv/carnet/?id=' . $bookingid . '" style="border-radius:15px;background-color:#f32c46">Carnet Digital</a>
                     </div>';
         }
