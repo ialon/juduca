@@ -2120,13 +2120,11 @@ input.bgcbs-button
 }
 
 .carnet-unilogo {
-	width: 50%;
-	text-align: center;
-	height: 80px;
+	height: 66px;
 	float: right;
-	position: absolute;
-	top: 46%;
-	right: 18%;
+	width: 156px;
+	text-align: center;
+	margin-top: -54px;
 }
 
 .carnet-unilogo img {
