@@ -374,16 +374,51 @@ class BGCBSBookingForm
 
     function createBookingCarnetPrint()
     {
-        return "";
+        if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+            define( 'DONOTCACHEPAGE', true );
+        }
+
+        global $wpdb;
+
+        $output = '<link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">';
+        $page = BGCBSHelper::getGetValue('page',false) ?? 0;
+        $size = BGCBSHelper::getGetValue('size',false) ?? 10;
+        $skip = $page * $size;
+
+        $query = "SELECT ID
+                FROM {$wpdb->prefix}posts
+                WHERE post_type = 'bgcbs_booking'
+                ORDER BY ID
+                LIMIT {$size} OFFSET {$skip}";
+
+        $allbookings = $wpdb->get_results($wpdb->prepare($query));
+
+        foreach ($allbookings as $booking) {
+            $output .= $this->createBookingCarnet($booking->ID, true);
+        }
+
+        return $output;
     }
 
     /**************************************************************************/
 
-    function createBookingCarnet($attr)
+    function createBookingCarnet($bid = null, $includeback = false)
     {
+        if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+            define( 'DONOTCACHEPAGE', true );
+        }
+
         $Booking=new BGCBSBooking();
 
-        $bookingid=BGCBSHelper::getGetValue('id',false);
+        $output = '';
+        if (!$bid) {
+            $output = '<link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">';
+        }
+
+        $bookingid = BGCBSHelper::getGetValue('id',false);
+        if (!$bookingid) {
+            $bookingid = $bid;
+        }
 
         $meta = BGCBSPostMeta::getPostMeta($bookingid);
 
@@ -663,10 +698,14 @@ class BGCBSBookingForm
         $header = $_header ? array_pop($_header) : null;
         $data['universidadlogo'] = $header ? wp_get_attachment_image_url($header->ID, 'medium') : '';
 
+        $data['includeback'] = $includeback;
+
         /***/
 
         $Template=new BGCBSTemplate($data,PLUGIN_BGCBS_TEMPLATE_PATH.'public/carnet.php');
-        return($Template->output());
+        $output .= $Template->output();
+        unset($Template);
+        return $output;
     }
  	
  	/**************************************************************************/

@@ -1,4 +1,3 @@
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">
 <div class="carnet-wrapper <?php echo $this->data['color']; ?>">
     <div class="carnet-content">
         <div class="carnet-header">
@@ -21,3 +20,8 @@
         </div>
     </div>
 </div>
+<?php
+if ($this->data['includeback']) {
+    echo '<div class="carnet-wrapper back ' . $this->data['color'] . '"></div>';
+}
+?>

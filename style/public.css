@@ -1977,32 +1977,48 @@ input.bgcbs-button
 .carnet-wrapper {
 	font-family: "Poppins", Sans-serif;
 	width: 14cm;
-	height: 20cm;
+	height: 19.975cm;
 	margin: auto;
 	padding: 41px;
-	border: 1px solid #cccccc;
+	border: none;
 	background-size: cover;
 	background-color: #FFFFFF;
 }
 
 .carnet-wrapper.gold {
-	background-image: url('/wp-content/uploads/2023/06/bg-gold.png');
+	background-image: url('/wp-content/uploads/2023/07/bg-gold.jpg');
 	color: #C99C27;
 }
 
 .carnet-wrapper.gray {
-	background-image: url('/wp-content/uploads/2023/06/bg-gray.png');
+	background-image: url('/wp-content/uploads/2023/07/bg-gray.jpg');
 	color: #585857;
 }
 
 .carnet-wrapper.orange {
-	background-image: url('/wp-content/uploads/2023/06/bg-orange.png');
+	background-image: url('/wp-content/uploads/2023/07/bg-orange.jpg');
 	color: #EE7627;
 }
 
 .carnet-wrapper.purple {
-	background-image: url('/wp-content/uploads/2023/06/bg-purple.png');
+	background-image: url('/wp-content/uploads/2023/07/bg-purple.jpg');
 	color: #D42262;
+}
+
+.carnet-wrapper.back.gold {
+	background-image: url('/wp-content/uploads/2023/07/bg-back-gold.jpg');
+}
+
+.carnet-wrapper.back.gray {
+	background-image: url('/wp-content/uploads/2023/07/bg-back-gray.jpg');
+}
+
+.carnet-wrapper.back.orange {
+	background-image: url('/wp-content/uploads/2023/07/bg-back-orange.jpg');
+}
+
+.carnet-wrapper.back.purple {
+	background-image: url('/wp-content/uploads/2023/07/bg-back-purple.jpg');
 }
 
 .carnet-header {
@@ -2134,30 +2150,33 @@ input.bgcbs-button
 
 .carnet-main {
 	clear: both;
-	height: 110px;
-}
-
-.purple .carnet-main {
-	height: 112px;
+	height: 120px;
 }
 
 .orange .carnet-main {
-	height: 105px;
+	height: 117px;
+}
+
+.gold .carnet-main {
+	height: 118px;
 }
 
 .carnet-qr-code {
 	width: 150px;
 	height: 150px;
-	margin-left: 18px;
+	margin-left: 15px;
 }
 
-.gold .carnet-qr-code,
 .purple .carnet-qr-code {
 	margin-left: 15px;
 }
 
 .orange .carnet-qr-code {
-	margin-left: 17px;
+	margin-left: 11px;
+}
+
+.gold .carnet-qr-code {
+	margin-left: 12px;
 }
 
 .carnet-amenities {
