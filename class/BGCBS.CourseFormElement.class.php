@@ -798,7 +798,8 @@ class BGCBSCourseFormElement
                         '
                             <div class="to-clear-fix">
                                 <span class="to-legend-field">'.esc_html($fieldLabel).'.</span>
-                                <a href="' . wp_get_attachment_url($fieldValue) . '" target="_blank">Abrir</a>								
+                                <a href="' . wp_get_attachment_url($fieldValue) . '" target="_blank">Abrir</a>
+                                <a href="' . esc_url( get_edit_post_link( $fieldValue ) ) . '" target="_blank">Editar</a>
                             </div> 
                         ';
                     }
