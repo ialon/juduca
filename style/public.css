@@ -1976,13 +1976,15 @@ input.bgcbs-button
 
 .carnet-wrapper {
 	font-family: "Poppins", Sans-serif;
-	width: 14cm;
-	height: 19.975cm;
+	width: 568px;
+	height: 752px;
 	margin: auto;
-	padding: 41px;
+	padding: 53px;
 	border: none;
 	background-size: cover;
 	background-color: #FFFFFF;
+	page-break-after: always;
+	break-after: page;
 }
 
 .carnet-wrapper.gold {
@@ -2022,13 +2024,13 @@ input.bgcbs-button
 }
 
 .carnet-header {
-	margin-top: 142px;
-	height: 150px;
+	margin-top: 135px;
+	height: 160px;
 }
 
 .carnet-photo {
-	width: 142px;
-	height: 142px;
+	width: 150px;
+	height: 150px;
 	display: inline-block;
 	float: left;
 	overflow: hidden;
@@ -2037,7 +2039,7 @@ input.bgcbs-button
 .carnet-country {
 	font-weight: bold;
 	display: inline-block;
-	margin-top: 20px;
+	margin-top: 19px;
 }
 
 .carnet-country-label {
@@ -2113,34 +2115,38 @@ input.bgcbs-button
 }
 
 .carnet-type {
-	font-size: 27px;
+	font-size: 29px;
 	font-weight: 600;
-	margin-left: 27px;
-	margin-top: 3px;
+	margin-left: 30px;
+	margin-top: 6px;
 }
 
 .carnet-sport {
-	margin-left: 43px;
-	height: 65px;
+	margin-left: 53px;
+	margin-top: 5px;
+	height: 59px;
 }
 
 .carnet-names,
 .carnet-lastnames {
-	font-size: 25px;
+	font-size: 26px;
 	font-weight: 500;
-	margin-left: -10px;
 }
 
 .carnet-names {
-	margin-top: 11px;
+	margin-top: 9px;
+}
+
+.carnet-lastnames {
+	margin-top: 4px;
 }
 
 .carnet-unilogo {
-	height: 66px;
+	height: 150px;
 	float: right;
-	width: 156px;
+	width: 150px;
 	text-align: center;
-	margin-top: -54px;
+	margin-top: -125px;
 }
 
 .carnet-unilogo img {
@@ -2150,38 +2156,19 @@ input.bgcbs-button
 
 .carnet-main {
 	clear: both;
-	height: 120px;
+	height: 114px;
 }
 
-.orange .carnet-main {
-	height: 117px;
-}
-
-.gold .carnet-main {
-	height: 118px;
+.purple .carnet-main {
+	height: 113px;
 }
 
 .carnet-qr-code {
-	width: 150px;
-	height: 150px;
-	margin-left: 15px;
-}
-
-.purple .carnet-qr-code {
-	margin-left: 15px;
-}
-
-.orange .carnet-qr-code {
-	margin-left: 11px;
+	width: 160px;
+	height: 160px;
+	margin-left: 16px;
 }
 
 .gold .carnet-qr-code {
-	margin-left: 12px;
-}
-
-.carnet-amenities {
-	width: 220px;
-	height: 210px;
-	float: right;
-	margin-top: 25px;
+	margin-left: 19px;
 }

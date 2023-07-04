@@ -1,4 +1,4 @@
-<div class="carnet-wrapper <?php echo $this->data['color']; ?>">
+<div class="carnet-wrapper html2pdf__page-break <?php echo $this->data['color']; ?>">
     <div class="carnet-content">
         <div class="carnet-header">
             <div class="carnet-photo"><img src="<?php echo $this->data['urlfoto']; ?>"/></div>
@@ -16,7 +16,6 @@
         </div>
         <div class="carnet-footer">
             <div class="carnet-qr-code"><?php echo $this->data['qrcode']; ?></div>
-            <div class="carnet-amenities"></div>
         </div>
     </div>
 </div>

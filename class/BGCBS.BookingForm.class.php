@@ -397,6 +397,8 @@ class BGCBSBookingForm
             $output .= $this->createBookingCarnet($booking->ID, true);
         }
 
+        $output .= "<br>UES 2023";
+
         return $output;
     }
 
@@ -609,7 +611,7 @@ class BGCBSBookingForm
         }
 
         // QR Code
-        $data['qrcode'] = '<img src="https://api.qrserver.com/v1/create-qr-code/?color=FFFFFF&margin=0&bgcolor=' . $qrbgcolor . '&size=150x150&data=' . urlencode('https://juduca2023.ues.edu.sv/qr/?id=' . $bookingid) . '">';
+        $data['qrcode'] = '<img src="https://api.qrserver.com/v1/create-qr-code/?color=FFFFFF&margin=0&bgcolor=' . $qrbgcolor . '&size=160x160&data=' . urlencode('https://juduca2023.ues.edu.sv/qr/?id=' . $bookingid) . '">';
 
 
         // Uni logo
