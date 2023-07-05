@@ -478,7 +478,7 @@ class BGCBSBookingForm
             $output .= $this->createBookingCarnet($booking->ID, true);
         }
 
-        $output .= "<br>UES 2023";
+        // $output .= "<br>UES 2023";
 
         return $output;
     }

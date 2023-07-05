@@ -1981,46 +1981,58 @@ input.bgcbs-button
 	margin: auto;
 	padding: 53px;
 	border: none;
-	background-size: cover;
-	background-color: #FFFFFF;
+	background-size: cover !important;
+	background-color: #FFFFFF !important;
 	page-break-after: always;
 	break-after: page;
 }
 
 .carnet-wrapper.gold {
-	background-image: url('/wp-content/uploads/2023/07/bg-gold.jpg');
-	color: #C99C27;
+	background-image: url('/wp-content/uploads/2023/07/bg-gold.jpg') !important;
+}
+
+.carnet-wrapper.gold * {
+	color: #C99C27 !important;
 }
 
 .carnet-wrapper.gray {
-	background-image: url('/wp-content/uploads/2023/07/bg-gray.jpg');
-	color: #585857;
+	background-image: url('/wp-content/uploads/2023/07/bg-gray.jpg') !important;
+}
+
+.carnet-wrapper.gray * {
+	color: #585857 !important;
 }
 
 .carnet-wrapper.orange {
-	background-image: url('/wp-content/uploads/2023/07/bg-orange.jpg');
-	color: #EE7627;
+	background-image: url('/wp-content/uploads/2023/07/bg-orange.jpg') !important;
+}
+
+.carnet-wrapper.orange * {
+	color: #EE7627 !important;
 }
 
 .carnet-wrapper.purple {
-	background-image: url('/wp-content/uploads/2023/07/bg-purple.jpg');
-	color: #D42262;
+	background-image: url('/wp-content/uploads/2023/07/bg-purple.jpg') !important;
+}
+
+.carnet-wrapper.purple *  {
+	color: #D42262 !important;
 }
 
 .carnet-wrapper.back.gold {
-	background-image: url('/wp-content/uploads/2023/07/bg-back-gold.jpg');
+	background-image: url('/wp-content/uploads/2023/07/bg-back-gold.jpg') !important;
 }
 
 .carnet-wrapper.back.gray {
-	background-image: url('/wp-content/uploads/2023/07/bg-back-gray.jpg');
+	background-image: url('/wp-content/uploads/2023/07/bg-back-gray.jpg') !important;
 }
 
 .carnet-wrapper.back.orange {
-	background-image: url('/wp-content/uploads/2023/07/bg-back-orange.jpg');
+	background-image: url('/wp-content/uploads/2023/07/bg-back-orange.jpg') !important;
 }
 
 .carnet-wrapper.back.purple {
-	background-image: url('/wp-content/uploads/2023/07/bg-back-purple.jpg');
+	background-image: url('/wp-content/uploads/2023/07/bg-back-purple.jpg') !important;
 }
 
 .carnet-header {
@@ -2042,10 +2054,10 @@ input.bgcbs-button
 	margin-top: 19px;
 }
 
-.carnet-country-label {
+.carnet-wrapper .carnet-country-label {
 	font-weight: 500;
 	font-size: 25px;
-	color: #FFFFFF;
+	color: #FFFFFF !important;
 	padding: 2px 25px 0px 30px;
 	height: 32px;
 	min-width: 200px;
@@ -2053,28 +2065,28 @@ input.bgcbs-button
 }
 
 .carnet-country-label.do {
-	background: #CE1327;
+	background: #CE1327  !important;
 }
 .carnet-country-label.be {
-	background: #003F87;
+	background: #003F87  !important;
 }
 .carnet-country-label.gt {
-	background: #4897D0;
+	background: #4897D0  !important;
 }
 .carnet-country-label.hn {
-	background: #2670B7;
+	background: #2670B7  !important;
 }
 .carnet-country-label.ni {
-	background: #2566AF;
+	background: #2566AF  !important;
 }
 .carnet-country-label.cr {
-	background: #CE1327;
+	background: #CE1327  !important;
 }
 .carnet-country-label.pa {
-	background: #D21036;
+	background: #D21036  !important;
 }
 .carnet-country-label.sv {
-	background: #244D9C;
+	background: #244D9C  !important;
 }
 
 .carnet-country-flag {
@@ -2084,34 +2096,34 @@ input.bgcbs-button
 	margin-left: 3px;
 	display: inline-block;
 	border-radius: 16px;
-	background-size: cover;
-	background-color: #FFFFFF;
-	background-position: center center;
+	background-size: cover !important;
+	background-color: #FFFFFF !important;
+	background-position: center center !important;;
 }
 
 .carnet-country-flag.do {
-	background-image: url('/wp-content/uploads/2023/06/flag-do.jpg');
+	background-image: url('/wp-content/uploads/2023/06/flag-do.jpg') !important;
 }
 .carnet-country-flag.be {
-	background-image: url('/wp-content/uploads/2023/06/flag-be.jpg');
+	background-image: url('/wp-content/uploads/2023/06/flag-be.jpg') !important;
 }
 .carnet-country-flag.gt {
-	background-image: url('/wp-content/uploads/2023/06/flag-gt.jpg');
+	background-image: url('/wp-content/uploads/2023/06/flag-gt.jpg') !important;
 }
 .carnet-country-flag.hn {
-	background-image: url('/wp-content/uploads/2023/06/flag-hn.jpg');
+	background-image: url('/wp-content/uploads/2023/06/flag-hn.jpg') !important;
 }
 .carnet-country-flag.ni {
-	background-image: url('/wp-content/uploads/2023/06/flag-ni.jpg');
+	background-image: url('/wp-content/uploads/2023/06/flag-ni.jpg') !important;
 }
 .carnet-country-flag.cr {
-	background-image: url('/wp-content/uploads/2023/06/flag-cr.jpg');
+	background-image: url('/wp-content/uploads/2023/06/flag-cr.jpg') !important;
 }
 .carnet-country-flag.pa {
-	background-image: url('/wp-content/uploads/2023/06/flag-pa.jpg');
+	background-image: url('/wp-content/uploads/2023/06/flag-pa.jpg') !important;
 }
 .carnet-country-flag.sv {
-	background-image: url('/wp-content/uploads/2023/06/flag-sv.jpg');
+	background-image: url('/wp-content/uploads/2023/06/flag-sv.jpg') !important;
 }
 
 .carnet-type {
@@ -2172,3 +2184,15 @@ input.bgcbs-button
 .gold .carnet-qr-code {
 	margin-left: 19px;
 }
+
+@media print {
+	* {
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+}
+
+@page {
+	margin: 0 !important;
+}
+
