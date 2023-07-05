@@ -381,15 +381,96 @@ class BGCBSBookingForm
         global $wpdb;
 
         $output = '<link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">';
-        $page = BGCBSHelper::getGetValue('page',false) ?? 0;
-        $size = BGCBSHelper::getGetValue('size',false) ?? 10;
-        $skip = $page * $size;
+        $wheresql = "";
 
-        $query = "SELECT ID
-                FROM {$wpdb->prefix}posts
-                WHERE post_type = 'bgcbs_booking'
-                ORDER BY ID
-                LIMIT {$size} OFFSET {$skip}";
+        if ($uni = BGCBSHelper::getGetValue('uni',false)) {
+            $wheresql .= " AND uni.code = '{$uni}' ";
+        }
+
+        if ($color = BGCBSHelper::getGetValue('color',false)) {
+            $wheresql .= " AND cat.color = '{$color}' ";
+        }
+
+        $query = "
+            SELECT
+                p.ID,
+                cat.name,
+                pm3.meta_value,
+                cat.color,
+                uni.code
+            FROM {$wpdb->prefix}posts p
+            LEFT JOIN
+                (
+                    SELECT
+                        pm.post_id,
+                        pm.meta_value AS name,
+                        CASE
+                                WHEN
+                                (pm.meta_value = 'Cuerpo médico') THEN 'orange'
+                            WHEN
+                                (pm.meta_value = 'Prensa') THEN 'purple'
+                            WHEN
+                                (pm.meta_value = 'Funcionarios' OR
+                                 pm.meta_value = 'Jefe de delegación' OR
+                                 pm.meta_value = 'Jefe de misión') THEN 'gold'
+                            WHEN
+                                (pm.meta_value = 'Baloncesto' OR
+                                 pm.meta_value = 'Fútbol' OR
+                                 pm.meta_value = 'Fútbol Sala' OR
+                                 pm.meta_value = 'Vóleibol' OR
+                                 pm.meta_value = 'Tenis de Mesa' OR
+                                 pm.meta_value = 'Ajedrez' OR
+                                 pm.meta_value = 'Atletismo' OR
+                                 pm.meta_value = 'Natación' OR
+                                 pm.meta_value = 'Taekwondo' OR
+                                 pm.meta_value = 'Karate Do' OR
+                                 pm.meta_value = 'Entrenadores' OR
+                                 pm.meta_value = 'Cuerpo técnico' OR
+                                 pm.meta_value = 'Delegados') THEN 'gray'
+                            ELSE 'gray'
+                        END AS color
+                    FROM {$wpdb->prefix}postmeta pm
+                    WHERE pm.meta_key = 'bgcbs_course_name'
+                ) cat ON cat.post_id = p.ID
+            LEFT JOIN
+                (
+                    SELECT
+                        pm2.post_id,
+                        pm2.meta_key AS name,
+                        CASE
+                            WHEN pm2.meta_value LIKE '%Universidad Autónoma de Santo Domingo%' THEN 'uasd'
+                            WHEN pm2.meta_value LIKE '%Universidad de Belize%' THEN 'ub'
+                            WHEN pm2.meta_value LIKE '%Universidad de San Carlos de Guatemala%' THEN 'usac'
+                            WHEN pm2.meta_value LIKE '%Universidad Nacional Autónoma de Honduras%' THEN 'unah'
+                            WHEN pm2.meta_value LIKE '%Universidad Nacional de Ciencias Forestales%' THEN 'unacifor'
+                            WHEN pm2.meta_value LIKE '%Universidad Pedagógica Nacional Francisco Morazán%' THEN 'unpfm'
+                            WHEN pm2.meta_value LIKE '%Universidad Nacional de Agricultura%' THEN 'unag'
+                            WHEN pm2.meta_value LIKE '%Bluefields Indian and Caribbean University%' THEN 'bicu'
+                            WHEN pm2.meta_value LIKE '%Universidad de las Regiones Autónomas de la Costa Caribe Nicaragüense%' THEN 'uraccan'
+                            WHEN pm2.meta_value LIKE '%Universidad Nacional Autónoma de Nicaragua Managua%' THEN 'unan-managua'
+                            WHEN pm2.meta_value LIKE '%Universidad Nacional Autónoma de Nicaragua León%' THEN 'unan-leon'
+                            WHEN pm2.meta_value LIKE '%Universidad Nacional Agraria de Nicaragua%' THEN 'ni_una'
+                            WHEN pm2.meta_value LIKE '%Universidad Nacional de Ingeniería%' THEN 'uni'
+                            WHEN pm2.meta_value LIKE '%Universidad Técnica Nacional de Costa Rica%' THEN 'utn'
+                            WHEN pm2.meta_value LIKE '%Universidad Estatal a Distancia de Costa Rica%' THEN 'uned'
+                            WHEN pm2.meta_value LIKE '%Tecnológico de Costa Rica%' THEN 'tec'
+                            WHEN pm2.meta_value LIKE '%Universidad de Costa Rica%' THEN 'ucr'
+                            WHEN pm2.meta_value LIKE '%Universidad Nacional de Costa Rica%' THEN 'cr_una'
+                            WHEN pm2.meta_value LIKE '%Universidad Marítima Internacional de Panamá%' THEN 'umip'
+                            WHEN pm2.meta_value LIKE '%Universidad Especializada de las Américas%' THEN 'udelas'
+                            WHEN pm2.meta_value LIKE '%Universidad Autónoma de Chiriquí%' THEN 'unachi'
+                            WHEN pm2.meta_value LIKE '%Universidad de Panamá%' THEN 'up'
+                            WHEN pm2.meta_value LIKE '%Universidad Tecnológica de Panamá%' THEN 'utp'
+                            WHEN pm2.meta_value LIKE '%Universidad de El Salvador%' THEN 'ues'
+                            ELSE 'ues'
+                        END AS code
+                    FROM {$wpdb->prefix}postmeta pm2
+                    WHERE pm2.meta_key = 'bgcbs_form_element_field'
+                ) uni ON uni.post_id = p.ID
+            LEFT JOIN {$wpdb->prefix}postmeta pm3 ON pm3.post_id = p.ID AND pm3.meta_key = 'bgcbs_course_group_name'
+            WHERE p.post_type = 'bgcbs_booking' {$wheresql}
+            ORDER BY uni.code, pm3.meta_value, cat.color, p.ID
+        ";
 
         $allbookings = $wpdb->get_results($wpdb->prepare($query));
 
