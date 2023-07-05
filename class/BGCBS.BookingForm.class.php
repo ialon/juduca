@@ -523,7 +523,7 @@ class BGCBSBookingForm
         foreach($meta['form_element_field'] as $elementfield)
         {
             if (($elementfield['label'] == 'Foto de carnet')) {
-                $data['urlfoto'] = wp_get_attachment_url($elementfield['value']);
+                $data['carnet-photo'] = "<div class=\"carnet-photo\" style=\"background-image: url('" . wp_get_attachment_url($elementfield['value']) . "') !important;\"></div>";
             } else if (($elementfield['label'] == 'Segundo nombre')) {
                 $data['nombres'] .= ' ' . ucwords(strtolower($elementfield['value']));
             } else if (($elementfield['label'] == 'Segundo apellido')) {
@@ -692,7 +692,7 @@ class BGCBSBookingForm
         }
 
         // QR Code
-        $data['qrcode'] = '<img src="https://api.qrserver.com/v1/create-qr-code/?color=FFFFFF&margin=0&bgcolor=' . $qrbgcolor . '&size=160x160&data=' . urlencode('https://juduca2023.ues.edu.sv/qr/?id=' . $bookingid) . '">';
+        $data['qrcode'] = '<img src="https://api.qrserver.com/v1/create-qr-code/?color=FFFFFF&margin=0&bgcolor=' . $qrbgcolor . '&size=120x120&data=' . urlencode('https://juduca2023.ues.edu.sv/qr/?id=' . $bookingid) . '">';
 
 
         // Uni logo

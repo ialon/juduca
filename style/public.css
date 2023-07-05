@@ -1976,10 +1976,10 @@ input.bgcbs-button
 
 .carnet-wrapper {
 	font-family: "Poppins", Sans-serif;
-	width: 568px;
-	height: 752px;
+	width: 426px;
+	height: 625px;
 	margin: auto;
-	padding: 53px;
+	padding: 35px;
 	border: none;
 	background-size: cover !important;
 	background-color: #FFFFFF !important;
@@ -2036,32 +2036,33 @@ input.bgcbs-button
 }
 
 .carnet-header {
-	margin-top: 135px;
-	height: 160px;
+	margin-top: 110px;
+	height: 120px;
 }
 
 .carnet-photo {
-	width: 150px;
-	height: 150px;
+	width: 115px;
+	height: 115px;
 	display: inline-block;
 	float: left;
-	overflow: hidden;
+	background-size: cover !important;
+	background-color: #FFFFFF !important;
 }
 
 .carnet-country {
 	font-weight: bold;
 	display: inline-block;
-	margin-top: 19px;
 }
 
 .carnet-wrapper .carnet-country-label {
 	font-weight: 500;
-	font-size: 25px;
+	font-size: 20px;
 	color: #FFFFFF !important;
-	padding: 2px 25px 0px 30px;
-	height: 32px;
-	min-width: 200px;
+	padding: 0px 25px 0px 30px;
+	height: 27px;
+	min-width: 165px;
 	display: inline-block;
+	margin-top: 15px;
 }
 
 .carnet-country-label.do {
@@ -2098,7 +2099,8 @@ input.bgcbs-button
 	border-radius: 16px;
 	background-size: cover !important;
 	background-color: #FFFFFF !important;
-	background-position: center center !important;;
+	background-position: center center !important;
+	margin-top: 10px;
 }
 
 .carnet-country-flag.do {
@@ -2127,21 +2129,21 @@ input.bgcbs-button
 }
 
 .carnet-type {
-	font-size: 29px;
-	font-weight: 600;
-	margin-left: 30px;
-	margin-top: 6px;
+	font-size: 22px;
+	font-weight: 700;
+	margin-left: 138px;
+	margin-top: -2px;
 }
 
 .carnet-sport {
-	margin-left: 53px;
-	margin-top: 5px;
-	height: 59px;
+	margin-left: 41px;
+	margin-top: 0px;
+	height: 47px;
 }
 
 .carnet-names,
 .carnet-lastnames {
-	font-size: 26px;
+	font-size: 20px;
 	font-weight: 500;
 }
 
@@ -2150,15 +2152,15 @@ input.bgcbs-button
 }
 
 .carnet-lastnames {
-	margin-top: 4px;
+	margin-top: -4px;
 }
 
 .carnet-unilogo {
-	height: 150px;
+	height: 140px;
 	float: right;
-	width: 150px;
+	width: 140px;
 	text-align: center;
-	margin-top: -125px;
+	margin-top: -95px;
 }
 
 .carnet-unilogo img {
@@ -2168,20 +2170,25 @@ input.bgcbs-button
 
 .carnet-main {
 	clear: both;
-	height: 114px;
+	height: 139px;
+	margin-left: -9px;
+}
+
+.gold .carnet-main {
+	height: 137px;
 }
 
 .purple .carnet-main {
-	height: 113px;
+	height: 136px;
+}
+
+.orange .carnet-main {
+	height: 134px;
 }
 
 .carnet-qr-code {
-	width: 160px;
-	height: 160px;
-	margin-left: 16px;
-}
-
-.gold .carnet-qr-code {
+	width: 120px;
+	height: 120px;
 	margin-left: 19px;
 }
 

@@ -1,8 +1,8 @@
 <div class="carnet-wrapper html2pdf__page-break <?php echo $this->data['color']; ?>">
     <div class="carnet-content">
         <div class="carnet-header">
-            <div class="carnet-photo"><img src="<?php echo $this->data['urlfoto']; ?>"/></div>
             <div class="carnet-country">
+                <?php echo $this->data['carnet-photo']; ?>
                 <div class="carnet-country-label <?php echo $this->data['countrycode']; ?>"><?php echo $this->data['country']; ?></div>
                 <div class="carnet-country-flag <?php echo $this->data['countrycode']; ?>"></div>
                 <div class="carnet-type"><?php echo $this->data['type']; ?></div>
