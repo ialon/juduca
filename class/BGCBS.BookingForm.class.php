@@ -514,6 +514,7 @@ class BGCBSBookingForm
 
         $data = [];
 
+        $data['bookingid'] = $bookingid;
         $data['universidad'] = $university;
         $data['disciplina'] = $meta['course_name'];
         $data['categoria'] = $meta['course_group_name'];

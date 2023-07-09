@@ -1,4 +1,4 @@
-<div class="carnet-wrapper html2pdf__page-break <?php echo $this->data['color']; ?>">
+<div class="carnet-wrapper html2pdf__page-break id-<?php echo $this->data['bookingid'] . ' ' . $this->data['color']; ?>">
     <div class="carnet-content">
         <div class="carnet-header">
             <div class="carnet-country">

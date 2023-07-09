@@ -2045,6 +2045,7 @@ input.bgcbs-button
 	height: 115px;
 	display: inline-block;
 	float: left;
+	background-position: center center !important;
 	background-size: cover !important;
 	background-color: #FFFFFF !important;
 }
