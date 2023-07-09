@@ -469,7 +469,7 @@ class BGCBSBookingForm
                 ) uni ON uni.post_id = p.ID
             LEFT JOIN {$wpdb->prefix}postmeta pm3 ON pm3.post_id = p.ID AND pm3.meta_key = 'bgcbs_course_group_name'
             WHERE p.post_type = 'bgcbs_booking' {$wheresql}
-            ORDER BY uni.code, pm3.meta_value, cat.color, p.ID
+            ORDER BY uni.code, cat.color, pm3.meta_value, p.ID
         ";
 
         $allbookings = $wpdb->get_results($wpdb->prepare($query));
@@ -792,6 +792,7 @@ class BGCBSBookingForm
         $_header = get_posts( $args );
         $header = $_header ? array_pop($_header) : null;
         $data['universidadlogo'] = $header ? wp_get_attachment_image_url($header->ID, 'medium') : '';
+        $data['unishortname'] = $shortname;
 
         $data['includeback'] = $includeback;
 
