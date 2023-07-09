@@ -1985,6 +1985,7 @@ input.bgcbs-button
 	background-color: #FFFFFF !important;
 	page-break-after: always;
 	break-after: page;
+	text-transform: capitalize;
 }
 
 .carnet-wrapper.gold {

@@ -536,6 +536,17 @@ class BGCBSBookingForm
             }
         }
 
+        // Fix names
+        $altnames = ucwords(mb_strtolower($data['nombres']));
+        $altlastnames = ucwords(mb_strtolower($data['apellidos']));
+
+        $data['caps-fixed'] = '';
+        if ($data['nombres'] !== $altnames || $data['apellidos'] !== $altlastnames) {
+            $data['caps-fixed'] = 'caps-fixed';
+        }
+        $data['nombres'] = $altnames;
+        $data['apellidos'] = $altlastnames;
+
         // Background
         switch ($meta['course_name']) {
             case 'Funcionarios':
