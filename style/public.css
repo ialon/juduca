@@ -2194,6 +2194,53 @@ input.bgcbs-button
 	margin-left: 19px;
 }
 
+@font-face {
+	font-family: "Julietta Messie";
+	src: url('/wp-content/plugins/bookingo/style/Julietta-Messie.eot');
+	src: url('/wp-content/plugins/bookingo/style/Julietta-Messie.eot') format('embedded-opentype'),
+	url('/wp-content/plugins/bookingo/style/Julietta-Messie.woff2') format('woff2'),
+	url('/wp-content/plugins/bookingo/style/Julietta-Messie.woff') format('woff'),
+	url('/wp-content/plugins/bookingo/style/Julietta-Messie.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.diploma-wrapper {
+	width: 792px;
+	height: 612px;
+	margin: auto;
+	padding: 35px;
+	border: none;
+	background-size: cover !important;
+	background-color: #FFFFFF !important;
+	page-break-after: always;
+	break-after: page;
+	text-transform: capitalize;
+	background-image: url('/wp-content/uploads/2023/07/diploma-bg.jpg') !important;
+	font-family: "Julietta Messie", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.diploma-unilogo {
+	height: 60px;
+	margin-left: 195px;
+	margin-top: 25px;
+	position: absolute;
+}
+
+.diploma-unilogo img {
+	height: 100%;
+}
+
+.diploma-names {
+	margin-left: 22px;
+	margin-top: 235px;
+	font-size: 38px;
+	position: absolute;
+	color: #CB2026;
+}
+
 @media print {
 	* {
 		-webkit-print-color-adjust: exact !important;

@@ -81,96 +81,98 @@ class BGCBSBookingForm
         add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_carnet',array($this,'createBookingCarnet'));
         add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_carnet_cta',array($this,'createBookingCarnetCta'));
         add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_carnet_print',array($this,'createBookingCarnetPrint'));
+        add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_diploma',array($this,'createBookingDiploma'));
+        add_shortcode(PLUGIN_BGCBS_CONTEXT.'_booking_diploma_cta',array($this,'createBookingDiplomaCta'));
 
-		add_filter('manage_edit-'.self::getCPTName().'_columns',array($this,'manageEditColumns')); 
+		add_filter('manage_edit-'.self::getCPTName().'_columns',array($this,'manageEditColumns'));
 		add_action('manage_'.self::getCPTName().'_posts_custom_column',array($this,'managePostsCustomColumn'));
 		add_filter('manage_edit-'.self::getCPTName().'_sortable_columns',array($this,'manageEditSortableColumns'));
  	}
- 	
+
  	/**************************************************************************/
- 	
+
  	static function getShortcodeName()
  	{
  	 	return(PLUGIN_BGCBS_CONTEXT.'_booking_form');
  	}
- 	
+
  	/**************************************************************************/
- 	
+
  	function addMetaBox()
  	{
- 	 	add_meta_box(PLUGIN_BGCBS_CONTEXT.'_meta_box_booking_form',esc_html__('Main','bookingo'),array($this,'addMetaBoxMain'),self::getCPTName(),'normal','low');		
+ 	 	add_meta_box(PLUGIN_BGCBS_CONTEXT.'_meta_box_booking_form',esc_html__('Main','bookingo'),array($this,'addMetaBoxMain'),self::getCPTName(),'normal','low');
  	}
- 	
+
  	/**************************************************************************/
- 	
+
  	function addMetaBoxMain()
  	{
  	 	global $post;
- 	 	
+
 		$Course=new BGCBSCourse();
  	 	$Country=new BGCBSCountry();
  	 	$Currency=new BGCBSCurrency();
  	 	$BookingStatus=new BGCBSBookingStatus();
  	 	$BookingFormStyle=new BGCBSBookingFormStyle();
- 	 	
+
 		$data=array();
- 	 	
+
  	 	$data['meta']=BGCBSPostMeta::getPostMeta($post);
- 	 	
+
 		$data['nonce']=BGCBSHelper::createNonceField(PLUGIN_BGCBS_CONTEXT.'_meta_box_booking_form');
- 	 	
+
  	 	$data['dictionary']['color']=$BookingFormStyle->getColor();
- 	 	
+
  	 	$data['dictionary']['course']=$Course->getDictionary();
- 	 	
+
  	 	$data['dictionary']['country']=$Country->getCountry();
-		
+
 		$data['dictionary']['currency']=$Currency->getCurrency();
-		
+
  	 	$data['dictionary']['booking_status']=$BookingStatus->getBookingStatus();
-		
+
 		echo BGCBSTemplate::outputS($data,PLUGIN_BGCBS_TEMPLATE_PATH.'admin/meta_box_booking_form.php');
  	}
- 	
+
  	/**************************************************************************/
- 	
- 	function adminCreateMetaBoxClass($class) 
+
+ 	function adminCreateMetaBoxClass($class)
  	{
  	 	array_push($class,'to-postbox-1');
  	 	return($class);
  	}
- 	
+
  	/**************************************************************************/
- 	
+
  	function savePost($postId)
- 	{ 	  
+ 	{
  	 	if(!$_POST) return(false);
- 	 	
+
  	 	if(BGCBSHelper::checkSavePost($postId,PLUGIN_BGCBS_CONTEXT.'_meta_box_booking_form_noncename','savePost')===false) return(false);
- 	 	
+
  	 	$Date=new BGCBSDate();
 		$Currency=new BGCBSCurrency();
  	 	$Validation=new BGCBSValidation();
  	 	$BookingStatus=new BGCBSBookingStatus();
 		$BookingFormStyle=new BGCBSBookingFormStyle();
- 	 	
+
  	 	/***/
  	 	/***/
- 	 	
+
  	 	$option=BGCBSHelper::getPostOption();
 
 		/***/
-		
+
 		if(!$BookingStatus->isBookingStatus($option['booking_status_id_default']))
 			$option['booking_status_id_default']=$BookingStatus->getDefaultBookingStatus();
-		
+
 		/***/
 
 		if(!$Validation->isBool($option['woocommerce_enable']))
- 	 	 	$option['woocommerce_enable']=0; 
-		
+ 	 	 	$option['woocommerce_enable']=0;
+
 		/***/
-		
+
  	 	$option['currency']=(array)$option['currency'];
  	 	if(in_array(-1,$option['currency']))
  	 	{
@@ -184,28 +186,28 @@ class BGCBSBookingForm
  	 	 	 	 	unset($option['currency'][$index]);
  	 	 	}
  	 	}
-		
+
  	 	if(!count($option['currency']))
- 	 	 	$option['currency']=array(-1); 
- 	 	
-		/***/
-		
- 	 	if(!$Validation->isBool($option['coupon_enable']))
- 	 	 	$option['coupon_enable']=0; 
-		
-		/***/
-		
-		if(!$Validation->isBool($option['form_preloader_enable']))
-			$option['form_preloader_enable']=0;
-			
-		if(!in_array($option['tab_active'],array(0,1)))
-			$option['tab_active']=1;
-		
-		if(!$Validation->isBool($option['course_time_enable']))
-			$option['course_time_enable']=0;		
+ 	 	 	$option['currency']=array(-1);
 
 		/***/
-		
+
+ 	 	if(!$Validation->isBool($option['coupon_enable']))
+ 	 	 	$option['coupon_enable']=0;
+
+		/***/
+
+		if(!$Validation->isBool($option['form_preloader_enable']))
+			$option['form_preloader_enable']=0;
+
+		if(!in_array($option['tab_active'],array(0,1)))
+			$option['tab_active']=1;
+
+		if(!$Validation->isBool($option['course_time_enable']))
+			$option['course_time_enable']=0;
+
+		/***/
+
  	 	foreach($option['style_color'] as $index=>$value)
  	 	{
  	 	 	if(!$BookingFormStyle->isColor($index))
@@ -213,11 +215,11 @@ class BGCBSBookingForm
  	 	 	 	unset($option['style_color'][$index]);
  	 	 	 	continue;
  	 	 	}
- 	 	 	
+
  	 	 	if(!$Validation->isColor($value,true))
  	 	 	 	$option['style_color'][$index]='';
  	 	}
-	
+
  	 	/***/
 
  	 	$key=array
@@ -235,49 +237,49 @@ class BGCBSBookingForm
 
 		foreach($key as $value)
 			BGCBSPostMeta::updatePostMeta($postId,$value,$option[$value]);
- 	 	
+
  	 	$BookingFormStyle->createCSSFile();
  	}
- 	
+
 	/**************************************************************************/
-	
+
 	function setPostMetaDefault(&$meta)
 	{
  	 	BGCBSHelper::setDefault($meta,'course_id',-1);
-		
+
 		BGCBSHelper::setDefault($meta,'booking_status_id_default',1);
-		
+
 		BGCBSHelper::setDefault($meta,'woocommerce_enable',0);
-		
+
 		BGCBSHelper::setDefault($meta,'currency',array(-1));
-		
+
 		BGCBSHelper::setDefault($meta,'coupon_enable',0);
-		
+
 		BGCBSHelper::setDefault($meta,'address_layout',0);
-		
- 	 	BGCBSHelper::setDefault($meta,'form_preloader_enable',1); 
-		BGCBSHelper::setDefault($meta,'tab_active',1); 
-		BGCBSHelper::setDefault($meta,'course_time_enable',1); 
+
+ 	 	BGCBSHelper::setDefault($meta,'form_preloader_enable',1);
+		BGCBSHelper::setDefault($meta,'tab_active',1);
+		BGCBSHelper::setDefault($meta,'course_time_enable',1);
 	}
- 	
+
  	/**************************************************************************/
- 	
+
  	function getDictionary($attr=array())
  	{
 		global $post;
-		
+
 		$dictionary=array();
-		
+
 		$default=array
 		(
 			'booking_form_id'=>0,
 			'suppress_filters'=>false
 		);
-		
+
 		$attribute=shortcode_atts($default,$attr);
-		
+
 		BGCBSHelper::preservePost($post,$bPost);
-		
+
 		$argument=array
 		(
 			'post_type'=>self::getCPTName(),
@@ -285,7 +287,7 @@ class BGCBSBookingForm
 			'posts_per_page'=>-1,
 			'orderby'=>array('menu_order'=>'asc','title'=>'asc')
 		);
-		
+
 		if(array_key_exists('booking_form_id',$attr))
  	 	{
 			$argument['p']=$attribute['booking_form_id'];
@@ -294,11 +296,11 @@ class BGCBSBookingForm
 		if(array_key_exists('suppress_filters',$attr))
  	 	{
 			$argument['suppress_filters']=$attribute['suppress_filters'];
- 	 	}	
-		
+ 	 	}
+
 		$query=new WP_Query($argument);
 		if($query===false) return($dictionary);
-		
+
 		while($query->have_posts())
 		{
 			$query->the_post();
@@ -307,13 +309,13 @@ class BGCBSBookingForm
 			$dictionary[$post->ID]['post']->post_title=BGCBSHelper::filterPostTitle($post->post_title,$post->ID);
 		}
 
-		BGCBSHelper::preservePost($post,$bPost,0);	
-		
-		return($dictionary); 	 	
+		BGCBSHelper::preservePost($post,$bPost,0);
+
+		return($dictionary);
  	}
- 	
+
  	/**************************************************************************/
- 	
+
  	function manageEditColumns($column)
  	{
  	 	$column=array
@@ -322,36 +324,36 @@ class BGCBSBookingForm
  	 	 	'title'=>esc_html__('Title','bookingo'),
  	 	 	'course'=>esc_html__('Course','bookingo')
  	 	);
-   
-		return($column); 	 	 
+
+		return($column);
  	}
- 	
+
  	/**************************************************************************/
- 	
+
  	function managePostsCustomColumn($column)
  	{
 		global $post;
-		
+
 		$Course=new BGCBSCourse();
-		
+
 		$meta=BGCBSPostMeta::getPostMeta($post);
-		
+
 		switch($column)
 		{
 			case 'course':
-				
+
 				$dictionary=$Course->getDictionary();
 				echo BGCBSHelper::displayDictionary($dictionary,$meta['course_id']);
-				
+
 			break;
 		}
  	}
- 	
+
  	/**************************************************************************/
- 	
+
  	function manageEditSortableColumns($column)
  	{
-		return($column); 	   
+		return($column);
  	}
 
     /**************************************************************************/
@@ -366,6 +368,22 @@ class BGCBSBookingForm
         } else {
             return '<div class="wp-block-button has-custom-font-size has-medium-font-size" style="text-align:center;">
                         <a class="wp-block-button__link has-white-color has-text-color has-background has-text-align-center wp-element-button" href="https://juduca2023.ues.edu.sv/carnet/?id=' . $bookingid . '" style="border-radius:15px;background-color:#f32c46">Carnet Digital</a>
+                    </div>';
+        }
+    }
+
+    /**************************************************************************/
+
+    function createBookingDiplomaCta()
+    {
+        $bookingid=BGCBSHelper::getGetValue('id',false);
+        $meta = BGCBSPostMeta::getPostMeta($bookingid);
+
+        if (empty($meta)) {
+            return "";
+        } else {
+            return '<div class="wp-block-button has-custom-font-size has-medium-font-size" style="text-align:center;">
+                        <a class="wp-block-button__link has-white-color has-text-color has-background has-text-align-center wp-element-button" href="https://juduca2023.ues.edu.sv/diploma/?id=' . $bookingid . '" style="border-radius:15px;background-color:#f32c46">Diploma de participación</a>
                     </div>';
         }
     }
@@ -1082,8 +1100,152 @@ class BGCBSBookingForm
         unset($Template);
         return $output;
     }
- 	
- 	/**************************************************************************/
+
+    /**************************************************************************/
+
+    function createBookingDiploma()
+    {
+        if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+            define( 'DONOTCACHEPAGE', true );
+        }
+
+        $Booking=new BGCBSBooking();
+        $bookingid = BGCBSHelper::getGetValue('id',false);
+        $meta = BGCBSPostMeta::getPostMeta($bookingid);
+
+        if (empty($meta))
+        {
+            return "ID inválido o no encontrado";
+        }
+
+        $output = '<link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">';
+
+        $university = $Booking->getUniversityFromBooking($bookingid);
+
+        $data = [];
+
+        $data['bookingid'] = $bookingid;
+        $data['universidad'] = $university;
+        $data['nombres'] = ucwords(strtolower($meta['participant_first_name']));
+        $data['apellidos'] = ucwords(strtolower($meta['participant_second_name']));
+
+        foreach($meta['form_element_field'] as $elementfield)
+        {
+            if (($elementfield['label'] == 'Segundo nombre')) {
+                $data['nombres'] .= ' ' . ucwords(strtolower($elementfield['value']));
+            } else if (($elementfield['label'] == 'Segundo apellido')) {
+                $data['apellidos'] .= ' ' . ucwords(strtolower($elementfield['value']));
+            }
+        }
+
+        // Fix names
+        $altnames = ucwords(mb_strtolower($data['nombres']));
+        $altlastnames = ucwords(mb_strtolower($data['apellidos']));
+
+        $data['caps-fixed'] = '';
+        if ($data['nombres'] !== $altnames || $data['apellidos'] !== $altlastnames) {
+            $data['caps-fixed'] = 'caps-fixed';
+        }
+        $data['nombres'] = $altnames;
+        $data['apellidos'] = $altlastnames;
+
+
+        // Uni logo
+        switch ($university) {
+            case 'Universidad Autónoma de Santo Domingo':
+                $shortname = 'uasd';
+                break;
+            case 'Universidad de Belize':
+                $shortname = 'ub';
+                break;
+            case 'Universidad de San Carlos de Guatemala':
+                $shortname = 'usac';
+                break;
+            case 'Universidad Nacional Autónoma de Honduras':
+                $shortname = 'unah';
+                break;
+            case 'Universidad Nacional de Ciencias Forestales':
+                $shortname = 'unacifor';
+                break;
+            case 'Universidad Pedagógica Nacional Francisco Morazán':
+                $shortname = 'unpfm';
+                break;
+            case 'Universidad Nacional de Agricultura':
+                $shortname = 'unag';
+                break;
+            case 'Bluefields Indian and Caribbean University':
+                $shortname = 'bicu';
+                break;
+            case 'Universidad de las Regiones Autónomas de la Costa Caribe Nicaragüense':
+                $shortname = 'uraccan';
+                break;
+            case 'Universidad Nacional Autónoma de Nicaragua Managua':
+                $shortname = 'unan-managua';
+                break;
+            case 'Universidad Nacional Autónoma de Nicaragua León':
+                $shortname = 'unan-leon';
+                break;
+            case 'Universidad Nacional Agraria de Nicaragua':
+                $shortname = 'ni_una';
+                break;
+            case 'Universidad Nacional de Ingeniería':
+                $shortname = 'uni';
+                break;
+            case 'Universidad Técnica Nacional de Costa Rica':
+                $shortname = 'utn';
+                break;
+            case 'Universidad Estatal a Distancia de Costa Rica':
+                $shortname = 'uned';
+                break;
+            case 'Tecnológico de Costa Rica':
+                $shortname = 'tec';
+                break;
+            case 'Universidad de Costa Rica':
+                $shortname = 'ucr';
+                break;
+            case 'Universidad Nacional de Costa Rica':
+                $shortname = 'cr_una';
+                break;
+            case 'Universidad Marítima Internacional de Panamá':
+                $shortname = 'umip';
+                break;
+            case 'Universidad Especializada de las Américas':
+                $shortname = 'udelas';
+                break;
+            case 'Universidad Autónoma de Chiriquí':
+                $shortname = 'unachi';
+                break;
+            case 'Universidad de Panamá':
+                $shortname = 'up';
+                break;
+            case 'Universidad Tecnológica de Panamá':
+                $shortname = 'utp';
+                break;
+            case 'Universidad de El Salvador':
+                $shortname = 'ues';
+                break;
+        }
+
+        $args = array(
+            'post_type' => 'attachment',
+            'name' => sanitize_title($shortname),
+            'posts_per_page' => 1,
+            'post_status' => 'inherit',
+        );
+        $_header = get_posts( $args );
+        $header = $_header ? array_pop($_header) : null;
+        $data['universidadlogo'] = $header ? wp_get_attachment_image_url($header->ID, 'medium') : '';
+        $data['unishortname'] = $shortname;
+
+        /***/
+
+        $Template=new BGCBSTemplate($data,PLUGIN_BGCBS_TEMPLATE_PATH.'public/diploma.php');
+        $output .= $Template->output();
+        unset($Template);
+        return $output;
+    }
+
+    /**************************************************************************/
  	
 	function createBookingForm($attr)
 	{

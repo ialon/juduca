@@ -696,8 +696,9 @@ class BGCBSBooking
  	 	
  	 	 	case 'participant':
                 $website = get_option( 'home' );
- 	 	 	 	echo '<a href="' . esc_url( $website . '/carnet/?id=' . $post->ID) . '">' . esc_html($meta['participant_first_name'].' '.$meta['participant_second_name']) . '</a>';
- 	 	 	 	
+                echo '<a href="' . esc_url( $website . '/carnet/?id=' . $post->ID) . '">' . esc_html($meta['participant_first_name'].' '.$meta['participant_second_name']) . '</a>';
+                echo '<br><a href="' . esc_url( $website . '/diploma/?id=' . $post->ID) . '">' . 'Diploma' . '</a>';
+
  	 	 	break;
    
  	 	 	case 'university':
