@@ -2223,9 +2223,9 @@ input.bgcbs-button
 }
 
 .diploma-unilogo {
-	height: 60px;
-	margin-left: 195px;
-	margin-top: 25px;
+	height: 85px;
+	margin-left: 369px;
+	margin-top: 9px;
 	position: absolute;
 }
 
@@ -2233,12 +2233,21 @@ input.bgcbs-button
 	height: 100%;
 }
 
-.diploma-names {
-	margin-left: 22px;
-	margin-top: 235px;
-	font-size: 38px;
+.ues .diploma-unilogo img {
+	display: none;
+}
+
+.diploma-names,
+.diploma-lastnames {
+	margin-left: 25px;
+	margin-top: 225px;
+	font-size: 47px;
 	position: absolute;
 	color: #CB2026;
+}
+
+.diploma-lastnames {
+	margin-top: 274px;
 }
 
 @media print {

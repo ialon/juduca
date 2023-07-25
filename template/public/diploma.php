@@ -4,7 +4,8 @@
         </div>
         <div class="diploma-main">
             <div class="diploma-unilogo"><img alt="<?php echo $this->data['universidad']; ?>" src="<?php echo $this->data['universidadlogo']; ?>"/></div>
-            <div class="diploma-names"><?php echo $this->data['nombres'] . ' ' . $this->data['apellidos']; ?></div>
+            <div class="diploma-names"><?php echo $this->data['nombres']; ?></div>
+            <div class="diploma-lastnames"><?php echo $this->data['apellidos']; ?></div>
         </div>
         <div class="diploma-footer">
         </div>
